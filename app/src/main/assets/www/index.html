@@ -125,22 +125,26 @@ body{margin:0}
 .field input,.field select{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:15px;color:var(--ink);width:100%;min-width:0}
 .btn.small-btn{padding:9px 16px;font-size:14.5px}
 a{color:var(--accent)}
+.stack{display:flex;flex-direction:column;gap:18px}
+a.chip.site{text-decoration:none;color:var(--ink);font-weight:600;padding:9px 14px}
+a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div class="brand"><span class="radar" aria-hidden="true"></span>Radar Emploi</div>
-    <button class="btn" id="keys-toggle" type="button">Clés</button>
+    <button class="btn" id="keys-toggle" type="button">Avancé</button>
   </div>
 
   <div class="hero">
     <h1>Les offres faites pour vous, <em>pays par pays</em>.</h1>
-    <p class="muted">Collez votre profil, choisissez vos pays. Chaque offre reçoit un score de compatibilité.</p>
+    <p class="muted">Indiquez le poste, choisissez vos pays, ouvrez la recherche sur LinkedIn, Indeed et les autres grands sites.</p>
   </div>
 
   <section class="panel" id="keys" hidden>
-    <h2>Vos clés</h2>
+    <h2>Mode avancé</h2>
+    <p class="small muted">Facultatif. Avec une clé, les offres s'affichent dans l'appli avec un score et une alerte quotidienne.</p>
     <label class="field"><span>Service d'offres (JSearch)</span>
       <select id="prov">
         <option value="rapid">Clé RapidAPI</option>
@@ -161,11 +165,13 @@ a{color:var(--accent)}
   </section>
 
   <section class="panel">
-    <div class="step"><span class="num">1</span><h2>Votre profil</h2></div>
-    <textarea id="profil" placeholder="Collez ici le texte de votre profil LinkedIn : titre, À propos, expériences, formation, compétences."></textarea>
+    <div class="step"><span class="num">1</span><h2>Votre recherche</h2></div>
     <label class="field"><span id="postes-label">Postes recherchés, séparés par des virgules</span>
       <input id="postes" type="text" placeholder="trade marketing manager, senior brand manager"></label>
-    <p class="small muted" id="mode-note"></p>
+    <div id="profil-wrap" hidden>
+      <textarea id="profil" placeholder="Collez ici le texte de votre profil LinkedIn : titre, À propos, expériences, formation, compétences."></textarea>
+    </div>
+    <p class="small muted" id="mode-note" hidden></p>
   </section>
 
   <section class="panel">
@@ -175,6 +181,14 @@ a{color:var(--accent)}
     <p class="small muted" id="cost"></p>
   </section>
 
+  <section class="panel">
+    <div class="step"><span class="num">3</span><h2>Ouvrir la recherche</h2></div>
+    <div class="row" id="link-postes"></div>
+    <div class="regions" id="links"></div>
+    <p class="small muted">Offres des 7 derniers jours quand le site le permet. Aucun compte ni clé à créer.</p>
+  </section>
+
+  <div class="stack" id="adv" hidden>
   <section class="panel" id="alerts" hidden>
     <div class="step"><h2>Alerte quotidienne</h2>
       <button class="chip" id="alert-toggle" type="button" aria-pressed="false" style="margin-left:auto">Désactivée</button></div>
@@ -222,8 +236,9 @@ a{color:var(--accent)}
     <button class="btn" id="more" type="button" hidden>Afficher plus</button>
     <button class="btn" id="rescore" type="button" hidden>Noter les offres restantes</button>
   </div>
+  <p class="foot">Le score estime la compatibilité entre votre profil et l'offre. Ce n'est pas une probabilité d'embauche.</p>
+  </div>
 
-  <p class="foot">Le score estime la compatibilité entre votre profil et l'offre. Ce n'est pas une probabilité d'embauche. Offres fournies par JSearch (Google for Jobs : LinkedIn, Indeed et autres sites).</p>
 </div>
 <script>
 (function(){
@@ -240,7 +255,9 @@ var COUNTRIES={};
 REGIONS.forEach(function(r){r[1].forEach(function(c){COUNTRIES[c[0]]={code:c[0],name:c[1],loc:c[2],fr:c[3]==="fr"};});});
 var PER_COUNTRY=2, FREE_QUOTA=200, MODEL="claude-haiku-4-5-20251001";
 
-var S={sel:new Set(["MA","AE","SA","QA","FR"]),profile:null,jobs:[],example:true,running:false,stop:false,min:0,country:"",shown:30,onlyNew:false,failed:new Set(),simple:false};
+var INDEED={GB:"uk",US:"www"};
+var BAYT={AE:"uae",SA:"saudi-arabia",QA:"qatar",KW:"kuwait",BH:"bahrain",OM:"oman",EG:"egypt",MA:"morocco"};
+var S={poste:0,sel:new Set(["MA","AE","SA","QA","FR"]),profile:null,jobs:[],example:true,running:false,stop:false,min:0,country:"",shown:30,onlyNew:false,failed:new Set(),simple:false};
 var K={prov:"rapid",jkey:"",akey:""};
 var NATIVE=!!(window.Android&&typeof window.Android.http==="function");
 
@@ -290,13 +307,14 @@ function renderKeys(){
   var ai=!!K.akey;
   $("postes-label").textContent=ai?"Postes recherchés (facultatif : l'IA les propose)":"Postes recherchés, séparés par des virgules";
   $("mode-note").textContent=ai?"Scores calculés par l'IA à partir de votre profil.":"Sans clé Claude : score simplifié, basé sur l'intitulé du poste.";
+  $("mode-note").hidden=!K.jkey;$("profil-wrap").hidden=!K.akey;$("adv").hidden=!K.jkey;
   renderCost();
 }
 $("keys-toggle").addEventListener("click",function(){$("keys").hidden=!$("keys").hidden;});
 $("keys-save").addEventListener("click",function(){
   K.prov=$("prov").value==="own"?"own":"rapid";K.jkey=$("jkey").value.trim();K.akey=$("akey").value.trim();
   store("radar.cles",JSON.stringify(K));
-  $("keys").hidden=!!K.jkey;showError("");renderKeys();syncAlerts();
+  $("keys").hidden=true;showError("");renderKeys();syncAlerts();
 });
 
 /* ---------- inputs ---------- */
@@ -311,10 +329,11 @@ function renderRegions(){
     box.append(row);
   });
   $("all").textContent=S.sel.size===Object.keys(COUNTRIES).length?"Tout décocher":"Monde entier";
-  renderCost();
+  renderCost();renderLinks();
 }
 function renderCost(){
   var n=S.sel.size*PER_COUNTRY;
+  $("cost").hidden=!K.jkey;
   $("cost").textContent=n?"Cette recherche utilisera "+n+" de vos "+FREE_QUOTA+" recherches mensuelles.":"";
 }
 function saveSel(){store("radar.sel",Array.from(S.sel).join(","));syncAlerts();}
@@ -330,8 +349,41 @@ $("all").addEventListener("click",function(){
   if(s!=null){var set=new Set(s.split(",").filter(function(c){return COUNTRIES[c];}));if(set.size)S.sel=set;}
 })();
 $("profil").addEventListener("input",function(){store("radar.profil",$("profil").value.slice(0,30000));});
-$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));});
+$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));renderLinks();});
 function typedTitles(){return uniq($("postes").value.split(/[,;\n]/).map(function(x){return x.trim().slice(0,60);})).slice(0,4);}
+
+/* ---------- direct links to the job sites: no key needed ---------- */
+function slug(q){return q.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function sites(c,q){
+  var e=encodeURIComponent(q),out=[
+    ["LinkedIn","https://www.linkedin.com/jobs/search/?keywords="+e+"&location="+encodeURIComponent(c.loc)+"&f_TPR=r604800&sortBy=DD"],
+    ["Indeed","https://"+(INDEED[c.code]||c.code.toLowerCase())+".indeed.com/jobs?q="+e+"&fromage=7&sort=date"],
+    ["Google","https://www.google.com/search?udm=8&q="+encodeURIComponent(q+" jobs "+c.loc)]];
+  if(BAYT[c.code])out.push(["Bayt","https://www.bayt.com/en/"+BAYT[c.code]+"/jobs/"+slug(q)+"-jobs/"]);
+  if(c.code==="MA"){
+    out.push(["ReKrute","https://www.rekrute.com/offres.html?keyword="+e]);
+    out.push(["Emploi.ma","https://www.emploi.ma/recherche-jobs-maroc/"+e]);
+  }
+  if(c.code==="FR"){
+    out.push(["Apec","https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles="+e]);
+    out.push(["Welcome to the Jungle","https://www.welcometothejungle.com/fr/jobs?query="+e+"&aroundQuery=France"]);
+  }
+  return out;
+}
+function renderLinks(){
+  var t=typedTitles(),box=$("links"),chips=$("link-postes");box.textContent="";chips.textContent="";
+  if(!t.length){box.append(el("p",{class:"muted",text:"Indiquez un poste à l'étape 1 pour afficher les liens."}));return;}
+  if(S.poste>=t.length)S.poste=0;
+  if(t.length>1)t.forEach(function(x,i){
+    chips.append(el("button",{class:"chip",type:"button","aria-pressed":S.poste===i?"true":"false",text:x,onclick:function(){S.poste=i;renderLinks();}}));
+  });
+  if(!S.sel.size){box.append(el("p",{class:"muted",text:"Choisissez au moins un pays à l'étape 2."}));return;}
+  S.sel.forEach(function(code){
+    var c=COUNTRIES[code],row=el("div",{class:"region"},el("b",{text:c.name}));
+    sites(c,t[S.poste]).forEach(function(s){row.append(el("a",{class:"chip site",href:s[1],text:s[0]}));});
+    box.append(row);
+  });
+}
 
 /* ---------- alerts (native only) ---------- */
 function alertQueries(){
@@ -467,10 +519,10 @@ function simpleScore(job,titles){
 /* ---------- pipeline ---------- */
 function copyFor(e){
   switch(e&&e.code){
-    case "job_key":return "Clé offres d'emploi refusée. Vérifiez-la dans « Clés », ainsi que le service choisi.";
+    case "job_key":return "Clé offres d'emploi refusée. Vérifiez-la dans « Avancé », ainsi que le service choisi.";
     case "job_quota":return "Quota de recherches atteint pour ce mois (ou trop de requêtes d'un coup). Les offres déjà trouvées restent affichées.";
     case "job_err":return "Le service d'offres a renvoyé une erreur"+(e.status?" ("+e.status+")":"")+". Réessayez dans un moment.";
-    case "ai_key":return "Clé Claude API refusée. Vérifiez-la dans « Clés », ou retirez-la pour utiliser le score simplifié.";
+    case "ai_key":return "Clé Claude API refusée. Vérifiez-la dans « Avancé », ou retirez-la pour utiliser le score simplifié.";
     case "ai_rate":return "Le service d'IA est saturé ou votre limite est atteinte. Réessayez dans quelques minutes.";
     case "ai_err":return "Le service d'IA a renvoyé une erreur"+(e.detail?" : "+e.detail:".");
     case "ai_json":return "La réponse de l'IA était illisible. Relancez.";
@@ -528,7 +580,7 @@ function readProfile(){
 function run(){
   if(S.running)return;
   showError("");
-  if(!K.jkey){$("keys").hidden=false;return showError("Ajoutez d'abord votre clé offres d'emploi dans « Clés ».");}
+  if(!K.jkey){$("keys").hidden=false;return showError("Ajoutez d'abord votre clé offres d'emploi dans « Avancé ».");}
   if(!S.sel.size)return showError("Choisissez au moins un pays.");
   S.running=true;S.stop=false;S.failed=new Set();S.simple=!K.akey;busy(true);
   readProfile().then(function(p){
@@ -699,7 +751,7 @@ function render(){
 }
 $("more").addEventListener("click",function(){S.shown+=30;render();});
 
-loadKeys();$("keys").hidden=!!K.jkey;
+loadKeys();$("keys").hidden=true;
 renderRegions();renderKeys();renderAlerts();render();
 })();
 </script>
