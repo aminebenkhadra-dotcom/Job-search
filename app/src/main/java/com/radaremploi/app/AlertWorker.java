@@ -81,14 +81,14 @@ public class AlertWorker extends Worker {
 
       if (seen.size() > 3000) seen = new HashSet<>(new ArrayList<>(seen).subList(0, 1500));
       prefs.edit().putStringSet("seen", seen).apply();
-      if (!fresh.isEmpty()) announce(ctx, fresh);
+      if (!fresh.isEmpty()) announce(ctx, fresh, 1);
     } catch (Exception e) {
       /* on réessaiera au prochain passage, sans consommer davantage de requêtes */
     }
     return Result.success();
   }
 
-  private void announce(Context ctx, List<String> fresh) {
+  static void announce(Context ctx, List<String> fresh, int notifId) {
     NotificationManager nm = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
     if (nm == null) return;
     if (Build.VERSION.SDK_INT >= 26) {
@@ -104,7 +104,7 @@ public class AlertWorker extends Worker {
       lines.append(fresh.get(i));
     }
     int n = fresh.size();
-    String title = n == 1 ? "1 nouvelle offre aujourd'hui" : n + " nouvelles offres aujourd'hui";
+    String title = n == 1 ? "1 nouvelle offre pour vous" : n + " nouvelles offres pour vous";
 
     Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(ctx, CHANNEL) : new Notification.Builder(ctx);
     b.setSmallIcon(android.R.drawable.ic_menu_search)
@@ -114,7 +114,7 @@ public class AlertWorker extends Worker {
         .setContentIntent(pi)
         .setAutoCancel(true);
     try {
-      nm.notify(1, b.build());
+      nm.notify(notifId, b.build());
     } catch (SecurityException e) {
       /* notifications refusées par l'utilisateur */
     }

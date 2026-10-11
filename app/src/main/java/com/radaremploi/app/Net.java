@@ -14,7 +14,7 @@ import java.util.Set;
 /** Appels HTTPS vers les seuls services utilisés par l'appli. */
 final class Net {
   static final Set<String> HOSTS = new HashSet<>(Arrays.asList(
-      "jsearch.p.rapidapi.com", "api.openwebninja.com", "api.anthropic.com"));
+      "jsearch.p.rapidapi.com", "api.openwebninja.com", "api.anthropic.com", "raw.githubusercontent.com"));
 
   static final class Reply {
     final int status;

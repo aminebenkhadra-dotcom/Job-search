@@ -2,6 +2,8 @@ name: Construire l'APK
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'data/**'
   workflow_dispatch:
 permissions:
   contents: write

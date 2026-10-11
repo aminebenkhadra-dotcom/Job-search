@@ -66,8 +66,23 @@ public class MainActivity extends Activity {
     });
 
     web.addJavascriptInterface(new Bridge(), "Android");
+    watchFeed();
     if (state != null) web.restoreState(state);
     else web.loadUrl("https://" + HOST + "/assets/www/index.html");
+  }
+
+  /** Vérifie la liste d'offres en arrière-plan et demande le droit d'afficher des notifications. */
+  private void watchFeed() {
+    Constraints net = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
+    PeriodicWorkRequest req = new PeriodicWorkRequest.Builder(FeedWorker.class, 3, TimeUnit.HOURS)
+        .setConstraints(net)
+        .build();
+    WorkManager.getInstance(getApplicationContext())
+        .enqueueUniquePeriodicWork("flux-offres", ExistingPeriodicWorkPolicy.KEEP, req);
+    if (Build.VERSION.SDK_INT >= 33
+        && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED) {
+      requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 7);
+    }
   }
 
   @Override

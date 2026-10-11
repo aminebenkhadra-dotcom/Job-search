@@ -61,6 +61,8 @@ textarea{width:100%;min-height:150px;resize:vertical;background:var(--sunk);bord
 .btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent);padding:13px 22px;font-size:16px;border-radius:12px}
 .btn.primary:disabled{opacity:.45;cursor:not-allowed}
 .btn.ghost{border-color:transparent;background:transparent;color:var(--accent);padding:6px 8px}
+.btn.cvbtn{border-color:var(--accent);color:var(--accent);padding:11px 16px}
+textarea#profil{min-height:96px}
 
 .regions{display:flex;flex-direction:column;gap:10px}
 .region{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -128,6 +130,7 @@ a{color:var(--accent)}
 .stack{display:flex;flex-direction:column;gap:18px}
 a.chip.site{text-decoration:none;color:var(--ink);font-weight:600;padding:9px 14px}
 a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
+h2.sep{margin-top:14px;padding-top:18px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -139,8 +142,25 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
 
   <div class="hero">
     <h1>Les offres faites pour vous, <em>pays par pays</em>.</h1>
-    <p class="muted">Indiquez le poste, choisissez vos pays, ouvrez la recherche sur LinkedIn, Indeed et les autres grands sites.</p>
+    <p class="muted">Vos offres, avec vos chances d'obtenir un entretien pour chacune.</p>
   </div>
+
+  <div class="stack" id="feed">
+    <div class="filters">
+      <h2>Mes offres</h2>
+      <button class="btn" id="feed-refresh" type="button">Actualiser</button>
+    </div>
+    <p class="small muted" id="feed-status">Chargement…</p>
+    <div class="stats">
+      <div class="stat"><b id="f-total">–</b><span>offres pour vous</span></div>
+      <div class="stat"><b id="f-strong">–</b><span>à 60 % et plus</span></div>
+      <div class="stat"><b id="f-best">–</b><span>meilleures chances</span></div>
+    </div>
+    <div class="list" id="feed-list"></div>
+    <p class="foot">Liste mise à jour chaque matin, avec une notification pour les nouvelles offres. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
+  </div>
+
+  <h2 class="sep">Chercher moi-même</h2>
 
   <section class="panel" id="keys" hidden>
     <h2>Mode avancé</h2>
@@ -279,6 +299,7 @@ function clamp(n){n=Math.round(Number(n));return isFinite(n)?Math.max(0,Math.min
 function str(v,max){return typeof v==="string"?v.trim().slice(0,max||200):"";}
 function arr(v,n,max){return Array.isArray(v)?v.map(function(x){return str(x,max||80);}).filter(Boolean).slice(0,n):[];}
 function tier(s){return s==null?"l":s>=75?"g":s>=55?"m":"l";}
+function tierC(s){return s==null?"l":s>=60?"g":s>=35?"m":"l";}
 function uniq(a){return a.filter(function(x,i){return x&&a.indexOf(x)===i;});}
 
 /* ---------- network: native bridge in the app, fetch elsewhere ---------- */
@@ -671,8 +692,8 @@ function renderProfile(){
   uniq(p.fr.concat(p.en)).forEach(function(s){q.append(el("span",{class:"tag",text:s}));});
 }
 function card(j,example){
-  var t=tier(j.score);
-  var ring=el("div",{class:"ring "+t,style:"--p:"+(j.score==null?0:j.score),role:"img","aria-label":j.score==null?"Score en attente":"Compatibilité "+j.score+" %"},
+  var t=example==="feed"?tierC(j.score):tier(j.score);
+  var ring=el("div",{class:"ring "+t,style:"--p:"+(j.score==null?0:j.score),role:"img","aria-label":j.score==null?"Estimation en attente":"Chances estimées "+j.score+" %"},
     el("span",{text:j.score==null?"–":j.score+"%"}));
   var title=j.url?el("a",{href:j.url,text:j.title}):document.createTextNode(j.title);
   var meta=uniq([j.company,j.place,example?j.country:COUNTRIES[j.cc].name]).join(" · ");
@@ -682,7 +703,7 @@ function card(j,example){
     el("div",{class:"meta",text:meta+(a?" · "+a:"")+(j.via?" · via "+j.via:"")}),
     j.why?el("div",{class:"why",text:j.why}):null);
   var tags=el("div",{class:"row"});
-  if(example)tags.append(el("span",{class:"tag key",text:"Exemple"}));
+  if(example===true)tags.append(el("span",{class:"tag key",text:"Exemple"}));
   if(j.isNew)tags.append(el("span",{class:"tag new",text:"Nouveau"}));
   if(j.refined)tags.append(el("span",{class:"tag key",text:"Score affiné sur l'annonce complète"}));
   if(!example&&K.akey&&S.profile&&j.desc&&j.dState!=="ok")
@@ -751,8 +772,46 @@ function render(){
 }
 $("more").addEventListener("click",function(){S.shown+=30;render();});
 
+/* ---------- my offers: the list evaluated for this user, read from the repository ---------- */
+var FEED="https://raw.githubusercontent.com/aminebenkhadra-dotcom/Job-search/main/data/offres.json";
+function feedSeen(save){
+  if(save){store("radar.fluxvus",JSON.stringify(save.slice(-2000)));return null;}
+  try{var a=JSON.parse(store("radar.fluxvus")||"null");return Array.isArray(a)?new Set(a):null;}catch(e){return null;}
+}
+function renderFeed(d,cached){
+  var list=$("feed-list");list.textContent="";
+  var seen=feedSeen(),offers=(d&&Array.isArray(d.offers)?d.offers:[]).map(function(o){
+    o=o&&typeof o==="object"?o:{};
+    var url=str(o.url,600),ts=Date.parse(o.posted||""),id=str(o.id,120);
+    return {id:id,title:str(o.title,160),company:str(o.company,80),place:str(o.place,80),country:str(o.country,40),score:clamp(o.chances),
+      why:str(o.why,200),url:/^https:\/\//.test(url)?url:"",posted:isFinite(ts)?ts:null,via:str(o.source,30),isNew:!!seen&&!!id&&!seen.has(id)};
+  }).filter(function(o){return o.title;}).sort(function(a,b){return (b.score||0)-(a.score||0);});
+  $("f-total").textContent=offers.length;
+  $("f-strong").textContent=offers.filter(function(o){return o.score>=60;}).length;
+  $("f-best").textContent=offers.length&&offers[0].score!=null?offers[0].score+"%":"–";
+  if(!offers.length)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. La liste se remplit chaque matin."}));
+  offers.forEach(function(o){list.append(card(o,"feed"));});
+  var when=Date.parse(d&&d.updated||"");
+  $("feed-status").textContent=(cached?"Dernière liste enregistrée":"À jour")+(isFinite(when)?" · "+new Date(when).toLocaleDateString("fr-FR",{day:"numeric",month:"long"}):"");
+  if(!cached&&offers.length)feedSeen((seen?Array.from(seen):[]).concat(offers.map(function(o){return o.id;}).filter(Boolean)).filter(function(x,i,a){return a.indexOf(x)===i;}));
+}
+function loadFeed(){
+  var cached=null;try{cached=JSON.parse(store("radar.flux")||"null");}catch(e){}
+  if(cached)renderFeed(cached,true);
+  http("GET",FEED+"?t="+Date.now(),{},"").then(function(r){
+    if(r.status!==200)throw 0;
+    var d=JSON.parse(r.body);
+    if(!d||!Array.isArray(d.offers))throw 0;
+    store("radar.flux",JSON.stringify(d));renderFeed(d,false);
+  }).catch(function(){
+    if(!cached)renderFeed({offers:[]},true);
+    $("feed-status").textContent=cached?"Hors ligne · dernière liste enregistrée":"Impossible de charger vos offres. Vérifiez la connexion, puis touchez Actualiser.";
+  });
+}
+$("feed-refresh").addEventListener("click",loadFeed);
+
 loadKeys();$("keys").hidden=true;
-renderRegions();renderKeys();renderAlerts();render();
+renderRegions();renderKeys();renderAlerts();render();loadFeed();
 })();
 </script>
 </body>
