@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' }
+android {
+  namespace 'com.radaremploi.app'
+  compileSdk 34
+  defaultConfig {
+    applicationId 'com.radaremploi.app'
+    minSdk 24
+    targetSdk 34
+    versionCode 1
+    versionName '1.0'
+  }
+  signingConfigs {
+    fixe { storeFile file('radar.keystore'); storePassword 'radaremploi2026'; keyAlias 'radar'; keyPassword 'radaremploi2026' }
+  }
+  buildTypes {
+    debug { signingConfig signingConfigs.fixe }
+    release { minifyEnabled false; signingConfig signingConfigs.fixe }
+  }
+  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+  implementation 'androidx.webkit:webkit:1.11.0'
+  implementation 'androidx.work:work-runtime:2.9.0'
+}
