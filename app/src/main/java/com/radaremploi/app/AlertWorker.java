@@ -81,22 +81,24 @@ public class AlertWorker extends Worker {
 
       if (seen.size() > 3000) seen = new HashSet<>(new ArrayList<>(seen).subList(0, 1500));
       prefs.edit().putStringSet("seen", seen).apply();
-      if (!fresh.isEmpty()) announce(ctx, fresh, 1);
+      if (!fresh.isEmpty()) announce(ctx, fresh, 1, "search", "aujourd'hui");
     } catch (Exception e) {
       /* on réessaiera au prochain passage, sans consommer davantage de requêtes */
     }
     return Result.success();
   }
 
-  static void announce(Context ctx, List<String> fresh, int notifId) {
+  /** Affiche une notification ; la toucher ouvre l'appli sur l'onglet indiqué. */
+  static void announce(Context ctx, List<String> fresh, int notifId, String tab, String label) {
     NotificationManager nm = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
     if (nm == null) return;
     if (Build.VERSION.SDK_INT >= 26) {
       nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Nouvelles offres", NotificationManager.IMPORTANCE_DEFAULT));
     }
     Intent open = new Intent(ctx, MainActivity.class);
+    open.putExtra("tab", tab);
     open.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-    PendingIntent pi = PendingIntent.getActivity(ctx, 0, open, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+    PendingIntent pi = PendingIntent.getActivity(ctx, notifId, open, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
     StringBuilder lines = new StringBuilder();
     for (int i = 0; i < fresh.size() && i < 5; i++) {
@@ -104,7 +106,7 @@ public class AlertWorker extends Worker {
       lines.append(fresh.get(i));
     }
     int n = fresh.size();
-    String title = n == 1 ? "1 nouvelle offre pour vous" : n + " nouvelles offres pour vous";
+    String title = n == 1 ? "1 nouvelle offre " + label : n + " nouvelles offres " + label;
 
     Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(ctx, CHANNEL) : new Notification.Builder(ctx);
     b.setSmallIcon(android.R.drawable.ic_menu_search)

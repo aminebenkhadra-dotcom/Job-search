@@ -130,27 +130,41 @@ a{color:var(--accent)}
 .stack{display:flex;flex-direction:column;gap:18px}
 a.chip.site{text-decoration:none;color:var(--ink);font-weight:600;padding:9px 14px}
 a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
-h2.sep{margin-top:14px;padding-top:18px;border-top:1px solid var(--line)}
+.tabs-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:8px;margin-block:-8px}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;background:var(--sunk);border:1px solid var(--line);border-radius:14px}
+.tab{border:0;background:transparent;border-radius:10px;padding:10px 4px;font-weight:600;font-size:14.5px;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;min-width:0}
+.tab[aria-selected="true"]{background:var(--surface);color:var(--accent);box-shadow:0 1px 3px rgba(14,28,34,.12)}
+.badge{background:var(--accent);color:var(--on-accent);border-radius:99px;font-size:11.5px;line-height:1.5;padding:0 7px;font-variant-numeric:tabular-nums}
+.hero h1{font-size:clamp(24px,6.4vw,36px)}
+.filters>p{min-width:0}
+.bar .lab{white-space:normal;line-height:1.2}
+.tag.warn{background:transparent;box-shadow:inset 0 0 0 1px var(--mid);color:var(--mid);font-weight:600}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div class="brand"><span class="radar" aria-hidden="true"></span>Radar Emploi</div>
-    <button class="btn" id="keys-toggle" type="button">Avancé</button>
   </div>
 
-  <div class="hero">
-    <h1>Les offres faites pour vous, <em>pays par pays</em>.</h1>
-    <p class="muted">Vos offres, avec vos chances d'obtenir un entretien pour chacune.</p>
+  <div class="tabs-wrap">
+    <nav class="tabs" role="tablist" aria-label="Sections de l'appli">
+      <button class="tab" role="tab" type="button" id="tabbtn-feed" data-tab="feed" aria-selected="true" aria-controls="tab-feed">Mes offres<span class="badge" id="badge-feed" hidden></span></button>
+      <button class="tab" role="tab" type="button" id="tabbtn-maroc" data-tab="maroc" aria-selected="false" aria-controls="tab-maroc">Maroc<span class="badge" id="badge-maroc" hidden></span></button>
+      <button class="tab" role="tab" type="button" id="tabbtn-search" data-tab="search" aria-selected="false" aria-controls="tab-search">Recherche</button>
+    </nav>
   </div>
 
-  <div class="stack" id="feed">
+  <!-- ===== Onglet 1 : la sélection, tous pays ===== -->
+  <div class="stack" id="tab-feed" role="tabpanel" aria-labelledby="tabbtn-feed">
+    <div class="hero">
+      <h1>Vos meilleures pistes, <em>tous pays</em>.</h1>
+      <p class="muted">Les offres retenues pour vous, avec vos chances d'obtenir un entretien.</p>
+    </div>
     <div class="filters">
-      <h2>Mes offres</h2>
+      <p class="small muted" id="feed-status">Chargement…</p>
       <button class="btn" id="feed-refresh" type="button">Actualiser</button>
     </div>
-    <p class="small muted" id="feed-status">Chargement…</p>
     <div class="stats">
       <div class="stat"><b id="f-total">–</b><span>offres pour vous</span></div>
       <div class="stat"><b id="f-strong">–</b><span>à 60 % et plus</span></div>
@@ -160,105 +174,154 @@ h2.sep{margin-top:14px;padding-top:18px;border-top:1px solid var(--line)}
     <p class="foot">Liste mise à jour chaque matin, avec une notification pour les nouvelles offres. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
   </div>
 
-  <h2 class="sep">Chercher moi-même</h2>
-
-  <section class="panel" id="keys" hidden>
-    <h2>Mode avancé</h2>
-    <p class="small muted">Facultatif. Avec une clé, les offres s'affichent dans l'appli avec un score et une alerte quotidienne.</p>
-    <label class="field"><span>Service d'offres (JSearch)</span>
-      <select id="prov">
-        <option value="rapid">Clé RapidAPI</option>
-        <option value="own">Clé OpenWeb Ninja</option>
-      </select></label>
-    <label class="field"><span>Clé offres d'emploi (obligatoire)</span>
-      <input id="jkey" type="password" autocomplete="off" placeholder="Collez votre clé JSearch"></label>
-    <label class="field"><span>Clé Claude API (facultative, pour les scores IA)</span>
-      <input id="akey" type="password" autocomplete="off" placeholder="sk-ant-…"></label>
-    <div class="row">
-      <button class="btn primary small-btn" id="keys-save" type="button">Enregistrer</button>
-      <span class="small muted" id="quota"></span>
+  <!-- ===== Onglet 2 : le marché marocain ===== -->
+  <div class="stack" id="tab-maroc" role="tabpanel" aria-labelledby="tabbtn-maroc" hidden>
+    <div class="hero">
+      <h1>Le marché marocain, <em>passé au scanner</em>.</h1>
+      <p class="muted">Toutes les offres repérées dans votre domaine, avec vos chances pour chacune.</p>
     </div>
-    <p class="small muted">Clé offres : gratuite, 200 recherches par mois, sur
-      <a href="https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch">rapidapi.com (JSearch)</a>.
-      Clé Claude : payante à l'usage, sur <a href="https://console.anthropic.com/">console.anthropic.com</a>.
-      Vos clés restent sur ce téléphone.</p>
-  </section>
-
-  <section class="panel">
-    <div class="step"><span class="num">1</span><h2>Votre recherche</h2></div>
-    <label class="field"><span id="postes-label">Postes recherchés, séparés par des virgules</span>
-      <input id="postes" type="text" placeholder="trade marketing manager, senior brand manager"></label>
-    <div id="profil-wrap" hidden>
-      <textarea id="profil" placeholder="Collez ici le texte de votre profil LinkedIn : titre, À propos, expériences, formation, compétences."></textarea>
+    <div class="filters">
+      <p class="small muted" id="maroc-status">Chargement…</p>
+      <button class="btn" id="maroc-refresh" type="button">Actualiser</button>
     </div>
-    <p class="small muted" id="mode-note" hidden></p>
-  </section>
-
-  <section class="panel">
-    <div class="step"><span class="num">2</span><h2>Où chercher</h2>
-      <button class="btn ghost" id="all" type="button" style="margin-left:auto">Monde entier</button></div>
-    <div class="regions" id="regions"></div>
-    <p class="small muted" id="cost"></p>
-  </section>
-
-  <section class="panel">
-    <div class="step"><span class="num">3</span><h2>Ouvrir la recherche</h2></div>
-    <div class="row" id="link-postes"></div>
-    <div class="regions" id="links"></div>
-    <p class="small muted">Offres des 7 derniers jours quand le site le permet. Aucun compte ni clé à créer.</p>
-  </section>
-
-  <div class="stack" id="adv" hidden>
-  <section class="panel" id="alerts" hidden>
-    <div class="step"><h2>Alerte quotidienne</h2>
-      <button class="chip" id="alert-toggle" type="button" aria-pressed="false" style="margin-left:auto">Désactivée</button></div>
-    <p class="small muted" id="alert-note">Une fois par jour, l'appli cherche les offres du jour dans vos 3 premiers pays et vous envoie une notification.</p>
-  </section>
-
-  <div class="go">
-    <button class="btn primary" id="run" type="button">Trouver mes offres</button>
-    <button class="btn" id="stop" type="button" hidden>Arrêter</button>
-    <div class="progress" id="progress" hidden>
-      <span class="small muted" id="ptext">Préparation…</span>
-      <div class="track"><span id="pbar"></span></div>
+    <div class="stats">
+      <div class="stat"><b id="m-total">–</b><span>offres scannées</span></div>
+      <div class="stat"><b id="m-strong">–</b><span>à 60 % et plus</span></div>
+      <div class="stat"><b id="m-best">–</b><span>meilleures chances</span></div>
     </div>
-  </div>
-  <div class="note err" id="error" hidden></div>
 
-  <section class="panel" id="who-panel" hidden>
-    <h2>Profil lu</h2>
-    <p id="who-resume"></p>
-    <div class="who" id="who-tags"></div>
-    <div class="who" id="who-titles"></div>
-  </section>
+    <section class="panel" id="maroc-chart">
+      <h2>Par métier</h2>
+      <div class="bars" id="m-bars"></div>
+      <div class="legend">
+        <span><i class="g"></i>60 % et plus</span><span><i class="m"></i>35 à 59 %</span><span><i class="l"></i>moins de 35 %</span>
+      </div>
+    </section>
 
-  <div class="stats" id="stats" hidden>
-    <div class="stat"><b id="s-total">0</b><span>offres trouvées</span></div>
-    <div class="stat"><b id="s-strong">0</b><span>à 75 % et plus</span></div>
-    <div class="stat"><b id="s-best">–</b><span>meilleur score</span></div>
-  </div>
-
-  <section class="panel" id="chart-panel" hidden>
-    <h2>Offres par pays</h2>
-    <div class="bars" id="bars"></div>
-    <div class="legend">
-      <span><i class="g"></i>75 % et plus</span><span><i class="m"></i>55 à 74 %</span><span><i class="l"></i>moins de 55 %</span>
+    <div class="filters">
+      <h2 id="m-title">Offres</h2>
+      <div class="row" id="m-filter"></div>
     </div>
-  </section>
+    <div class="list" id="m-list"></div>
+    <div class="row"><button class="btn" id="m-more" type="button" hidden>Afficher plus</button></div>
 
-  <div class="filters">
-    <h2 id="list-title">Aperçu du résultat</h2>
-    <div class="row" id="score-filter" hidden></div>
-  </div>
-  <div class="note" id="example-note">Exemples fictifs. Vos vraies offres remplacent cet aperçu après la recherche.</div>
-  <div class="list" id="list"></div>
-  <div class="row">
-    <button class="btn" id="more" type="button" hidden>Afficher plus</button>
-    <button class="btn" id="rescore" type="button" hidden>Noter les offres restantes</button>
-  </div>
-  <p class="foot">Le score estime la compatibilité entre votre profil et l'offre. Ce n'est pas une probabilité d'embauche.</p>
+    <section class="panel">
+      <h2>Vérifier en direct</h2>
+      <div class="row" id="m-postes"></div>
+      <div class="row" id="m-links"></div>
+      <p class="small muted">Ouvre la recherche de la semaine sur chaque site marocain.</p>
+    </section>
+
+    <p class="foot" id="m-foot">Scan refait chaque matin. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
   </div>
 
+  <!-- ===== Onglet 3 : chercher soi-même ===== -->
+  <div class="stack" id="tab-search" role="tabpanel" aria-labelledby="tabbtn-search" hidden>
+    <div class="hero">
+      <h1>Cherchez vous-même, <em>site par site</em>.</h1>
+      <p class="muted">Un poste, des pays : la recherche s'ouvre sur LinkedIn, Indeed et les autres grands sites.</p>
+    </div>
+
+    <section class="panel">
+      <div class="step"><span class="num">1</span><h2>Votre recherche</h2></div>
+      <label class="field"><span id="postes-label">Postes recherchés, séparés par des virgules</span>
+        <input id="postes" type="text" placeholder="trade marketing manager, senior brand manager"></label>
+      <div id="profil-wrap" hidden>
+        <textarea id="profil" placeholder="Collez ici le texte de votre profil LinkedIn : titre, À propos, expériences, formation, compétences."></textarea>
+      </div>
+      <p class="small muted" id="mode-note" hidden></p>
+    </section>
+
+    <section class="panel">
+      <div class="step"><span class="num">2</span><h2>Où chercher</h2>
+        <button class="btn ghost" id="all" type="button" style="margin-left:auto">Monde entier</button></div>
+      <div class="regions" id="regions"></div>
+      <p class="small muted" id="cost"></p>
+    </section>
+
+    <section class="panel">
+      <div class="step"><span class="num">3</span><h2>Ouvrir la recherche</h2></div>
+      <div class="row" id="link-postes"></div>
+      <div class="regions" id="links"></div>
+      <p class="small muted">Offres des 7 derniers jours quand le site le permet. Aucun compte ni clé à créer.</p>
+    </section>
+
+    <div class="row"><button class="btn ghost" id="keys-toggle" type="button">Mode avancé (facultatif)</button></div>
+
+    <section class="panel" id="keys" hidden>
+      <h2>Mode avancé</h2>
+      <p class="small muted">Facultatif. Avec une clé, les offres s'affichent dans l'appli avec un score et une alerte quotidienne.</p>
+      <label class="field"><span>Service d'offres (JSearch)</span>
+        <select id="prov">
+          <option value="rapid">Clé RapidAPI</option>
+          <option value="own">Clé OpenWeb Ninja</option>
+        </select></label>
+      <label class="field"><span>Clé offres d'emploi (obligatoire)</span>
+        <input id="jkey" type="password" autocomplete="off" placeholder="Collez votre clé JSearch"></label>
+      <label class="field"><span>Clé Claude API (facultative, pour les scores IA)</span>
+        <input id="akey" type="password" autocomplete="off" placeholder="sk-ant-…"></label>
+      <div class="row">
+        <button class="btn primary small-btn" id="keys-save" type="button">Enregistrer</button>
+        <span class="small muted" id="quota"></span>
+      </div>
+      <p class="small muted">Clé offres : gratuite, 200 recherches par mois, sur
+        <a href="https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch">rapidapi.com (JSearch)</a>.
+        Clé Claude : payante à l'usage, sur <a href="https://console.anthropic.com/">console.anthropic.com</a>.
+        Vos clés restent sur ce téléphone.</p>
+    </section>
+
+    <div class="stack" id="adv" hidden>
+      <section class="panel" id="alerts" hidden>
+        <div class="step"><h2>Alerte quotidienne</h2>
+          <button class="chip" id="alert-toggle" type="button" aria-pressed="false" style="margin-left:auto">Désactivée</button></div>
+        <p class="small muted" id="alert-note">Une fois par jour, l'appli cherche les offres du jour dans vos 3 premiers pays et vous envoie une notification.</p>
+      </section>
+
+      <div class="go">
+        <button class="btn primary" id="run" type="button">Trouver mes offres</button>
+        <button class="btn" id="stop" type="button" hidden>Arrêter</button>
+        <div class="progress" id="progress" hidden>
+          <span class="small muted" id="ptext">Préparation…</span>
+          <div class="track"><span id="pbar"></span></div>
+        </div>
+      </div>
+
+      <section class="panel" id="who-panel" hidden>
+        <h2>Profil lu</h2>
+        <p id="who-resume"></p>
+        <div class="who" id="who-tags"></div>
+        <div class="who" id="who-titles"></div>
+      </section>
+
+      <div class="stats" id="stats" hidden>
+        <div class="stat"><b id="s-total">0</b><span>offres trouvées</span></div>
+        <div class="stat"><b id="s-strong">0</b><span>à 75 % et plus</span></div>
+        <div class="stat"><b id="s-best">–</b><span>meilleur score</span></div>
+      </div>
+
+      <section class="panel" id="chart-panel" hidden>
+        <h2>Offres par pays</h2>
+        <div class="bars" id="bars"></div>
+        <div class="legend">
+          <span><i class="g"></i>75 % et plus</span><span><i class="m"></i>55 à 74 %</span><span><i class="l"></i>moins de 55 %</span>
+        </div>
+      </section>
+
+      <div class="filters">
+        <h2 id="list-title">Aperçu du résultat</h2>
+        <div class="row" id="score-filter" hidden></div>
+      </div>
+      <div class="note" id="example-note">Exemples fictifs. Vos vraies offres remplacent cet aperçu après la recherche.</div>
+      <div class="list" id="list"></div>
+      <div class="row">
+        <button class="btn" id="more" type="button" hidden>Afficher plus</button>
+        <button class="btn" id="rescore" type="button" hidden>Noter les offres restantes</button>
+      </div>
+      <p class="foot">Le score estime la compatibilité entre votre profil et l'offre. Ce n'est pas une probabilité d'embauche.</p>
+    </div>
+
+    <div class="note err" id="error" hidden></div>
+  </div>
 </div>
 <script>
 (function(){
@@ -370,7 +433,7 @@ $("all").addEventListener("click",function(){
   if(s!=null){var set=new Set(s.split(",").filter(function(c){return COUNTRIES[c];}));if(set.size)S.sel=set;}
 })();
 $("profil").addEventListener("input",function(){store("radar.profil",$("profil").value.slice(0,30000));});
-$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));renderLinks();});
+$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));renderLinks();renderMarocLinks();});
 function typedTitles(){return uniq($("postes").value.split(/[,;\n]/).map(function(x){return x.trim().slice(0,60);})).slice(0,4);}
 
 /* ---------- direct links to the job sites: no key needed ---------- */
@@ -382,7 +445,7 @@ function sites(c,q){
     ["Google","https://www.google.com/search?udm=8&q="+encodeURIComponent(q+" jobs "+c.loc)]];
   if(BAYT[c.code])out.push(["Bayt","https://www.bayt.com/en/"+BAYT[c.code]+"/jobs/"+slug(q)+"-jobs/"]);
   if(c.code==="MA"){
-    out.push(["ReKrute","https://www.rekrute.com/offres.html?keyword="+e]);
+    out.push(["ReKrute","https://www.rekrute.com/emploi-"+e]);
     out.push(["Emploi.ma","https://www.emploi.ma/recherche-jobs-maroc/"+e]);
   }
   if(c.code==="FR"){
@@ -601,7 +664,7 @@ function readProfile(){
 function run(){
   if(S.running)return;
   showError("");
-  if(!K.jkey){$("keys").hidden=false;return showError("Ajoutez d'abord votre clé offres d'emploi dans « Avancé ».");}
+  if(!K.jkey){$("keys").hidden=false;return showError("Ajoutez d'abord votre clé offres d'emploi dans « Mode avancé ».");}
   if(!S.sel.size)return showError("Choisissez au moins un pays.");
   S.running=true;S.stop=false;S.failed=new Set();S.simple=!K.akey;busy(true);
   readProfile().then(function(p){
@@ -691,6 +754,8 @@ function renderProfile(){
   q.append(el("span",{class:"small muted",text:"Postes recherchés :"}));
   uniq(p.fr.concat(p.en)).forEach(function(s){q.append(el("span",{class:"tag",text:s}));});
 }
+/* French punctuation: keep " :" " ;" " %" on the same line as the word before */
+function nb(t){return String(t||"").replace(/ ([:;!?%»])/g,"\u00a0$1").replace(/« /g,"«\u00a0");}
 function card(j,example){
   var t=example==="feed"?tierC(j.score):tier(j.score);
   var ring=el("div",{class:"ring "+t,style:"--p:"+(j.score==null?0:j.score),role:"img","aria-label":j.score==null?"Estimation en attente":"Chances estimées "+j.score+" %"},
@@ -701,10 +766,15 @@ function card(j,example){
   var body=el("div",{class:"body"},
     el("h3",{},title),
     el("div",{class:"meta",text:meta+(a?" · "+a:"")+(j.via?" · via "+j.via:"")}),
-    j.why?el("div",{class:"why",text:j.why}):null);
+    j.why?el("div",{class:"why",text:nb(j.why)}):null);
   var tags=el("div",{class:"row"});
   if(example===true)tags.append(el("span",{class:"tag key",text:"Exemple"}));
   if(j.isNew)tags.append(el("span",{class:"tag new",text:"Nouveau"}));
+  if(j.deadline){
+    /* the closing day itself still counts as open */
+    var left=Math.ceil((j.deadline+864e5-Date.now())/864e5);
+    tags.append(el("span",{class:"tag"+(left<=7?" warn":""),text:left<=0?"Candidatures closes":"Clôture le "+new Date(j.deadline).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}));
+  }
   if(j.refined)tags.append(el("span",{class:"tag key",text:"Score affiné sur l'annonce complète"}));
   if(!example&&K.akey&&S.profile&&j.desc&&j.dState!=="ok")
     tags.append(el("button",{class:"btn ghost",type:"button",disabled:j.dState==="load",text:j.dState==="load"?"Analyse en cours…":"Analyser l'annonce en détail",onclick:function(){analyse(j);}}));
@@ -772,46 +842,150 @@ function render(){
 }
 $("more").addEventListener("click",function(){S.shown+=30;render();});
 
-/* ---------- my offers: the list evaluated for this user, read from the repository ---------- */
-var FEED="https://raw.githubusercontent.com/aminebenkhadra-dotcom/Job-search/main/data/offres.json";
-function feedSeen(save){
-  if(save){store("radar.fluxvus",JSON.stringify(save.slice(-2000)));return null;}
-  try{var a=JSON.parse(store("radar.fluxvus")||"null");return Array.isArray(a)?new Set(a):null;}catch(e){return null;}
-}
-function renderFeed(d,cached){
-  var list=$("feed-list");list.textContent="";
-  var seen=feedSeen(),offers=(d&&Array.isArray(d.offers)?d.offers:[]).map(function(o){
-    o=o&&typeof o==="object"?o:{};
-    var url=str(o.url,600),ts=Date.parse(o.posted||""),id=str(o.id,120);
-    return {id:id,title:str(o.title,160),company:str(o.company,80),place:str(o.place,80),country:str(o.country,40),score:clamp(o.chances),
-      why:str(o.why,200),url:/^https:\/\//.test(url)?url:"",posted:isFinite(ts)?ts:null,via:str(o.source,30),isNew:!!seen&&!!id&&!seen.has(id)};
-  }).filter(function(o){return o.title;}).sort(function(a,b){return (b.score||0)-(a.score||0);});
-  $("f-total").textContent=offers.length;
-  $("f-strong").textContent=offers.filter(function(o){return o.score>=60;}).length;
-  $("f-best").textContent=offers.length&&offers[0].score!=null?offers[0].score+"%":"–";
-  if(!offers.length)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. La liste se remplit chaque matin."}));
-  offers.forEach(function(o){list.append(card(o,"feed"));});
-  var when=Date.parse(d&&d.updated||"");
-  $("feed-status").textContent=(cached?"Dernière liste enregistrée":"À jour")+(isFinite(when)?" · "+new Date(when).toLocaleDateString("fr-FR",{day:"numeric",month:"long"}):"");
-  if(!cached&&offers.length)feedSeen((seen?Array.from(seen):[]).concat(offers.map(function(o){return o.id;}).filter(Boolean)).filter(function(x,i,a){return a.indexOf(x)===i;}));
-}
-function loadFeed(){
-  var cached=null;try{cached=JSON.parse(store("radar.flux")||"null");}catch(e){}
-  if(cached)renderFeed(cached,true);
-  http("GET",FEED+"?t="+Date.now(),{},"").then(function(r){
-    if(r.status!==200)throw 0;
-    var d=JSON.parse(r.body);
-    if(!d||!Array.isArray(d.offers))throw 0;
-    store("radar.flux",JSON.stringify(d));renderFeed(d,false);
-  }).catch(function(){
-    if(!cached)renderFeed({offers:[]},true);
-    $("feed-status").textContent=cached?"Hors ligne · dernière liste enregistrée":"Impossible de charger vos offres. Vérifiez la connexion, puis touchez Actualiser.";
+/* ---------- tabs ---------- */
+var TABS=["feed","maroc","search"],TAB="feed",LISTS={};
+function showTab(name){
+  if(TABS.indexOf(name)<0)name="feed";
+  TAB=name;
+  TABS.forEach(function(t){
+    $("tab-"+t).hidden=t!==name;
+    $("tabbtn-"+t).setAttribute("aria-selected",t===name?"true":"false");
   });
+  store("radar.onglet",name);
+  if(LISTS[name])LISTS[name].opened();
+  window.scrollTo(0,0);
 }
-$("feed-refresh").addEventListener("click",loadFeed);
+window.__tab=showTab;
+window.addEventListener("hashchange",function(){var h=(location.hash||"").replace("#","");if(h)showTab(h);});
+TABS.forEach(function(t){$("tabbtn-"+t).addEventListener("click",function(){showTab(t);});});
+
+/* ---------- evaluated lists read from the repository: the selection and the Moroccan market ---------- */
+var BASE="https://raw.githubusercontent.com/aminebenkhadra-dotcom/Job-search/main/data/";
+function makeList(name,file,render){
+  var L={name:name,offers:[],ids:[],updated:NaN,meta:{},cached:true,loaded:false,error:false};
+  var cacheKey="radar.liste."+name,seenKey="radar.vues."+name;
+  function seen(){
+    try{var a=JSON.parse(store(seenKey)||(name==="feed"?store("radar.fluxvus"):null)||"null");return Array.isArray(a)?new Set(a):null;}catch(e){return null;}
+  }
+  function apply(d,cached){
+    var s=seen();
+    L.offers=(d&&Array.isArray(d.offers)?d.offers:[]).map(function(o){
+      o=o&&typeof o==="object"?o:{};
+      var url=str(o.url,600),ts=Date.parse(o.posted||""),id=str(o.id,120);
+      return {id:id,title:str(o.title,160),company:str(o.company,80),place:str(o.place,80),country:str(o.country,40),family:str(o.family,40),
+        score:clamp(o.chances),why:str(o.why,220),url:/^https:\/\//.test(url)?url:"",posted:isFinite(ts)?ts:null,via:str(o.source,30),
+        deadline:isFinite(Date.parse(o.deadline||""))?Date.parse(o.deadline):null,isNew:!!s&&!!id&&!s.has(id)};
+    }).filter(function(o){return o.title;}).sort(function(x,y){return (y.score||0)-(x.score||0)||(y.posted||0)-(x.posted||0);});
+    L.ids=L.offers.map(function(o){return o.id;}).filter(Boolean);
+    L.updated=Date.parse(d&&d.updated||"");L.meta=d&&typeof d==="object"?d:{};L.cached=cached;
+    if(!cached)L.loaded=true;
+    render(L);
+    var n=L.offers.filter(function(o){return o.isNew;}).length,b=$("badge-"+name);
+    b.textContent=n;b.hidden=!n||TAB===name;
+    if(!cached&&TAB===name)L.opened();
+  }
+  /* the offers count as seen once their tab has been shown with fresh data */
+  L.opened=function(){
+    $("badge-"+name).hidden=true;
+    if(!L.loaded||!L.ids.length)return;
+    var s=seen(),all=(s?Array.from(s):[]).concat(L.ids).filter(function(x,i,arr2){return arr2.indexOf(x)===i;});
+    store(seenKey,JSON.stringify(all.slice(-3000)));
+  };
+  L.render=function(){render(L);};
+  L.load=function(){
+    var cached=null;try{cached=JSON.parse(store(cacheKey)||(name==="feed"?store("radar.flux"):null)||"null");}catch(e){}
+    if(cached&&!L.loaded)apply(cached,true);
+    http("GET",BASE+file+"?t="+Date.now(),{},"").then(function(r){
+      if(r.status!==200)throw 0;
+      var d=JSON.parse(r.body);
+      if(!d||!Array.isArray(d.offers))throw 0;
+      store(cacheKey,JSON.stringify(d));L.error=false;apply(d,false);
+    }).catch(function(){
+      L.error=true;
+      if(!cached&&!L.loaded)apply({offers:[]},true);else render(L);
+    });
+  };
+  LISTS[name]=L;return L;
+}
+function statusText(L){
+  if(L.error)return L.offers.length?"Hors ligne · dernière liste enregistrée":"Impossible de charger la liste. Vérifiez la connexion, puis touchez Actualiser.";
+  var d=isFinite(L.updated)?" · "+new Date(L.updated).toLocaleDateString("fr-FR",{day:"numeric",month:"long"}):"";
+  return (L.cached?"Dernière liste enregistrée":"À jour")+d;
+}
+function stats(prefix,offers){
+  $(prefix+"-total").textContent=offers.length;
+  $(prefix+"-strong").textContent=offers.filter(function(o){return o.score>=60;}).length;
+  $(prefix+"-best").textContent=offers.length&&offers[0].score!=null?offers[0].score+"%":"–";
+}
+
+makeList("feed","offres.json",function(L){
+  var list=$("feed-list");list.textContent="";
+  stats("f",L.offers);
+  if(!L.offers.length&&!L.error)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. La liste se remplit chaque matin."}));
+  L.offers.forEach(function(o){list.append(card(o,"feed"));});
+  $("feed-status").textContent=statusText(L);
+});
+$("feed-refresh").addEventListener("click",function(){LISTS.feed.load();});
+
+/* ---------- Morocco tab ---------- */
+var M={min:0,fam:"",onlyNew:false,shown:20,poste:0};
+var MPOSTES=["trade marketing","directeur marketing","brand manager","category manager","directeur commercial"];
+makeList("maroc","maroc.json",function(L){
+  var offers=L.offers;
+  stats("m",offers);
+
+  /* one stacked bar per job family, widths on a single count scale */
+  var by={},fams=[];
+  offers.forEach(function(o){var f=o.family||"Autres";if(!by[f]){by[f]={g:0,m:0,l:0,n:0};fams.push(f);}by[f].n++;by[f][tierC(o.score)]++;});
+  fams.sort(function(x,y){return by[y].g-by[x].g||by[y].m-by[x].m||by[y].n-by[x].n;});
+  if(M.fam&&!by[M.fam])M.fam="";
+  var max=Math.max.apply(null,fams.map(function(f){return by[f].n;}).concat([1]));
+  var bars=$("m-bars");bars.textContent="";
+  fams.forEach(function(f){
+    var b=by[f];
+    bars.append(el("button",{class:"bar",type:"button","aria-pressed":M.fam===f?"true":"false",onclick:function(){M.fam=M.fam===f?"":f;M.shown=20;L.render();}},
+      el("span",{class:"lab",text:f}),
+      el("span",{class:"seg",style:"width:"+Math.max(4,b.n/max*100)+"%"},
+        el("i",{class:"g",style:"width:"+b.g/b.n*100+"%"}),el("i",{class:"m",style:"width:"+b.m/b.n*100+"%"}),el("i",{class:"l",style:"width:"+b.l/b.n*100+"%"})),
+      el("span",{class:"n",text:b.n})));
+  });
+  $("maroc-chart").hidden=!fams.length;
+
+  var f=$("m-filter");f.textContent="";
+  if(offers.length)[[0,"Toutes"],[35,"35 % +"],[60,"60 % +"]].forEach(function(o){
+    f.append(el("button",{class:"chip",type:"button","aria-pressed":M.min===o[0]?"true":"false",text:o[1],onclick:function(){M.min=o[0];M.shown=20;L.render();}}));
+  });
+  var nNew=offers.filter(function(o){return o.isNew;}).length;
+  if(nNew)f.append(el("button",{class:"chip",type:"button","aria-pressed":M.onlyNew?"true":"false",text:"Nouvelles · "+nNew,onclick:function(){M.onlyNew=!M.onlyNew;M.shown=20;L.render();}}));
+  else M.onlyNew=false;
+
+  var view=offers.filter(function(o){return (!M.onlyNew||o.isNew)&&(!M.fam||(o.family||"Autres")===M.fam)&&(o.score||0)>=M.min;});
+  $("m-title").textContent=view.length+" offre"+(view.length>1?"s":"")+(M.fam?" · "+M.fam:"");
+  var list=$("m-list");list.textContent="";
+  if(!offers.length&&!L.error)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. Le scan tourne chaque matin."}));
+  else if(!view.length&&offers.length)list.append(el("p",{class:"muted",text:"Aucune offre avec ces filtres."}));
+  view.slice(0,M.shown).forEach(function(o){list.append(card(o,"feed"));});
+  $("m-more").hidden=view.length<=M.shown;
+  $("maroc-status").textContent=statusText(L);
+  var src=arr(L.meta.sources,10,30);
+  $("m-foot").textContent=(src.length?"Sites scannés : "+src.join(", ")+". ":"")+"Scan refait chaque matin. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.";
+});
+$("m-more").addEventListener("click",function(){M.shown+=20;LISTS.maroc.render();});
+$("maroc-refresh").addEventListener("click",function(){LISTS.maroc.load();});
+function renderMarocLinks(){
+  var t=typedTitles();if(!t.length)t=MPOSTES;
+  if(M.poste>=t.length)M.poste=0;
+  var chips=$("m-postes"),box=$("m-links");chips.textContent="";box.textContent="";
+  t.forEach(function(x,i){
+    chips.append(el("button",{class:"chip",type:"button","aria-pressed":M.poste===i?"true":"false",text:x,onclick:function(){M.poste=i;renderMarocLinks();}}));
+  });
+  sites(COUNTRIES.MA,t[M.poste]).forEach(function(s){box.append(el("a",{class:"chip site",href:s[1],text:s[0]}));});
+}
 
 loadKeys();$("keys").hidden=true;
-renderRegions();renderKeys();renderAlerts();render();loadFeed();
+renderRegions();renderKeys();renderAlerts();render();renderMarocLinks();
+showTab((location.hash||"").replace("#","")||store("radar.onglet")||"feed");
+LISTS.feed.load();LISTS.maroc.load();
 })();
 </script>
 </body>

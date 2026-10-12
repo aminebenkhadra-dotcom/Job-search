@@ -68,7 +68,20 @@ public class MainActivity extends Activity {
     web.addJavascriptInterface(new Bridge(), "Android");
     watchFeed();
     if (state != null) web.restoreState(state);
-    else web.loadUrl("https://" + HOST + "/assets/www/index.html");
+    else web.loadUrl("https://" + HOST + "/assets/www/index.html" + tabHash(getIntent()));
+  }
+
+  /** Onglet demandé par une notification ("#maroc"), ou rien. */
+  private static String tabHash(Intent intent) {
+    String tab = intent == null ? null : intent.getStringExtra("tab");
+    return tab != null && tab.matches("[a-z]{1,12}") ? "#" + tab : "";
+  }
+
+  @Override
+  protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    String hash = tabHash(intent);
+    if (!hash.isEmpty()) web.evaluateJavascript("window.__tab&&window.__tab('" + hash.substring(1) + "')", null);
   }
 
   /** Vérifie la liste d'offres en arrière-plan et demande le droit d'afficher des notifications. */
