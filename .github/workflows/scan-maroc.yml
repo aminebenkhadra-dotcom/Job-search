@@ -1,0 +1,35 @@
+name: Scan du marché marocain
+on:
+  schedule:
+    - cron: '37 5 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/scan_maroc.py'
+      - '.github/workflows/scan-maroc.yml'
+permissions:
+  contents: write
+concurrency:
+  group: scan-maroc
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scanner les sites d'emploi
+        run: python3 scripts/scan_maroc.py
+      - name: Enregistrer les listes
+        run: |
+          if git diff --quiet -- data; then echo "Aucun changement"; exit 0; fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/maroc.json data/offres.json
+          git commit -qm "Scan Maroc du $(date -u +%d/%m/%Y)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep 10
+          done
+          exit 1
