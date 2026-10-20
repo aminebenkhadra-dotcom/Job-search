@@ -48,36 +48,6 @@
    "deadline": "2026-12-05"
   },
   {
-   "id": "confidentiel-directeur-trice-marketing-et-communication-marrakech-2026-10",
-   "title": "Directeur(trice) Marketing et Communication",
-   "company": "Confidentiel",
-   "place": "Marrakech",
-   "family": "Marketing",
-   "chances": 65,
-   "why": "Marketing, 5 à 20 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-directeurtrice-marketing-et-communication-recrutement-confidentiel-marrakech-186981.html",
-   "source": "ReKrute",
-   "posted": "2026-10-06",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-29"
-  },
-  {
-   "id": "orh-assessment-trade-marketer-h-f-agadir-2026-09",
-   "title": "Trade Marketer (H/F)",
-   "company": "ORH Assessment",
-   "place": "Agadir",
-   "family": "Trade marketing",
-   "chances": 60,
-   "why": "Trade marketing, 1 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-trade-marketer-hf-recrutement-orh-assessment-agadir-185903.html",
-   "source": "ReKrute",
-   "posted": "2026-09-01",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-01"
-  },
-  {
    "id": "jotun-marketing-manager-casablanca-2026-09",
    "title": "Marketing Manager",
    "company": "Jotun · peintures",
@@ -148,6 +118,20 @@
    "deadline": "2026-11-16"
   },
   {
+   "id": "metraco-responsable-marketing-et-communication-casablanca-2026-10",
+   "title": "Responsable Marketing et Communication",
+   "company": "Metraco · électroménager",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 50,
+   "why": "Marque et digital, 8 ans demandés dont un passage en agence : vous les avez. Frein : poste sous votre niveau.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-et-communication-recrutement-metraco-casablanca-187231.html",
+   "source": "ReKrute",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-12-06"
+  },
+  {
    "id": "groupe-agroalimentaire-responsable-commercial-chr-casablanca-2026-08",
    "title": "Responsable Commercial CHR",
    "company": "Groupe agroalimentaire · boulangerie industrielle",
@@ -161,21 +145,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-09",
-   "title": "Directeur en charge E-Commerce",
-   "company": "Groupe Label'Vie - Carrefour",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 45,
-   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-en-charge-e-commerce-recrutement-groupe-labelvie---carrefour-casablanca-186265.html",
-   "source": "ReKrute",
-   "posted": "2026-09-10",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-10"
-  },
-  {
    "id": "interface-directeur-commercial-fmcg-agadir-2026-10",
    "title": "Directeur Commercial · FMCG",
    "company": "Interface (cabinet) · agroalimentaire",
@@ -187,21 +156,6 @@
    "source": "Indeed",
    "posted": "2026-10-06",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "metraco-responsable-marketing-et-communication-casablanca-2026-10",
-   "title": "Responsable Marketing et Communication",
-   "company": "Metraco",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 45,
-   "why": "Marketing, 5 à 10 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-et-communication-recrutement-metraco-casablanca-187231.html",
-   "source": "ReKrute",
-   "posted": "2026-10-06",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-06"
   },
   {
    "id": "michael-page-sales-manager-fmcg-marrakech-2026-09",
@@ -230,21 +184,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-10-25"
-  },
-  {
-   "id": "confidentiel-directeur-commercial-marketing-tit-mellil-2026-09",
-   "title": "Directeur Commercial & Marketing",
-   "company": "Confidentiel",
-   "place": "Tit Mellil",
-   "family": "Marketing",
-   "chances": 40,
-   "why": "Marketing, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-marketing-recrutement-confidentiel-tit-mellil-186432.html",
-   "source": "ReKrute",
-   "posted": "2026-09-15",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-15"
   },
   {
    "id": "labelvie-category-manager-casablanca-2026-09",
@@ -288,21 +227,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
-   "title": "Directeur Commercial et Marketing Immobilier",
-   "company": "XCDM Maroc",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 40,
-   "why": "Marketing, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-et-marketing-immobilier-recrutement-xcdm-maroc-casablanca-187619.html",
-   "source": "ReKrute",
-   "posted": "2026-10-16",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-16"
-  },
-  {
    "id": "ncc-maroc-responsable-marketing-operationnel-casablanca-2026-09",
    "title": "Responsable Marketing Opérationnel",
    "company": "NCC Maroc",
@@ -316,6 +240,20 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-09",
+   "title": "Directeur en charge E-Commerce",
+   "company": "Label'Vie · Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Pilotage du e-commerce de Carrefour Maroc ; votre expérience du marketing en ligne compte. Frein : direction d'une activité e-commerce attendue.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-en-charge-e-commerce-recrutement-groupe-labelvie---carrefour-casablanca-186265.html",
+   "source": "ReKrute",
+   "posted": "2026-09-10",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-11-10"
+  },
+  {
    "id": "cosmomaroc-responsable-marketing-foxyfox-fes-2026-09",
    "title": "Responsable Marketing · marque de cosmétique FoxyFox",
    "company": "Cosmomaroc",
@@ -327,6 +265,20 @@
    "source": "Indeed",
    "posted": "2026-09-14",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "confidentiel-directeur-commercial-marketing-tit-mellil-2026-09",
+   "title": "Directeur Commercial & Marketing",
+   "company": "Confidentiel · industrie",
+   "place": "Tit Mellil",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Direction commerciale et marketing, 10 ans demandés : votre niveau. Frein : une expérience de l'industrie est fortement souhaitée.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-marketing-recrutement-confidentiel-tit-mellil-186432.html",
+   "source": "ReKrute",
+   "posted": "2026-09-15",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-11-15"
   },
   {
    "id": "groupe-label-vie-carrefo-chef-de-departement-marketing-operationnel-casablanca-2026-09",
@@ -369,6 +321,20 @@
    "source": "Indeed",
    "posted": "2026-10-02",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "confidentiel-directeur-trice-marketing-et-communication-marrakech-2026-10",
+   "title": "Directeur(trice) Marketing et Communication",
+   "company": "Es Saadi Marrakech Resort · hôtellerie de luxe",
+   "place": "Marrakech",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Direction marketing d'un palace, à votre niveau. Frein : spécialiste de l'hôtellerie de luxe exigé, poste à Marrakech.",
+   "url": "https://www.rekrute.com/offre-emploi-directeurtrice-marketing-et-communication-recrutement-confidentiel-marrakech-186981.html",
+   "source": "ReKrute",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-11-29"
   },
   {
    "id": "job-success-responsable-marketing-groupe-agadir-2026-07",
@@ -695,6 +661,20 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "orh-assessment-trade-marketer-h-f-agadir-2026-09",
+   "title": "Trade Marketer (H/F)",
+   "company": "ORH Assessment · client agroalimentaire",
+   "place": "Agadir",
+   "family": "Trade marketing",
+   "chances": 20,
+   "why": "Votre métier, en agroalimentaire, mais poste pour 2 à 4 ans d'expérience à Agadir : très en dessous de votre niveau.",
+   "url": "https://www.rekrute.com/offre-emploi-trade-marketer-hf-recrutement-orh-assessment-agadir-185903.html",
+   "source": "ReKrute",
+   "posted": "2026-09-01",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-11-01"
   },
   {
    "id": "sigman-responsable-commercial-multinationale-casablanca-2026-09",
@@ -1098,6 +1078,20 @@
    "source": "Indeed",
    "posted": "2026-07-29",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
+   "title": "Directeur Commercial et Marketing Immobilier",
+   "company": "XCDM Maroc · promotion immobilière",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 10,
+   "why": "Huit ans d'expérience dans l'immobilier exigés, que vous n'avez pas.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-et-marketing-immobilier-recrutement-xcdm-maroc-casablanca-187619.html",
+   "source": "ReKrute",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-20",
+   "deadline": "2026-12-16"
   },
   {
    "id": "manpower-brand-manager-junior-casablanca-2026-08",

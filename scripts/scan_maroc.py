@@ -101,8 +101,12 @@ def offer_key(url):
     return ""
 
 
+GENERIC_WORDS = {"groupe", "group", "societe", "ste", "les", "la", "le", "l", "the", "ets", "cie"}
+NO_DEDUPE = {"", "confidentiel", "confidential", "michael"}
+
+
 def first_word(company):
-    w = norm(company).replace("'", " ").split()
+    w = [x for x in re.split(r"[^a-z0-9]+", norm(company)) if x and x not in GENERIC_WORDS]
     return w[0] if w else ""
 
 
@@ -251,7 +255,9 @@ def enrich_michael_page(o, page):
 
 # ---------------------------------------------------------------- estimation automatique
 EXCLUDE_TITLE = re.compile(
-    r"(?<!en )\bcharge(?:e|s|es)? (?:de|d|du|des)\b|"
+    r"(?<!en )\bcharge(?:e|s|es)?\b|\bcommerci\w* terrain\b|\battache\w* commercia\w*|\bdelegue\w*|"
+    r"\btechnico.commercia\w*|\bsuperviseu\w*|\bmerchandis\w*|\bpromot\w*|\banimat\w*|\bteleven\w*|"
+    r"\bcommunication interne\b|"
     r"\b(stagiaire|stage|internship|intern|alternan\w*|apprenti\w*|junior|assistant\w*|"
     r"community|seo|sea|ads|media buyer|content|contenu|graphiste|infographiste|designer|redacteur|"
     r"conseiller\w*|teleconseill\w*|teleprospect\w*|call ?cent\w*|sdr|sales development|formateur|"
@@ -389,7 +395,7 @@ def merge(maroc, scraped, today, now_iso, sources):
             twin = by_sig.get(same_offer_signature(s))
             # (une même entreprise publie parfois la même offre sur ReKrute et sur Exekutive, avec deux numéros)
             if twin and first_word(twin.get("company")) == first_word(s["company"]) \
-                    and first_word(s["company"]) not in ("", "confidentiel", "michael"):
+                    and first_word(s["company"]) not in NO_DEDUPE:
                 cur = twin
         if cur is not None:
             if s.get("deadline") and not cur.get("deadline"):
@@ -398,6 +404,8 @@ def merge(maroc, scraped, today, now_iso, sources):
                 est = estimate(s)
                 if est:
                     cur["family"], cur["chances"], cur["why"] = est
+                else:
+                    cur["drop"] = True  # hors du domaine recherché d'après les règles actuelles
             continue
         est = estimate(s)
         if not est:
@@ -420,12 +428,27 @@ def merge(maroc, scraped, today, now_iso, sources):
         by_sig[same_offer_signature(o)] = o
         added += 1
     before = len(offers)
-    offers = [o for o in offers if still_open(o, today, 90) and not excluded_sector(o)]
+    offers = [o for o in offers if not o.pop("drop", False)
+              and not (o.get("auto") and EXCLUDE_TITLE.search(norm(o.get("title", ""))))]
+    offers = [o for o in dedupe(offers) if still_open(o, today, 90) and not excluded_sector(o)]
     removed = before - len(offers)
     offers.sort(key=lambda o: (-int(o.get("chances") or 0), o.get("posted") or "", o.get("id")))
     offers = offers[:MAX_MAROC]
     maroc.update({"updated": now_iso, "sources": sources, "offers": offers})
     return added, removed
+
+
+def dedupe(offers):
+    """Une même offre publiée deux fois (ou sur deux sites) n'apparaît qu'une fois ; l'évaluation à la main l'emporte."""
+    seen, out = set(), []
+    for o in sorted(offers, key=lambda o: (bool(o.get("auto")), o.get("first_seen") or "")):
+        fw = first_word(o.get("company"))
+        sig = (same_offer_signature(o), fw)
+        if fw not in NO_DEDUPE and sig in seen:
+            continue
+        seen.add(sig)
+        out.append(o)
+    return out
 
 
 def sync_selection(sel, maroc, today, now_iso):
@@ -437,7 +460,7 @@ def sync_selection(sel, maroc, today, now_iso):
             continue
         if o.get("country") == "Maroc":
             m = mar.get(o["id"])
-            if not m:
+            if not m or int(m.get("chances") or 0) < SEUIL_SELECTION:
                 continue
             for k in ("chances", "why", "deadline", "url", "title", "company", "place"):
                 if k in m:
