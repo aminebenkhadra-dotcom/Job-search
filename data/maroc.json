@@ -1,11 +1,9 @@
 {
- "updated": "2026-10-12T00:28:07Z",
+ "updated": "2026-10-20T00:25:29Z",
  "sources": [
-  "Indeed",
   "ReKrute",
   "Exekutive",
-  "Michael Page",
-  "Dreamjob"
+  "Michael Page"
  ],
  "offers": [
   {
@@ -48,6 +46,36 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05"
+  },
+  {
+   "id": "confidentiel-directeur-trice-marketing-et-communication-marrakech-2026-10",
+   "title": "Directeur(trice) Marketing et Communication",
+   "company": "Confidentiel",
+   "place": "Marrakech",
+   "family": "Marketing",
+   "chances": 65,
+   "why": "Marketing, 5 à 20 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeurtrice-marketing-et-communication-recrutement-confidentiel-marrakech-186981.html",
+   "source": "ReKrute",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-29"
+  },
+  {
+   "id": "orh-assessment-trade-marketer-h-f-agadir-2026-09",
+   "title": "Trade Marketer (H/F)",
+   "company": "ORH Assessment",
+   "place": "Agadir",
+   "family": "Trade marketing",
+   "chances": 60,
+   "why": "Trade marketing, 1 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-trade-marketer-hf-recrutement-orh-assessment-agadir-185903.html",
+   "source": "ReKrute",
+   "posted": "2026-09-01",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-01"
   },
   {
    "id": "jotun-marketing-manager-casablanca-2026-09",
@@ -105,18 +133,19 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "kitea-brand-manager-casablanca-2026-08",
-   "title": "Brand Manager",
-   "company": "KITEA Group · ameublement",
+   "id": "groupe-label-vie-carrefo-charge-trade-marketing-casablanca-2026-09",
+   "title": "Charge Trade Marketing",
+   "company": "Groupe Label'Vie - Carrefour",
    "place": "Casablanca",
-   "family": "Marque & produit",
+   "family": "Trade marketing",
    "chances": 50,
-   "why": "5 ans en marque demandés, retail apprécié : vous avez les deux. Frein : annonce d'août, bientôt close.",
-   "url": "https://www.rekrute.com/offre-emploi-brand-manager-recrutement-kitea-group-casablanca-185527.html",
+   "why": "Trade marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-charge-trade-marketing-recrutement-groupe-labelvie---carrefour-casablanca-186541.html",
    "source": "ReKrute",
-   "posted": "2026-08-13",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-10-13"
+   "posted": "2026-09-16",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-16"
   },
   {
    "id": "groupe-agroalimentaire-responsable-commercial-chr-casablanca-2026-08",
@@ -132,17 +161,19 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "omega-cuisine-directeur-cave-vins-spiritueux-marrakech-2026-10",
-   "title": "Directeur de cave à vins et spiritueux",
-   "company": "Omega Cuisine",
-   "place": "Marrakech",
-   "family": "Direction",
+   "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-09",
+   "title": "Directeur en charge E-Commerce",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
    "chances": 45,
-   "why": "Votre spécialité, le vin. Freins : gestion d'une cave à Marrakech, plus opérationnelle. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aaxv2blm2sqw",
-   "source": "Indeed",
-   "posted": "2026-10-05",
-   "first_seen": "2026-10-12"
+   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-en-charge-e-commerce-recrutement-groupe-labelvie---carrefour-casablanca-186265.html",
+   "source": "ReKrute",
+   "posted": "2026-09-10",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-10"
   },
   {
    "id": "interface-directeur-commercial-fmcg-agadir-2026-10",
@@ -158,6 +189,21 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "metraco-responsable-marketing-et-communication-casablanca-2026-10",
+   "title": "Responsable Marketing et Communication",
+   "company": "Metraco",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing, 5 à 10 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-et-communication-recrutement-metraco-casablanca-187231.html",
+   "source": "ReKrute",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-06"
+  },
+  {
    "id": "michael-page-sales-manager-fmcg-marrakech-2026-09",
    "title": "Sales Manager FMCG",
    "company": "Michael Page · multinationale grande consommation",
@@ -171,17 +217,34 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "bic-brand-manager-human-expression-africa-casablanca-2026-07",
-   "title": "Brand Manager, Human Expression · Africa",
-   "company": "BIC",
+   "id": "groupe-label-vie-carrefo-category-manager-casablanca-2026-08",
+   "title": "Category Manager",
+   "company": "Groupe Label'Vie - Carrefour",
    "place": "Casablanca",
-   "family": "Marque & produit",
+   "family": "Category",
    "chances": 40,
-   "why": "Marque régionale Afrique : vous avez géré le Maroc et l'Afrique de l'Ouest. Annonce de juillet. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aatqslfd6lsn",
-   "source": "Indeed",
-   "posted": "2026-07-21",
-   "first_seen": "2026-10-12"
+   "why": "Category management, 3 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-groupe-labelvie---carrefour-casablanca-185678.html",
+   "source": "ReKrute",
+   "posted": "2026-08-25",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-10-25"
+  },
+  {
+   "id": "confidentiel-directeur-commercial-marketing-tit-mellil-2026-09",
+   "title": "Directeur Commercial & Marketing",
+   "company": "Confidentiel",
+   "place": "Tit Mellil",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-marketing-recrutement-confidentiel-tit-mellil-186432.html",
+   "source": "ReKrute",
+   "posted": "2026-09-15",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-15"
   },
   {
    "id": "labelvie-category-manager-casablanca-2026-09",
@@ -225,6 +288,21 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
+   "title": "Directeur Commercial et Marketing Immobilier",
+   "company": "XCDM Maroc",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-et-marketing-immobilier-recrutement-xcdm-maroc-casablanca-187619.html",
+   "source": "ReKrute",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-16"
+  },
+  {
    "id": "ncc-maroc-responsable-marketing-operationnel-casablanca-2026-09",
    "title": "Responsable Marketing Opérationnel",
    "company": "NCC Maroc",
@@ -249,6 +327,21 @@
    "source": "Indeed",
    "posted": "2026-09-14",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "groupe-label-vie-carrefo-chef-de-departement-marketing-operationnel-casablanca-2026-09",
+   "title": "Chef de Departement Marketing Operationnel",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-departement-marketing-operationnel-recrutement-groupe-labelvie---carrefour-casablanca-186628.html",
+   "source": "ReKrute",
+   "posted": "2026-09-18",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-18"
   },
   {
    "id": "ora-technologies-marketing-manager-casablanca-2026-09",
@@ -357,17 +450,19 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "nobu-marketing-manager-marrakech-2026-10",
-   "title": "Marketing Manager",
-   "company": "Nobu Marrakech · hôtellerie de luxe",
-   "place": "Marrakech",
+   "id": "lesieur-cristal-responsable-communication-interne-casablanca-2026-10",
+   "title": "Responsable Communication interne",
+   "company": "Lesieur Cristal",
+   "place": "Casablanca",
    "family": "Marketing",
    "chances": 30,
-   "why": "Vous connaissez le canal premium côté fournisseur. Frein : marketing hôtelier attendu. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aamlgknqbk27",
-   "source": "Indeed",
-   "posted": "2026-10-06",
-   "first_seen": "2026-10-12"
+   "why": "Marketing, 3 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-communication-interne-recrutement-lesieur-cristal-casablanca-187164.html",
+   "source": "ReKrute",
+   "posted": "2026-10-05",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-05"
   },
   {
    "id": "distribution-key-account-manager-casablanca-2026-10",
@@ -378,6 +473,19 @@
    "chances": 30,
    "why": "Grands comptes en grande distribution. Frein : 3 à 5 ans demandés, vous êtes surqualifié.",
    "url": "https://to.indeed.com/aab9ctqqfstb",
+   "source": "Indeed",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-12"
+  },
+  {
+   "id": "nobu-marketing-manager-marrakech-2026-10",
+   "title": "Marketing Manager",
+   "company": "Nobu Marrakech · hôtellerie de luxe",
+   "place": "Marrakech",
+   "family": "Marketing",
+   "chances": 30,
+   "why": "Vous connaissez le canal premium côté fournisseur. Frein : marketing hôtelier attendu. Estimation d'après l'intitulé seul.",
+   "url": "https://to.indeed.com/aamlgknqbk27",
    "source": "Indeed",
    "posted": "2026-10-06",
    "first_seen": "2026-10-12"
@@ -394,6 +502,48 @@
    "source": "Indeed",
    "posted": "2026-10-08",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "michael-page-cabinet-de-directeur-commercial-h-f-secteur-pharmaceuti-maroc-2026-10",
+   "title": "Directeur Commercial H/F (secteur pharmaceutique)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Maroc",
+   "family": "Direction",
+   "chances": 25,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-commercial-hf-secteur-pharmaceutique-maroc/ref/jn-102026-7117420",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-20",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-head-of-sales-africa-h-f-solutions-de-securi-casablanca-2026-10",
+   "title": "Head of Sales Africa H/F (Solutions de Sécurité)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 25,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/head-sales-africa-hf-solutions-de-s%C3%A9curit%C3%A9-casablanca/ref/jn-102026-7116982",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-20",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
+   "title": "Operators Key Account Manager H/F - Telecom",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 25,
+   "why": "Vente et comptes clés, 15 à 15 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-20",
+   "auto": true
   },
   {
    "id": "emeraude-responsable-marketing-communication-rabat-2026-08",
@@ -435,6 +585,21 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "m-automotiv-chef-des-ventes-laayoune-2026-09",
+   "title": "Chef des ventes",
+   "company": "M-automotiv",
+   "place": "Laayoune",
+   "family": "Vente & comptes clés",
+   "chances": 25,
+   "why": "Vente et comptes clés, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-recrutement-m-automotiv-laayoune-186822.html",
+   "source": "ReKrute",
+   "posted": "2026-09-23",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-23"
+  },
+  {
    "id": "sis-pay-brand-partnerships-manager-casablanca-2026-09",
    "title": "Brand & Partnerships Manager",
    "company": "Sis Pay · paiement",
@@ -446,6 +611,21 @@
    "source": "Indeed",
    "posted": "2026-09-28",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "carl-rogers-consulting-responsable-commercial-immobilier-h-f-marrakech-2026-10",
+   "title": "Responsable Commercial Immobilier (H/F)",
+   "company": "Carl Rogers Consulting",
+   "place": "Marrakech",
+   "family": "Vente & comptes clés",
+   "chances": 25,
+   "why": "Vente et comptes clés, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-immobilier-hf-recrutement-carl-rogers-consulting-marrakech-184052.html",
+   "source": "ReKrute",
+   "posted": "2026-10-01",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-01"
   },
   {
    "id": "interface-directeur-commercial-btob-casablanca-2026-10",
@@ -472,6 +652,36 @@
    "source": "Indeed",
    "posted": "2026-10-08",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "xcdm-maroc-trucks-sales-manager-casablanca-2026-10",
+   "title": "Trucks Sales Manager",
+   "company": "XCDM Maroc",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 25,
+   "why": "Vente et comptes clés, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-trucks-sales-manager-recrutement-xcdm-maroc-casablanca-187483.html",
+   "source": "ReKrute",
+   "posted": "2026-10-13",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-13"
+  },
+  {
+   "id": "confidentiel-country-manager-h-f-casablanca-2026-10",
+   "title": "Country Manager (H/F)",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 25,
+   "why": "Direction, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-country-manager-hf-recrutement-confidentiel-casablanca-186751.html",
+   "source": "ReKrute",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-24"
   },
   {
    "id": "michael-page-marketing-head-technologie-casablanca-2026-07",
@@ -581,6 +791,21 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "inyad-key-account-manager-casablanca-2026-09",
+   "title": "Key Account Manager",
+   "company": "Inyad",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 20,
+   "why": "Vente et comptes clés, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
+   "source": "ReKrute",
+   "posted": "2026-09-30",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-30"
+  },
+  {
    "id": "nador-west-med-cadres-marketing-commerciaux-nador-2026-10",
    "title": "Cadres Marketing et Commerciaux (2 postes)",
    "company": "Nador West Med · port",
@@ -593,19 +818,6 @@
    "posted": "2026-10-02",
    "first_seen": "2026-10-12",
    "deadline": "2026-10-23"
-  },
-  {
-   "id": "citmetal-responsable-marketing-digital-casablanca-2026-10",
-   "title": "Responsable Marketing & Digital",
-   "company": "Citmetal · industrie",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 20,
-   "why": "Industrie du métal et marketing surtout digital : loin de votre parcours. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa2l46wcbxyp",
-   "source": "Indeed",
-   "posted": "2026-10-07",
-   "first_seen": "2026-10-12"
   },
   {
    "id": "cellulift-directeur-commercial-casablanca-2026-10",
@@ -621,6 +833,34 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "citmetal-responsable-marketing-digital-casablanca-2026-10",
+   "title": "Responsable Marketing & Digital",
+   "company": "Citmetal · industrie",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 20,
+   "why": "Industrie du métal et marketing surtout digital : loin de votre parcours. Estimation d'après l'intitulé seul.",
+   "url": "https://to.indeed.com/aa2l46wcbxyp",
+   "source": "Indeed",
+   "posted": "2026-10-07",
+   "first_seen": "2026-10-12"
+  },
+  {
+   "id": "claes-medical-service-chef-de-produit-appels-doffres-secteur-medic-casablanca-2026-10",
+   "title": "Chef de Produit – Appels d’Offres (Secteur Médical)",
+   "company": "Claes Medical Service",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 20,
+   "why": "Marque et produit, 3 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-appels-doffres-secteur-medical-recrutement-claes-medical-service-casablanca-187332.html",
+   "source": "ReKrute",
+   "posted": "2026-10-09",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-09"
+  },
+  {
    "id": "kwiks-sales-marketing-manager-healthtech-temara-2026-10",
    "title": "Sales & Marketing Manager · start-up santé",
    "company": "Kwiks FRC",
@@ -632,6 +872,35 @@
    "source": "Indeed",
    "posted": "2026-10-09",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "auto-hall-responsable-communication-h-f-casablanca-2026-10",
+   "title": "Responsable communication (H/F)",
+   "company": "Auto Hall",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 20,
+   "why": "Marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-communication-hf-recrutement-auto-hall-casablanca-187486.html",
+   "source": "ReKrute",
+   "posted": "2026-10-13",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-13"
+  },
+  {
+   "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
+   "title": "Country Manager H/F (coatings)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 15,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/country-manager-hf-coatings-casablanca/ref/jn-062026-7045645",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-20",
+   "auto": true
   },
   {
    "id": "michael-page-marketing-manager-b2b-telecom-casablanca-2026-08",
@@ -660,6 +929,36 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "manpower-agences-directeur-de-communication-h-f-casablanca-2026-09",
+   "title": "Directeur de communication (H/F)",
+   "company": "Manpower Agences",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 15,
+   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-de-communication-hf-recrutement-manpower-agences-casablanca-185937.html",
+   "source": "ReKrute",
+   "posted": "2026-09-02",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-02"
+  },
+  {
+   "id": "sothema-key-account-manager-casablanca-2026-09",
+   "title": "KEY ACCOUNT MANAGER",
+   "company": "Sothema",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 3 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-sothema-casablanca-185847.html",
+   "source": "ReKrute",
+   "posted": "2026-09-09",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-10-31"
+  },
+  {
    "id": "the-view-senior-sales-manager-rabat-2026-09",
    "title": "Senior Sales Manager",
    "company": "The View Rabat · hôtellerie",
@@ -684,6 +983,21 @@
    "source": "Indeed",
    "posted": "2026-09-25",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "super-auto-group-chef-des-ventes-automobile-volkswagen-rabat-rabat-2026-09",
+   "title": "Chef des Ventes Automobile - Volkswagen Rabat",
+   "company": "Super Auto Group",
+   "place": "Rabat",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-automobile---volkswagen-rabat-recrutement-super-auto-group-rabat-187001.html",
+   "source": "ReKrute",
+   "posted": "2026-09-29",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-29"
   },
   {
    "id": "givaudan-consumer-sensory-insights-manager-casablanca-2026-10",
@@ -713,6 +1027,66 @@
    "deadline": "2026-12-05"
   },
   {
+   "id": "foods-and-goods-commercial-terrain-food-solution-tout-le-maroc-2026-10",
+   "title": "Commercial Terrain *Food Solution*",
+   "company": "Foods and Goods",
+   "place": "Tout le Maroc",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 1 à 3 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-commercial-terrain-food-solution-recrutement-foods-and-goods-tout-le-maroc-187255.html",
+   "source": "ReKrute",
+   "posted": "2026-10-07",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-07"
+  },
+  {
+   "id": "confidentiel-responsable-commercial-casablanca-2026-10",
+   "title": "Responsable Commercial",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-recrutement-confidentiel-casablanca-187344.html",
+   "source": "ReKrute",
+   "posted": "2026-10-09",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-09"
+  },
+  {
+   "id": "meski-invest-riva-indust-chef-des-ventes-h-f-beni-mellal-2026-10",
+   "title": "Chef des ventes (H/F)",
+   "company": "Meski Invest - Riva Industries",
+   "place": "Béni Mellal",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-hf-recrutement-meski-invest---riva-industries-beni-mellal-181073.html",
+   "source": "ReKrute",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-10-26"
+  },
+  {
+   "id": "maroc-diplomatique-responsable-commercial-h-f-casablanca-2026-10",
+   "title": "Responsable Commercial H/F",
+   "company": "Maroc Diplomatique",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, 3 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-hf-recrutement-maroc-diplomatique-casablanca-186692.html",
+   "source": "ReKrute",
+   "posted": "2026-10-19",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-11-21"
+  },
+  {
    "id": "pg-brand-manager-casablanca-2026-07",
    "title": "Brand Manager",
    "company": "Procter & Gamble Maroc",
@@ -738,20 +1112,6 @@
    "posted": "2026-08-31",
    "first_seen": "2026-10-12",
    "deadline": "2026-10-31"
-  },
-  {
-   "id": "centrale-danone-assistant-brand-manager-casablanca-2026-09",
-   "title": "Assistant Brand Manager",
-   "company": "Centrale Danone",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 8,
-   "why": "Poste d'assistant, pour 1 à 5 ans d'expérience.",
-   "url": "https://www.rekrute.com/offre-emploi-assistant-brand-manager-hf-recrutement-centrale-danone-casablanca-181932.html",
-   "source": "ReKrute",
-   "posted": "2026-09-11",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-11-11"
   }
  ]
 }
