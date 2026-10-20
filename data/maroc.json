@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T00:25:29Z",
+ "updated": "2026-10-20T00:36:17Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -103,21 +103,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "groupe-label-vie-carrefo-charge-trade-marketing-casablanca-2026-09",
-   "title": "Charge Trade Marketing",
-   "company": "Groupe Label'Vie - Carrefour",
-   "place": "Casablanca",
-   "family": "Trade marketing",
-   "chances": 50,
-   "why": "Trade marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-charge-trade-marketing-recrutement-groupe-labelvie---carrefour-casablanca-186541.html",
-   "source": "ReKrute",
-   "posted": "2026-09-16",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-16"
-  },
-  {
    "id": "metraco-responsable-marketing-et-communication-casablanca-2026-10",
    "title": "Responsable Marketing et Communication",
    "company": "Metraco · électroménager",
@@ -169,21 +154,6 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "groupe-label-vie-carrefo-category-manager-casablanca-2026-08",
-   "title": "Category Manager",
-   "company": "Groupe Label'Vie - Carrefour",
-   "place": "Casablanca",
-   "family": "Category",
-   "chances": 40,
-   "why": "Category management, 3 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-groupe-labelvie---carrefour-casablanca-185678.html",
-   "source": "ReKrute",
-   "posted": "2026-08-25",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-10-25"
   },
   {
    "id": "labelvie-category-manager-casablanca-2026-09",
@@ -279,21 +249,6 @@
    "posted": "2026-09-15",
    "first_seen": "2026-10-20",
    "deadline": "2026-11-15"
-  },
-  {
-   "id": "groupe-label-vie-carrefo-chef-de-departement-marketing-operationnel-casablanca-2026-09",
-   "title": "Chef de Departement Marketing Operationnel",
-   "company": "Groupe Label'Vie - Carrefour",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 35,
-   "why": "Marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-departement-marketing-operationnel-recrutement-groupe-labelvie---carrefour-casablanca-186628.html",
-   "source": "ReKrute",
-   "posted": "2026-09-18",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-18"
   },
   {
    "id": "ora-technologies-marketing-manager-casablanca-2026-09",
@@ -416,21 +371,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "lesieur-cristal-responsable-communication-interne-casablanca-2026-10",
-   "title": "Responsable Communication interne",
-   "company": "Lesieur Cristal",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 30,
-   "why": "Marketing, 3 à 5 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-communication-interne-recrutement-lesieur-cristal-casablanca-187164.html",
-   "source": "ReKrute",
-   "posted": "2026-10-05",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-05"
-  },
-  {
    "id": "distribution-key-account-manager-casablanca-2026-10",
    "title": "Key Account Manager",
    "company": "Société de distribution · grande consommation",
@@ -492,20 +432,6 @@
    "chances": 25,
    "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
    "url": "https://www.michaelpageafrica.com/fr/job-detail/head-sales-africa-hf-solutions-de-s%C3%A9curit%C3%A9-casablanca/ref/jn-102026-7116982",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-20",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
-   "title": "Operators Key Account Manager H/F - Telecom",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 25,
-   "why": "Vente et comptes clés, 15 à 15 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-20",
@@ -883,6 +809,20 @@
    "auto": true
   },
   {
+   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
+   "title": "Operators Key Account Manager H/F - Telecom",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 15,
+   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-20",
+   "auto": true
+  },
+  {
    "id": "michael-page-marketing-manager-b2b-telecom-casablanca-2026-08",
    "title": "Marketing Manager B2B · télécoms",
    "company": "Michael Page · groupe tech",
@@ -1007,21 +947,6 @@
    "deadline": "2026-12-05"
   },
   {
-   "id": "foods-and-goods-commercial-terrain-food-solution-tout-le-maroc-2026-10",
-   "title": "Commercial Terrain *Food Solution*",
-   "company": "Foods and Goods",
-   "place": "Tout le Maroc",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 1 à 3 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-commercial-terrain-food-solution-recrutement-foods-and-goods-tout-le-maroc-187255.html",
-   "source": "ReKrute",
-   "posted": "2026-10-07",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-07"
-  },
-  {
    "id": "confidentiel-responsable-commercial-casablanca-2026-10",
    "title": "Responsable Commercial",
    "company": "Confidentiel",
@@ -1106,6 +1031,36 @@
    "posted": "2026-08-31",
    "first_seen": "2026-10-12",
    "deadline": "2026-10-31"
+  },
+  {
+   "id": "super-auto-group-chef-de-produit-casablanca-2026-10",
+   "title": "Chef de Produit",
+   "company": "Super Auto Group",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 5,
+   "why": "Marque et produit, 1 à 3 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-recrutement-super-auto-group-casablanca-187230.html",
+   "source": "ReKrute",
+   "posted": "2026-10-06",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-12-06"
+  },
+  {
+   "id": "meski-invest-riva-indust-chef-des-ventes-h-f-el-jadida-2026-10",
+   "title": "Chef des ventes (H/F)",
+   "company": "Meski Invest - Riva Industries",
+   "place": "El Jadida",
+   "family": "Vente & comptes clés",
+   "chances": 5,
+   "why": "Vente et comptes clés, 3 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-hf-recrutement-meski-invest---riva-industries-el-jadida-181078.html",
+   "source": "ReKrute",
+   "posted": "2026-10-14",
+   "first_seen": "2026-10-20",
+   "auto": true,
+   "deadline": "2026-10-26"
   }
  ]
 }
