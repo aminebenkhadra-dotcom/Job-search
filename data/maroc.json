@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T06:05:19Z",
+ "updated": "2026-10-23T06:05:01Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -306,19 +306,6 @@
    "auto": true
   },
   {
-   "id": "talensya-directeur-commercial-retail-rabat-2026-07",
-   "title": "Directeur/rice Commercial · Retail",
-   "company": "Talensya Consulting",
-   "place": "Rabat",
-   "family": "Direction",
-   "chances": 30,
-   "why": "Direction commerciale dans le retail, à Rabat. Annonce de juillet. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aaxjm2y9h9q8",
-   "source": "Indeed",
-   "posted": "2026-07-24",
-   "first_seen": "2026-10-12"
-  },
-  {
    "id": "sorec-brand-manager-rabat-2026-09",
    "title": "Brand Manager (H/F)",
    "company": "SOREC · jeux et paris hippiques",
@@ -409,6 +396,21 @@
    "source": "Indeed",
    "posted": "2026-10-08",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
+   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
+   "company": "Sofrecom Maroc",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 30,
+   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
+   "source": "ReKrute",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-23",
+   "auto": true,
+   "deadline": "2026-12-22"
   },
   {
    "id": "michael-page-cabinet-de-directeur-commercial-h-f-secteur-pharmaceuti-maroc-2026-10",
