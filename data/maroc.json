@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T06:08:12Z",
+ "updated": "2026-10-27T06:07:54Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -60,6 +60,20 @@
    "posted": "2026-09-24",
    "first_seen": "2026-10-12",
    "deadline": "2026-10-27"
+  },
+  {
+   "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
+   "title": "Responsable Grands Comptes & Marketing H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Agadir",
+   "family": "Marketing",
+   "chances": 55,
+   "why": "Marketing, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-grands-comptes-marketing-hf-agadir/ref/jn-102026-7132652",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-27",
+   "auto": true
   },
   {
    "id": "labelvie-chef-departement-marketing-operationnel-casablanca-2026-09",
@@ -195,6 +209,21 @@
    "source": "Indeed",
    "posted": "2026-10-01",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
+   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
+   "company": "Sofrecom Maroc",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
+   "source": "ReKrute",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-23",
+   "auto": true,
+   "deadline": "2026-12-22"
   },
   {
    "id": "ncc-maroc-responsable-marketing-operationnel-casablanca-2026-09",
@@ -398,21 +427,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
-   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
-   "company": "Sofrecom Maroc",
-   "place": "Rabat",
-   "family": "Marketing",
-   "chances": 30,
-   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
-   "source": "ReKrute",
-   "posted": "2026-10-22",
-   "first_seen": "2026-10-23",
-   "auto": true,
-   "deadline": "2026-12-22"
-  },
-  {
    "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
    "title": "Chef de Produit / Product Manager (H/F)",
    "company": "Jameel Motors",
@@ -439,20 +453,6 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-20",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
-   "title": "Directeur Général H/F (Secteur BTP)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Direction, 15 à 15 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-secteur-btp-casablanca/ref/jn-102026-7125657",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-26",
    "auto": true
   },
   {
@@ -827,6 +827,20 @@
    "auto": true
   },
   {
+   "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
+   "title": "Directeur Général H/F (Secteur BTP)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 15,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-secteur-btp-casablanca/ref/jn-102026-7125657",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-26",
+   "auto": true
+  },
+  {
    "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
    "title": "Operators Key Account Manager H/F - Telecom",
    "company": "Michael Page · cabinet de recrutement",
@@ -980,21 +994,6 @@
    "deadline": "2026-12-09"
   },
   {
-   "id": "meski-invest-riva-indust-chef-des-ventes-h-f-beni-mellal-2026-10",
-   "title": "Chef des ventes (H/F)",
-   "company": "Meski Invest - Riva Industries",
-   "place": "Béni Mellal",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-hf-recrutement-meski-invest---riva-industries-beni-mellal-181073.html",
-   "source": "ReKrute",
-   "posted": "2026-10-14",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-10-26"
-  },
-  {
    "id": "maroc-diplomatique-responsable-commercial-h-f-casablanca-2026-10",
    "title": "Responsable Commercial H/F",
    "company": "Maroc Diplomatique",
@@ -1051,6 +1050,20 @@
    "deadline": "2026-10-31"
   },
   {
+   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
+   "title": "Directeur Général H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Kénitra",
+   "family": "Direction",
+   "chances": 5,
+   "why": "Direction, 5 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-27",
+   "auto": true
+  },
+  {
    "id": "super-auto-group-chef-de-produit-casablanca-2026-10",
    "title": "Chef de Produit",
    "company": "Super Auto Group",
@@ -1064,21 +1077,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-06"
-  },
-  {
-   "id": "meski-invest-riva-indust-chef-des-ventes-h-f-el-jadida-2026-10",
-   "title": "Chef des ventes (H/F)",
-   "company": "Meski Invest - Riva Industries",
-   "place": "El Jadida",
-   "family": "Vente & comptes clés",
-   "chances": 5,
-   "why": "Vente et comptes clés, 3 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-hf-recrutement-meski-invest---riva-industries-el-jadida-181078.html",
-   "source": "ReKrute",
-   "posted": "2026-10-14",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-10-26"
   }
  ]
 }
