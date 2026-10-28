@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T06:07:54Z",
+ "updated": "2026-10-28T06:13:36Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -46,34 +46,6 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05"
-  },
-  {
-   "id": "jotun-marketing-manager-casablanca-2026-09",
-   "title": "Marketing Manager",
-   "company": "Jotun · peintures",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 60,
-   "why": "7 ans demandés en trade, category et marque : votre parcours. Frein : secteur des peintures, nouveau pour vous.",
-   "url": "https://to.indeed.com/aa7vy7ts2mpj",
-   "source": "Indeed",
-   "posted": "2026-09-24",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-10-27"
-  },
-  {
-   "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
-   "title": "Responsable Grands Comptes & Marketing H/F",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Agadir",
-   "family": "Marketing",
-   "chances": 55,
-   "why": "Marketing, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-grands-comptes-marketing-hf-agadir/ref/jn-102026-7132652",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-27",
-   "auto": true
   },
   {
    "id": "labelvie-chef-departement-marketing-operationnel-casablanca-2026-09",
@@ -129,6 +101,20 @@
    "posted": "2026-10-06",
    "first_seen": "2026-10-20",
    "deadline": "2026-12-06"
+  },
+  {
+   "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
+   "title": "Responsable Grands Comptes & Marketing H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Agadir",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-grands-comptes-marketing-hf-agadir/ref/jn-102026-7132652",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-27",
+   "auto": true
   },
   {
    "id": "groupe-agroalimentaire-responsable-commercial-chr-casablanca-2026-08",
@@ -813,6 +799,20 @@
    "deadline": "2026-12-13"
   },
   {
+   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
+   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 15,
+   "why": "Marketing, 5 à 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-28",
+   "auto": true
+  },
+  {
    "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
    "title": "Country Manager H/F (coatings)",
    "company": "Michael Page · cabinet de recrutement",
@@ -824,6 +824,20 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-20",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
+   "title": "Directeur Général H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Kénitra",
+   "family": "Direction",
+   "chances": 15,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-27",
    "auto": true
   },
   {
@@ -1009,19 +1023,6 @@
    "deadline": "2026-11-21"
   },
   {
-   "id": "pg-brand-manager-casablanca-2026-07",
-   "title": "Brand Manager",
-   "company": "Procter & Gamble Maroc",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 10,
-   "why": "Poste d'entrée : P&G recrute surtout de jeunes diplômés qu'il forme en interne.",
-   "url": "https://to.indeed.com/aajgblh9jxm7",
-   "source": "Indeed",
-   "posted": "2026-07-29",
-   "first_seen": "2026-10-12"
-  },
-  {
    "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
    "title": "Directeur Commercial et Marketing Immobilier",
    "company": "XCDM Maroc · promotion immobilière",
@@ -1048,20 +1049,6 @@
    "posted": "2026-08-31",
    "first_seen": "2026-10-12",
    "deadline": "2026-10-31"
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
-   "title": "Directeur Général H/F",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Kénitra",
-   "family": "Direction",
-   "chances": 5,
-   "why": "Direction, 5 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-27",
-   "auto": true
   },
   {
    "id": "super-auto-group-chef-de-produit-casablanca-2026-10",
