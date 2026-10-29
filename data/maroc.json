@@ -13,10 +13,10 @@
    "place": "Kénitra",
    "family": "Trade marketing",
    "chances": 75,
-   "why": "Votre métier exact, 5 à 8 ans demandés. Risque : profil jugé trop senior.",
-   "url": "https://to.indeed.com/aalmqcnfzwqs",
+   "why": "Votre métier, en agroalimentaire, 5 ans minimum demandés. Risque : profil jugé trop senior pour le poste.",
+   "url": "https://to.indeed.com/aayhs7pvfkwr",
    "source": "Indeed",
-   "posted": "2026-10-01",
+   "posted": "2026-10-20",
    "first_seen": "2026-10-12"
   },
   {
@@ -48,6 +48,19 @@
    "deadline": "2026-12-05"
   },
   {
+   "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
+   "title": "Responsable Grands Comptes & Marketing H/F",
+   "company": "Michael Page · industriel FMCG",
+   "place": "Agadir",
+   "family": "Marketing",
+   "chances": 55,
+   "why": "Grands comptes et marques en FMCG, 8 ans demandés : votre double compétence. Freins : export attendu, poste à Agadir.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-grands-comptes-marketing-hf-agadir/ref/jn-102026-7132652",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-27"
+  },
+  {
    "id": "labelvie-chef-departement-marketing-operationnel-casablanca-2026-09",
    "title": "Chef de Département Marketing Opérationnel",
    "company": "Label'Vie · Carrefour",
@@ -76,19 +89,6 @@
    "deadline": "2027-01-08"
   },
   {
-   "id": "michael-page-brand-manager-cosmetique-casablanca-2026-09",
-   "title": "Brand Manager Cosmétique",
-   "company": "Michael Page · distributeur de marques internationales",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 50,
-   "why": "5 à 8 ans en cosmétique, luxe ou grande consommation. Votre expérience de marque compte ; le secteur vous est nouveau.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/brand-manager-cosm%C3%A9tique-hf-casablanca/ref/jn-092026-7110522",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-12"
-  },
-  {
    "id": "metraco-responsable-marketing-et-communication-casablanca-2026-10",
    "title": "Responsable Marketing et Communication",
    "company": "Metraco · électroménager",
@@ -103,31 +103,17 @@
    "deadline": "2026-12-06"
   },
   {
-   "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
-   "title": "Responsable Grands Comptes & Marketing H/F",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Agadir",
-   "family": "Marketing",
-   "chances": 45,
-   "why": "Marketing. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-grands-comptes-marketing-hf-agadir/ref/jn-102026-7132652",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-27",
-   "auto": true
-  },
-  {
-   "id": "groupe-agroalimentaire-responsable-commercial-chr-casablanca-2026-08",
-   "title": "Responsable Commercial CHR",
-   "company": "Groupe agroalimentaire · boulangerie industrielle",
+   "id": "michael-page-cabinet-de-senior-business-developer-h-f-home-appliance-casablanca-2026-10",
+   "title": "Senior Business Developer H/F (Home Appliance)",
+   "company": "Michael Page · électroménager premium",
    "place": "Casablanca",
    "family": "Vente & comptes clés",
    "chances": 45,
-   "why": "Votre canal exact, le CHR, avec 6 ans demandés. Freins : annonce d'août, poste en dessous de votre niveau.",
-   "url": "https://to.indeed.com/aaxxqwmhsjtc",
-   "source": "Indeed",
-   "posted": "2026-08-07",
-   "first_seen": "2026-10-12"
+   "why": "Distributeurs et retail pour une marque premium, 6 ans demandés. Freins : poste sans équipe, profil tech recherché.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/senior-business-developer-hf-home-appliance-casablanca/ref/jn-102026-7130182",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-22"
   },
   {
    "id": "interface-directeur-commercial-fmcg-agadir-2026-10",
@@ -136,10 +122,23 @@
    "place": "Agadir",
    "family": "Direction",
    "chances": 45,
-   "why": "Grande consommation et circuits que vous connaissez. Frein : exige d'avoir déjà dirigé une grande force de vente.",
-   "url": "https://to.indeed.com/aazh7n92lkjj",
+   "why": "Agroalimentaire, GMS et traditionnel : vos circuits. Frein : 10 à 15 ans et une grande force de vente déjà dirigée.",
+   "url": "https://to.indeed.com/aayzd6bsjgmq",
    "source": "Indeed",
    "posted": "2026-10-06",
+   "first_seen": "2026-10-12"
+  },
+  {
+   "id": "groupe-agroalimentaire-responsable-commercial-chr-casablanca-2026-08",
+   "title": "Responsable Commercial CHR",
+   "company": "Groupe agroalimentaire · boulangerie industrielle",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 45,
+   "why": "Votre canal, le CHR, 6 ans demandés en agroalimentaire. Frein : poste en dessous de votre niveau.",
+   "url": "https://to.indeed.com/aazv42hw67kd",
+   "source": "Indeed",
+   "posted": "2026-10-20",
    "first_seen": "2026-10-12"
   },
   {
@@ -156,18 +155,18 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "labelvie-category-manager-casablanca-2026-09",
-   "title": "Category Manager",
-   "company": "Label'Vie · Carrefour",
-   "place": "Casablanca",
-   "family": "Category",
+   "id": "sorec-brand-manager-rabat-2026-09",
+   "title": "Brand Manager (H/F)",
+   "company": "SOREC · jeux et paris hippiques",
+   "place": "Rabat",
+   "family": "Marque & produit",
    "chances": 40,
-   "why": "Category management en grande distribution, que vous avez pratiqué. Frein : poste pour 3 à 5 ans.",
-   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-groupe-labelvie---carrefour-casablanca-186731.html",
+   "why": "Marketing des jeux, un univers que vous connaissez bien. Freins : 3 à 5 ans demandés, poste à Rabat.",
+   "url": "https://www.rekrute.com/offre-emploi-brand-manager-hf-recrutement-sorec-rabat-186648.html",
    "source": "ReKrute",
-   "posted": "2026-09-22",
+   "posted": "2026-09-18",
    "first_seen": "2026-10-12",
-   "deadline": "2026-11-22"
+   "deadline": "2026-11-18"
   },
   {
    "id": "confidentiel-category-manager-tit-mellil-2026-09",
@@ -197,34 +196,17 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
-   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
-   "company": "Sofrecom Maroc",
-   "place": "Rabat",
-   "family": "Marketing",
+   "id": "bb-directeur-commercial-casablanca-2026-10",
+   "title": "Directeur Commercial",
+   "company": "BB",
+   "place": "Casablanca",
+   "family": "Direction",
    "chances": 40,
-   "why": "Marketing, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
-   "source": "ReKrute",
-   "posted": "2026-10-22",
-   "first_seen": "2026-10-23",
-   "auto": true,
-   "deadline": "2026-12-22"
-  },
-  {
-   "id": "confidentiel-area-manager-responsable-regional-e-tanger-2026-10",
-   "title": "Area Manager / Responsable Régional(e)",
-   "company": "Confidentiel",
-   "place": "Tanger",
-   "family": "Vente & comptes clés",
-   "chances": 40,
-   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-area-manager-responsable-regionale-recrutement-confidentiel-tanger-187998.html",
-   "source": "ReKrute",
-   "posted": "2026-10-28",
-   "first_seen": "2026-10-29",
-   "auto": true,
-   "deadline": "2026-12-28"
+   "why": "Marques et gammes vendues en grande distribution et chez les grossistes : vos circuits. Frein : profil de vente pure attendu.",
+   "url": "https://to.indeed.com/aatcky4l7hd2",
+   "source": "Indeed",
+   "posted": "2026-10-21",
+   "first_seen": "2026-10-29"
   },
   {
    "id": "ncc-maroc-responsable-marketing-operationnel-casablanca-2026-09",
@@ -322,46 +304,17 @@
    "deadline": "2026-11-29"
   },
   {
-   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
-   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
-   "company": "Michael Page · cabinet de recrutement",
+   "id": "gi-responsable-marketing-salles-de-sport-casablanca-2026-10",
+   "title": "Responsable Marketing",
+   "company": "GI · réseau de salles de sport",
    "place": "Casablanca",
    "family": "Marketing",
-   "chances": 30,
-   "why": "Marketing. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-28",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-senior-business-developer-h-f-home-appliance-casablanca-2026-10",
-   "title": "Senior Business Developer H/F (Home Appliance)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 30,
-   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/senior-business-developer-hf-home-appliance-casablanca/ref/jn-102026-7130182",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-22",
-   "auto": true
-  },
-  {
-   "id": "sorec-brand-manager-rabat-2026-09",
-   "title": "Brand Manager (H/F)",
-   "company": "SOREC · jeux et paris hippiques",
-   "place": "Rabat",
-   "family": "Marque & produit",
-   "chances": 30,
-   "why": "Univers des jeux, que vous connaissez. Freins : 2 à 5 ans demandés, poste à Rabat.",
-   "url": "https://www.rekrute.com/offre-emploi-brand-manager-hf-recrutement-sorec-rabat-186648.html",
-   "source": "ReKrute",
-   "posted": "2026-09-18",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-11-18"
+   "chances": 35,
+   "why": "Marketing B2C d'un réseau de clubs, 6 ans demandés. Frein : forte acquisition digitale attendue (Meta, Google).",
+   "url": "https://to.indeed.com/aapswbyycr8s",
+   "source": "Indeed",
+   "posted": "2026-10-23",
+   "first_seen": "2026-10-29"
   },
   {
    "id": "cheers-agency-directeur-marketing-casablanca-2026-09",
@@ -377,6 +330,20 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "labelvie-category-manager-casablanca-2026-09",
+   "title": "Category Manager",
+   "company": "Label'Vie · Carrefour",
+   "place": "Casablanca",
+   "family": "Category",
+   "chances": 30,
+   "why": "Category management côté distributeur, une première expérience suffit : poste nettement sous votre niveau.",
+   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-groupe-labelvie---carrefour-casablanca-186731.html",
+   "source": "ReKrute",
+   "posted": "2026-09-22",
+   "first_seen": "2026-10-12",
+   "deadline": "2026-11-22"
+  },
+  {
    "id": "beyondcom-directeur-marketing-casablanca-2026-09",
    "title": "Directeur/trice Marketing",
    "company": "Beyondcom",
@@ -387,19 +354,6 @@
    "url": "https://to.indeed.com/aalkh6r2hscn",
    "source": "Indeed",
    "posted": "2026-09-28",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "jil-pack-commercial-terrain-senior-chr-casablanca-2026-10",
-   "title": "Commercial Terrain Senior · CHR / HoReCa",
-   "company": "Jil Pack · emballages",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 30,
-   "why": "Votre canal, le CHR. Frein : vente terrain d'emballages, en dessous de votre niveau. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa9frw9lncp2",
-   "source": "Indeed",
-   "posted": "2026-10-05",
    "first_seen": "2026-10-12"
   },
   {
@@ -442,19 +396,18 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
-   "title": "Chef de Produit / Product Manager (H/F)",
-   "company": "Jameel Motors",
-   "place": "Casablanca",
-   "family": "Marque & produit",
+   "id": "confidentiel-area-manager-responsable-regional-e-tanger-2026-10",
+   "title": "Area Manager / Responsable Régional(e)",
+   "company": "Confidentiel",
+   "place": "Tanger",
+   "family": "Vente & comptes clés",
    "chances": 30,
-   "why": "Marque et produit, 3 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-product-manager-hf-recrutement-jameel-motors-casablanca-186387.html",
+   "why": "Réseau de boutiques beauté à piloter. Freins : gestion de magasins attendue, poste à Tanger.",
+   "url": "https://www.rekrute.com/offre-emploi-area-manager-responsable-regionale-recrutement-confidentiel-tanger-187998.html",
    "source": "ReKrute",
-   "posted": "2026-10-23",
-   "first_seen": "2026-10-24",
-   "auto": true,
-   "deadline": "2026-11-14"
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-29",
+   "deadline": "2026-12-28"
   },
   {
    "id": "michael-page-cabinet-de-directeur-commercial-h-f-secteur-pharmaceuti-maroc-2026-10",
@@ -1036,6 +989,47 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-11-21"
+  },
+  {
+   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
+   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
+   "company": "Sofrecom Maroc",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 15,
+   "why": "Études clients pour un groupe télécom : loin de votre métier de marque et de vente.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
+   "source": "ReKrute",
+   "posted": "2026-10-22",
+   "first_seen": "2026-10-23",
+   "deadline": "2026-12-22"
+  },
+  {
+   "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
+   "title": "Chef de Produit / Product Manager (H/F)",
+   "company": "Jameel Motors",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 15,
+   "why": "Chef de produit automobile, 3 à 5 ans demandés : secteur éloigné et poste sous votre niveau.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-product-manager-hf-recrutement-jameel-motors-casablanca-186387.html",
+   "source": "ReKrute",
+   "posted": "2026-10-23",
+   "first_seen": "2026-10-24",
+   "deadline": "2026-11-14"
+  },
+  {
+   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
+   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 10,
+   "why": "Communication institutionnelle dans le secteur public : hors de votre métier.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-28"
   },
   {
    "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",

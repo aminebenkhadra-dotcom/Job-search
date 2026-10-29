@@ -5,8 +5,8 @@ Lit les pages publiques d'offres de ReKrute, Exekutive et Michael Page Africa (d
 de leur robots.txt), puis met à jour data/maroc.json (onglet Maroc) et data/offres.json (Mes offres).
 
 - Les offres déjà évaluées à la main gardent leur estimation ("auto" absent ou faux).
-- Les nouvelles offres reçoivent une estimation automatique d'après l'annonce ("auto": true).
-- Les offres closes ou trop anciennes sont retirées.
+- Les nouvelles offres reçoivent une estimation automatique d'après l'annonce complète ("auto": true).
+- Les offres closes, retirées du site ou trop anciennes sont retirées.
 
 Usage : python3 scripts/scan_maroc.py            (lecture des sites)
         python3 scripts/scan_maroc.py --offline DIR   (pages déjà enregistrées, pour les tests)
@@ -20,6 +20,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.request
 import urllib.robotparser
 from urllib.parse import urlsplit
@@ -138,19 +139,25 @@ def allowed(url):
     return _robots[host].can_fetch(UA, url)
 
 
-def fetch(url):
+def fetch(url, status=False):
+    """Contenu de la page (ou None). Avec status=True : (code HTTP, contenu) ; 404 et 410 signalent une annonce retirée."""
     if not allowed(url):
         print("  ignorée (robots.txt) :", url)
-        return None
+        return (None, None) if status else None
     for attempt in (1, 2):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "fr,en;q=0.8"})
             with urllib.request.urlopen(req, timeout=40) as r:
-                return r.read().decode("utf-8", "replace")
-        except Exception as e:  # réseau, 403, 500…
+                body = r.read().decode("utf-8", "replace")
+                return (r.status, body) if status else body
+        except urllib.error.HTTPError as e:
+            if e.code in (404, 410):
+                return (e.code, None) if status else None
             print(f"  échec ({attempt}) {url} : {e}")
-            time.sleep(5)
-    return None
+        except Exception as e:  # réseau, délai dépassé…
+            print(f"  échec ({attempt}) {url} : {e}")
+        time.sleep(5)
+    return (0, None) if status else None
 
 
 # ---------------------------------------------------------------- analyse des pages
@@ -235,6 +242,11 @@ def parse_michael_page(page):
     return out
 
 
+MIN_YEARS = re.compile(
+    r"(?:minimum|minimale?|au moins)\s*(?:de\s*|d.\s*)?(\d{1,2})\s*ans|(\d{1,2})\s*ans\s*(?:d.exp\S*rience\s*)?(?:minimum|au moins)",
+    re.I)
+
+
 def enrich_michael_page(o, page):
     """Ajoute la description complète d'une offre Michael Page (secteur, années d'expérience)."""
     i = page.find("job_advert__job-desc")
@@ -247,10 +259,26 @@ def enrich_michael_page(o, page):
     if m:
         o["experience"] = [f"{m.group(1)} à {m.group(2)} ans"]
     else:
-        m = re.search(r"(\d{1,2})\s*ans (?:d'exp\S*rience )?minimum|minimum (?:de )?(\d{1,2})\s*ans", desc)
+        m = MIN_YEARS.search(desc)
         if m:
-            n = m.group(1) or m.group(2)
-            o["experience"] = [f"{n} à {n} ans"]
+            o["min_years"] = int(m.group(1) or m.group(2))
+
+
+
+def enrich_rekrute(o, page):
+    """Ajoute la description complète d'une offre ReKrute ou Exekutive : missions, profil, années demandées."""
+    i = page.find('id="BlocDetailAnnonce"')
+    if i < 0:
+        return
+    j = page.find('class="jo-testCta"', i)
+    if j < 0:
+        j = page.find('class="jo-applyBar"', i)
+    desc = text(page[i:j if j > i else i + 20000])
+    k = desc.find("Poste :")
+    o["context"] = (o.get("context", "") + " " + desc[max(k, 0):][:5000]).strip()
+    m = MIN_YEARS.search(desc[max(k, 0):])
+    if m:
+        o["min_years"] = int(m.group(1) or m.group(2))
 
 
 # ---------------------------------------------------------------- estimation automatique
@@ -266,7 +294,8 @@ EXCLUDE_TITLE = re.compile(
     r"juriste|developpeur|ingenieur|engineer|technicien|maintenance|production|usine|magasinier|"
     r"caissier\w*|vendeu\w*|store manager|responsable magasin|operations|it)\b")
 # Secteur que le candidat veut quitter : ces offres ne sont pas retenues.
-EXCLUDE_SECTOR = re.compile(r"\b(vins?|spiritueux|wines?|spirits|alcool\w*|brasseries?|bieres?|beers?|caviste|sommelier)\b")
+EXCLUDE_SECTOR = re.compile(
+    r"\b(vins?|spiritueux|wines?|spirits|brasseries?|bieres?|beers?|caviste|sommelier)\b|(?<!sans )\balcool\w*")
 GOOD_SECTOR = re.compile(
     r"\b(fmcg|grande consommation|biens de consommation|agro\w*|alimentaire|food|boissons|beverages?|"
     r"cosmeti\w*|beaute|beauty|hygiene|retail|grande distribution|gms|horeca|chr|hotellerie|luxe|luxury|premium)\b")
@@ -276,10 +305,14 @@ FAR_SECTOR = re.compile(
     r"energie|energy|btp|construction|aeronautique|education|ecole|universite|centre d.appel|presse|media|"
     r"securite|security|industri\w*|equipements?|vehicules?|camions?|trucks?|mobilite|transport|textile)\b")
 PROCUREMENT = re.compile(r"\b(procurement|sourcing|matieres premieres|strategies? achats|achats (industriels|indirects|directs))\b")
-GAMING = re.compile(r"\b(jeux|loterie|lottery|gaming|betting|hippique)\b")
+GAMING = re.compile(
+    r"\b(loterie|lottery|gaming|betting|casino|sorec|paris (?:sportifs|hippiques)|hippiques?|"
+    r"jeux (?:de hasard|d.argent|en ligne)|marocaine des jeux)\b")
 
 FAMILY_RULES = [
     ("Trade marketing", re.compile(r"\btrade\b"), 60),
+    # « Directeur commercial et marketing » : un poste de direction, pas un poste marketing
+    ("Direction", re.compile(r"\b(directeur|directrice|director|head)\b.*\b(commercia\w*|ventes?|sales)\b"), 40),
     ("Category", re.compile(r"\bcateg\w*\b"), 40),
     ("Marque & produit", re.compile(r"\b(brand|marques?|chef de produit|product manager|chef de groupe)\b"), 45),
     ("Marketing", re.compile(r"\bmarketing\b"), 45),
@@ -328,6 +361,10 @@ def estimate(o):
         return None  # category management côté achats
     parts = [FAMILY_LABEL[fam]]
     yr = years(o.get("experience") or [])
+    mn = o.get("min_years")
+    if mn and 1 <= mn <= 25:
+        # le minimum écrit dans l'annonce est plus précis que la tranche du site
+        yr = (mn, max(mn, yr[1]) if yr else mn)
     if yr:
         lo, hi = yr
         if hi <= 3:
@@ -336,7 +373,9 @@ def estimate(o):
             score -= 10
         elif hi >= 20 or lo >= 10:
             score += 10
-        parts.append(f"{lo} à {hi} ans d'expérience demandés")
+        elif lo >= 8:
+            score += 5
+        parts.append(f"{lo} ans minimum demandés" if mn and lo == mn else f"{lo} à {hi} ans d'expérience demandés")
     if GOOD_SECTOR.search(ctx):
         score += 10
         parts.append("secteur proche de votre parcours")
@@ -344,7 +383,8 @@ def estimate(o):
         score -= 15
         parts.append("secteur éloigné de votre parcours")
     if GAMING.search(ctx):
-        score += 5
+        score += 10  # univers déjà pratiqué
+        parts.append("univers des jeux, déjà pratiqué")
     score = max(5, min(70, score))
     why = ", ".join(parts) + ". Estimation automatique d'après l'annonce, à affiner."
     return fam, score, why[0].upper() + why[1:]
@@ -380,7 +420,7 @@ def still_open(o, today, max_age):
     return age <= max_age
 
 
-def merge(maroc, scraped, today, now_iso, sources):
+def merge(maroc, scraped, today, now_iso, sources, closed=frozenset()):
     iso = today.isoformat()
     offers = [o for o in maroc.get("offers", []) if isinstance(o, dict) and o.get("id")]
     by_key = {offer_key(o.get("url")): o for o in offers if offer_key(o.get("url"))}
@@ -401,11 +441,11 @@ def merge(maroc, scraped, today, now_iso, sources):
             if s.get("deadline") and not cur.get("deadline"):
                 cur["deadline"] = s["deadline"]
             if cur.get("auto"):
-                est = estimate(s)
-                if est:
-                    cur["family"], cur["chances"], cur["why"] = est
-                else:
-                    cur["drop"] = True  # hors du domaine recherché d'après les règles actuelles
+                # L'estimation du premier jour, faite avec l'annonce complète, est gardée.
+                # On vérifie seulement que l'offre n'est pas sortie du domaine recherché.
+                ctx = norm(" ".join([s["title"], s.get("company", ""), s.get("context", "")]))
+                if EXCLUDE_TITLE.search(norm(s["title"])) or EXCLUDE_SECTOR.search(ctx):
+                    cur["drop"] = True
             continue
         est = estimate(s)
         if not est:
@@ -429,6 +469,7 @@ def merge(maroc, scraped, today, now_iso, sources):
         added += 1
     before = len(offers)
     offers = [o for o in offers if not o.pop("drop", False)
+              and offer_key(o.get("url")) not in closed
               and not (o.get("auto") and EXCLUDE_TITLE.search(norm(o.get("title", ""))))]
     offers = [o for o in dedupe(offers) if still_open(o, today, 90) and not excluded_sector(o)]
     removed = before - len(offers)
@@ -501,26 +542,47 @@ def main():
         if source not in ok_sources:
             ok_sources.append(source)
 
-    # pages de détail des nouvelles offres Michael Page (le résumé de la liste ne suffit pas)
-    known = {offer_key(o.get("url")) for o in load(MAROC)["offers"]}
+    def detail(url):
+        """(code HTTP, page) d'une annonce ; hors ligne : la page enregistrée, sinon (None, None)."""
+        if offline:
+            name = os.path.join(offline, slug(url, 120) + ".html")
+            return (200, open(name, encoding="utf-8", errors="replace").read()) if os.path.exists(name) else (None, None)
+        res = fetch(url, status=True)
+        time.sleep(2.5)
+        return res
+
+    # pages de détail des nouvelles offres (le résumé des listes ne suffit pas pour estimer)
+    current = load(MAROC)["offers"]
+    known = {offer_key(o.get("url")) for o in current}
     for o in scraped:
-        if o["source"] == "Michael Page" and offer_key(o["url"]) not in known:
-            if offline:
-                name = os.path.join(offline, slug(o["url"], 120) + ".html")
-                page = open(name, encoding="utf-8", errors="replace").read() if os.path.exists(name) else None
-            else:
-                page = fetch(o["url"])
-                time.sleep(2.5)
-            if page:
+        key = offer_key(o["url"])
+        if not key or key in known:
+            continue
+        known.add(key)
+        code, page = detail(o["url"])
+        if page:
+            if o["source"] == "Michael Page":
                 enrich_michael_page(o, page)
-            known.add(offer_key(o["url"]))
+            else:
+                enrich_rekrute(o, page)
+
+    # annonces Michael Page déjà listées : sans date de clôture, on vérifie qu'elles sont toujours en ligne
+    closed = set()
+    seen_now = {offer_key(o["url"]) for o in scraped}
+    for o in current:
+        key = offer_key(o.get("url"))
+        if key.startswith("mp:") and key not in seen_now:
+            code, _ = detail(o["url"])
+            if code in (404, 410):
+                closed.add(key)
+                print("  annonce retirée :", o["url"])
 
     if not ok_sources:
         print("Aucun site n'a pu être lu : listes inchangées.")
         return 1
 
     maroc = load(MAROC)
-    added, removed = merge(maroc, scraped, today, now_iso, ok_sources)
+    added, removed = merge(maroc, scraped, today, now_iso, ok_sources, closed)
     sel = load(OFFRES)
     sync_selection(sel, maroc, today, now_iso)
     save(MAROC, maroc)
