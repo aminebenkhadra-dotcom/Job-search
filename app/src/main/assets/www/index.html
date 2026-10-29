@@ -1130,14 +1130,20 @@ function importKit(){
 
 /* lettre : sur mesure si Claude l'a écrite pour l'offre, sinon modèle du métier */
 var RECRUTEURS=/\b(confidentiel\w*|confidential|cabinet|michael page|interface|manpower\w*|ifcar\w*|talents? partners|best profil|orh|carl rogers|adecco|africa staffing|talentmind|talensya)\b/i;
+var VILLES=/\s+[-–]\s+(casablanca|rabat|marrakech|tanger|agadir|f[eè]s|mekn[eè]s|k[ée]nitra|t[ée]touan|oujda|bouskoura|mohammedia|el jadida|laayoune|tit mellil|maroc)\s*$/i;
 function cleanTitle(t){
-  t=String(t||"").split(" · ")[0].replace(/\s*[(\[]?\b[HF]\s*\/\s*[HFX]\b[)\]]?/gi,"").replace(/\s+[-–]\s*$/,"").replace(/\s{2,}/g," ").trim();
+  t=String(t||"").split(" · ")[0]
+    .replace(/\s*[(\[]?\b[HF]\s*\/\s*[HFX]\b[)\]]?/gi,"")          /* (H/F) */
+    .replace(/\((?:trice|rice|e|ne)\)|\/(?:trice|rice)\b/gi,"")      /* Directeur(trice), Régional(e) */
+    .replace(VILLES,"").replace(/\s+[-–]\s*$/,"").replace(/\s{2,}/g," ").trim();
   if(t===t.toUpperCase()&&/[A-Z]{4}/.test(t))t=t.charAt(0)+t.slice(1).toLowerCase();
   return t;
 }
 function companyOf(c){
   c=String(c||"");var name=c.split(" · ")[0].trim();
   if(!name||RECRUTEURS.test(name))return {name:"",recruiter:!!name&&!/confidenti/i.test(name)};
+  /* « Groupe agroalimentaire », « Société de distribution » : une description, pas un nom */
+  if(/^(groupe|soci[ée]t[ée]|entreprise|client)\s+[a-zà-ÿ]/.test(name.charAt(0).toLowerCase()+name.slice(1))&&!/\s[A-Z]/.test(name))return {name:"",recruiter:false};
   return {name:name,recruiter:false};
 }
 function familyOf(t){
