@@ -139,6 +139,61 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
 .filters>p{min-width:0}
 .bar .lab{white-space:normal;line-height:1.2}
 .tag.warn{background:transparent;box-shadow:inset 0 0 0 1px var(--mid);color:var(--mid);font-weight:600}
+:root{--good-soft:#DDF2E7;--mid-soft:#FBF0DA}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--good-soft:#12352A;--mid-soft:#3A2D12} }
+:root[data-theme="dark"]{--good-soft:#12352A;--mid-soft:#3A2D12}
+.tabs{display:flex}
+.tab{flex:1 1 auto;white-space:nowrap;font-size:14px;padding:10px 6px}
+@media (max-width:390px){.tab{font-size:13px;padding:9px 3px;gap:4px}.badge{padding:0 5px}}
+.badge.warnb{background:var(--mid);color:#fff}
+.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.btn.go{background:var(--accent);color:var(--on-accent);border-color:var(--accent);padding:9px 20px;border-radius:99px;font-size:14.5px}
+.btn.go:active{transform:scale(.98)}
+.tag.done{background:var(--good-soft);color:var(--good);font-weight:600}
+body.noscroll{overflow:hidden}
+.sheet-back{position:fixed;inset:0;z-index:20;background:rgba(6,16,20,.5);display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--bg);width:100%;max-width:640px;max-height:94vh;border-radius:22px 22px 0 0;display:flex;flex-direction:column;box-shadow:0 -12px 40px rgba(0,0,0,.28);animation:rise .22s ease-out}
+@media (min-width:700px){.sheet-back{align-items:center}.sheet{border-radius:22px;max-height:88vh}}
+@keyframes rise{from{transform:translateY(28px);opacity:.5}to{transform:none;opacity:1}}
+.sheet-head{display:grid;grid-template-columns:auto minmax(0,1fr) 40px;gap:12px;align-items:center;padding:16px 16px 12px;border-bottom:1px solid var(--line)}
+.sheet-head h2{font-size:18px;line-height:1.2;overflow-wrap:anywhere}
+.sh-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ring.sm{width:48px;height:48px}
+.ring.sm span{width:36px;height:36px;font-size:12.5px}
+.x{width:40px;height:40px;border-radius:50%;border:0;background:var(--sunk);font-size:24px;line-height:1;cursor:pointer;color:var(--muted)}
+.sheet-body{overflow-y:auto;padding:14px 16px 24px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.steps{display:flex;flex-direction:column;gap:12px}
+.st{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px}
+.st-h{display:flex;align-items:center;gap:10px}
+.st-h h3{font-size:16px;flex:1}
+.st .num{width:26px;height:26px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-size:14px;flex:none}
+textarea.letter{min-height:160px;font-size:14px;line-height:1.5}
+.btn.wide{width:100%;text-align:center}
+.btn.done{background:var(--good);border-color:var(--good);color:#fff;padding:13px 18px;border-radius:12px;font-size:15.5px}
+.mailbox{display:flex;flex-direction:column;gap:6px;border-top:1px dashed var(--line);padding-top:10px}
+.mailrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.st .num.ico{font-size:13px;color:var(--accent)}
+textarea.letter{resize:none;overflow:hidden}
+.segs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;padding:3px;background:var(--sunk);border:1px solid var(--line);border-radius:11px}
+.seg-b{border:0;background:transparent;border-radius:8px;padding:8px 2px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg-b[aria-pressed="true"]{background:var(--surface);color:var(--accent);box-shadow:0 1px 3px rgba(14,28,34,.14)}
+.mailrow input{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:15px;min-width:0;color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:30;background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);width:max-content;max-width:calc(100% - 32px);text-align:center;animation:rise .18s ease-out}
+.app{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:9px}
+.app.is-due{border-color:var(--mid);box-shadow:inset 4px 0 0 var(--mid)}
+.app-h{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+.app-h .body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.app h3{font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+.app h3 a{color:inherit;text-decoration:none;border-bottom:1.5px solid var(--line)}
+.pct{font-family:var(--display);font-weight:700;font-size:15px;padding:3px 10px;border-radius:99px;background:var(--sunk);font-variant-numeric:tabular-nums}
+.pct.g{color:var(--good);background:var(--good-soft)} .pct.m{color:var(--mid);background:var(--mid-soft)} .pct.l{color:var(--muted)}
+.due{color:var(--mid);font-weight:600}
+.kitrows{display:flex;flex-direction:column;gap:8px}
+.kitrow{display:grid;grid-template-columns:10px 76px minmax(0,1fr);gap:10px;align-items:center;font-size:14px}
+.kitrow>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--mid)} .dot.ok{background:var(--good)}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+@media (prefers-reduced-motion:reduce){.sheet,.toast{animation:none}}
 </style>
 </head>
 <body>
@@ -151,6 +206,7 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
     <nav class="tabs" role="tablist" aria-label="Sections de l'appli">
       <button class="tab" role="tab" type="button" id="tabbtn-feed" data-tab="feed" aria-selected="true" aria-controls="tab-feed">Mes offres<span class="badge" id="badge-feed" hidden></span></button>
       <button class="tab" role="tab" type="button" id="tabbtn-maroc" data-tab="maroc" aria-selected="false" aria-controls="tab-maroc">Maroc<span class="badge" id="badge-maroc" hidden></span></button>
+      <button class="tab" role="tab" type="button" id="tabbtn-suivi" data-tab="suivi" aria-selected="false" aria-controls="tab-suivi">Suivi<span class="badge warnb" id="badge-suivi" hidden></span></button>
       <button class="tab" role="tab" type="button" id="tabbtn-search" data-tab="search" aria-selected="false" aria-controls="tab-search">Recherche</button>
     </nav>
   </div>
@@ -158,8 +214,8 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
   <!-- ===== Onglet 1 : la sélection, tous pays ===== -->
   <div class="stack" id="tab-feed" role="tabpanel" aria-labelledby="tabbtn-feed">
     <div class="hero">
-      <h1>Vos meilleures pistes, <em>tous pays</em>.</h1>
-      <p class="muted">Les offres retenues pour vous, avec vos chances d'obtenir un entretien.</p>
+      <h1>Vos meilleures pistes, <em>au Maroc</em>.</h1>
+      <p class="muted">Vos chances d'entretien pour chaque offre. «&nbsp;Postuler&nbsp;» prépare la lettre et le CV.</p>
     </div>
     <div class="filters">
       <p class="small muted" id="feed-status">Chargement…</p>
@@ -171,7 +227,7 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
       <div class="stat"><b id="f-best">–</b><span>meilleures chances</span></div>
     </div>
     <div class="list" id="feed-list"></div>
-    <p class="foot">Liste mise à jour chaque matin, avec une notification pour les nouvelles offres. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
+    <p class="foot">Liste mise à jour chaque matin, avec une notification pour les nouvelles offres. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.</p>
   </div>
 
   <!-- ===== Onglet 2 : le marché marocain ===== -->
@@ -215,7 +271,32 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
     <p class="foot" id="m-foot">Scan refait chaque matin. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
   </div>
 
-  <!-- ===== Onglet 3 : chercher soi-même ===== -->
+  <!-- ===== Onglet 3 : les candidatures envoyées ===== -->
+  <div class="stack" id="tab-suivi" role="tabpanel" aria-labelledby="tabbtn-suivi" hidden>
+    <div class="hero">
+      <h1>Vos candidatures, <em>suivies</em>.</h1>
+      <p class="muted">Ce que vous avez envoyé, et quand relancer.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="a-sent">0</b><span>envoyées</span></div>
+      <div class="stat"><b id="a-due">0</b><span>à relancer</span></div>
+      <div class="stat"><b id="a-int">0</b><span>entretiens</span></div>
+    </div>
+    <div class="filters"><h2 id="a-title">Candidatures</h2></div>
+    <div class="list" id="a-list"></div>
+    <section class="panel" id="kit-panel">
+      <div class="step"><h2>Mon dossier</h2><button class="btn small-btn" id="kit-import" type="button" style="margin-left:auto">Importer</button></div>
+      <div class="kitrows" id="kit-rows"></div>
+      <div class="row" id="kit-cv" hidden>
+        <button class="btn ghost" id="cv-share" type="button">Partager le CV</button>
+        <button class="btn ghost" id="cv-save" type="button">Enregistrer dans Téléchargements</button>
+      </div>
+      <p class="small muted" id="kit-note"></p>
+    </section>
+    <p class="foot">Tout reste sur ce téléphone. Une notification vous rappelle de relancer 7 jours après l'envoi.</p>
+  </div>
+
+  <!-- ===== Onglet 4 : chercher soi-même ===== -->
   <div class="stack" id="tab-search" role="tabpanel" aria-labelledby="tabbtn-search" hidden>
     <div class="hero">
       <h1>Cherchez vous-même, <em>site par site</em>.</h1>
@@ -323,6 +404,18 @@ a.chip.site:active{background:var(--accent-soft);border-color:var(--accent)}
     <div class="note err" id="error" hidden></div>
   </div>
 </div>
+
+<div class="sheet-back" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title">
+    <div class="sheet-head">
+      <div class="ring sm" id="sh-ring" role="img" aria-label="Vos chances"><span></span></div>
+      <div class="sh-txt"><h2 id="sh-title"></h2><div class="meta" id="sh-meta"></div></div>
+      <button class="x" id="sh-close" type="button" aria-label="Fermer">×</button>
+    </div>
+    <div class="sheet-body" id="sh-body"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <script>
 (function(){
 "use strict";
@@ -635,7 +728,7 @@ function queriesFor(c){
   if(p.typed)return p.en.slice(0,PER_COUNTRY);
   return uniq(c.fr?[p.fr[0],p.en[0]]:p.en.slice(0,PER_COUNTRY)).slice(0,PER_COUNTRY);
 }
-function keyOf(j){return (j.title+"|"+j.company+"|"+j.place+"|"+j.cc).toLowerCase();}
+function keyOf(j){return (j.title+"|"+j.company+"|"+j.place+"|"+(j.cc||j.country||"")).toLowerCase();}
 function loadKnown(){try{var a=JSON.parse(store("radar.vues")||"null");return Array.isArray(a)?new Set(a):null;}catch(e){return null;}}
 function saveKnown(){
   if(S.example||!S.jobs.length)return;
@@ -761,7 +854,7 @@ function card(j,example){
   var ring=el("div",{class:"ring "+t,style:"--p:"+(j.score==null?0:j.score),role:"img","aria-label":j.score==null?"Estimation en attente":"Chances estimées "+j.score+" %"},
     el("span",{text:j.score==null?"–":j.score+"%"}));
   var title=j.url?el("a",{href:j.url,text:j.title}):document.createTextNode(j.title);
-  var meta=uniq([j.company,j.place,example?j.country:COUNTRIES[j.cc].name]).join(" · ");
+  var meta=uniq([j.company,j.place,example?(j.country==="Maroc"?"":j.country):COUNTRIES[j.cc].name]).join(" · ");
   var a=age(j.posted);
   var body=el("div",{class:"body"},
     el("h3",{},title),
@@ -786,6 +879,14 @@ function card(j,example){
     if(j.detail.ecarts.length)d.append(el("div",{},el("h4",{text:"Écarts"}),el("ul",{},j.detail.ecarts.map(function(x){return el("li",{text:x});}))));
     if(j.detail.conseil)d.append(el("div",{class:"tip"},el("h4",{text:"Conseil"}),j.detail.conseil));
     body.append(d);
+  }
+  if(example!==true&&j.url){
+    if(!j.id)j.id=keyOf(j);
+    var ap=appOf(j.id),acts=el("div",{class:"acts"});
+    if(ap)acts.append(el("span",{class:"tag done",text:"✓ Postulé le "+fmtDate(ap.sent)}),
+      el("button",{class:"btn ghost",type:"button",text:"Voir le suivi",onclick:function(){showTab("suivi");}}));
+    else acts.append(el("button",{class:"btn go",type:"button",text:"Postuler",onclick:function(){openApply(j);}}));
+    body.append(acts);
   }
   return el("article",{class:"job"},ring,body);
 }
@@ -843,7 +944,7 @@ function render(){
 $("more").addEventListener("click",function(){S.shown+=30;render();});
 
 /* ---------- tabs ---------- */
-var TABS=["feed","maroc","search"],TAB="feed",LISTS={};
+var TABS=["feed","maroc","suivi","search"],TAB="feed",LISTS={};
 function showTab(name){
   if(TABS.indexOf(name)<0)name="feed";
   TAB=name;
@@ -853,6 +954,7 @@ function showTab(name){
   });
   store("radar.onglet",name);
   if(LISTS[name])LISTS[name].opened();
+  if(name==="suivi")$("badge-suivi").hidden=true;
   window.scrollTo(0,0);
 }
 window.__tab=showTab;
@@ -982,10 +1084,261 @@ function renderMarocLinks(){
   sites(COUNTRIES.MA,t[M.poste]).forEach(function(s){box.append(el("a",{class:"chip site",href:s[1],text:s[0]}));});
 }
 
+/* ---------- postuler : dossier privé (CV, lettres), fiche de candidature, suivi ---------- */
+function has(fn){try{return NATIVE&&typeof window.Android[fn]==="function";}catch(e){return false;}}
+function pad(n){return (n<10?"0":"")+n;}
+function today(){var d=new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());}
+function dayOf(iso){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||"");return m?new Date(+m[1],+m[2]-1,+m[3]):null;}
+function daysSince(iso){var d=dayOf(iso);if(!d)return 0;var t=new Date();t.setHours(0,0,0,0);return Math.round((t-d)/864e5);}
+function fmtDate(iso){var d=dayOf(iso);return d?d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"}):"";}
+function fmtLong(iso){var d=dayOf(iso);return d?d.toLocaleDateString("fr-FR",{day:"numeric",month:"long"}):"";}
+
+var toastT=null;
+function toast(msg){
+  var t=$("toast");if(!msg)return;t.textContent=msg;t.hidden=false;
+  clearTimeout(toastT);toastT=setTimeout(function(){t.hidden=true;},2800);
+}
+
+/* le dossier : fichier envoyé par Claude, importé une fois ; rien de personnel dans l'appli publiée */
+var KIT=null,CVNAME="";
+function loadKit(){
+  var raw="";
+  try{raw=has("kit")?String(window.Android.kit()||""):(store("radar.kit")||"");}catch(e){raw="";}
+  KIT=null;
+  if(raw){try{var k=JSON.parse(raw);if(k&&k.radar_kit)KIT=k;}catch(e){}}
+  try{CVNAME=has("cvName")?String(window.Android.cvName()||""):(store("radar.cvname")||"");}catch(e){CVNAME="";}
+}
+window.__kit=function(ok,msg){
+  loadKit();renderKit();toast(msg||(ok?"Dossier importé":"Fichier non reconnu"));
+  if(SHEET.offer)openApply(SHEET.offer);
+};
+function importKit(){
+  if(has("pickKit"))return window.Android.pickKit();
+  var inp=el("input",{type:"file",accept:".json,application/json,application/pdf"});
+  inp.addEventListener("change",function(){
+    var f=inp.files&&inp.files[0],r=new FileReader();if(!f)return;
+    if(/\.pdf$/i.test(f.name)){store("radar.cvname",f.name);return window.__kit(true,"CV enregistré");}
+    r.onload=function(){
+      try{var k=JSON.parse(r.result);if(!k||!k.radar_kit)throw 0;var cv=k.cv;delete k.cv;
+        store("radar.kit",JSON.stringify(k));if(cv&&cv.name)store("radar.cvname",cv.name);window.__kit(true,"Dossier importé : lettres et CV prêts");}
+      catch(e){window.__kit(false,"Fichier non reconnu");}
+    };
+    r.readAsText(f);
+  });
+  inp.click();
+}
+
+/* lettre : sur mesure si Claude l'a écrite pour l'offre, sinon modèle du métier */
+var RECRUTEURS=/\b(confidentiel\w*|confidential|cabinet|michael page|interface|manpower\w*|ifcar\w*|talents? partners|best profil|orh|carl rogers|adecco|africa staffing|talentmind|talensya)\b/i;
+function cleanTitle(t){
+  t=String(t||"").split(" · ")[0].replace(/\s*[(\[]?\b[HF]\s*\/\s*[HFX]\b[)\]]?/gi,"").replace(/\s+[-–]\s*$/,"").replace(/\s{2,}/g," ").trim();
+  if(t===t.toUpperCase()&&/[A-Z]{4}/.test(t))t=t.charAt(0)+t.slice(1).toLowerCase();
+  return t;
+}
+function companyOf(c){
+  c=String(c||"");var name=c.split(" · ")[0].trim();
+  if(!name||RECRUTEURS.test(name))return {name:"",recruiter:!!name&&!/confidenti/i.test(name)};
+  return {name:name,recruiter:false};
+}
+function familyOf(t){
+  t=String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  if(/\btrade\b/.test(t))return "Trade marketing";
+  if(/\b(directeur|directrice|director|head)\b.*\b(commercia\w*|ventes?|sales)\b/.test(t))return "Direction";
+  if(/\bcateg/.test(t))return "Category";
+  if(/\b(brand|marques?|chef de produit|product manager|chef de groupe)\b/.test(t))return "Marque & produit";
+  if(/\b(marketing|e-?commerce|digital|communication|crm)\b/.test(t))return "Marketing";
+  if(/\b(directeur general|country manager|general manager|managing director)\b/.test(t))return "Direction";
+  return "Vente & comptes clés";
+}
+function fill(t,v){return String(t||"").replace(/\{(\w+)\}/g,function(m,k){return v[k]!=null?v[k]:"";});}
+function varsFor(o,extra){
+  var p=cleanTitle(o.title),c=companyOf(o.company),city=String(o.place||"").trim(),k;
+  var v={poste:p,de_poste:(/^[aeiouyàâéèêëîïôöûü]/i.test(p)?"d'":"de ")+p,chez:c.name?" chez "+c.name:"",entreprise:c.name,
+    a_entreprise:c.name?" à "+c.name:(c.recruiter?" à votre client":""),
+    ville:city&&!/^(maroc|morocco)$/i.test(city)?" à "+city:"",signature:KIT&&KIT.signature||""};
+  for(k in extra||{})v[k]=extra[k];
+  return v;
+}
+function letterFor(o){
+  if(!KIT)return "";
+  var v=varsFor(o),custom=KIT.letters&&o.id&&KIT.letters[o.id],fams=KIT.families||{};
+  if(custom)return fill(custom,v);
+  return fill([KIT.opening,fams[o.family||familyOf(o.title)]||fams.Marketing,KIT.closing].filter(Boolean).join("\n\n"),v);
+}
+function subjectFor(o){return fill(KIT&&KIT.subject||"Candidature – {poste}",varsFor(o));}
+function siteOf(o){
+  var u=o.url||"";
+  if(/michaelpage/.test(u))return {name:"Michael Page",url:u.replace("/job-detail/","/job-apply/"),hint:"Formulaire Michael Page : ajoutez votre CV, puis collez la lettre."};
+  if(/exekutive\.biz/.test(u))return {name:"Exekutive",url:u,hint:"Connectez-vous avec votre compte ReKrute, touchez « Postuler » et collez la lettre si elle est demandée."};
+  if(/rekrute\.com/.test(u))return {name:"ReKrute",url:u,hint:"Connectez-vous à ReKrute, touchez « Postuler » et collez la lettre si elle est demandée."};
+  if(/indeed\./.test(u)||o.via==="Indeed")return {name:"Indeed",url:u,hint:"Postulez avec votre CV sur Indeed et collez la lettre si elle est demandée."};
+  if(/linkedin\./.test(u))return {name:"LinkedIn",url:u,hint:"Postulez sur LinkedIn et collez la lettre en message."};
+  return {name:o.via||"le site",url:u,hint:"Postulez sur le site avec votre CV et collez la lettre."};
+}
+function copy(text,msg){
+  var done=false;
+  try{if(has("copy")){window.Android.copy(text);done=true;}}catch(e){}
+  if(!done&&navigator.clipboard)navigator.clipboard.writeText(text).catch(function(){});
+  toast(msg||"Copié");
+}
+function openUrl(u){
+  if(!/^https:\/\//.test(u||""))return;
+  try{if(has("open"))return window.Android.open(u);}catch(e){}
+  window.open(u,"_blank","noopener");
+}
+function sendMail(to,subject,body){
+  if(has("send"))return window.Android.send(JSON.stringify({to:to,subject:subject,body:body}));
+  location.href="mailto:"+encodeURIComponent(to)+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+}
+
+/* candidatures : gardées sur le téléphone, recopiées côté Android pour le rappel de relance */
+var APPS=[];
+function loadApps(){try{var a=JSON.parse(store("radar.candidatures")||"[]");APPS=Array.isArray(a)?a.filter(function(x){return x&&x.id&&x.title;}):[];}catch(e){APPS=[];}}
+function syncApps(){try{if(has("saveApps"))window.Android.saveApps(JSON.stringify(APPS));}catch(e){}}
+function saveApps(){store("radar.candidatures",JSON.stringify(APPS));syncApps();renderApps();refreshCards();}
+function appOf(id){for(var i=0;i<APPS.length;i++)if(APPS[i].id===id)return APPS[i];return null;}
+function due(a){return (a.status==="envoyee"&&daysSince(a.sent)>=7)||(a.status==="relancee"&&daysSince(a.relance||a.sent)>=10);}
+function markSent(o){
+  var a=appOf(o.id);
+  if(!a){a={id:o.id,title:o.title,company:o.company,place:o.place,url:o.url,via:o.via,score:o.score,family:o.family||familyOf(o.title)};APPS.unshift(a);}
+  a.sent=today();a.status="envoyee";delete a.relance;saveApps();
+}
+function refreshCards(){
+  Object.keys(LISTS).forEach(function(n){if(LISTS[n].loaded||LISTS[n].offers.length)LISTS[n].render();});
+  if(!S.example)render();
+}
+
+/* fiche en bas d'écran */
+var SHEET={offer:null};
+function openSheet(title,meta,score,content){
+  $("sh-title").textContent=title;$("sh-meta").textContent=meta;
+  var r=$("sh-ring");r.hidden=score==null;
+  if(score!=null){r.className="ring sm "+tierC(score);r.style.setProperty("--p",score);r.firstChild.textContent=score+"%";}
+  var b=$("sh-body");b.textContent="";b.append(content);b.scrollTop=0;
+  $("sheet").hidden=false;document.body.classList.add("noscroll");
+}
+function closeSheet(){$("sheet").hidden=true;document.body.classList.remove("noscroll");SHEET.offer=null;}
+window.__back=function(){if(!$("sheet").hidden){closeSheet();return true;}return false;};
+$("sh-close").addEventListener("click",closeSheet);
+$("sheet").addEventListener("click",function(e){if(e.target===$("sheet"))closeSheet();});
+function metaOf(o){return uniq([companyOf(o.company).name||String(o.company||"").split(" · ")[0],o.place]).join(" · ");}
+function step(n,title,extra){
+  return el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num",text:n}),el("h3",{text:title}),extra||null));
+}
+function mailRow(getSubject,getBody){
+  var mail=el("input",{type:"email",inputmode:"email",autocomplete:"off",placeholder:"adresse e-mail","aria-label":"Adresse e-mail du recruteur"});
+  return el("div",{class:"mailbox"},el("p",{class:"small muted",text:CVNAME?"Ou par e-mail, CV joint :":"Ou par e-mail :"}),
+    el("div",{class:"mailrow"},mail,el("button",{class:"btn",type:"button",text:"Envoyer",onclick:function(){sendMail(mail.value.trim(),getSubject(),getBody());}})));
+}
+function autosize(ta){
+  function fit(){ta.style.height="auto";ta.style.height=(ta.scrollHeight+2)+"px";}
+  ta.addEventListener("input",fit);requestAnimationFrame(fit);
+}
+function openApply(o){
+  SHEET.offer=o;
+  var site=siteOf(o),a=appOf(o.id),ta=null,box=el("div",{class:"steps"});
+  if(KIT){ta=el("textarea",{class:"letter","aria-label":"Lettre de candidature",spellcheck:"false"});ta.value=letterFor(o);}
+  var s1=step("1","Postuler");
+  s1.append(el("button",{class:"btn primary wide",type:"button",onclick:function(){
+      if(ta)copy(ta.value,"Lettre copiée : collez-la sur "+site.name);openUrl(site.url);}},"Postuler sur "+site.name+" ↗"),
+    el("p",{class:"small muted",text:nb((ta?"La lettre est copiée en même temps. ":"")+site.hint)}),
+    mailRow(function(){return subjectFor(o);},function(){return ta?ta.value:"";}));
+  var s2=step("2","C'est envoyé ?");
+  if(a)s2.append(el("p",{class:"small",text:"Déjà dans votre suivi : envoyée le "+fmtLong(a.sent)+"."}),
+    el("button",{class:"btn wide",type:"button",text:"Voir le suivi",onclick:function(){closeSheet();showTab("suivi");}}));
+  else s2.append(el("button",{class:"btn done wide",type:"button",text:"Oui, ajouter à mon suivi",onclick:function(){
+    markSent(o);closeSheet();toast("Ajoutée au suivi · rappel de relance dans 7 jours");}}));
+  var s3;
+  if(ta){
+    s3=el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num ico",text:"✎"}),el("h3",{text:"Votre lettre"}),
+      el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){copy(ta.value,"Lettre copiée");}})));
+    s3.append(el("p",{class:"small muted",text:KIT.letters&&KIT.letters[o.id]?"Écrite pour cette offre. Modifiable avant l'envoi.":"Adaptée à ce métier. Modifiable avant l'envoi."}),ta);
+  }else{
+    s3=el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num ico",text:"✎"}),el("h3",{text:"Lettre et CV prêts ?"})));
+    s3.append(el("p",{class:"small",text:"Importez le dossier envoyé par Claude : une lettre prête pour chaque offre, et le CV joint aux e-mails."}),
+      el("div",{class:"row"},el("button",{class:"btn",type:"button",text:"Importer mon dossier",onclick:importKit})));
+  }
+  box.append(s1,s2,s3);
+  openSheet(cleanTitle(o.title),metaOf(o),o.score,box);
+  if(ta)autosize(ta);
+}
+function openRelance(a){
+  SHEET.offer=null;
+  var o={id:a.id,title:a.title,company:a.company,place:a.place,url:a.url,via:a.via,family:a.family};
+  var v=varsFor(o,{date:fmtLong(a.sent)}),f=KIT&&KIT.followup||{};
+  var ta=el("textarea",{class:"letter","aria-label":"Message de relance",spellcheck:"false"});
+  ta.value=fill(f.body||"Madame, Monsieur,\n\nJe me permets de revenir vers vous au sujet de ma candidature au poste {de_poste}{chez}, envoyée le {date}. Ce poste m'intéresse vivement et je reste disponible pour un échange à votre convenance.\n\nBien cordialement,\n{signature}",v).trim();
+  var s1=step("1","Votre message",el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){copy(ta.value,"Message copié");}}));
+  s1.append(ta,el("p",{class:"small muted",text:"Pas d'adresse ? Copiez le message et envoyez-le au recruteur sur LinkedIn."}),
+    mailRow(function(){return fill(f.subject||"Relance – Candidature {poste}",v);},function(){return ta.value;}));
+  if(a.url)s1.append(el("button",{class:"btn ghost",type:"button",text:"Revoir l'offre ↗",onclick:function(){openUrl(a.url);}}));
+  var s2=step("2","C'est fait ?");
+  s2.append(el("button",{class:"btn done wide",type:"button",text:"Oui, relance envoyée",onclick:function(){
+    a.status="relancee";a.relance=today();saveApps();closeSheet();toast("Relance notée");}}));
+  var box=el("div",{class:"steps"});box.append(s1,s2);
+  openSheet("Relancer · "+cleanTitle(a.title),metaOf(a),a.score,box);
+  autosize(ta);
+}
+
+/* onglet Suivi */
+var STATUTS=[["envoyee","Envoyée"],["relancee","Relancée"],["entretien","Entretien"],["refus","Refus"]];
+function renderApps(){
+  var list=$("a-list"),nDue=APPS.filter(due).length;list.textContent="";
+  $("a-sent").textContent=APPS.length;$("a-due").textContent=nDue;
+  $("a-int").textContent=APPS.filter(function(a){return a.status==="entretien";}).length;
+  var b=$("badge-suivi");b.textContent=nDue;b.hidden=!nDue||TAB==="suivi";
+  $("a-title").textContent=APPS.length?APPS.length+" candidature"+(APPS.length>1?"s":""):"Candidatures";
+  if(!APPS.length){
+    list.append(el("div",{class:"empty"},el("p",{text:nb("Aucune candidature pour l'instant. Touchez « Postuler » sur une offre : elle s'ajoute ici.")}),
+      el("button",{class:"btn primary small-btn",type:"button",text:"Voir mes offres",onclick:function(){showTab("feed");}})));
+    return;
+  }
+  APPS.slice().sort(function(x,y){return (due(y)-due(x))||String(y.relance||y.sent).localeCompare(String(x.relance||x.sent));}).forEach(function(a){
+    var d=due(a),open=a.status==="envoyee"||a.status==="relancee";
+    var title=a.url?el("a",{href:a.url,text:cleanTitle(a.title)}):document.createTextNode(cleanTitle(a.title));
+    var head=el("div",{class:"app-h"},el("div",{class:"body"},el("h3",{},title),el("div",{class:"meta",text:metaOf(a)})),
+      a.score!=null?el("span",{class:"pct "+tierC(a.score),text:a.score+"%"}):null);
+    var when=(a.relance?"Relancée le "+fmtDate(a.relance):"Envoyée le "+fmtDate(a.sent))+(d?" · à relancer":"");
+    var chips=el("div",{class:"segs",role:"group","aria-label":"Statut"});
+    STATUTS.forEach(function(s){chips.append(el("button",{class:"seg-b",type:"button","aria-pressed":a.status===s[0]?"true":"false",text:s[1],onclick:function(){
+      if(a.status===s[0])return;a.status=s[0];if(s[0]==="relancee")a.relance=a.relance||today();saveApps();}}));});
+    var acts=el("div",{class:"row"});
+    if(open)acts.append(el("button",{class:d?"btn primary small-btn":"btn",type:"button",text:"Relancer",onclick:function(){openRelance(a);}}));
+    var rm=el("button",{class:"btn ghost",type:"button",text:"Retirer",onclick:function(){
+      if(rm.dataset.ok){APPS=APPS.filter(function(x){return x!==a;});saveApps();toast("Retirée du suivi");return;}
+      rm.dataset.ok="1";rm.textContent="Confirmer le retrait";setTimeout(function(){delete rm.dataset.ok;rm.textContent="Retirer";},3500);}});
+    acts.append(rm);
+    list.append(el("article",{class:"app"+(d?" is-due":"")},head,el("p",{class:"small "+(d?"due":"muted"),text:when}),chips,acts));
+  });
+}
+function renderKit(){
+  var rows=$("kit-rows");rows.textContent="";
+  function row(ok,label,val){rows.append(el("div",{class:"kitrow"},el("span",{class:"dot"+(ok?" ok":"")}),el("b",{text:label}),el("span",{class:ok?"":"muted",text:val})));}
+  var n=KIT&&KIT.letters?Object.keys(KIT.letters).length:0;
+  row(!!CVNAME,"CV",CVNAME||"à importer");
+  row(!!KIT,"Lettres",KIT?n+" sur mesure, et un modèle par métier":"à importer");
+  row(!!(KIT&&KIT.profile),"Contact",KIT&&KIT.profile?(KIT.profile.email||KIT.profile.phone||"✓"):"à importer");
+  $("kit-import").textContent=KIT||CVNAME?"Remplacer":"Importer";
+  $("kit-note").textContent=nb(KIT?"Dossier du "+fmtLong(KIT.updated)+". Pour le changer, importez le nouveau fichier envoyé par Claude."
+    :"Importez le fichier « Dossier-candidature » envoyé par Claude, ou simplement votre CV en PDF.");
+  $("kit-cv").hidden=!(CVNAME&&(has("shareCv")||has("saveCv")));
+  /* tant que le dossier manque, il passe en tête de l'onglet */
+  var tab=$("tab-suivi"),panel=$("kit-panel");
+  tab.insertBefore(panel,KIT||CVNAME?tab.querySelector(".foot"):tab.children[1]);
+}
+$("kit-import").addEventListener("click",importKit);
+$("cv-share").addEventListener("click",function(){if(has("shareCv"))window.Android.shareCv();});
+$("cv-save").addEventListener("click",function(){
+  if(!has("saveCv"))return;
+  toast(window.Android.saveCv()?"CV enregistré dans Téléchargements":"Impossible ici : utilisez « Partager le CV »");
+});
+
+loadKit();loadApps();syncApps();renderKit();renderApps();
 loadKeys();$("keys").hidden=true;
 renderRegions();renderKeys();renderAlerts();render();renderMarocLinks();
 showTab((location.hash||"").replace("#","")||store("radar.onglet")||"feed");
 LISTS.feed.load();LISTS.maroc.load();
+try{if(has("notice"))toast(String(window.Android.notice()||""));}catch(e){}
 })();
 </script>
 </body>

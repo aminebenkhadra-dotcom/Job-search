@@ -88,8 +88,15 @@ public class AlertWorker extends Worker {
     return Result.success();
   }
 
-  /** Affiche une notification ; la toucher ouvre l'appli sur l'onglet indiqué. */
+  /** Annonce de nouvelles offres ; la toucher ouvre l'appli sur l'onglet indiqué. */
   static void announce(Context ctx, List<String> fresh, int notifId, String tab, String label) {
+    int n = fresh.size();
+    notify(ctx, fresh, notifId, tab, n == 1 ? "1 nouvelle offre " + label : n + " nouvelles offres " + label);
+  }
+
+  /** Affiche une notification (titre, puis jusqu'à 5 lignes) qui ouvre l'appli sur l'onglet indiqué. */
+  static void notify(Context ctx, List<String> fresh, int notifId, String tab, String title) {
+    if (fresh.isEmpty()) return;
     NotificationManager nm = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
     if (nm == null) return;
     if (Build.VERSION.SDK_INT >= 26) {
@@ -105,9 +112,6 @@ public class AlertWorker extends Worker {
       if (i > 0) lines.append('\n');
       lines.append(fresh.get(i));
     }
-    int n = fresh.size();
-    String title = n == 1 ? "1 nouvelle offre " + label : n + " nouvelles offres " + label;
-
     Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(ctx, CHANNEL) : new Notification.Builder(ctx);
     b.setSmallIcon(android.R.drawable.ic_menu_search)
         .setContentTitle(title)

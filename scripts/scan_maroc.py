@@ -503,7 +503,7 @@ def sync_selection(sel, maroc, today, now_iso):
             m = mar.get(o["id"])
             if not m or int(m.get("chances") or 0) < SEUIL_SELECTION:
                 continue
-            for k in ("chances", "why", "deadline", "url", "title", "company", "place"):
+            for k in ("chances", "why", "deadline", "url", "title", "company", "place", "posted"):
                 if k in m:
                     o[k] = m[k]
         keep.append(o)
