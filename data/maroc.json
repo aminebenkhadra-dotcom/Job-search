@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T06:13:36Z",
+ "updated": "2026-10-29T06:15:44Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -212,6 +212,21 @@
    "deadline": "2026-12-22"
   },
   {
+   "id": "confidentiel-area-manager-responsable-regional-e-tanger-2026-10",
+   "title": "Area Manager / Responsable Régional(e)",
+   "company": "Confidentiel",
+   "place": "Tanger",
+   "family": "Vente & comptes clés",
+   "chances": 40,
+   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-area-manager-responsable-regionale-recrutement-confidentiel-tanger-187998.html",
+   "source": "ReKrute",
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-29",
+   "auto": true,
+   "deadline": "2026-12-28"
+  },
+  {
    "id": "ncc-maroc-responsable-marketing-operationnel-casablanca-2026-09",
    "title": "Responsable Marketing Opérationnel",
    "company": "NCC Maroc",
@@ -305,6 +320,20 @@
    "posted": "2026-10-06",
    "first_seen": "2026-10-20",
    "deadline": "2026-11-29"
+  },
+  {
+   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
+   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 30,
+   "why": "Marketing. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-28",
+   "auto": true
   },
   {
    "id": "michael-page-cabinet-de-senior-business-developer-h-f-home-appliance-casablanca-2026-10",
@@ -799,20 +828,6 @@
    "deadline": "2026-12-13"
   },
   {
-   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
-   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 15,
-   "why": "Marketing, 5 à 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-28",
-   "auto": true
-  },
-  {
    "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
    "title": "Country Manager H/F (coatings)",
    "company": "Michael Page · cabinet de recrutement",
@@ -1064,6 +1079,21 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-06"
+  },
+  {
+   "id": "al-akhawayn-university-business-communication-business-development-ifrane-2026-10",
+   "title": "Business Communication & Business Development Project Manager",
+   "company": "Al Akhawayn University",
+   "place": "Ifrane",
+   "family": "Marketing",
+   "chances": 5,
+   "why": "Marketing, 3 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-business-communication-business-development-project-manager-recrutement-al-akhawayn-university-ifrane-187972.html",
+   "source": "ReKrute",
+   "posted": "2026-10-28",
+   "first_seen": "2026-10-29",
+   "auto": true,
+   "deadline": "2026-12-28"
   }
  ]
 }
