@@ -51,7 +51,7 @@ PAGES = (
     + [("Talent.com", "https://ma.talent.com/jobs?k=" + quote_plus(q) + "&l=Maroc") for q in TALENT_QUERIES]
     + [("Jobzyn", "https://www.jobzyn.com/fr/jobs/maroc?searchQuery=" + quote(q) + "&pageSize=100") for q in JOBZYN_QUERIES]
     + [("MaroCadres", "https://www.marocadres.com/")]
-    + [("Fed Africa", "https://www.fedafrica.com/offres?q%5Bgeo_area_id_in%5D%5B%5D=35")]
+    + [("Fed Africa", "https://www.fedafrica.com/offres?q%5Bexpertise_area_id_in%5D%5B%5D=2&q%5Bgeo_area_id_in%5D%5B%5D=35")]
 )
 
 MAX_MAROC = 120
@@ -174,6 +174,7 @@ def allowed(url):
 
 def fetch(url, status=False):
     """Contenu de la page (ou None). Avec status=True : (code HTTP, contenu) ; 404 et 410 signalent une annonce retirée."""
+    url = quote(url, safe=":/?&=%#+,;@!$'()*[]~")  # accents dans l'adresse
     if not allowed(url):
         print("  ignorée (robots.txt) :", url)
         return (None, None) if status else None
@@ -366,8 +367,8 @@ def parse_talent(page, today):
         posted = ago_to_date(g("timeText"), today)
         if not href or not title or not place or posted is None:
             continue
-        if norm(company).startswith("michael page"):
-            continue  # déjà lu directement chez Michael Page
+        if re.match(r"(michael page|marocadres|rekrute|exekutive)", norm(company)) or norm(company) == norm(title):
+            continue  # site déjà lu directement, ou annonce sans entreprise
         out.append({"title": title, "company": company, "place": place, "url": "https://ma.talent.com" + href.group(1),
                     "source": "Talent.com", "posted": posted, "deadline": "", "experience": [], "context": ""})
     return out
@@ -460,18 +461,20 @@ EXCLUDE_TITLE = re.compile(
     r"formatrice|recouvrement|achats?|acheteur|purchas\w*|procurement|sourcing|supply|logisti\w*|hse|"
     r"ehs|qualite|quality|rh|ressources humaines|recrut\w*|comptab\w*|financ\w*|controle de gestion|"
     r"juriste|developpeur|ingenieur|engineer|technicien|maintenance|production|usine|magasinier|"
-    r"caissier\w*|vendeu\w*|store manager|responsable magasin|operations|it)\b")
+    r"caissier\w*|vendeu\w*|store manager|responsable magasin|operations|it|si|amoa|moa|erp|data|ppc|amazon)\b")
 # Secteur que le candidat veut quitter : ces offres ne sont pas retenues.
 EXCLUDE_SECTOR = re.compile(
     r"\b(vins?|spiritueux|wines?|spirits|brasseries?|bieres?|beers?|caviste|sommelier)\b|(?<!sans )\balcool\w*")
 GOOD_SECTOR = re.compile(
     r"\b(fmcg|grande consommation|biens de consommation|agro\w*|alimentaire|food|boissons|beverages?|"
-    r"cosmeti\w*|beaute|beauty|hygiene|retail|grande distribution|gms|horeca|chr|hotellerie|luxe|luxury|premium)\b")
+    r"cosmeti\w*|beaute|beauty|hygiene|retail|grande distribution|gms|horeca|chr)\b")
 FAR_SECTOR = re.compile(
-    r"\b(pharma\w*|medical\w*|sante|clinique|automobile|automotive|informatique|logiciel|saas|software|"
+    r"\b(pharma\w*|medical\w*|sante|clinique|auto|automobile|automotiv\w*|motors?|informatique|logiciel|saas|software|bank|banking|"
+    r"fintech|paiement|payment|logisti\w*|cyber\w*|sterili\w*|"
     r"telecom\w*|technolog\w*|banque|bancaire|assurance\w*|immobilier|real estate|petrol\w*|carburants?|"
     r"energie|energy|btp|construction|aeronautique|education|ecole|universite|centre d.appel|presse|media|"
-    r"securite|security|industri\w*|equipements?|vehicules?|camions?|trucks?|mobilite|transport|textile)\b")
+    r"securite|security|equipements? industriels?|vehicules?|camions?|trucks?|mobilite|transport|textile|"
+    r"chimie|parachimie|metallurg\w*|siderurg\w*|plasturg\w*)\b")
 PROCUREMENT = re.compile(r"\b(procurement|sourcing|matieres premieres|strategies? achats|achats (industriels|indirects|directs))\b")
 GAMING = re.compile(
     r"\b(loterie|lottery|gaming|betting|casino|sorec|paris (?:sportifs|hippiques)|hippiques?|"
@@ -570,10 +573,18 @@ def estimate(o):
         elif lo >= 8:
             score += 5
         parts.append(f"{lo} à {hi} ans demandés" if hi and hi != lo else f"{lo} ans minimum demandés")
-    if GOOD_SECTOR.search(ctx):
+    # Le secteur se lit d'abord dans l'intitulé et l'entreprise, puis au début de l'annonce, puis dans tout le texte.
+    # Au premier niveau qui tranche, on s'arrête ; si les deux secteurs apparaissent, l'intitulé penche vers « éloigné ».
+    sector = ""
+    for level, txt in enumerate((norm(o["title"] + " " + o.get("company", "")), norm(o.get("context", "")[:150]), ctx)):
+        good, far = bool(GOOD_SECTOR.search(txt)), bool(FAR_SECTOR.search(txt))
+        if good or far:
+            sector = "far" if far and (not good or level == 0) else ("good" if not far else "")
+            break
+    if sector == "good":
         score += 10
         parts.append("secteur proche de votre parcours")
-    elif FAR_SECTOR.search(ctx):
+    elif sector == "far":
         score -= 15
         parts.append("secteur éloigné de votre parcours")
     if GAMING.search(ctx):
