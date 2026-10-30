@@ -1,0 +1,48 @@
+ReKrute        3 offres au Maroc · https://www.rekrute.com/emploi-Trade-Marketing-Manager
+ReKrute        5 offres au Maroc · https://www.rekrute.com/emploi-trade-marketing
+ReKrute        0 offres au Maroc · https://www.rekrute.com/emploi-responsable-trade-marketing
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-Marketing%20Manager
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-responsable-marketing
+ReKrute        8 offres au Maroc · https://www.rekrute.com/emploi-directeur-marketing
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-Marketing-op%C3%A9rationnel
+ReKrute        6 offres au Maroc · https://www.rekrute.com/emploi-brand-manager
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-chef-de-produit
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-chef-de-groupe
+ReKrute        3 offres au Maroc · https://www.rekrute.com/emploi-category-manager
+ReKrute        4 offres au Maroc · https://www.rekrute.com/emploi-Key%20Account%20Manager
+ReKrute        3 offres au Maroc · https://www.rekrute.com/emploi-grands-comptes
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-directeur-commercial
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-responsable-commerciale
+ReKrute        0 offres au Maroc · https://www.rekrute.com/emploi-directeur-des-ventes
+ReKrute        4 offres au Maroc · https://www.rekrute.com/emploi-chef-des-ventes
+ReKrute        5 offres au Maroc · https://www.rekrute.com/emploi-business-development-manager
+ReKrute        2 offres au Maroc · https://www.rekrute.com/emploi-country-manager
+ReKrute       10 offres au Maroc · https://www.rekrute.com/emploi-FMCG
+ReKrute        6 offres au Maroc · https://www.rekrute.com/emploi-grande-consommation
+ReKrute        8 offres au Maroc · https://www.rekrute.com/emploi-CHR
+Exekutive     10 offres au Maroc · https://exekutive.biz/offres-emploi-afrique.html
+Michael Page   6 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/marketing-agences
+Michael Page   6 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/ventes
+Michael Page   5 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/marketing-director
+Michael Page   3 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/directeur-commercial/africa
+Talent.com     7 offres au Maroc · https://ma.talent.com/jobs?k=trade+marketing&l=Maroc
+Talent.com    10 offres au Maroc · https://ma.talent.com/jobs?k=marketing+manager&l=Maroc
+Talent.com     9 offres au Maroc · https://ma.talent.com/jobs?k=responsable+marketing&l=Maroc
+Talent.com     9 offres au Maroc · https://ma.talent.com/jobs?k=directeur+marketing&l=Maroc
+Talent.com     5 offres au Maroc · https://ma.talent.com/jobs?k=directeur+commercial&l=Maroc
+Talent.com     7 offres au Maroc · https://ma.talent.com/jobs?k=brand+manager&l=Maroc
+Talent.com     8 offres au Maroc · https://ma.talent.com/jobs?k=key+account+manager&l=Maroc
+Talent.com     6 offres au Maroc · https://ma.talent.com/jobs?k=category+manager&l=Maroc
+Jobzyn        14 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Marketing&pageSize=100
+Jobzyn         0 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Trade%20Marketing&pageSize=100
+Jobzyn        25 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Commercial&pageSize=100
+Jobzyn        22 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Directeur&pageSize=100
+Jobzyn         9 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Brand&pageSize=100
+Jobzyn         2 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Key%20Account&pageSize=100
+Jobzyn         3 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Category&pageSize=100
+MaroCadres    20 offres au Maroc · https://www.marocadres.com/
+  échec (1) https://www.fedafrica.com/offres?q%5Bgeo_area_id_in%5D%5B%5D=35 : HTTP Error 500: Internal Server Error
+  échec (2) https://www.fedafrica.com/offres?q%5Bgeo_area_id_in%5D%5B%5D=35 : HTTP Error 500: Internal Server Error
+  échec (1) https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca : 'ascii' codec can't encode character '\xe9' in position 40: ordinal not in range(128)
+  échec (2) https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca : 'ascii' codec can't encode character '\xe9' in position 40: ordinal not in range(128)
+Maroc : 120 offres (53 nouvelles, 0 retirées) · Mes offres : 19
