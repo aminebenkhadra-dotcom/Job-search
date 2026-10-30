@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T11:05:47Z",
+ "updated": "2026-10-30T11:11:21Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -79,20 +79,6 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05",
-   "country": "Maroc"
-  },
-  {
-   "id": "procter-gamble-brand-manager-casablanca-2026-10",
-   "title": "Brand Manager",
-   "company": "Procter & Gamble",
-   "place": "Casablanca",
-   "chances": 59,
-   "why": "Marque et produit, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/procter-&-gamble/jobs/brand-manager-casablanca",
-   "source": "Jobzyn",
-   "posted": "",
-   "first_seen": "2026-10-30",
-   "auto": true,
    "country": "Maroc"
   },
   {
