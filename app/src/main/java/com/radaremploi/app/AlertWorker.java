@@ -26,7 +26,7 @@ import java.util.Set;
 
 /** Une fois par jour : cherche les offres publiées aujourd'hui et prévient s'il y en a de nouvelles. */
 public class AlertWorker extends Worker {
-  private static final String CHANNEL = "offres";
+  static final String CHANNEL = "offres";
   private static final int MAX_COUNTRIES = 3;
 
   public AlertWorker(Context context, WorkerParameters params) {
@@ -88,19 +88,34 @@ public class AlertWorker extends Worker {
     return Result.success();
   }
 
+  /** Canal des offres à 75 % et plus : notification immédiate, avec son. */
+  static final String CH_STRONG = "fortes";
+  /** Canal des autres offres quand l'utilisateur les veut discrètes. */
+  static final String CH_QUIET = "discretes";
+
   /** Annonce de nouvelles offres ; la toucher ouvre l'appli sur l'onglet indiqué. */
   static void announce(Context ctx, List<String> fresh, int notifId, String tab, String label) {
     int n = fresh.size();
     notify(ctx, fresh, notifId, tab, n == 1 ? "1 nouvelle offre " + label : n + " nouvelles offres " + label);
   }
 
-  /** Affiche une notification (titre, puis jusqu'à 5 lignes) qui ouvre l'appli sur l'onglet indiqué. */
   static void notify(Context ctx, List<String> fresh, int notifId, String tab, String title) {
+    notify(ctx, fresh, notifId, tab, title, CHANNEL);
+  }
+
+  /** Affiche une notification (titre, puis jusqu'à 5 lignes) qui ouvre l'appli sur l'onglet indiqué. */
+  static void notify(Context ctx, List<String> fresh, int notifId, String tab, String title, String channel) {
     if (fresh.isEmpty()) return;
     NotificationManager nm = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
     if (nm == null) return;
     if (Build.VERSION.SDK_INT >= 26) {
-      nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Nouvelles offres", NotificationManager.IMPORTANCE_DEFAULT));
+      if (CH_STRONG.equals(channel)) {
+        nm.createNotificationChannel(new NotificationChannel(CH_STRONG, "Offres à 75 % et plus", NotificationManager.IMPORTANCE_HIGH));
+      } else if (CH_QUIET.equals(channel)) {
+        nm.createNotificationChannel(new NotificationChannel(CH_QUIET, "Autres offres (discrètes)", NotificationManager.IMPORTANCE_LOW));
+      } else {
+        nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Nouvelles offres", NotificationManager.IMPORTANCE_DEFAULT));
+      }
     }
     Intent open = new Intent(ctx, MainActivity.class);
     open.putExtra("tab", tab);
@@ -112,7 +127,14 @@ public class AlertWorker extends Worker {
       if (i > 0) lines.append('\n');
       lines.append(fresh.get(i));
     }
-    Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(ctx, CHANNEL) : new Notification.Builder(ctx);
+    Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(ctx, channel) : new Notification.Builder(ctx);
+    if (Build.VERSION.SDK_INT < 26) {
+      if (CH_STRONG.equals(channel)) {
+        b.setPriority(Notification.PRIORITY_HIGH).setDefaults(Notification.DEFAULT_ALL);
+      } else if (CH_QUIET.equals(channel)) {
+        b.setPriority(Notification.PRIORITY_LOW);
+      }
+    }
     b.setSmallIcon(android.R.drawable.ic_menu_search)
         .setContentTitle(title)
         .setContentText(fresh.get(0))

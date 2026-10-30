@@ -157,6 +157,8 @@ body.noscroll{overflow:hidden}
 @keyframes rise{from{transform:translateY(28px);opacity:.5}to{transform:none;opacity:1}}
 .sheet-head{display:grid;grid-template-columns:auto minmax(0,1fr) 40px;gap:12px;align-items:center;padding:16px 16px 12px;border-bottom:1px solid var(--line)}
 .sheet-head h2{font-size:18px;line-height:1.2;overflow-wrap:anywhere}
+.sheet-head.noring{grid-template-columns:minmax(0,1fr) 40px}
+.segs.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .sh-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
 .ring.sm{width:48px;height:48px}
 .ring.sm span{width:36px;height:36px;font-size:12.5px}
@@ -194,21 +196,83 @@ textarea.letter{resize:none;overflow:hidden}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--mid)} .dot.ok{background:var(--good)}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 @media (prefers-reduced-motion:reduce){.sheet,.toast{animation:none}}
+/* 1.5 : barre d'onglets en bas, Conseils, réglages */
+:root{--chart-1:#00908A}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--chart-1:#22A39E} }
+:root[data-theme="dark"]{--chart-1:#22A39E}
+body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+.wrap{padding-block:18px 28px}
+.bnav{position:fixed;left:0;right:0;bottom:0;z-index:15;display:flex;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 18px rgba(14,28,34,.07)}
+.bn{flex:1 1 0;min-width:0;position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:0;padding:4px 2px;color:var(--muted);font-size:11.5px;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bn svg{width:50px;height:30px;padding:3px 13px;border-radius:99px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;transition:background .15s}
+.bn[aria-selected="true"]{color:var(--accent)}
+.bn[aria-selected="true"] svg{background:var(--accent-soft)}
+.bn span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.bn .badge{position:absolute;top:0;left:calc(50% + 7px);font-style:normal}
+@media (min-width:700px){.bnav{left:50%;right:auto;width:640px;transform:translateX(-50%);border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0}}
+.toast{bottom:calc(88px + env(safe-area-inset-bottom))}
+.iconbtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--ink);margin-left:auto}
+.iconbtn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.alertline{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 13px;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;margin-top:4px;text-align:left}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.weekhead{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center}
+.ring.big{width:74px;height:74px}
+.ring.big span{width:58px;height:58px;font-size:17px}
+.goals{display:flex;flex-direction:column;gap:13px}
+.goal{display:flex;flex-direction:column;gap:5px}
+.gtop{display:flex;align-items:center;gap:8px;min-height:34px}
+.glink,.gl{flex:1;min-width:0;font-weight:600;font-size:14.5px;color:var(--ink);text-align:left}
+.glink{background:none;border:0;padding:0;cursor:pointer}
+.gv{font-family:var(--display);font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.gctl{display:flex;gap:6px}
+.pm{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:19px;line-height:1;cursor:pointer;color:var(--ink);display:grid;place-items:center}
+.pm.plus{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.gbar{height:8px;border-radius:99px;background:var(--sunk);overflow:hidden}
+.gbar i{display:block;height:100%;background:var(--chart-1);border-radius:99px;transition:width .3s}
+.goal.ok .gbar i{background:var(--good)}
+.wchart{position:relative}
+.wplot{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;height:150px;align-items:end;border-bottom:1px solid var(--line);margin:14px 0 24px}
+.wcol{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.wbar{display:block;width:min(26px,72%);background:var(--chart-1);border-radius:4px 4px 0 0;opacity:.62}
+.wcol.now .wbar,.wcol.sel .wbar{opacity:1}
+.wbar.zero{height:2px!important;background:var(--line);opacity:1}
+.wv{font-size:12px;font-weight:700;margin-bottom:3px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.wl{position:absolute;bottom:-21px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
+.wcol.sel .wl{color:var(--ink);font-weight:600}
+.wtip{font-size:13px;background:var(--sunk);border-radius:10px;padding:9px 11px}
+.cause{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start}
+.cnum{width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:700}
+.cause .body{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}
+.cause h3{font-size:16px;line-height:1.25}
+.cause .btn.ghost{padding:4px 0}
+.tips{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.rows,.checks{display:flex;flex-direction:column}
+.rowbtn{display:flex;align-items:center;gap:10px;background:none;border:0;border-top:1px solid var(--line);padding:12px 2px;text-align:left;cursor:pointer;color:var(--ink);width:100%}
+.rowbtn:first-child,.row2:first-child,.chk:first-child{border-top:0}
+.rt{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.rt b{font-size:14.5px}
+.chev{font-size:22px;color:var(--muted);line-height:1}
+.row2{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line);padding:10px 0}
+.ra{display:flex;gap:4px;align-items:center;flex:none}
+.chk{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;border-top:1px solid var(--line);padding:11px 0}
+.box{width:26px;height:26px;border-radius:8px;border:2px solid var(--line);background:var(--surface);color:#fff;font-weight:700;cursor:pointer;display:grid;place-items:center;padding:0}
+.chk.on .box{background:var(--good);border-color:var(--good)}
+.chk.on b{text-decoration:line-through;color:var(--muted)}
+.setrow{display:flex;align-items:center;gap:12px;justify-content:space-between}
+.setrow.col{flex-direction:column;align-items:stretch}
+.switch{width:52px;height:30px;border-radius:99px;border:0;background:var(--line);position:relative;cursor:pointer;flex:none;padding:0}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .15s}
+.switch[aria-checked="true"]{background:var(--accent)}
+.switch[aria-checked="true"]::after{left:25px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div class="brand"><span class="radar" aria-hidden="true"></span>Radar Emploi</div>
-  </div>
-
-  <div class="tabs-wrap">
-    <nav class="tabs" role="tablist" aria-label="Sections de l'appli">
-      <button class="tab" role="tab" type="button" id="tabbtn-feed" data-tab="feed" aria-selected="true" aria-controls="tab-feed">Mes offres<span class="badge" id="badge-feed" hidden></span></button>
-      <button class="tab" role="tab" type="button" id="tabbtn-maroc" data-tab="maroc" aria-selected="false" aria-controls="tab-maroc">Maroc<span class="badge" id="badge-maroc" hidden></span></button>
-      <button class="tab" role="tab" type="button" id="tabbtn-suivi" data-tab="suivi" aria-selected="false" aria-controls="tab-suivi">Suivi<span class="badge warnb" id="badge-suivi" hidden></span></button>
-      <button class="tab" role="tab" type="button" id="tabbtn-search" data-tab="search" aria-selected="false" aria-controls="tab-search">Recherche</button>
-    </nav>
+    <button class="iconbtn" id="open-settings" type="button" aria-label="Réglages des alertes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    </button>
   </div>
 
   <!-- ===== Onglet 1 : la sélection, tous pays ===== -->
@@ -216,6 +280,7 @@ textarea.letter{resize:none;overflow:hidden}
     <div class="hero">
       <h1>Vos meilleures pistes, <em>au Maroc</em>.</h1>
       <p class="muted">Vos chances d'entretien pour chaque offre. «&nbsp;Postuler&nbsp;» prépare la lettre et le CV.</p>
+      <button class="alertline" id="alert-line" type="button"><span class="dot ok" id="alert-dot"></span><span id="alert-txt">Alerte dès qu'une offre dépasse 75&nbsp;%</span></button>
     </div>
     <div class="filters">
       <p class="small muted" id="feed-status">Chargement…</p>
@@ -227,7 +292,7 @@ textarea.letter{resize:none;overflow:hidden}
       <div class="stat"><b id="f-best">–</b><span>meilleures chances</span></div>
     </div>
     <div class="list" id="feed-list"></div>
-    <p class="foot">Liste mise à jour chaque matin, avec une notification pour les nouvelles offres. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.</p>
+    <p class="foot">Liste mise à jour 3 fois par jour, avec une alerte dès qu'une offre dépasse 75 %. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.</p>
   </div>
 
   <!-- ===== Onglet 2 : le marché marocain ===== -->
@@ -296,7 +361,55 @@ textarea.letter{resize:none;overflow:hidden}
     <p class="foot">Tout reste sur ce téléphone. Une notification vous rappelle de relancer 7 jours après l'envoi.</p>
   </div>
 
-  <!-- ===== Onglet 4 : chercher soi-même ===== -->
+  <!-- ===== Onglet 4 : plan d'action ===== -->
+  <div class="stack" id="tab-conseils" role="tabpanel" aria-labelledby="tabbtn-conseils" hidden>
+    <div class="hero">
+      <h1>Ce qui fait <em>rappeler</em>.</h1>
+      <p class="muted">Un plan simple, chaque semaine.</p>
+    </div>
+    <section class="panel" id="c-week">
+      <div class="step"><h2>Cette semaine</h2><span class="small muted" id="c-weekno" style="margin-left:auto"></span></div>
+      <div class="weekhead">
+        <div class="ring big" id="c-ring" role="img"><span></span></div>
+        <p id="c-weektxt" class="small"></p>
+      </div>
+      <div class="goals" id="c-goals"></div>
+      <p class="small muted">Remis à zéro chaque lundi. Les candidatures et relances se comptent seules.</p>
+    </section>
+    <section class="panel">
+      <div class="step"><h2>Vos 8 dernières semaines</h2></div>
+      <div class="wchart" id="c-chart"></div>
+      <p class="small muted" id="c-chart-note"></p>
+    </section>
+    <div class="filters"><h2>Pourquoi on ne vous rappelle pas</h2></div>
+    <p class="note" id="c-rappel-note"></p>
+    <div class="list" id="c-causes"></div>
+    <section class="panel" id="c-anchor-cv">
+      <h2>Votre CV en 5 points</h2>
+      <ol class="tips" id="c-cv"></ol>
+    </section>
+    <section class="panel">
+      <h2>Messages prêts</h2>
+      <div class="rows" id="c-tpl"></div>
+    </section>
+    <section class="panel" id="c-anchor-cabinets">
+      <h2>Cabinets de recrutement</h2>
+      <p class="small muted">Les postes de cadres passent souvent par eux. Un e-mail court avec le CV suffit.</p>
+      <div class="rows" id="c-cabinets"></div>
+    </section>
+    <section class="panel" id="c-anchor-entreprises">
+      <h2>Entreprises cibles</h2>
+      <p class="small muted">Grande consommation et distribution au Maroc. Touchez une entreprise.</p>
+      <div class="rows" id="c-entreprises"></div>
+    </section>
+    <section class="panel">
+      <div class="step"><h2>À faire une fois</h2><span class="small muted" id="c-once-count" style="margin-left:auto"></span></div>
+      <div class="checks" id="c-once"></div>
+    </section>
+    <p class="foot" id="c-foot">Conseils mis à jour en ligne, sans réinstaller l'appli.</p>
+  </div>
+
+  <!-- ===== Onglet 5 : chercher soi-même ===== -->
   <div class="stack" id="tab-search" role="tabpanel" aria-labelledby="tabbtn-search" hidden>
     <div class="hero">
       <h1>Cherchez vous-même, <em>site par site</em>.</h1>
@@ -404,6 +517,19 @@ textarea.letter{resize:none;overflow:hidden}
     <div class="note err" id="error" hidden></div>
   </div>
 </div>
+
+<nav class="bnav" role="tablist" aria-label="Sections de l'appli">
+  <button class="bn" role="tab" type="button" id="tabbtn-feed" data-tab="feed" aria-selected="true" aria-controls="tab-feed">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><span>Offres</span><b class="badge" id="badge-feed" hidden></b></button>
+  <button class="bn" role="tab" type="button" id="tabbtn-maroc" data-tab="maroc" aria-selected="false" aria-controls="tab-maroc">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Maroc</span><b class="badge" id="badge-maroc" hidden></b></button>
+  <button class="bn" role="tab" type="button" id="tabbtn-suivi" data-tab="suivi" aria-selected="false" aria-controls="tab-suivi">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/></svg><span>Suivi</span><b class="badge warnb" id="badge-suivi" hidden></b></button>
+  <button class="bn" role="tab" type="button" id="tabbtn-conseils" data-tab="conseils" aria-selected="false" aria-controls="tab-conseils">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg><span>Conseils</span><b class="badge" id="badge-conseils" hidden></b></button>
+  <button class="bn" role="tab" type="button" id="tabbtn-search" data-tab="search" aria-selected="false" aria-controls="tab-search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>Chercher</span></button>
+</nav>
 
 <div class="sheet-back" id="sheet" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title">
@@ -540,6 +666,17 @@ function sites(c,q){
   if(c.code==="MA"){
     out.push(["ReKrute","https://www.rekrute.com/emploi-"+e]);
     out.push(["Emploi.ma","https://www.emploi.ma/recherche-jobs-maroc/"+e]);
+    out.push(["Michael Page","https://www.michaelpageafrica.com/fr/jobs/"+slug(q)]);
+    out.push(["Jobzyn","https://www.jobzyn.com/fr/jobs/maroc?searchQuery="+e]);
+    out.push(["Talent.com","https://ma.talent.com/jobs?k="+e+"&l=Maroc"]);
+    out.push(["Dreamjob","https://www.dreamjob.ma/?s="+e]);
+    out.push(["Optioncarrière","https://www.optioncarriere.ma/emploi?s="+e+"&l=Maroc"]);
+    out.push(["MaroCadres","https://www.marocadres.com/"]);
+    out.push(["Fed Africa","https://www.fedafrica.com/offres"]);
+    out.push(["Exekutive","https://exekutive.biz/offres-emploi-afrique.html"]);
+    out.push(["Anapec","https://www.anapec.org/"]);
+    out.push(["Avito Emploi","https://www.avito.ma/fr/maroc/offres_d_emploi"]);
+    out.push(["MarocAnnonces","https://www.marocannonces.com/categorie/309/Emploi/Offres-emploi.html"]);
   }
   if(c.code==="FR"){
     out.push(["Apec","https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles="+e]);
@@ -944,7 +1081,7 @@ function render(){
 $("more").addEventListener("click",function(){S.shown+=30;render();});
 
 /* ---------- tabs ---------- */
-var TABS=["feed","maroc","suivi","search"],TAB="feed",LISTS={};
+var TABS=["feed","maroc","suivi","conseils","search"],TAB="feed",LISTS={};
 function showTab(name){
   if(TABS.indexOf(name)<0)name="feed";
   TAB=name;
@@ -955,6 +1092,7 @@ function showTab(name){
   store("radar.onglet",name);
   if(LISTS[name])LISTS[name].opened();
   if(name==="suivi")$("badge-suivi").hidden=true;
+  if(name==="conseils")renderConseils();
   window.scrollTo(0,0);
 }
 window.__tab=showTab;
@@ -1070,7 +1208,7 @@ makeList("maroc","maroc.json",function(L){
   $("m-more").hidden=view.length<=M.shown;
   $("maroc-status").textContent=statusText(L);
   var src=arr(L.meta.sources,10,30);
-  $("m-foot").textContent=(src.length?"Sites scannés : "+src.join(", ")+". ":"")+"Scan refait chaque matin. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.";
+  $("m-foot").textContent=(src.length?"Sites scannés : "+src.join(", ")+". ":"")+"Scan refait 3 fois par jour. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.";
 });
 $("m-more").addEventListener("click",function(){M.shown+=20;LISTS.maroc.render();});
 $("maroc-refresh").addEventListener("click",function(){LISTS.maroc.load();});
@@ -1201,7 +1339,7 @@ function sendMail(to,subject,body){
 var APPS=[];
 function loadApps(){try{var a=JSON.parse(store("radar.candidatures")||"[]");APPS=Array.isArray(a)?a.filter(function(x){return x&&x.id&&x.title;}):[];}catch(e){APPS=[];}}
 function syncApps(){try{if(has("saveApps"))window.Android.saveApps(JSON.stringify(APPS));}catch(e){}}
-function saveApps(){store("radar.candidatures",JSON.stringify(APPS));syncApps();renderApps();refreshCards();}
+function saveApps(){store("radar.candidatures",JSON.stringify(APPS));syncApps();renderApps();refreshCards();if(TAB==="conseils")renderConseils();}
 function appOf(id){for(var i=0;i<APPS.length;i++)if(APPS[i].id===id)return APPS[i];return null;}
 function due(a){return (a.status==="envoyee"&&daysSince(a.sent)>=7)||(a.status==="relancee"&&daysSince(a.relance||a.sent)>=10);}
 function markSent(o){
@@ -1217,13 +1355,14 @@ function refreshCards(){
 /* fiche en bas d'écran */
 var SHEET={offer:null};
 function openSheet(title,meta,score,content){
+  SHEET.count="";
   $("sh-title").textContent=title;$("sh-meta").textContent=meta;
-  var r=$("sh-ring");r.hidden=score==null;
+  var r=$("sh-ring");r.hidden=score==null;r.parentNode.classList.toggle("noring",score==null);
   if(score!=null){r.className="ring sm "+tierC(score);r.style.setProperty("--p",score);r.firstChild.textContent=score+"%";}
   var b=$("sh-body");b.textContent="";b.append(content);b.scrollTop=0;
   $("sheet").hidden=false;document.body.classList.add("noscroll");
 }
-function closeSheet(){$("sheet").hidden=true;document.body.classList.remove("noscroll");SHEET.offer=null;}
+function closeSheet(){$("sheet").hidden=true;document.body.classList.remove("noscroll");SHEET.offer=null;SHEET.count="";}
 window.__back=function(){if(!$("sheet").hidden){closeSheet();return true;}return false;};
 $("sh-close").addEventListener("click",closeSheet);
 $("sheet").addEventListener("click",function(e){if(e.target===$("sheet"))closeSheet();});
@@ -1307,7 +1446,8 @@ function renderApps(){
     var when=(a.relance?"Relancée le "+fmtDate(a.relance):"Envoyée le "+fmtDate(a.sent))+(d?" · à relancer":"");
     var chips=el("div",{class:"segs",role:"group","aria-label":"Statut"});
     STATUTS.forEach(function(s){chips.append(el("button",{class:"seg-b",type:"button","aria-pressed":a.status===s[0]?"true":"false",text:s[1],onclick:function(){
-      if(a.status===s[0])return;a.status=s[0];if(s[0]==="relancee")a.relance=a.relance||today();saveApps();}}));});
+      if(a.status===s[0])return;a.status=s[0];if(s[0]==="relancee")a.relance=a.relance||today();
+      if(s[0]==="entretien")a.entretien=a.entretien||today();saveApps();}}));});
     var acts=el("div",{class:"row"});
     if(open)acts.append(el("button",{class:d?"btn primary small-btn":"btn",type:"button",text:"Relancer",onclick:function(){openRelance(a);}}));
     var rm=el("button",{class:"btn ghost",type:"button",text:"Retirer",onclick:function(){
@@ -1339,7 +1479,221 @@ $("cv-save").addEventListener("click",function(){
   toast(window.Android.saveCv()?"CV enregistré dans Téléchargements":"Impossible ici : utilisez « Partager le CV »");
 });
 
-loadKit();loadApps();syncApps();renderKit();renderApps();
+/* ---------- Conseils : plan de la semaine, diagnostic, messages, cabinets, entreprises ---------- */
+var CONSEILS=null;
+function loadConseils(){
+  var cached=null;try{cached=JSON.parse(store("radar.liste.conseils")||"null");}catch(e){}
+  if(cached&&cached.semaine)CONSEILS=cached;
+  http("GET",BASE+"conseils.json?t="+Date.now(),{},"").then(function(r){
+    if(r.status!==200)throw 0;var d=JSON.parse(r.body);if(!d||!Array.isArray(d.semaine))throw 0;
+    store("radar.liste.conseils",JSON.stringify(d));CONSEILS=d;if(TAB==="conseils")renderConseils();
+  }).catch(function(){});
+}
+/* semaine ISO (lundi) : "2026-10-26" pour la semaine du lundi 26 octobre */
+function mondayOf(d){d=new Date(d.getFullYear(),d.getMonth(),d.getDate());var k=(d.getDay()+6)%7;d.setDate(d.getDate()-k);return d;}
+function isoDay(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());}
+function weekKey(iso){var d=iso?dayOf(iso):new Date();return d?isoDay(mondayOf(d)):"";}
+function loadActions(){try{var a=JSON.parse(store("radar.actions")||"{}");return a&&typeof a==="object"?a:{};}catch(e){return {};}}
+function saveActions(a){var keys=Object.keys(a).sort().slice(-16),o={};keys.forEach(function(k){o[k]=a[k];});store("radar.actions",JSON.stringify(o));}
+function bump(id,delta){
+  var a=loadActions(),w=weekKey(),c=a[w]||(a[w]={});
+  c[id]=Math.max(0,(c[id]||0)+delta);saveActions(a);
+  if(TAB==="conseils")renderConseils();
+}
+function autoCount(kind,week){
+  return APPS.filter(function(a){return kind==="candidatures"?weekKey(a.sent)===week:(a.relance&&weekKey(a.relance)===week);}).length;
+}
+function goalState(g,week){
+  var a=loadActions()[week]||{},v=g.auto?autoCount(g.auto,week):(a[g.id]||0),t=g.cible||0;
+  if(g.auto==="relances")t=v+APPS.filter(due).length;     /* toutes les relances dues */
+  return {v:v,t:t};
+}
+function template(id){
+  var k=KIT&&KIT.templates&&KIT.templates[id],m=CONSEILS&&CONSEILS.modeles&&CONSEILS.modeles[id];
+  if(k)return {titre:(m&&m.titre)||id,objet:k.objet||(m&&m.objet)||"",texte:k.texte||k,perso:true};
+  return m?{titre:m.titre,objet:m.objet||"",texte:m.texte,perso:false}:null;
+}
+function openTemplate(id,vars,count){
+  var t=template(id);if(!t)return;
+  vars=vars||{};vars.signature=KIT&&KIT.signature||"";
+  var ta=el("textarea",{class:"letter","aria-label":t.titre,spellcheck:"false"});ta.value=fill(t.texte,vars).trim();
+  var mail=id!=="linkedin"&&id!=="pitch"&&id!=="reseau";
+  var s1=step("1",t.titre,el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){
+    copy(ta.value,"Message copié");if(count&&!mail){bump(count,1);}}}));
+  s1.append(el("p",{class:"small muted",text:t.perso?"Écrit pour vous. Modifiable.":"Remplacez les [crochets], puis copiez."}),ta);
+  var box=el("div",{class:"steps"});box.append(s1);
+  if(mail){
+    var s2=step("2","Envoyer");
+    s2.append(mailRow(function(){return fill(t.objet||"Candidature",vars);},function(){return ta.value;}));
+    if(count)s2.append(el("p",{class:"small muted",text:"Compté dans votre plan de la semaine dès l'envoi."}));
+    box.append(s2);
+  }
+  openSheet(t.titre,vars.entreprise&&vars.entreprise.charAt(0)!=="["?vars.entreprise:"",null,box);autosize(ta);
+  SHEET.count=mail?(count||""):"";
+}
+function weekLabel(iso){var d=dayOf(iso);return d?d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"}):"";}
+function renderChart(){
+  var box=$("c-chart");box.textContent="";
+  var weeks=[],m=mondayOf(new Date()),i;
+  for(i=7;i>=0;i--){var d=new Date(m);d.setDate(d.getDate()-7*i);weeks.push(isoDay(d));}
+  var acts=loadActions();
+  var data=weeks.map(function(w){
+    var a=acts[w]||{},cand=autoCount("candidatures",w),rel=autoCount("relances",w);
+    var net=(a.reseau||0)+(a.cabinets||0)+(a.spontanees||0)+(a.linkedin||0);
+    var ent=APPS.filter(function(x){return x.entretien&&weekKey(x.entretien)===w;}).length;
+    return {w:w,total:cand+rel+net,cand:cand,rel:rel,net:net,ent:ent};
+  });
+  var max=Math.max.apply(null,data.map(function(x){return x.total;}).concat([4]));
+  var tip=el("div",{class:"wtip",role:"status"});tip.hidden=true;
+  var plot=el("div",{class:"wplot"});
+  data.forEach(function(x,k){
+    var last=k===data.length-1,h=x.total?Math.max(4,Math.round(x.total/max*100)):0;
+    var col=el("button",{class:"wcol"+(last?" now":""),type:"button","aria-label":"Semaine du "+weekLabel(x.w)+" : "+x.total+" actions",onclick:function(){
+      tip.hidden=false;tip.textContent="Semaine du "+weekLabel(x.w)+" : "+x.total+" action"+(x.total>1?"s":"")+" · "+x.cand+" candidature"+(x.cand>1?"s":"")+", "+x.net+" réseau et cabinets, "+x.rel+" relance"+(x.rel>1?"s":"")+(x.ent?" · "+x.ent+" entretien"+(x.ent>1?"s":""):"");
+      Array.prototype.forEach.call(plot.children,function(c){c.classList.remove("sel");});col.classList.add("sel");}},
+      el("span",{class:"wv",text:(x.ent?"★":"")+(x.ent&&x.total&&(last||x.total===max)?" ":"")+(x.total&&(last||x.total===max)?x.total:"")}),
+      el("span",{class:"wbar"+(x.total?"":" zero"),style:"height:"+h+"%"}),
+      el("span",{class:"wl",text:(data.length-1-k)%2===0?weekLabel(x.w):""}));
+    plot.append(col);
+  });
+  var table=el("table",{class:"sr-only"},el("caption",{text:"Actions par semaine"}),
+    el("tr",{},el("th",{text:"Semaine"}),el("th",{text:"Actions"}),el("th",{text:"Entretiens"})));
+  data.forEach(function(x){table.append(el("tr",{},el("td",{text:weekLabel(x.w)}),el("td",{text:x.total}),el("td",{text:x.ent})));});
+  box.append(plot,tip,table);
+  var ent=APPS.filter(function(a){return a.status==="entretien"||a.entretien;}).length;
+  $("c-chart-note").textContent=nb("Barres : candidatures, relances, réseau et cabinets. ★ : semaine avec un entretien. Entretiens obtenus : "+ent+".");
+}
+function scrollToAnchor(name){var t=$("c-anchor-"+name);if(t)t.scrollIntoView({behavior:"smooth",block:"start"});}
+function renderConseils(){
+  var C=CONSEILS;if(!C){$("c-goals").textContent="Chargement…";return;}
+  $("c-rappel-note").textContent=nb(C.rappel||"");
+  var week=weekKey(),goals=C.semaine||[],done=0,total=0,box=$("c-goals");box.textContent="";
+  $("c-weekno").textContent="semaine du "+weekLabel(week);
+  goals.forEach(function(g){
+    var st=goalState(g,week),pct=st.t?Math.min(100,Math.round(st.v/st.t*100)):(st.v?100:0);
+    if(st.t){done+=Math.min(st.v,st.t);total+=st.t;}
+    var ok=st.t?st.v>=st.t:true;
+    var right=el("div",{class:"gctl"});
+    if(!g.auto){
+      right.append(el("button",{class:"pm",type:"button","aria-label":"Retirer une action « "+g.label+" »",onclick:function(){bump(g.id,-1);}},"−"),
+        el("button",{class:"pm plus",type:"button","aria-label":"Ajouter une action « "+g.label+" »",onclick:function(){bump(g.id,1);toast("+1 · "+g.label);}},"+"));
+    }
+    var label=g.modele?el("button",{class:"glink",type:"button",onclick:function(){
+        if(g.id==="cabinets")scrollToAnchor("cabinets");else if(g.id==="spontanees")scrollToAnchor("entreprises");else openTemplate(g.modele,{},g.id);}},g.label+" ›")
+      :(g.auto==="candidatures"?el("button",{class:"glink",type:"button",onclick:function(){showTab("feed");}},g.label+" ›")
+      :(g.auto==="relances"?el("button",{class:"glink",type:"button",onclick:function(){showTab("suivi");}},g.label+" ›"):el("span",{class:"gl",text:g.label})));
+    box.append(el("div",{class:"goal"+(ok&&st.t?" ok":"")},
+      el("div",{class:"gtop"},label,el("b",{class:"gv",text:st.t?st.v+"/"+st.t:(st.v?st.v+" ✓":"à jour")}),right),
+      el("div",{class:"gbar"},el("i",{style:"width:"+pct+"%"})),
+      el("p",{class:"small muted",text:nb(g.aide||"")})));
+  });
+  var p=total?Math.round(done/total*100):0,r=$("c-ring");
+  r.className="ring big "+(p>=80?"g":p>=40?"m":"l");r.style.setProperty("--p",p);r.firstChild.textContent=p+"%";
+  r.setAttribute("aria-label","Plan de la semaine fait à "+p+" %");
+  $("c-weektxt").textContent=p>=100?"Semaine complète. C'est ce rythme qui finit par payer."
+    :p>=50?"Bon rythme. Gardez une part pour le réseau et les cabinets."
+    :"Commencez par 2 messages à votre réseau : c'est ce qui fait le plus rappeler.";
+  renderChart();
+  var cs=$("c-causes");cs.textContent="";
+  (C.causes||[]).forEach(function(c,i){
+    var act=c.action||{},btn=el("button",{class:"btn ghost",type:"button",onclick:function(){
+      if(act.url)openUrl(act.url);else if(act.onglet)showTab(act.onglet);else if(act.ancre)scrollToAnchor(act.ancre);}},(act.label||"Voir")+" ›");
+    cs.append(el("article",{class:"cause"},el("span",{class:"cnum",text:String(i+1)}),
+      el("div",{class:"body"},el("h3",{text:nb(c.titre)}),el("p",{class:"small",text:nb(c.texte)}),btn)));
+  });
+  var cv=$("c-cv");cv.textContent="";(C.cv||[]).forEach(function(t){cv.append(el("li",{text:nb(t)}));});
+  var tp=$("c-tpl");tp.textContent="";
+  ["reseau","cabinet","spontanee","linkedin","pitch"].forEach(function(id){
+    var t=template(id);if(!t)return;
+    tp.append(el("button",{class:"rowbtn",type:"button",onclick:function(){openTemplate(id,{entreprise:"[entreprise]"},id==="reseau"?"reseau":id==="cabinet"?"cabinets":id==="spontanee"?"spontanees":"");}},
+      el("span",{class:"rt"},el("b",{text:t.titre}),el("span",{class:"small muted",text:t.perso?"Prêt, écrit pour vous":"Modèle à compléter"})),el("span",{class:"chev",text:"›"})));
+  });
+  var cb=$("c-cabinets");cb.textContent="";
+  (C.cabinets||[]).forEach(function(c){
+    var site=c.site||("https://www.linkedin.com/search/results/companies/?keywords="+encodeURIComponent(c.linkedin||c.nom));
+    cb.append(el("div",{class:"row2"},el("div",{class:"rt"},el("b",{text:c.nom}),el("span",{class:"small muted",text:c.note||""})),
+      el("div",{class:"ra"},el("button",{class:"btn ghost",type:"button",onclick:function(){openUrl(site);}},c.site?"Site ↗":"LinkedIn ↗"),
+        el("button",{class:"btn",type:"button",text:"E-mail",onclick:function(){openTemplate("cabinet",{entreprise:c.nom},"cabinets");}}))));
+  });
+  var en=$("c-entreprises");en.textContent="";
+  (C.entreprises||[]).forEach(function(c){
+    en.append(el("button",{class:"rowbtn",type:"button",onclick:function(){openCompany(c);}},
+      el("span",{class:"rt"},el("b",{text:c.nom}),el("span",{class:"small muted",text:c.secteur||""})),el("span",{class:"chev",text:"›"})));
+  });
+  var once=loadOnce(),oc=$("c-once"),n=0;oc.textContent="";
+  (C.une_fois||[]).forEach(function(o){
+    var on=!!once[o.id];if(on)n++;
+    oc.append(el("div",{class:"chk"+(on?" on":"")},
+      el("button",{class:"box",type:"button",role:"checkbox","aria-checked":on?"true":"false","aria-label":o.label,onclick:function(){var x=loadOnce();x[o.id]=!x[o.id];store("radar.unefois",JSON.stringify(x));renderConseils();}},on?"✓":""),
+      el("div",{class:"rt"},el("b",{text:nb(o.label)}),el("span",{class:"small muted",text:nb(o.aide||"")})),
+      o.url?el("button",{class:"btn ghost",type:"button",onclick:function(){openUrl(o.url);}},"Ouvrir ↗"):null));
+  });
+  $("c-once-count").textContent=n+"/"+(C.une_fois||[]).length;
+  var b=$("badge-conseils"),todo=(C.une_fois||[]).length-n;b.textContent=todo;b.hidden=!todo||TAB==="conseils";
+}
+function loadOnce(){try{var o=JSON.parse(store("radar.unefois")||"{}");return o&&typeof o==="object"?o:{};}catch(e){return {};}}
+function openCompany(c){
+  var q=encodeURIComponent(c.nom),box=el("div",{class:"steps"});
+  var s1=step("1","Voir leurs offres");
+  s1.append(el("div",{class:"row"},
+    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.linkedin.com/jobs/search/?keywords="+q+"&location=Maroc");}},"Offres LinkedIn ↗"),
+    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.google.com/search?q="+encodeURIComponent(c.nom+" recrutement carrières Maroc"));}},"Page carrières ↗"),
+    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.linkedin.com/search/results/people/?keywords="+encodeURIComponent(c.nom+" marketing"));}},"Leurs équipes ↗")),
+    el("p",{class:"small muted",text:"Un contact dans l'entreprise vaut mieux qu'un formulaire : cherchez un ancien collègue ou un manager marketing."}));
+  var s2=step("2","Candidature spontanée");
+  s2.append(el("button",{class:"btn primary wide",type:"button",text:"Préparer l'e-mail",onclick:function(){openTemplate("spontanee",{entreprise:c.nom},"spontanees");}}));
+  box.append(s1,s2);
+  openSheet(c.nom,c.secteur||"",null,box);
+}
+/* compté au moment de l'envoi d'un e-mail préparé depuis le plan */
+var sendMailBase=sendMail;
+sendMail=function(to,subject,body){if(SHEET.count){bump(SHEET.count,1);toast("Compté dans votre plan de la semaine");SHEET.count="";}return sendMailBase(to,subject,body);};
+
+/* ---------- réglages des alertes ---------- */
+function notifPrefs(){
+  var d={fortes:true,autres:"discretes",relances:true};
+  try{var raw=has("notifPrefs")?window.Android.notifPrefs():store("radar.notif");var p=JSON.parse(raw||"{}");for(var k in p)d[k]=p[k];}catch(e){}
+  return d;
+}
+function setNotifPrefs(p){
+  var s=JSON.stringify(p);store("radar.notif",s);
+  try{if(has("setNotif"))window.Android.setNotif(s);}catch(e){}
+  renderAlertLine();
+}
+function renderAlertLine(){
+  var p=notifPrefs();$("alert-dot").className="dot"+(p.fortes?" ok":"");
+  $("alert-txt").textContent=nb(p.fortes?"Alerte immédiate dès 75 % · 3 scans par jour":"Alertes 75 % coupées · touchez pour activer");
+}
+function openSettings(){
+  SHEET.offer=null;
+  var p=notifPrefs(),box=el("div",{class:"steps"});
+  function sw(label,help,on,fn){
+    var b=el("button",{class:"switch",type:"button",role:"switch","aria-checked":on?"true":"false","aria-label":label,onclick:function(){on=!on;b.setAttribute("aria-checked",on?"true":"false");fn(on);}});
+    return el("div",{class:"setrow"},el("div",{class:"rt"},el("b",{text:nb(label)}),el("span",{class:"small muted",text:nb(help)})),b);
+  }
+  var s1=step("1","Alertes");
+  s1.append(sw("Offres à 75 % et plus","Notification immédiate, avec son.",p.fortes,function(v){p.fortes=v;setNotifPrefs(p);}));
+  var seg=el("div",{class:"segs three",role:"group","aria-label":"Autres nouvelles offres"});
+  [["son","Avec son"],["discretes","Discrètes"],["aucune","Aucune"]].forEach(function(o){
+    seg.append(el("button",{class:"seg-b",type:"button","aria-pressed":p.autres===o[0]?"true":"false",text:o[1],onclick:function(){
+      p.autres=o[0];setNotifPrefs(p);Array.prototype.forEach.call(seg.children,function(c){c.setAttribute("aria-pressed",c===this?"true":"false");},this);}}));
+  });
+  s1.append(el("div",{class:"setrow col"},el("div",{class:"rt"},el("b",{text:"Autres nouvelles offres"}),el("span",{class:"small muted",text:"De 40 à 74 %."})),seg));
+  s1.append(sw("Rappels de relance","7 jours après l'envoi d'une candidature.",p.relances,function(v){p.relances=v;setNotifPrefs(p);}));
+  s1.append(el("button",{class:"btn wide",type:"button",text:"Tester une alerte",onclick:function(){
+    if(has("testNotif")){window.Android.testNotif();toast("Alerte de test envoyée");}else toast("Disponible dans l'appli Android");}}));
+  var s2=step("2","Le scan");
+  s2.append(el("p",{class:"small",text:nb("Le marché marocain est scanné 3 fois par jour (matin, midi, fin d'après-midi) : ReKrute, Exekutive, Michael Page, Talent.com, Jobzyn, MaroCadres et Fed Africa. Le téléphone vérifie chaque heure.")}),
+    el("p",{class:"small muted",text:nb("LinkedIn, Indeed, Emploi.ma et les autres sites refusent les robots : ouvrez-les depuis l'onglet Maroc ou Chercher.")}));
+  var s3=step("3","Mon dossier");
+  s3.append(el("button",{class:"btn wide",type:"button",text:"Voir mon dossier (CV et lettres)",onclick:function(){closeSheet();showTab("suivi");setTimeout(function(){$("kit-panel").scrollIntoView({behavior:"smooth"});},150);}}));
+  box.append(s1,s2,s3);
+  openSheet("Réglages","Alertes et dossier",null,box);
+}
+$("open-settings").addEventListener("click",openSettings);
+$("alert-line").addEventListener("click",openSettings);
+
+loadKit();loadApps();syncApps();renderKit();renderApps();renderAlertLine();loadConseils();
 loadKeys();$("keys").hidden=true;
 renderRegions();renderKeys();renderAlerts();render();renderMarocLinks();
 showTab((location.hash||"").replace("#","")||store("radar.onglet")||"feed");

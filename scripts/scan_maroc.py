@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Scan quotidien du marché marocain pour l'appli Radar Emploi.
 
-Lit les pages publiques d'offres de ReKrute, Exekutive et Michael Page Africa (dans le respect
-de leur robots.txt), puis met à jour data/maroc.json (onglet Maroc) et data/offres.json (Mes offres).
+Lit les pages publiques d'offres de ReKrute, Exekutive, Michael Page Africa, Talent.com, Jobzyn,
+MaroCadres et Fed Africa (dans le respect de leur robots.txt), puis met à jour data/maroc.json
+(onglet Maroc) et data/offres.json (Mes offres). Emploi.ma, Dreamjob, Bayt, Optioncarrière et Diorh
+refusent les robots ; LinkedIn, Indeed et MarocAnnonces les interdisent : l'appli ouvre leurs pages de recherche.
 
 - Les offres déjà évaluées à la main gardent leur estimation ("auto" absent ou faux).
 - Les nouvelles offres reçoivent une estimation automatique d'après l'annonce complète ("auto": true).
@@ -23,7 +25,7 @@ import unicodedata
 import urllib.error
 import urllib.request
 import urllib.robotparser
-from urllib.parse import urlsplit
+from urllib.parse import quote, quote_plus, urlsplit
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAROC = os.path.join(ROOT, "data", "maroc.json")
@@ -38,14 +40,21 @@ REKRUTE_KEYWORDS = [
     "directeur-des-ventes", "chef-des-ventes", "business-development-manager", "country-manager",
     "FMCG", "grande-consommation", "CHR",
 ]
+TALENT_QUERIES = ["trade marketing", "marketing manager", "responsable marketing", "directeur marketing",
+                  "directeur commercial", "brand manager", "key account manager", "category manager"]
+JOBZYN_QUERIES = ["Marketing", "Trade Marketing", "Commercial", "Directeur", "Brand", "Key Account", "Category"]
 PAGES = (
     [("ReKrute", "https://www.rekrute.com/emploi-" + k) for k in REKRUTE_KEYWORDS]
     + [("Exekutive", "https://exekutive.biz/offres-emploi-afrique.html")]
     + [("Michael Page", "https://www.michaelpageafrica.com/fr/jobs/" + p)
        for p in ("marketing-agences", "ventes", "marketing-director", "directeur-commercial/africa")]
+    + [("Talent.com", "https://ma.talent.com/jobs?k=" + quote_plus(q) + "&l=Maroc") for q in TALENT_QUERIES]
+    + [("Jobzyn", "https://www.jobzyn.com/fr/jobs/maroc?searchQuery=" + quote(q) + "&pageSize=100") for q in JOBZYN_QUERIES]
+    + [("MaroCadres", "https://www.marocadres.com/")]
+    + [("Fed Africa", "https://www.fedafrica.com/offres?q%5Bexpertise_area_id_in%5D%5B%5D=2&q%5Bgeo_area_id_in%5D%5B%5D=35")]
 )
 
-MAX_MAROC = 80
+MAX_MAROC = 120
 MAX_OFFRES = 25
 SEUIL_SELECTION = 55  # une offre marocaine entre dans « Mes offres » à partir de ce niveau
 
@@ -99,6 +108,11 @@ def offer_key(url):
     m = re.search(r"michaelpageafrica\.com/.*?/ref/(jn-\d{6}-\d+)", url or "")
     if m:
         return "mp:" + m.group(1)
+    for prefix, rx in (("tl:", r"talent\.com/view\?id=(\d+)"), ("jz:", r"jobzyn\.com/fr/companies/([^/]+/jobs/[^/?#]+)"),
+                       ("mc:", r"marocadres\.com/Offre\?id=(\d+)"), ("fa:", r"fedafrica\.com/offres/([^/?#]+)")):
+        m = re.search(rx, url or "")
+        if m:
+            return prefix + m.group(1).lower()
     return ""
 
 
@@ -115,6 +129,25 @@ def same_offer_signature(o):
     title = re.sub(r"\(?\b[hf] ?/ ?[hfx]\b\)?", "", norm(o.get("title", "")))
     title = re.sub(r"[^a-z0-9]+", " ", title).strip()
     return title + "|" + slug(o.get("place", ""))
+
+
+TITLE_STOP = {"de", "du", "des", "la", "le", "les", "et", "en", "h", "f", "x", "hf", "fh", "a", "au", "d", "l"}
+
+
+def title_words(o):
+    t = re.sub(r"\(?\b[hf] ?/ ?[hfx]\b\)?", " ", norm(o.get("title", "")))
+    return {w for w in re.split(r"[^a-z0-9]+", t) if w and w not in TITLE_STOP and w not in MA_CITIES}
+
+
+def same_offer(a, b):
+    """Même entreprise, même ville, et un intitulé contenu dans l'autre (offre reprise par un autre site)."""
+    fa = first_word(a.get("company"))
+    if not fa or fa in NO_DEDUPE or fa != first_word(b.get("company")):
+        return False
+    if slug(a.get("place", "")) != slug(b.get("place", "")):
+        return False
+    wa, wb = title_words(a), title_words(b)
+    return bool(wa) and bool(wb) and (wa <= wb or wb <= wa)
 
 
 # ---------------------------------------------------------------- lecture des sites
@@ -141,6 +174,7 @@ def allowed(url):
 
 def fetch(url, status=False):
     """Contenu de la page (ou None). Avec status=True : (code HTTP, contenu) ; 404 et 410 signalent une annonce retirée."""
+    url = quote(url, safe=":/?&=%#+,;@!$'()*[]~")  # accents dans l'adresse
     if not allowed(url):
         print("  ignorée (robots.txt) :", url)
         return (None, None) if status else None
@@ -281,40 +315,186 @@ def enrich_rekrute(o, page):
         o["min_years"] = int(m.group(1) or m.group(2))
 
 
+FOREIGN = re.compile(r"\b(congo|kinshasa|rdc|senegal|dakar|abidjan|cote d.ivoire|tunisie|tunis|algerie|alger|"
+                     r"mauritanie|france|paris|dubai|emirats|qatar|arabie|gabon|cameroun|mali|niger|guinee)\b")
+
+
+def moroccan_place(loc):
+    """Ville marocaine tirée d'un lieu (« Casablanca, Casablanca-Settat, MA »), ou "" si l'offre est à l'étranger."""
+    n = norm(loc)
+    if not n or FOREIGN.search(n):
+        return ""
+    if n in ("casa", "ad-dar-al-bayda") or n.startswith("casa,") or "dar-al-bayda" in n or "grand casablanca" in n:
+        return "Casablanca"
+    for c in MA_CITIES:
+        if c in ("maroc", "morocco"):
+            continue
+        if re.search(r"\b" + re.escape(c) + r"\b", n):
+            return city_case(c)
+    if re.search(r"\b(maroc|morocco|ma)\b", n):
+        return "Maroc"
+    return ""
+
+
+def ago_to_date(s, today):
+    """« il y a 3 jours » → date ; « plus de 30 jours » → None (annonce ancienne) ; inconnu → ""."""
+    n = norm(s)
+    if not n:
+        return ""
+    if "plus de" in n:
+        return None
+    m = re.search(r"(\d+)\s*(jour|semaine|mois)", n)
+    if m:
+        k = int(m.group(1)) * {"jour": 1, "semaine": 7, "mois": 30}[m.group(2)]
+        return None if k > 45 else (today - dt.timedelta(days=k)).isoformat()
+    if re.search(r"heure|minute|aujourd", n):
+        return today.isoformat()
+    return ""
+
+
+def parse_talent(page, today):
+    """Agrégateur Talent.com : cartes de résultats (intitulé, entreprise, lieu, ancienneté)."""
+    out = []
+    for a in [m.start() for m in re.finditer(r'class="JobCard_card__TSiPB', page)]:
+        c = page[a:a + 5000]
+
+        def g(k):
+            m = re.search(r'class="JobCard_' + k + r'[^"]*"[^>]*>(.*?)</', c, re.S)
+            return text(m.group(1)) if m else ""
+        href = re.search(r'href="(/view\?id=\d+)"', c)
+        title, company = g("title"), g("company") or "Confidentiel"
+        place = moroccan_place(g("location"))
+        posted = ago_to_date(g("timeText"), today)
+        if not href or not title or not place or posted is None:
+            continue
+        if re.match(r"(michael page|marocadres|rekrute|exekutive)", norm(company)) or norm(company) == norm(title):
+            continue  # site déjà lu directement, ou annonce sans entreprise
+        out.append({"title": title, "company": company, "place": place, "url": "https://ma.talent.com" + href.group(1),
+                    "source": "Talent.com", "posted": posted, "deadline": "", "experience": [], "context": ""})
+    return out
+
+
+def parse_jobzyn(page, today):
+    """Jobzyn : cartes d'offres (intitulé — entreprise, ville, contrat, expérience)."""
+    out = []
+    for chunk in page.split('<a class="group block h-full" href="')[1:]:
+        href = chunk.split('"', 1)[0]
+        if "/jobs/" not in href:
+            continue
+        c = chunk[:7000]
+        label = re.search(r'role="article" aria-label="([^"]+)"', c)
+        if not label:
+            continue
+        title, _, company = html.unescape(label.group(1)).partition(" — ")
+        spans = [text(x) for x in re.findall(r'<span class="font-semibold text-gray-800">(.*?)</span>', c, re.S)]
+        place = moroccan_place(spans[0]) if spans else ""
+        if not place or any(norm(x) in ("stage", "alternance", "stage pfe") for x in spans):
+            continue
+        exp = [x for x in spans if re.search(r"\d+\s*(-|à)\s*\d+\s*ans|\d+\s*ans", x)]
+        out.append({"title": title.strip(), "company": company.strip() or "Confidentiel", "place": place,
+                    "url": "https://www.jobzyn.com" + html.unescape(href).split("?")[0], "source": "Jobzyn",
+                    "posted": "", "deadline": "", "experience": [x.replace("-", "à") for x in exp], "context": ""})
+    return out
+
+
+def parse_marocadres(page, today):
+    """MaroCadres : tableau des offres (date, intitulé, entreprise, lieu) ; seules les 45 derniers jours comptent."""
+    out = []
+    for row in page.split('<div class="liste-annonce-text clearfix">')[1:]:
+        date = re.search(r"Le : (\d{2}/\d{2}/\d{4})", row)
+        a = re.search(r'<h4>\s*<a href="(Offre\?id=\d+)">(.*?)</a>', row, re.S)
+        if not date or not a:
+            continue
+        posted = ddmmyyyy(date.group(1))
+        if (days_since(posted, today) or 999) > 45:
+            continue
+        ent = re.search(r"Entreprise :\s*<span>\s*<a[^>]*>(.*?)</a>", row, re.S)
+        loc = re.search(r"Localit\S* :\s*<span>(.*?)</span>", row, re.S)
+        place = moroccan_place(text(loc.group(1)) if loc else "")
+        if not place:
+            continue
+        out.append({"title": text(a.group(2)), "company": text(ent.group(1)) if ent else "Confidentiel", "place": place,
+                    "url": "https://www.marocadres.com/" + a.group(1), "source": "MaroCadres", "posted": posted,
+                    "deadline": "", "experience": [], "context": ""})
+    return out
+
+
+def parse_fedafrica(page, today):
+    """Fed Africa : offres de cadres (les offres pourvues sont ignorées)."""
+    out = []
+    for block in page.split("<div class='offre ")[1:]:
+        if "provided" in block.split(">", 1)[0]:
+            continue
+        a = re.search(r"<a class='nom' href='(/offres/[^']+)'>(.*?)</a>", block, re.S)
+        loc = re.search(r"ico-localisation'></div>\s*(.*?)\s*</div>", block, re.S)
+        date = re.search(r"ico-date'></div>\s*([\d/]+)", block)
+        place = moroccan_place(text(loc.group(1)) if loc else "")
+        if not a or not place:
+            continue
+        out.append({"title": city_case(text(a.group(2))) if text(a.group(2)).isupper() else text(a.group(2)),
+                    "company": "Fed Africa · cabinet de recrutement", "place": place,
+                    "url": "https://www.fedafrica.com" + a.group(1), "source": "Fed Africa",
+                    "posted": ddmmyyyy(date.group(1)) if date else "", "deadline": "", "experience": [], "context": ""})
+    return out
+
+
+def enrich_generic(o, page):
+    """Texte d'une annonce (Talent.com, Jobzyn, MaroCadres, Fed Africa) : à partir de l'intitulé, sans menus ni scripts."""
+    body = re.sub(r"<(script|style|nav|header|footer|svg)\b.*?</\1>", " ", page, flags=re.S | re.I)
+    desc = text(body)
+    i = desc.lower().find(o["title"].lower()[:25])
+    desc = desc[max(i, 0):][:4000]
+    o["context"] = (o.get("context", "") + " " + desc).strip()
+    m = MIN_YEARS.search(desc)
+    if m:
+        o["min_years"] = int(m.group(1) or m.group(2))
+    # « Publiée il y a 3 semaines » (Jobzyn) : date approximative de publication
+    m = re.search(r"publiee il y a (plus de\s+)?(\d+|un|une)\s*(heure|jour|semaine|mois)", norm(desc))
+    if m and not o.get("posted"):
+        n = 1 if m.group(2) in ("un", "une") else int(m.group(2))
+        days = n * {"heure": 0, "jour": 1, "semaine": 7, "mois": 30}[m.group(3)] + (1 if m.group(1) else 0)
+        o["posted"] = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+
+
 # ---------------------------------------------------------------- estimation automatique
 EXCLUDE_TITLE = re.compile(
     r"(?<!en )\bcharge(?:e|s|es)?\b|\bcommerci\w* terrain\b|\battache\w* commercia\w*|\bdelegue\w*|"
     r"\btechnico.commercia\w*|\bsuperviseu\w*|\bmerchandis\w*|\bpromot\w*|\banimat\w*|\bteleven\w*|"
     r"\bcommunication interne\b|"
     r"\b(stagiaire|stage|internship|intern|alternan\w*|apprenti\w*|junior|assistant\w*|"
-    r"community|seo|sea|ads|media buyer|content|contenu|graphiste|infographiste|designer|redacteur|"
+    r"community|seo|sea|ads|media buyer|content|contenu|graphiste|infographiste|designer|redacteur|influence\w*|"
     r"conseiller\w*|teleconseill\w*|teleprospect\w*|call ?cent\w*|sdr|sales development|formateur|"
     r"formatrice|recouvrement|achats?|acheteur|purchas\w*|procurement|sourcing|supply|logisti\w*|hse|"
     r"ehs|qualite|quality|rh|ressources humaines|recrut\w*|comptab\w*|financ\w*|controle de gestion|"
     r"juriste|developpeur|ingenieur|engineer|technicien|maintenance|production|usine|magasinier|"
-    r"caissier\w*|vendeu\w*|store manager|responsable magasin|operations|it)\b")
+    r"caissier\w*|vendeu\w*|store manager|responsable magasin|operations|it|si|amoa|moa|erp|data|ppc|amazon)\b")
 # Secteur que le candidat veut quitter : ces offres ne sont pas retenues.
 EXCLUDE_SECTOR = re.compile(
     r"\b(vins?|spiritueux|wines?|spirits|brasseries?|bieres?|beers?|caviste|sommelier)\b|(?<!sans )\balcool\w*")
 GOOD_SECTOR = re.compile(
     r"\b(fmcg|grande consommation|biens de consommation|agro\w*|alimentaire|food|boissons|beverages?|"
-    r"cosmeti\w*|beaute|beauty|hygiene|retail|grande distribution|gms|horeca|chr|hotellerie|luxe|luxury|premium)\b")
+    r"cosmeti\w*|beaute|beauty|hygiene|retail|grande distribution|gms|horeca|chr|"
+    # grandes entreprises de grande consommation et de distribution au Maroc
+    r"procter|unilever|nestle|danone|lesieur|cosumar|coca.cola|oulmes|sotherma|mondelez|bimo|dari|copag|jaouda|"
+    r"koutoubia|henkel|l.oreal|colgate|safilait|lactalis|label.?vie|marjane|carrefour|bim)\b")
 FAR_SECTOR = re.compile(
-    r"\b(pharma\w*|medical\w*|sante|clinique|automobile|automotive|informatique|logiciel|saas|software|"
+    r"\b(pharma\w*|medical\w*|sante|clinique|auto|automobile|automotiv\w*|motors?|informatique|logiciel|saas|software|bank|banking|"
+    r"fintech|paiement|payment|logisti\w*|cyber\w*|sterili\w*|"
     r"telecom\w*|technolog\w*|banque|bancaire|assurance\w*|immobilier|real estate|petrol\w*|carburants?|"
-    r"energie|energy|btp|construction|aeronautique|education|ecole|universite|centre d.appel|presse|media|"
-    r"securite|security|industri\w*|equipements?|vehicules?|camions?|trucks?|mobilite|transport|textile)\b")
+    r"energie|energy|btp|construction|aeronautique|education|ecole|universite|centre d.appel|"
+    r"securite|security|equipements? industriels?|vehicules?|camions?|trucks?|mobilite|transport|textile|"
+    r"chimie|parachimie|metallurg\w*|siderurg\w*|plasturg\w*)\b")
 PROCUREMENT = re.compile(r"\b(procurement|sourcing|matieres premieres|strategies? achats|achats (industriels|indirects|directs))\b")
 GAMING = re.compile(
     r"\b(loterie|lottery|gaming|betting|casino|sorec|paris (?:sportifs|hippiques)|hippiques?|"
     r"jeux (?:de hasard|d.argent|en ligne)|marocaine des jeux)\b")
 
 FAMILY_RULES = [
-    ("Trade marketing", re.compile(r"\btrade\b"), 60),
+    ("Trade marketing", re.compile(r"\btrade\b"), 55),
     # « Directeur commercial et marketing » : un poste de direction, pas un poste marketing
     ("Direction", re.compile(r"\b(directeur|directrice|director|head)\b.*\b(commercia\w*|ventes?|sales)\b"), 40),
     ("Category", re.compile(r"\bcateg\w*\b"), 40),
-    ("Marque & produit", re.compile(r"\b(brand|marques?|chef de produit|product manager|chef de groupe)\b"), 45),
+    ("Marque & produit", re.compile(r"\b(brand|marques?|chefs? de produits?|product manager|chef de groupe)\b"), 45),
     ("Marketing", re.compile(r"\bmarketing\b"), 45),
     ("Marketing", re.compile(r"\b(e-?commerce|digital|omnicanal|crm)\b"), 35),
     ("Marketing", re.compile(r"\bcommunication\b"), 30),
@@ -348,44 +528,84 @@ def years(labels):
     return (min(nums), max(nums)) if nums else None
 
 
+# Points forts recherchés dans l'annonce : chaque thème présent ajoute 2 points (8 au plus).
+STRENGTHS = [re.compile(r) for r in (
+    r"\btrade marketing\b", r"\bactivations?\b", r"\blancements?\b",
+    r"\b(gms|grande distribution|modern trade|retail)\b", r"\b(circuit )?traditionnel\b", r"\b(chr|horeca|on trade)\b",
+    r"\b(key accounts?|grands comptes|comptes cles)\b", r"\b(pricing|politique tarifaire|politique de prix)\b",
+    r"\bbudgets?\b", r"\bcategor\w*\b", r"\b(merchandising|plv|points? de vente)\b", r"\b(marques?|brands?)\b",
+    r"\b(distributeurs?|reseaux? de distribution|route.to.market)\b", r"\b(e-?commerce|digital|online)\b")]
+SENIOR = re.compile(r"\b(directeur|directrice|director|head|senior|national|country)\b")
+NEAR_HOME = re.compile(
+    r"\b(casablanca|bouskoura|mohammedia|ain sebaa|sidi maarouf|nouaceur|berrechid|had soualem|tit mellil|"
+    r"dar bouazza|settat)\b")
+MAX_AUTO = 80  # une estimation automatique ne dépasse pas ce niveau
+PLAIN_SALES = re.compile(r"^(commercia\w*|conseill\w* commercia\w*|agent commercia\w*|vendeu\w*)\b")
+LEAD = re.compile(r"\b(directeur|directrice|director|responsable|manager|head|chef|national|country|key account|kam|grands comptes)\b")
+
+
 def estimate(o):
-    """Renvoie (famille, chances, explication) ou None si l'offre sort du domaine recherché."""
+    """Renvoie (famille, chances, explication) ou None si l'offre sort du domaine recherché.
+
+    Barème : métier (30 à 55) + niveau du poste + années demandées + secteur + points forts de l'annonce + lieu.
+    Les meilleures offres de grande consommation, au bon niveau et près de Casablanca, dépassent 75.
+    """
     t = norm(o["title"])
     ctx = norm(" ".join([o["title"], o.get("company", ""), o.get("context", "")]))
     if EXCLUDE_TITLE.search(t) or EXCLUDE_SECTOR.search(ctx):
         return None
+    if PLAIN_SALES.search(t) and not LEAD.search(t):
+        return None  # vente terrain
     fam, score = family_of(o["title"])
     if not fam:
         return None
     if fam == "Category" and PROCUREMENT.search(ctx):
         return None  # category management côté achats
     parts = [FAMILY_LABEL[fam]]
+    if SENIOR.search(t):
+        score += 5
+    lo = hi = None
     yr = years(o.get("experience") or [])
-    mn = o.get("min_years")
-    if mn and 1 <= mn <= 25:
-        # le minimum écrit dans l'annonce est plus précis que la tranche du site
-        yr = (mn, max(mn, yr[1]) if yr else mn)
     if yr:
         lo, hi = yr
-        if hi <= 3:
+    mn = o.get("min_years")
+    if mn and 1 <= mn <= 25:
+        # le minimum écrit dans l'annonce est plus précis que la tranche du site ; il ne fixe pas de maximum
+        lo, hi = mn, (hi if hi and hi >= mn else None)
+    if lo is not None:
+        if hi is not None and hi <= 3:
             score -= 25
-        elif hi <= 5:
+        elif hi is not None and hi <= 5:
             score -= 10
-        elif hi >= 20 or lo >= 10:
+        elif lo >= 10 or (hi or 0) >= 20:
             score += 10
         elif lo >= 8:
             score += 5
-        parts.append(f"{lo} ans minimum demandés" if mn and lo == mn else f"{lo} à {hi} ans d'expérience demandés")
-    if GOOD_SECTOR.search(ctx):
+        parts.append(f"{lo} à {hi} ans demandés" if hi and hi != lo else f"{lo} ans minimum demandés")
+    # Le secteur se lit d'abord dans l'intitulé et l'entreprise, puis au début de l'annonce, puis dans tout le texte.
+    # Au premier niveau qui tranche, on s'arrête ; si les deux secteurs apparaissent, l'intitulé penche vers « éloigné ».
+    sector = ""
+    for level, txt in enumerate((norm(o["title"] + " " + o.get("company", "")), norm(o.get("context", "")[:150]), ctx)):
+        good, far = bool(GOOD_SECTOR.search(txt)), bool(FAR_SECTOR.search(txt))
+        if good or far:
+            sector = "far" if far and (not good or level == 0) else ("good" if not far else "")
+            break
+    if sector == "good":
         score += 10
         parts.append("secteur proche de votre parcours")
-    elif FAR_SECTOR.search(ctx):
-        score -= 15
+    elif sector == "far":
+        score -= 20
         parts.append("secteur éloigné de votre parcours")
     if GAMING.search(ctx):
         score += 10  # univers déjà pratiqué
         parts.append("univers des jeux, déjà pratiqué")
-    score = max(5, min(70, score))
+    hits = sum(1 for rx in STRENGTHS if rx.search(ctx))
+    score += min(8, 2 * hits)
+    if hits >= 4:
+        parts.append("missions proches des vôtres")
+    if NEAR_HOME.search(norm(o.get("place", ""))):
+        score += 2
+    score = max(5, min(MAX_AUTO, score))
     why = ", ".join(parts) + ". Estimation automatique d'après l'annonce, à affiner."
     return fam, score, why[0].upper() + why[1:]
 
@@ -437,6 +657,8 @@ def merge(maroc, scraped, today, now_iso, sources, closed=frozenset()):
             if twin and first_word(twin.get("company")) == first_word(s["company"]) \
                     and first_word(s["company"]) not in NO_DEDUPE:
                 cur = twin
+            else:
+                cur = next((o for o in offers if same_offer(o, s)), None)
         if cur is not None:
             if s.get("deadline") and not cur.get("deadline"):
                 cur["deadline"] = s["deadline"]
@@ -485,7 +707,7 @@ def dedupe(offers):
     for o in sorted(offers, key=lambda o: (bool(o.get("auto")), o.get("first_seen") or "")):
         fw = first_word(o.get("company"))
         sig = (same_offer_signature(o), fw)
-        if fw not in NO_DEDUPE and sig in seen:
+        if fw not in NO_DEDUPE and (sig in seen or any(same_offer(k, o) for k in out)):
             continue
         seen.add(sig)
         out.append(o)
@@ -518,6 +740,9 @@ def sync_selection(sel, maroc, today, now_iso):
     sel.update({"updated": now_iso, "offers": keep[:MAX_OFFRES]})
 
 
+PARSERS = {"Talent.com": parse_talent, "Jobzyn": parse_jobzyn, "MaroCadres": parse_marocadres, "Fed Africa": parse_fedafrica}
+
+
 def main():
     offline = None
     if "--offline" in sys.argv:
@@ -535,8 +760,12 @@ def main():
             time.sleep(2.5)
         if not page:
             continue
-        found = parse_michael_page(page) if source == "Michael Page" else parse_rekrute(
-            page, "https://exekutive.biz" if source == "Exekutive" else "https://www.rekrute.com", source)
+        if source in PARSERS:
+            found = PARSERS[source](page, today)
+        elif source == "Michael Page":
+            found = parse_michael_page(page)
+        else:
+            found = parse_rekrute(page, "https://exekutive.biz" if source == "Exekutive" else "https://www.rekrute.com", source)
         print(f"{source:12} {len(found):3} offres au Maroc · {url}")
         scraped.extend(found)
         if source not in ok_sources:
@@ -554,17 +783,23 @@ def main():
     # pages de détail des nouvelles offres (le résumé des listes ne suffit pas pour estimer)
     current = load(MAROC)["offers"]
     known = {offer_key(o.get("url")) for o in current}
+    budget = 45  # pages de détail lues au plus par passage
     for o in scraped:
         key = offer_key(o["url"])
-        if not key or key in known:
+        if not key or key in known or budget <= 0:
             continue
         known.add(key)
+        if estimate(o) is None:
+            continue  # intitulé hors du domaine recherché : inutile de lire l'annonce
+        budget -= 1
         code, page = detail(o["url"])
         if page:
             if o["source"] == "Michael Page":
                 enrich_michael_page(o, page)
-            else:
+            elif o["source"] in ("ReKrute", "Exekutive"):
                 enrich_rekrute(o, page)
+            else:
+                enrich_generic(o, page)
 
     # annonces Michael Page déjà listées : sans date de clôture, on vérifie qu'elles sont toujours en ligne
     closed = set()

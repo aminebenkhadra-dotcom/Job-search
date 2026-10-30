@@ -1,7 +1,7 @@
 name: Scan du marché marocain
 on:
   schedule:
-    - cron: '37 5 * * *'
+    - cron: '37 5,11,16 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -27,7 +27,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add data/maroc.json data/offres.json
-          git commit -qm "Scan Maroc du $(date -u +%d/%m/%Y)"
+          git commit -qm "Scan Maroc du $(date -u +%d/%m/%Y) à $(date -u +%Hh%M)"
           for i in 1 2 3; do
             git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
             sleep 10

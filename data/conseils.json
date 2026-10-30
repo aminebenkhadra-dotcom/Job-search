@@ -1,0 +1,73 @@
+{
+ "updated": "2026-10-30",
+ "rappel": "Le pourcentage mesure l'adéquation avec l'annonce. Le rappel dépend surtout du canal : une candidature recommandée par un contact, ou présentée par un cabinet, est beaucoup plus souvent lue.",
+ "semaine": [
+  {"id": "candidatures", "label": "Candidatures ciblées", "cible": 5, "auto": "candidatures", "aide": "Offres à 55 % et plus, lettre adaptée."},
+  {"id": "reseau", "label": "Messages à votre réseau", "cible": 5, "modele": "reseau", "aide": "Anciens collègues et managers, clients, anciens de votre école."},
+  {"id": "cabinets", "label": "Cabinets contactés", "cible": 2, "modele": "cabinet", "aide": "Un message court et le CV."},
+  {"id": "spontanees", "label": "Candidatures spontanées", "cible": 2, "modele": "spontanee", "aide": "Entreprises cibles, même sans offre publiée."},
+  {"id": "relances", "label": "Relances", "auto": "relances", "aide": "Chaque candidature restée sans réponse 7 jours."},
+  {"id": "linkedin", "label": "Posts ou commentaires LinkedIn", "cible": 2, "aide": "Sur votre métier : résultats, lancements, marché."}
+ ],
+ "causes": [
+  {"titre": "Le CV doit parler du poste visé", "texte": "Un recruteur décide en quelques secondes : titre, dernier poste, chiffres. En haut du CV, le métier visé et vos meilleurs résultats.", "action": {"label": "Conseils CV", "ancre": "cv"}},
+  {"titre": "Les sites d'emploi seuls répondent peu", "texte": "Une annonce reçoit souvent des centaines de CV. Les postes de cadres passent surtout par le réseau et les cabinets.", "action": {"label": "Voir les cabinets", "ancre": "cabinets"}},
+  {"titre": "« Trop senior » pour l'annonce", "texte": "Avec beaucoup d'expérience, un poste « Responsable » peut inquiéter (salaire, motivation). Dites pourquoi ce poste vous attire, et visez aussi Head of et Directeur.", "action": {"label": "Mes meilleures offres", "onglet": "feed"}},
+  {"titre": "Invisible pour les chasseurs", "texte": "Les chasseurs cherchent sur LinkedIn par titre, compétences et ville. Un titre clair et « Open to work » visible des seuls recruteurs changent beaucoup.", "action": {"label": "Ouvrir mon LinkedIn", "url": "https://www.linkedin.com/in/me/"}},
+  {"titre": "Pas de relance", "texte": "Une relance polie 7 jours après l'envoi remet votre candidature en haut de la pile.", "action": {"label": "Voir le suivi", "onglet": "suivi"}}
+ ],
+ "cv": [
+  "En haut : le poste visé (par exemple « Trade Marketing Manager · Grande consommation »), pas seulement l'intitulé actuel.",
+  "Trois résultats chiffrés dès le début, liés au poste visé : croissance, lancements, budgets.",
+  "Le secteur que vous quittez : une ligne, pas une liste de marques.",
+  "Les mots de l'annonce repris tels quels : les logiciels de tri les cherchent.",
+  "Deux pages au plus, en PDF, nommé Prénom_Nom_CV.pdf."
+ ],
+ "modeles": {
+  "reseau": {"titre": "Message au réseau", "texte": "Bonjour [Prénom], j'espère que tu vas bien. Je regarde de nouvelles opportunités en [votre métier] dans [votre secteur]. Aurais-tu 15 minutes cette semaine pour un café ou un appel ? Ton regard sur le marché m'aiderait beaucoup. Merci !"},
+  "cabinet": {"titre": "Message à un cabinet", "objet": "Candidature – [poste visé]", "texte": "Bonjour,\n\n[Votre poste actuel], avec [X] ans en [votre métier], je suis à l'écoute de postes de [postes visés] au Maroc. Mon CV est joint.\n\nSeriez-vous disponible pour un échange de 15 minutes ?\n\nBien cordialement,\n[Prénom Nom]"},
+  "spontanee": {"titre": "Candidature spontanée", "objet": "Candidature spontanée – [poste visé]", "texte": "Madame, Monsieur,\n\nJe vous adresse ma candidature spontanée pour un poste de [poste visé] chez {entreprise}. [Deux résultats chiffrés de votre parcours.]\n\nJe serais heureux d'échanger avec vous. Mon CV est joint.\n\nBien cordialement,\n[Prénom Nom]"},
+  "linkedin": {"titre": "Titre LinkedIn", "texte": "[Métier visé] | [Secteur] | [Deux compétences clés] | [Un résultat chiffré]"},
+  "pitch": {"titre": "Pitch de 60 secondes", "texte": "Je suis [Prénom], [X] ans en [métier]. J'ai [résultat 1] et [résultat 2]. Je cherche un poste de [poste visé] où je peux [ce que vous apportez]."}
+ },
+ "cabinets": [
+  {"nom": "Michael Page", "note": "Cadres : marketing, ventes, direction", "site": "https://www.michaelpageafrica.com/fr"},
+  {"nom": "Fed Africa", "note": "Cadres et dirigeants · alerte e-mail", "site": "https://www.fedafrica.com/offres"},
+  {"nom": "Diorh Executive Search", "note": "Chasse de cadres dirigeants", "site": "https://www.diorh.com/fr"},
+  {"nom": "ExeKutive", "note": "Postes de direction (ReKrute)", "site": "https://exekutive.biz/offres-emploi-afrique.html"},
+  {"nom": "MaroCadres", "note": "Cadres au Maroc", "site": "https://www.marocadres.com/"},
+  {"nom": "Interface", "note": "Grande consommation, ventes, marketing", "linkedin": "Interface recrutement Maroc"},
+  {"nom": "Talents Partners", "note": "Cadres commerciaux et marketing", "linkedin": "Talents Partners Maroc"}
+ ],
+ "entreprises": [
+  {"nom": "Centrale Danone", "secteur": "Produits laitiers"},
+  {"nom": "Lesieur Cristal", "secteur": "Huiles, savons"},
+  {"nom": "Cosumar", "secteur": "Sucre"},
+  {"nom": "Unilever Maroc", "secteur": "Hygiène, alimentaire"},
+  {"nom": "Procter & Gamble Maroc", "secteur": "Hygiène, beauté"},
+  {"nom": "Nestlé Maroc", "secteur": "Alimentaire"},
+  {"nom": "Coca-Cola Maroc", "secteur": "Boissons sans alcool"},
+  {"nom": "Les Eaux Minérales d'Oulmès", "secteur": "Eaux, boissons"},
+  {"nom": "Sotherma", "secteur": "Eaux"},
+  {"nom": "Mondelez Maroc", "secteur": "Biscuits, confiserie"},
+  {"nom": "Dari Couspate", "secteur": "Pâtes, couscous"},
+  {"nom": "Copag Jaouda", "secteur": "Produits laitiers, jus"},
+  {"nom": "Safilait", "secteur": "Produits laitiers"},
+  {"nom": "Koutoubia", "secteur": "Charcuterie, volaille"},
+  {"nom": "Henkel Maroc", "secteur": "Détergents, cosmétique"},
+  {"nom": "L'Oréal Maroc", "secteur": "Beauté"},
+  {"nom": "Colgate-Palmolive Maroc", "secteur": "Hygiène"},
+  {"nom": "Label'Vie Carrefour", "secteur": "Grande distribution"},
+  {"nom": "Marjane", "secteur": "Grande distribution"},
+  {"nom": "KITEA", "secteur": "Ameublement, retail"}
+ ],
+ "une_fois": [
+  {"id": "alerte-linkedin", "label": "Alerte LinkedIn « trade marketing »", "aide": "Ouvrez, puis activez « Alerte » en haut des résultats.", "url": "https://www.linkedin.com/jobs/search/?keywords=trade%20marketing&location=Maroc&f_TPR=r604800"},
+  {"id": "alerte-linkedin-2", "label": "Alerte LinkedIn « marketing manager »", "aide": "Même chose pour un second intitulé.", "url": "https://www.linkedin.com/jobs/search/?keywords=marketing%20manager&location=Casablanca"},
+  {"id": "opentowork", "label": "LinkedIn : titre clair et « Open to work » (recruteurs seulement)", "aide": "Profil, puis « Disponible pour » et « Recruteurs uniquement ».", "url": "https://www.linkedin.com/in/me/"},
+  {"id": "alerte-indeed", "label": "Alerte Indeed « marketing » à Casablanca", "aide": "Touchez « Recevoir de nouvelles offres par e-mail ».", "url": "https://ma.indeed.com/jobs?q=marketing+manager&l=Casablanca"},
+  {"id": "compte-rekrute", "label": "Compte ReKrute avec CV et alertes", "aide": "Indispensable pour postuler sur ReKrute et Exekutive.", "url": "https://www.rekrute.com/"},
+  {"id": "michael-page", "label": "Profil Michael Page", "aide": "Déposez votre CV : les consultants cherchent dans leur base.", "url": "https://www.michaelpageafrica.com/fr"},
+  {"id": "fed-africa", "label": "Alerte e-mail Fed Africa (Maroc, commercial et marketing)", "aide": "Bouton « Créer une alerte e-mail ».", "url": "https://www.fedafrica.com/offres"}
+ ]
+}

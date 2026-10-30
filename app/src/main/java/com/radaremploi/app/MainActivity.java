@@ -179,11 +179,11 @@ public class MainActivity extends Activity {
   /** Vérifie la liste d'offres en arrière-plan et demande le droit d'afficher des notifications. */
   private void watchFeed() {
     Constraints net = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-    PeriodicWorkRequest req = new PeriodicWorkRequest.Builder(FeedWorker.class, 3, TimeUnit.HOURS)
+    PeriodicWorkRequest req = new PeriodicWorkRequest.Builder(FeedWorker.class, 1, TimeUnit.HOURS)
         .setConstraints(net)
         .build();
     WorkManager.getInstance(getApplicationContext())
-        .enqueueUniquePeriodicWork("flux-offres", ExistingPeriodicWorkPolicy.KEEP, req);
+        .enqueueUniquePeriodicWork("flux-offres", ExistingPeriodicWorkPolicy.UPDATE, req);
     if (Build.VERSION.SDK_INT >= 33
         && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED) {
       requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 7);
@@ -327,6 +327,49 @@ public class MainActivity extends Activity {
     public void saveApps(String json) {
       getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
           .putString("apps", json == null ? "" : json).apply();
+    }
+
+    /** Réglages des alertes : {"fortes":true,"autres":"discretes","relances":true}. */
+    @JavascriptInterface
+    public void setNotif(String json) {
+      try {
+        JSONObject o = new JSONObject(json == null ? "{}" : json);
+        String autres = o.optString("autres", "discretes");
+        if (!autres.equals("son") && !autres.equals("aucune")) autres = "discretes";
+        getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+            .putBoolean("notif_fortes", o.optBoolean("fortes", true))
+            .putString("notif_autres", autres)
+            .putBoolean("notif_relances", o.optBoolean("relances", true))
+            .apply();
+      } catch (Exception e) {
+        /* réglage illisible : on garde l'ancien */
+      }
+    }
+
+    @JavascriptInterface
+    public String notifPrefs() {
+      android.content.SharedPreferences p = getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+      try {
+        return new JSONObject()
+            .put("fortes", p.getBoolean("notif_fortes", true))
+            .put("autres", p.getString("notif_autres", "discretes"))
+            .put("relances", p.getBoolean("notif_relances", true))
+            .toString();
+      } catch (Exception e) {
+        return "{}";
+      }
+    }
+
+    /** Notification d'essai (et demande d'autorisation si besoin). */
+    @JavascriptInterface
+    public void testNotif() {
+      runOnUiThread(() -> {
+        if (Build.VERSION.SDK_INT >= 33
+            && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED) {
+          requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 7);
+        }
+      });
+      FeedWorker.test(getApplicationContext());
     }
 
     @JavascriptInterface
