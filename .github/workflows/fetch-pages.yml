@@ -10,9 +10,9 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/scan_maroc.py | tee scan-log.txt
+      - run: python3 probe2/probe.py
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add data scan-log.txt
-          git commit -qm "scan-test" && git push -q origin HEAD:scan-debug
+          git add probe2
+          git commit -qm "probe3" && git push -q origin HEAD:scan-debug
