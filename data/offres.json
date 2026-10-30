@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T12:15:28Z",
+ "updated": "2026-10-30T17:21:30Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -13,6 +13,20 @@
    "source": "Indeed",
    "posted": "2026-10-20",
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "michael-page-cabinet-de-directeur-commercial-h-f-distribution-fmcg-casablanca-2026-10",
+   "title": "Directeur Commercial H/F - Distribution FMCG",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "chances": 73,
+   "why": "Direction, 10 ans minimum demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-commercial-hf-distribution-fmcg-casablanca/ref/jn-102026-7134761",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
   },
   {
    "id": "b5-flormar-senior-trade-marketing-bouskoura-2026-10",

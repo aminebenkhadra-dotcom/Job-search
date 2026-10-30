@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T12:15:28Z",
+ "updated": "2026-10-30T17:21:30Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -22,6 +22,20 @@
    "source": "Indeed",
    "posted": "2026-10-20",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "michael-page-cabinet-de-directeur-commercial-h-f-distribution-fmcg-casablanca-2026-10",
+   "title": "Directeur Commercial H/F - Distribution FMCG",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 73,
+   "why": "Direction, 10 ans minimum demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-commercial-hf-distribution-fmcg-casablanca/ref/jn-102026-7134761",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true
   },
   {
    "id": "b5-flormar-senior-trade-marketing-bouskoura-2026-10",
@@ -257,19 +271,6 @@
    "auto": true
   },
   {
-   "id": "michael-page-cabinet-de-senior-business-developer-h-f-home-appliance-casablanca-2026-10",
-   "title": "Senior Business Developer H/F (Home Appliance)",
-   "company": "Michael Page · électroménager premium",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 45,
-   "why": "Distributeurs et retail pour une marque premium, 6 ans demandés. Freins : poste sans équipe, profil tech recherché.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/senior-business-developer-hf-home-appliance-casablanca/ref/jn-102026-7130182",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-22"
-  },
-  {
    "id": "procter-gamble-brand-manager-casablanca-2026-10",
    "title": "Brand Manager",
    "company": "Procter & Gamble",
@@ -401,6 +402,21 @@
    "source": "Indeed",
    "posted": "2026-10-21",
    "first_seen": "2026-10-29"
+  },
+  {
+   "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
+   "title": "Directeur Commercial et Marketing Immobilier",
+   "company": "XCDM Maroc",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 39,
+   "why": "Direction, 10 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-et-marketing-immobilier-recrutement-xcdm-maroc-casablanca-187619.html",
+   "source": "ReKrute",
+   "posted": "2026-10-16",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "deadline": "2026-12-16"
   },
   {
    "id": "auto-nejma-maroc-s-a-chef-de-produits-senior-value-casablanca-2026-10",
@@ -1283,6 +1299,20 @@
    "deadline": "2026-12-13"
   },
   {
+   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
+   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 19,
+   "why": "Marketing, 5 à 8 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
    "id": "jobzyn-confidential-responsable-commercial-senior-h-f-casablanca-2026-08",
    "title": "Responsable Commercial Senior H/F",
    "company": "Jobzyn Confidential",
@@ -1620,44 +1650,16 @@
    "auto": true
   },
   {
-   "id": "bank-of-africa-responsable-developpement-commercial-tpe-casablanca-2026-08",
-   "title": "Responsable Développement Commercial TPE",
-   "company": "BANK OF AFRICA",
-   "place": "Casablanca",
+   "id": "michael-page-cabinet-de-responsable-commercial-regional-nord-h-f-equ-rabat-2026-10",
+   "title": "Responsable Commercial Régional Nord H/F - Équipements Sanitaires",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Rabat",
    "family": "Vente & comptes clés",
    "chances": 12,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/bank-of-africa/jobs/responsable-developpement-commercial-tpe-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-08-30",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "chateau-de-mercues-general-manager-fes-2026-10",
-   "title": "General Manager",
-   "company": "Château de Mercuès",
-   "place": "Fes",
-   "family": "Direction",
-   "chances": 12,
-   "why": "Direction, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=590765669686061140",
-   "source": "Talent.com",
-   "posted": "2026-10-20",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "riad-fes-general-manager-fes-2026-10",
-   "title": "General Manager",
-   "company": "Riad Fès",
-   "place": "Fes",
-   "family": "Direction",
-   "chances": 12,
-   "why": "Direction, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=590765660851284052",
-   "source": "Talent.com",
-   "posted": "2026-10-20",
+   "why": "Vente et comptes clés, 5 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/responsable-commercial-nord-hf-sanitaire-collectif-rabat/ref/jn-102026-7136683",
+   "source": "Michael Page",
+   "posted": "",
    "first_seen": "2026-10-30",
    "auto": true
   }
