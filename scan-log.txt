@@ -25,13 +25,13 @@ Michael Page   6 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/ma
 Michael Page   6 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/ventes
 Michael Page   5 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/marketing-director
 Michael Page   3 offres au Maroc · https://www.michaelpageafrica.com/fr/jobs/directeur-commercial/africa
-Talent.com     7 offres au Maroc · https://ma.talent.com/jobs?k=trade+marketing&l=Maroc
-Talent.com    10 offres au Maroc · https://ma.talent.com/jobs?k=marketing+manager&l=Maroc
+Talent.com     6 offres au Maroc · https://ma.talent.com/jobs?k=trade+marketing&l=Maroc
+Talent.com     9 offres au Maroc · https://ma.talent.com/jobs?k=marketing+manager&l=Maroc
 Talent.com     9 offres au Maroc · https://ma.talent.com/jobs?k=responsable+marketing&l=Maroc
-Talent.com     9 offres au Maroc · https://ma.talent.com/jobs?k=directeur+marketing&l=Maroc
-Talent.com     5 offres au Maroc · https://ma.talent.com/jobs?k=directeur+commercial&l=Maroc
-Talent.com     7 offres au Maroc · https://ma.talent.com/jobs?k=brand+manager&l=Maroc
-Talent.com     8 offres au Maroc · https://ma.talent.com/jobs?k=key+account+manager&l=Maroc
+Talent.com     8 offres au Maroc · https://ma.talent.com/jobs?k=directeur+marketing&l=Maroc
+Talent.com     4 offres au Maroc · https://ma.talent.com/jobs?k=directeur+commercial&l=Maroc
+Talent.com     5 offres au Maroc · https://ma.talent.com/jobs?k=brand+manager&l=Maroc
+Talent.com     7 offres au Maroc · https://ma.talent.com/jobs?k=key+account+manager&l=Maroc
 Talent.com     6 offres au Maroc · https://ma.talent.com/jobs?k=category+manager&l=Maroc
 Jobzyn        14 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Marketing&pageSize=100
 Jobzyn         0 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Trade%20Marketing&pageSize=100
@@ -41,8 +41,5 @@ Jobzyn         9 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQ
 Jobzyn         2 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Key%20Account&pageSize=100
 Jobzyn         3 offres au Maroc · https://www.jobzyn.com/fr/jobs/maroc?searchQuery=Category&pageSize=100
 MaroCadres    20 offres au Maroc · https://www.marocadres.com/
-  échec (1) https://www.fedafrica.com/offres?q%5Bgeo_area_id_in%5D%5B%5D=35 : HTTP Error 500: Internal Server Error
-  échec (2) https://www.fedafrica.com/offres?q%5Bgeo_area_id_in%5D%5B%5D=35 : HTTP Error 500: Internal Server Error
-  échec (1) https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca : 'ascii' codec can't encode character '\xe9' in position 40: ordinal not in range(128)
-  échec (2) https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca : 'ascii' codec can't encode character '\xe9' in position 40: ordinal not in range(128)
-Maroc : 120 offres (53 nouvelles, 0 retirées) · Mes offres : 19
+Fed Africa     0 offres au Maroc · https://www.fedafrica.com/offres?q%5Bexpertise_area_id_in%5D%5B%5D=2&q%5Bgeo_area_id_in%5D%5B%5D=35
+Maroc : 120 offres (44 nouvelles, 0 retirées) · Mes offres : 13

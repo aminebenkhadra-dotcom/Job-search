@@ -1,6 +1,20 @@
 {
- "updated": "2026-10-30T06:16:04Z",
+ "updated": "2026-10-30T10:50:56Z",
  "offers": [
+  {
+   "id": "kitea-head-of-marketing-customer-intelligence-casablanca-2026-10",
+   "title": "Head Of Marketing & Customer Intelligence",
+   "company": "KITEA",
+   "place": "Casablanca",
+   "chances": 80,
+   "why": "Marketing, 10 ans minimum demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/head-of-marketing-customer-intelligence-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
+  },
   {
    "id": "ifcar-rtm-kenitra-2026-10",
    "title": "Responsable Trade Marketing (H/F)",
@@ -15,6 +29,20 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "cosmetica-brand-manager-senior-cosmetiques-h-f-casablanca-2026-10",
+   "title": "Brand Manager Senior – Cosmétiques (H/F)",
+   "company": "Cosmetica",
+   "place": "Casablanca",
+   "chances": 70,
+   "why": "Marque et produit, 5 ans minimum demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/cosmetica/jobs/brand-manager-senior-cosmetiques-hf-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
    "id": "b5-flormar-senior-trade-marketing-bouskoura-2026-10",
    "title": "Senior Trade Marketing Manager",
    "company": "Flormar · B5 Cosmetics",
@@ -26,6 +54,20 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05",
+   "country": "Maroc"
+  },
+  {
+   "id": "maghreb-industries-responsable-marketing-casablanca-2026-10",
+   "title": "Responsable Marketing",
+   "company": "Maghreb Industries",
+   "place": "Casablanca",
+   "chances": 65,
+   "why": "Marketing, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/Maghreb-Industries/jobs/responsable-marketing-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
    "country": "Maroc"
   },
   {
@@ -43,6 +85,34 @@
    "country": "Maroc"
   },
   {
+   "id": "kitea-category-manager-casablanca-2026-10",
+   "title": "Category Manager",
+   "company": "KITEA",
+   "place": "Casablanca",
+   "chances": 58,
+   "why": "Category management, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/category-manager-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "innoflex-responsable-commercial-hospitality-gms-et-gr-had-soualem-2026-10",
+   "title": "Responsable Commercial Hospitality, GMS et Grands Comptes",
+   "company": "Innoflex",
+   "place": "Had Soualem",
+   "chances": 56,
+   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/innoflex/jobs/responsable-commercial-hospitality-gms-et-grand-compte-had-soualem",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
    "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
    "title": "Responsable Grands Comptes & Marketing H/F",
    "company": "Michael Page · industriel FMCG",
@@ -53,6 +123,34 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-27",
+   "country": "Maroc"
+  },
+  {
+   "id": "innoflex-responsable-marketing-et-digital-casablanca-2026-10",
+   "title": "Responsable Marketing et Digital",
+   "company": "Innoflex",
+   "place": "Casablanca",
+   "chances": 55,
+   "why": "Marketing, 3 ans minimum demandés, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/innoflex/jobs/responsable-marketing-et-digital-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "sterifil-responsable-marketing-casablanca-2026-10",
+   "title": "Responsable Marketing",
+   "company": "Sterifil",
+   "place": "Casablanca",
+   "chances": 55,
+   "why": "Marketing, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/sterifil/jobs/responsable-marketing-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
    "country": "Maroc"
   },
   {
