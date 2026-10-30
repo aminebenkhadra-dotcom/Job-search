@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T11:05:47Z",
+ "updated": "2026-10-30T12:15:28Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -101,19 +101,6 @@
    "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/head-of-marketing-customer-intelligence-casablanca",
    "posted": "2026-08-30",
    "source": "Jobzyn",
-   "first_seen": "2026-10-30"
-  },
-  {
-   "id": "procter-gamble-brand-manager-casablanca-2026-10",
-   "title": "Brand Manager",
-   "company": "Procter & Gamble",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 45,
-   "why": "Brand Manager chez la référence de la grande consommation. Freins : P&G promeut surtout en interne, poste sous votre niveau.",
-   "url": "https://www.jobzyn.com/fr/companies/procter-&-gamble/jobs/brand-manager-casablanca",
-   "source": "Jobzyn",
-   "posted": "",
    "first_seen": "2026-10-30"
   },
   {
@@ -281,6 +268,19 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-10-22"
+  },
+  {
+   "id": "procter-gamble-brand-manager-casablanca-2026-10",
+   "title": "Brand Manager",
+   "company": "Procter & Gamble",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 45,
+   "why": "Brand Manager chez la référence de la grande consommation. Freins : P&G promeut surtout en interne, poste sous votre niveau.",
+   "url": "https://www.jobzyn.com/fr/companies/procter-&-gamble/jobs/brand-manager-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30"
   },
   {
    "id": "innoflex-responsable-marketing-et-digital-casablanca-2026-10",
@@ -1050,6 +1050,20 @@
    "auto": true
   },
   {
+   "id": "chapsvision-sales-administration-manager-casablanca-2026-10",
+   "title": "Sales Administration Manager",
+   "company": "ChapsVision",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 24,
+   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=640802755189932971",
+   "source": "Talent.com",
+   "posted": "2026-10-10",
+   "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
    "id": "maroc-telecom-responsable-marketing-cybersecurite-b2b-rabat-2026-08",
    "title": "Responsable Marketing Cybersécurité B2B",
    "company": "Maroc Telecom",
@@ -1620,6 +1634,20 @@
    "auto": true
   },
   {
+   "id": "chateau-de-mercues-general-manager-fes-2026-10",
+   "title": "General Manager",
+   "company": "Château de Mercuès",
+   "place": "Fes",
+   "family": "Direction",
+   "chances": 12,
+   "why": "Direction, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=590765669686061140",
+   "source": "Talent.com",
+   "posted": "2026-10-20",
+   "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
    "id": "riad-fes-general-manager-fes-2026-10",
    "title": "General Manager",
    "company": "Riad Fès",
@@ -1632,33 +1660,6 @@
    "posted": "2026-10-20",
    "first_seen": "2026-10-30",
    "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
-   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 10,
-   "why": "Communication institutionnelle dans le secteur public : hors de votre métier.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
-   "title": "Directeur Commercial et Marketing Immobilier",
-   "company": "XCDM Maroc · promotion immobilière",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 10,
-   "why": "Huit ans d'expérience dans l'immobilier exigés, que vous n'avez pas.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-et-marketing-immobilier-recrutement-xcdm-maroc-casablanca-187619.html",
-   "source": "ReKrute",
-   "posted": "2026-10-16",
-   "first_seen": "2026-10-20",
-   "deadline": "2026-12-16"
   }
  ]
 }
