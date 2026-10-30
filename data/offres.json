@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T06:16:04Z",
+ "updated": "2026-10-30T11:05:47Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -29,6 +29,45 @@
    "country": "Maroc"
   },
   {
+   "id": "cosmetica-brand-manager-senior-cosmetiques-h-f-casablanca-2026-10",
+   "title": "Brand Manager Senior – Cosmétiques (H/F)",
+   "company": "Cosmetica · marques de beauté sélectives",
+   "place": "Casablanca",
+   "chances": 70,
+   "why": "Marques de luxe : lancements 360°, trade plan par enseigne, 5 ans et plus. Frein : la cosmétique, secteur nouveau pour vous.",
+   "url": "https://www.jobzyn.com/fr/companies/cosmetica/jobs/brand-manager-senior-cosmetiques-hf-casablanca",
+   "posted": "2026-10-29",
+   "source": "Jobzyn",
+   "first_seen": "2026-10-30",
+   "country": "Maroc"
+  },
+  {
+   "id": "innoflex-responsable-commercial-hospitality-gms-et-gr-had-soualem-2026-10",
+   "title": "Responsable Commercial Hospitality, GMS et Grands Comptes",
+   "company": "Innoflex · literie",
+   "place": "Had Soualem",
+   "chances": 65,
+   "why": "Hôtels, GMS et grands comptes pour un fabricant de literie, 10 ans demandés : vos canaux et un secteur que vous connaissez.",
+   "url": "https://www.jobzyn.com/fr/companies/innoflex/jobs/responsable-commercial-hospitality-gms-et-grand-compte-had-soualem",
+   "posted": "2026-09-30",
+   "source": "Jobzyn",
+   "first_seen": "2026-10-30",
+   "country": "Maroc"
+  },
+  {
+   "id": "maghreb-industries-responsable-marketing-casablanca-2026-10",
+   "title": "Responsable Marketing",
+   "company": "Maghreb Industries · confiserie",
+   "place": "Casablanca",
+   "chances": 65,
+   "why": "Grande consommation : trade marketing, lancements, packagings, terrain. Frein : 3 à 5 ans demandés, vous êtes plus senior.",
+   "url": "https://www.jobzyn.com/fr/companies/Maghreb-Industries/jobs/responsable-marketing-casablanca",
+   "posted": "2026-09-30",
+   "source": "Jobzyn",
+   "first_seen": "2026-10-30",
+   "country": "Maroc"
+  },
+  {
    "id": "confidentiel-responsable-marketing-fmcg-casablanca-2026-10",
    "title": "Responsable Marketing (H/F)",
    "company": "Confidentiel · marques grand public",
@@ -40,6 +79,20 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05",
+   "country": "Maroc"
+  },
+  {
+   "id": "procter-gamble-brand-manager-casablanca-2026-10",
+   "title": "Brand Manager",
+   "company": "Procter & Gamble",
+   "place": "Casablanca",
+   "chances": 59,
+   "why": "Marque et produit, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/procter-&-gamble/jobs/brand-manager-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-10-30",
+   "auto": true,
    "country": "Maroc"
   },
   {
