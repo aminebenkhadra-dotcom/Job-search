@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T06:14:37Z",
+ "updated": "2026-10-31T12:10:09Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -129,6 +129,20 @@
    "source": "Jobzyn",
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "yo-ai-labs-product-manager-remote-casablanca-2026-10",
+   "title": "Product Manager - Remote",
+   "company": "YO AI Labs",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 56,
+   "why": "Marque et produit, 9 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=640242385073539906",
+   "source": "Talent.com",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-31",
    "auto": true
   },
   {
@@ -1647,20 +1661,6 @@
    "source": "Jobzyn",
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "fes-representant-commercial-bilingue-fes-fes-2026-10",
-   "title": "Représentant commercial bilingue-fes.",
-   "company": "Fes",
-   "place": "Fes",
-   "family": "Vente & comptes clés",
-   "chances": 14,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=626348007704168316",
-   "source": "Talent.com",
-   "posted": "2026-10-07",
-   "first_seen": "2026-10-31",
    "auto": true
   }
  ]

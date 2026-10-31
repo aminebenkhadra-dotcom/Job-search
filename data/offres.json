@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T06:14:37Z",
+ "updated": "2026-10-31T12:10:09Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -93,6 +93,20 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05",
+   "country": "Maroc"
+  },
+  {
+   "id": "yo-ai-labs-product-manager-remote-casablanca-2026-10",
+   "title": "Product Manager - Remote",
+   "company": "YO AI Labs",
+   "place": "Casablanca",
+   "chances": 56,
+   "why": "Marque et produit, 9 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=640242385073539906",
+   "source": "Talent.com",
+   "posted": "2026-10-15",
+   "first_seen": "2026-10-31",
+   "auto": true,
    "country": "Maroc"
   },
   {
