@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T06:19:37Z",
+ "updated": "2026-11-01T10:40:22Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -504,6 +504,21 @@
    "auto": true
   },
   {
+   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
+   "title": "Responsable d’Etudes Client Marketing & Parcours client (F/H)",
+   "company": "Sofrecom Maroc",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 37,
+   "why": "Marketing, 5 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketing-parcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
+   "source": "ReKrute",
+   "posted": "2026-10-26",
+   "first_seen": "2026-11-01",
+   "auto": true,
+   "deadline": "2026-12-22"
+  },
+  {
    "id": "kitea-responsable-commercial-specialiste-des-cuisi-casablanca-2026-08",
    "title": "Responsable Commercial – Spécialiste des Cuisines H/F - Casablanca",
    "company": "KITEA",
@@ -737,6 +752,21 @@
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
    "auto": true
+  },
+  {
+   "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
+   "title": "Chef de Produit / Product Manager (H/F)",
+   "company": "Jameel Motors",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 31,
+   "why": "Marque et produit, 3 à 10 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-product-manager-hf-recrutement-jameel-motors-casablanca-186387.html",
+   "source": "ReKrute",
+   "posted": "2026-10-23",
+   "first_seen": "2026-11-01",
+   "auto": true,
+   "deadline": "2026-11-14"
   },
   {
    "id": "m-automotiv-directeur-commercial-h-f-casablanca-2026-10",
@@ -1631,36 +1661,6 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05"
-  },
-  {
-   "id": "confidentiel-responsable-commercial-casablanca-2026-10",
-   "title": "Responsable Commercial",
-   "company": "Confidentiel",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-recrutement-confidentiel-casablanca-187344.html",
-   "source": "ReKrute",
-   "posted": "2026-10-09",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-09"
-  },
-  {
-   "id": "maroc-diplomatique-responsable-commercial-h-f-casablanca-2026-10",
-   "title": "Responsable Commercial H/F",
-   "company": "Maroc Diplomatique",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 3 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-hf-recrutement-maroc-diplomatique-casablanca-186692.html",
-   "source": "ReKrute",
-   "posted": "2026-10-19",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-21"
   }
  ]
 }

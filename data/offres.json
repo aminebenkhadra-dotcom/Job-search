@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T10:32:41Z",
+ "updated": "2026-11-01T10:43:54Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -148,6 +148,33 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-17"
+  },
+  {
+   "id": "kitea-head-of-marketing-customer-intelligence-casablanca-2026-10",
+   "title": "Head Of Marketing & Customer Intelligence",
+   "company": "KITEA · ameublement",
+   "place": "Casablanca",
+   "chances": 60,
+   "why": "Direction marketing d'un leader de l'ameublement, 10 ans demandés. Freins : forte expertise data et CRM attendue, annonce ancienne.",
+   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/head-of-marketing-customer-intelligence-casablanca",
+   "posted": "2026-08-30",
+   "source": "Jobzyn",
+   "first_seen": "2026-10-30",
+   "country": "Maroc"
+  },
+  {
+   "id": "kitea-category-manager-casablanca-2026-08",
+   "title": "Category Manager",
+   "company": "KITEA",
+   "place": "Casablanca",
+   "chances": 58,
+   "why": "Category management, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/category-manager-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-08-30",
+   "first_seen": "2026-10-30",
+   "auto": true,
+   "country": "Maroc"
   },
   {
    "id": "yo-ai-labs-product-manager-remote-casablanca-2026-10",

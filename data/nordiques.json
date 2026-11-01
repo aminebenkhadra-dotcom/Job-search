@@ -524,6 +524,24 @@
    "deadline": "2026-11-19"
   },
   {
+   "id": "dk-microsoft-danmark-aps-enterprise-sales-leader-enterprise-commercia-2026-10",
+   "title": "Enterprise Sales Leader - Enterprise Commercial",
+   "company": "Microsoft Danmark ApS",
+   "place": "2800 Kgs. Lyngby, København",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 28,
+   "why": "Vente et comptes clés. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14077522",
+   "source": "Jobindex",
+   "posted": "2026-10-30",
+   "first_seen": "2026-11-01",
+   "lang": "",
+   "auto": true,
+   "deadline": "2026-12-28"
+  },
+  {
    "id": "dk-spirii-aps-commercial-director-emobility-emsp-2026-10",
    "title": "Commercial Director, eMobility (eMSP)",
    "company": "Spirii Aps",
@@ -2785,36 +2803,17 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-12-03"
-  },
-  {
-   "id": "se-academic-work-sweden-ab-key-account-manager-b2b-till-expansivt-bolag-2026-10",
-   "title": "Key Account Manager B2B till expansivt bolag",
-   "company": "Academic Work Sweden AB",
-   "place": "Göteborg",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Vente & comptes clés",
-   "chances": 5,
-   "why": "Vente et comptes clés, annonce en langue locale, la langue sera exigée, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656719",
-   "source": "Platsbanken",
-   "posted": "2026-10-28",
-   "first_seen": "2026-11-01",
-   "lang": "local",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2027-04-26"
   }
  ],
- "updated": "2026-11-01T10:32:41Z",
+ "updated": "2026-11-01T10:43:54Z",
  "sources": [
   "Platsbanken (Suède)",
   "NAV (Norvège)",
   "Jobindex (Danemark)"
  ],
  "counts": {
-  "DK": 47,
-  "SE": 71,
+  "DK": 48,
+  "SE": 70,
   "NO": 32
  }
 }
