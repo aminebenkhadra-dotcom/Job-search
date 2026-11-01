@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T10:40:22Z",
+ "updated": "2026-11-01T12:09:18Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -754,6 +754,21 @@
    "auto": true
   },
   {
+   "id": "maroc-diplomatique-responsable-commercial-h-f-casablanca-2026-10",
+   "title": "Responsable Commercial H/F",
+   "company": "Maroc Diplomatique",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 32,
+   "why": "Vente et comptes clés, 2 à 10 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-hf-recrutement-maroc-diplomatique-casablanca-186692.html",
+   "source": "ReKrute",
+   "posted": "2026-10-19",
+   "first_seen": "2026-11-01",
+   "auto": true,
+   "deadline": "2026-11-21"
+  },
+  {
    "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
    "title": "Chef de Produit / Product Manager (H/F)",
    "company": "Jameel Motors",
@@ -1106,6 +1121,20 @@
    "source": "Talent.com",
    "posted": "2026-10-14",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "yo-ai-labs-product-manager-remote-rabat-2026-10",
+   "title": "Product Manager - Remote",
+   "company": "YO AI Labs",
+   "place": "Rabat",
+   "family": "Marque & produit",
+   "chances": 25,
+   "why": "Marque et produit, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=640242374214421314",
+   "source": "Talent.com",
+   "posted": "2026-10-15",
+   "first_seen": "2026-11-01",
    "auto": true
   },
   {
@@ -1634,33 +1663,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-11-29"
-  },
-  {
-   "id": "givaudan-consumer-sensory-insights-manager-casablanca-2026-10",
-   "title": "Consumer & Sensory Insights Manager",
-   "company": "Givaudan",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 15,
-   "why": "Études consommateurs et analyse sensorielle : un métier de spécialiste. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aaq82pnbvxk6",
-   "source": "Indeed",
-   "posted": "2026-10-02",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "auto-nejma-responsable-national-ventes-byd-casablanca-2026-10",
-   "title": "Responsable National des Ventes BYD",
-   "company": "Auto Nejma · automobile",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Responsabilité nationale, à votre niveau. Frein : l'automobile, où une expérience du secteur est attendue.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-national-des-ventes-byd-recrutement-auto-nejma-maroc-s.a.-casablanca-187178.html",
-   "source": "ReKrute",
-   "posted": "2026-10-05",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-12-05"
   }
  ]
 }
