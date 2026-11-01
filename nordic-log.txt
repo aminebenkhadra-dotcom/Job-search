@@ -10,7 +10,7 @@ Suède       1 annonces · « commercial director »
 Suède      18 annonces · « marknadschef »
 Suède       0 annonces · « sales director »
 Suède       3 annonces · « country manager »
-Norvège    41 annonces du domaine · 24 pages du flux
+Norvège    39 annonces du domaine · 24 pages du flux
 Danemark   20 annonces · « marketing manager »
 Danemark   10 annonces · « trade marketing »
 Danemark   16 annonces · « brand manager »
@@ -19,4 +19,4 @@ Danemark   16 annonces · « key account manager »
 Danemark   18 annonces · « head of marketing »
 Danemark    9 annonces · « export manager »
 Danemark   18 annonces · « commercial director »
-Pays nordiques : 150 offres (175 nouvelles, 7 retirées) {'DK': 48, 'NO': 32, 'SE': 70} · Mes offres : 27
+Pays nordiques : 150 offres (166 nouvelles, 7 retirées) {'DK': 47, 'SE': 71, 'NO': 32} · Mes offres : 21
