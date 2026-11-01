@@ -735,9 +735,11 @@ def sync_selection(sel, maroc, today, now_iso):
             o = {k: v for k, v in m.items() if k not in ("family",)}
             o["country"] = "Maroc"
             keep.append(o)
-    keep = [o for o in keep if still_open(o, today, 60) and not excluded_sector(o)]
+    keep = [o for o in keep if still_open(o, today, 75) and not excluded_sector(o)]
     keep.sort(key=lambda o: (-int(o.get("chances") or 0), o.get("posted") or ""))
-    sel.update({"updated": now_iso, "offers": keep[:MAX_OFFRES]})
+    # seules les offres marocaines sont limitées ici ; les offres nordiques sont gérées par scan_nordiques.py
+    ma = [o for o in keep if o.get("country") == "Maroc"][:MAX_OFFRES]
+    sel.update({"updated": now_iso, "offers": [o for o in keep if o.get("country") != "Maroc" or o in ma]})
 
 
 PARSERS = {"Talent.com": parse_talent, "Jobzyn": parse_jobzyn, "MaroCadres": parse_marocadres, "Fed Africa": parse_fedafrica}

@@ -1,0 +1,18 @@
+name: Scan nordique (test)
+on:
+  push:
+    branches: [scan-debug]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/scan_nordiques.py --dump nordic/dump 2>&1 | tee nordic-log.txt
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A nordic nordic-log.txt data
+          git commit -qm "nordic scan" && git push -q origin HEAD:scan-debug
