@@ -1,0 +1,78 @@
+{
+ "uuid": "c86d12e0-4a0a-4b07-a580-4153ff82cdc8",
+ "ad_content": {
+  "uuid": "c86d12e0-4a0a-4b07-a580-4153ff82cdc8",
+  "published": "2026-10-20T10:06:18+02:00",
+  "expires": "2026-11-20T22:59:59+01:00",
+  "updated": "2026-10-21T09:03:51.837437+02:00",
+  "workLocations": [
+   {
+    "country": "NORGE",
+    "address": "Østensjøveien 14A",
+    "city": "OSLO",
+    "postalCode": "0661",
+    "county": "OSLO",
+    "municipal": "OSLO"
+   }
+  ],
+  "contactList": [
+   {
+    "name": "Julie Hansen",
+    "email": "julie.hansen@bravura-norge.no",
+    "phone": null,
+    "role": null,
+    "title": null
+   }
+  ],
+  "title": "Account Manager til AddSecure",
+  "description": "<p><em>Vil du jobbe med teknologi som faktisk betyr noe – og samtidig være med på å bygge opp et marked i Norge? Som Account Manager hos AddSecure får du en sentral rolle i satsingen på vår moderne kommunikasjonsløsning GroupTalk. I denne rollen får du ansvar for å identifisere nye forretningsmuligheter, bygge relasjoner og skape vekst blant kunder over hele Norge</em></p><p></p><p></p><h4><strong>Om prosessen</strong></h4><p>Denne stillingen er en direkte rekruttering, noe som innebærer at rekrutteringsprosessen skjer gjennom Bravura og du ansettes direkte hos AddSecure.</p><h4><strong>Om selskapet</strong></h4><p>AddSecure er en ledende europeisk leverandør av sikre IoT-løsninger og kritisk kommunikasjon. Vi hjelper virksomheter med å sikre drift, beskytte verdier og optimalisere sine operasjoner gjennom innovative og pålitelige løsninger.</p><h4>Arbeidsoppgaver</h4><p>Rollen innebærer et tydelig kommersielt ansvar hvor du selger GroupTalk, AddSecures moderne plattform for kritisk kommunikasjon og samhandling. Løsningen brukes av virksomheter som er avhengige av sikker og effektiv kommunikasjon i hverdagen, blant annet innen industri, bygg og anlegg, sikkerhet, transport og offentlig sektor.</p><p><strong>Ansvarsområder:</strong></p><ul><li><p>Drive aktivt oppsøkende salgsarbeid og vinne nye kunder i hele Norge</p></li><li><p>Bygge opp og utvikle egen kundeportefølje innen GroupTalk-segmentet</p></li><li><p>Kartlegge og utvikle nye markedsmuligheter for GroupTalk i Norge</p></li><li><p>Følge opp egen pipeline og salgsaktiviteter</p></li><li><p>Samarbeide tett med teknisk team for å sikre gode leveranser</p></li><li><p>Delta på messer og bransjearrangementer</p></li></ul><h4>Utdanning, erfaring og personlige egenskaper</h4><ul><li><p>Relevant høyere utdannelse</p></li><li><p>Erfaring fra oppsøkende B2B-salg</p></li><li><p>Erfaring med salg av tekniske løsninger, gjerne innen telekom eller sikkerhet er en fordel</p></li><li><p>Forståelse for salgsprosesser og evne til å drive disse fra behov til signert avtale</p></li><li><p>Svært gode norsk- og engelskkunnskaper, både muntlig og skriftlig</p></li><li><p>Førerkort klasse B</p></li></ul><p>For å trives i denne rollen tror vi at du er en kommersiell og selvgående person som motiveres av oppsøkende salg og ansvar for egne resultater. Rollen innebærer høy grad av kundeaktivitet, så det er viktig at du trives med å være ute i felt og møte kundene der de er.</p><p>Du har god gjennomføringsevne, tar initiativ og er ikke redd for å utfordre deg selv. Samtidig jobber du strukturert og evner å bygge gode relasjoner over tid.</p><h4>Hvorfor søke?</h4><ul><li><p>Bli en del av et internasjonalt teknologiselskap i sterk vekst</p></li><li><p>Jobbe med kritiske og samfunnsviktige løsninger</p></li><li><p>Få stor grad av frihet og eierskap til å utvikle et vekstområde i Norge</p></li><li><p>Gode utviklingsmuligheter</p></li><li><p>Konkurransedyktige betingelser, samt god bilordning</p></li></ul><h4>Praktisk informasjon</h4><p><strong>Oppstart:</strong> Etter avtale, med hensyn til oppsigelsestid<br /><strong>Sted:</strong> Hele Norge (hjemmekontor/feltbasert rolle)<br /><strong>Lønn:</strong> Etter avtale</p><p>Bravura benytter seg av kompetansebasert rekrutteringsmetode for å sikre objektive og fordomsfrie vurderinger. Vi jobber også med løpende utvelgelse, noe som betyr at annonsen tas ned når vi har mottatt tilstrekkelig antall søknader.</p><p>Dersom du er aktuell for stillingen, blir du kontaktet for et første telefonintervju. Uavhengig av om du går videre i prosessen eller ikke, vil du få tilbakemelding på søknaden din.</p><p>Har du spørsmål? Ta gjerne kontakt med Julie Hansen på <a href=\"mailto:julie.hansen&#64;bravura-norge.no\" rel=\"nofollow\">julie.hansen&#64;bravura-norge.no</a></p><p><strong>Velkommen med din søknad!</strong></p>",
+  "sourceurl": "",
+  "source": "IMPORTAPI",
+  "applicationUrl": "https://career.bravura-norge.no/jobs/8575001-account-manager-til-addsecure/applications/new?promotion=2256246-nav-no",
+  "applicationDue": "Snarest",
+  "occupationCategories": [
+   {
+    "level1": "Salg og service",
+    "level2": "Salg, butikk- og varehandel"
+   }
+  ],
+  "categoryList": [
+   {
+    "categoryType": "ESCO",
+    "code": "http://data.europa.eu/esco/isco/c3322",
+    "name": "Account manager",
+    "description": "",
+    "score": 1.0
+   },
+   {
+    "categoryType": "JANZZ",
+    "code": "32730",
+    "name": "Account manager",
+    "description": "",
+    "score": 1.0
+   },
+   {
+    "categoryType": "STYRK08",
+    "code": "3322",
+    "name": "Selgere (engros)",
+    "description": "",
+    "score": 1.0
+   }
+  ],
+  "jobtitle": "",
+  "link": "https://arbeidsplassen.nav.no/stillinger/stilling/c86d12e0-4a0a-4b07-a580-4153ff82cdc8",
+  "employer": {
+   "name": "Bravura Norge",
+   "orgnr": "976448677",
+   "description": "<p>Vi jobber med bemanning og rekruttering, men først og fremst jobber vi med mennesker. Vår oppgave er å matche alle som søker interessante jobber og utfordringer med bedrifter der deres talent og erfaring kommer til sin rett og kan utvikles. Vi skiller oss ut ved å sette våre ansatte, og dem vi formidler, i første rekke. Dette har siden starten vist seg å være det beste for deg som oppdragsgiver, for deg som søker jobb, og for oss selv som selskap.</p>",
+   "homepage": "https://career.bravura-norge.no"
+  },
+  "engagementtype": "Fast",
+  "extent": "Heltid",
+  "starttime": "",
+  "positioncount": "1",
+  "sector": "Privat"
+ },
+ "sistEndret": "2026-10-21T09:03:51.837+02:00",
+ "status": "ACTIVE"
+}

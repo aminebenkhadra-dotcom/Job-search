@@ -1,0 +1,290 @@
+[
+ {
+  "relevance": 1.0,
+  "id": "31497105",
+  "external_id": null,
+  "original_id": null,
+  "label": [],
+  "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/31497105",
+  "logo_url": "https://arbetsformedlingen.se/rest/employer-logo-api/api/v1/organisation/5590979984/logotyper/logo.png",
+  "headline": "Marketing Manager",
+  "application_deadline": "2027-03-17T23:59:59",
+  "number_of_vacancies": 1,
+  "description": {
+   "text": "Marketing Manager – Automotive Dealership\nLocation: Stockholm, Sweden Employment Type: Full-time\nAbout the Role\nWe are looking for a creative, hands-on, and independent Marketing Manager to take overall responsibility for day-to-day marketing activities for two premium automotive brands in Stockholm.\nYou will manage the brands' digital presence, content creation, advertising, printed materials, and in-store events, ensuring a consistent and professional brand experience across all channels.\nKey Responsibilities\nManage and develop social media channels across relevant platforms.\n\n\nPlan, create, and publish engaging content for social media and digital channels.\n\n\nFilm and photograph vehicles, events, stores, and other marketing activities.\n\n\nEdit videos, photos, graphics, and other marketing materials.\n\n\nManage digital advertising campaigns across websites and relevant platforms.\n\n\nCoordinate the creation and production of printed marketing materials.\n\n\nPlan, coordinate, and support events and promotional activities at dealerships.\n\n\nMaintain consistent brand identity and visual communication across all channels.\n\n\nCoordinate with internal teams, agencies, suppliers, and other marketing partners.\n\n\nMonitor marketing activities and identify opportunities to improve engagement and brand visibility.\n\n\nTake ownership of the day-to-day marketing calendar, activities, and deliverables for both brands.\n\nRequirements\nExperience in marketing, preferably within automotive, retail, premium/luxury, or consumer brands.\n\n\nStrong understanding of social media marketing and digital content creation.\n\n\nPractical experience with photography, video production, and editing.\n\n\nExperience managing digital advertising and online campaigns.\n\n\nStrong visual and creative sense with attention to brand consistency.\n\n\nAbility to work independently and manage multiple activities simultaneously.\n\n\nStrong communication, coordination, and organisational skills.\n\n\nFluency in English; Swedish is an advantage.\n\n\nComfortable working in a hands-on role where you are responsible for taking ideas from planning to execution.\n\nWhat We Offer\nAn independent and hands-on marketing role within the automotive industry.\n\n\nThe opportunity to manage marketing activities for two premium automotive brands.\n\n\nA dynamic and international working environment.\n\n\nThe opportunity to shape and develop the brands' local presence in the Swedish market.",
+   "text_formatted": "<strong>Marketing Manager – Automotive Dealership</strong><p><strong>Location:</strong> Stockholm, Sweden <strong>Employment Type:</strong> Full-time</p><strong>About the Role</strong><p>We are looking for a creative, hands-on, and independent <strong>Marketing Manager</strong> to take overall responsibility for day-to-day marketing activities for two premium automotive brands in Stockholm.</p><p>You will manage the brands' digital presence, content creation, advertising, printed materials, and in-store events, ensuring a consistent and professional brand experience across all channels.</p><strong>Key Responsibilities</strong><ul><li><p>Manage and develop social media channels across relevant platforms.</p></li><li><p>Plan, create, and publish engaging content for social media and digital channels.</p></li><li><p>Film and photograph vehicles, events, stores, and other marketing activities.</p></li><li><p>Edit videos, photos, graphics, and other marketing materials.</p></li><li><p>Manage digital advertising campaigns across websites and relevant platforms.</p></li><li><p>Coordinate the creation and production of printed marketing materials.</p></li><li><p>Plan, coordinate, and support events and promotional activities at dealerships.</p></li><li><p>Maintain consistent brand identity and visual communication across all channels.</p></li><li><p>Coordinate with internal teams, agencies, suppliers, and other marketing partners.</p></li><li><p>Monitor marketing activities and identify opportunities to improve engagement and brand visibility.</p></li><li><p>Take ownership of the day-to-day marketing calendar, activities, and deliverables for both brands.</p></li></ul><strong>Requirements</strong><ul><li><p>Experience in marketing, preferably within <strong>automotive, retail, premium/luxury, or consumer brands</strong>.</p></li><li><p>Strong understanding of social media marketing and digital content creation.</p></li><li><p>Practical experience with photography, video production, and editing.</p></li><li><p>Experience managing digital advertising and online campaigns.</p></li><li><p>Strong visual and creative sense with attention to brand consistency.</p></li><li><p>Ability to work independently and manage multiple activities simultaneously.</p></li><li><p>Strong communication, coordination, and organisational skills.</p></li><li><p>Fluency in <strong>English</strong>; Swedish is an advantage.</p></li><li><p>Comfortable working in a hands-on role where you are responsible for taking ideas from planning to execution.</p></li></ul><strong>What We Offer</strong><ul><li><p>An independent and hands-on marketing role within the automotive industry.</p></li><li><p>The opportunity to manage marketing activities for <strong>two premium automotive brands</strong>.</p></li><li><p>A dynamic and international working environment.</p></li><li><p>The opportunity to shape and develop the brands' local presence in the Swedish market.</p></li></ul>",
+   "company_information": null,
+   "needs": null,
+   "requirements": null,
+   "conditions": null
+  },
+  "employment_type": {
+   "concept_id": "PFZr_Syz_cUq",
+   "label": "Vanlig anställning",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "salary_type": {
+   "concept_id": "oG8G_9cW_nRf",
+   "label": "Fast månads- vecko- eller timlön",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "salary_description": null,
+  "duration": {
+   "concept_id": "a7uU_j21_mkL",
+   "label": "Tills vidare",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "working_hours_type": {
+   "concept_id": "6YE1_gAC_R2G",
+   "label": "Heltid",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "scope_of_work": {
+   "min": 100,
+   "max": 100
+  },
+  "access": null,
+  "employer": {
+   "phone_number": null,
+   "email": null,
+   "url": "https://minnov.teamtailor.com",
+   "organization_number": "5590979984",
+   "name": "Minnovation International AB",
+   "workplace": "Minnovation International AB"
+  },
+  "application_details": {
+   "information": null,
+   "reference": "teamtailor-8403774-2204333",
+   "email": null,
+   "via_af": false,
+   "url": "https://minnov.teamtailor.com/jobs/8403774-marketing-manager/applications/new?promotion=2204333-arbetsformedlingen",
+   "other": null
+  },
+  "experience_required": true,
+  "access_to_own_car": false,
+  "driving_license_required": false,
+  "driving_license": null,
+  "occupation": {
+   "concept_id": "WCma_2oa_gyZ",
+   "label": "Marknadsförare",
+   "legacy_ams_taxonomy_id": "5547"
+  },
+  "occupation_group": {
+   "concept_id": "WX67_Pfb_WMN",
+   "label": "Marknadsanalytiker och marknadsförare m.fl.",
+   "legacy_ams_taxonomy_id": "2431"
+  },
+  "occupation_field": {
+   "concept_id": "RPTn_bxG_ExZ",
+   "label": "Försäljning, inköp, marknadsföring",
+   "legacy_ams_taxonomy_id": "5"
+  },
+  "workplace_model": {
+   "concept_id": null,
+   "label": null
+  },
+  "workplace_address": {
+   "municipality": "Stockholm",
+   "municipality_code": "0180",
+   "municipality_concept_id": "AvNB_uwa_6n6",
+   "region": "Stockholms län",
+   "region_code": "01",
+   "region_concept_id": "CifL_Rzy_Mku",
+   "country": "Sverige",
+   "country_code": "199",
+   "country_concept_id": "i46j_HmG_v64",
+   "street_address": "Hovslagargatan 5B",
+   "postcode": "11148",
+   "city": "Stockholm",
+   "coordinates": [
+    18.0785511371579,
+    59.3301421253154
+   ]
+  },
+  "workplace_addresses": [
+   {
+    "municipality": "Stockholm",
+    "municipality_code": "0180",
+    "municipality_concept_id": "AvNB_uwa_6n6",
+    "region": "Stockholms län",
+    "region_code": "01",
+    "region_concept_id": "CifL_Rzy_Mku",
+    "country": "Sverige",
+    "country_code": "199",
+    "country_concept_id": "i46j_HmG_v64",
+    "street_address": "Hovslagargatan 5B",
+    "postcode": "11148",
+    "city": "Stockholm",
+    "coordinates": [
+     18.0785511371579,
+     59.3301421253154
+    ]
+   }
+  ],
+  "must_have": {
+   "skills": [],
+   "languages": [],
+   "work_experiences": [],
+   "education": [],
+   "education_level": []
+  },
+  "nice_to_have": {
+   "skills": [],
+   "languages": [],
+   "work_experiences": [],
+   "education": [],
+   "education_level": []
+  },
+  "application_contacts": [],
+  "publication_date": "2026-09-18T19:21:40",
+  "last_publication_date": "2027-03-17T23:59:59",
+  "removed": false,
+  "removed_date": null,
+  "source_type": "VIA_JOBPOSTING",
+  "timestamp": 1789752100595
+ },
+ {
+  "relevance": 1.0,
+  "id": "31449469",
+  "external_id": null,
+  "original_id": null,
+  "label": [],
+  "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/31449469",
+  "logo_url": null,
+  "headline": "Marketing Manager",
+  "application_deadline": "2027-03-07T23:59:59",
+  "number_of_vacancies": 1,
+  "description": {
+   "text": "At Proposales, we’re transforming how hotels sell and manage Groups, Meetings & Events. We’re building a modern product platform for an industry that still relies heavily on legacy systems and manual processes, helping hotels move from inquiry to booking and delivery through beautifully designed software, automation and AI.\nWe’re now taking the next step, expanding Proposales beyond proposals into booking, workflows and AI powered operations and we're looking for a Marketing Manager to lead how we tell our story and support the sales team in getting it out there. You'll run social content, plan events and help build the kind of presence that makes prospects already know who we are before a salesperson picks up the phone. This isn't a role where you hand off a brief and wait. You're hands on, from planning the campaign to shooting the video for it.  This role is Stockholm based - 100% on-site. \nYour mission:\n\nSupport sales through social content, events, and showing up in person where it matters\n\n\nRun online marketing that builds both awareness and leads, not just one of the two\n\n\nUse ABM to reach the accounts we actually want to win\n\n\nBuild our public presence and tell our story in a way people remember\n\n\nCreate visual content yourself, ads, videos, presentations, whatever the story needs\n\n\nA bit about you:\n\n3+ years in B2B SaaS marketing\n\n\nReal experience with ABM, not just knowing the term\n\n\nYou've made content yourself, not just briefed someone else to do it\n\n\nYou move fast, you're confident, and you're not afraid to take a risk\n\n\nYou bring energy into a room\n\n\nWhat we believe in:\nWe value ownership over process, curiosity over comfort, and getting things done over getting them perfect.\nOur process:\n\nFirst stage: An intro interview. We want to get to know you, and for you to get a feel for our culture and what Proposales is about.\n\n\nSecond stage: A meeting with our CEO. This is where you dig into the vision, and we talk through mutual expectations.\n\n\nThird stage (Case Presentation): You'll get an assignment, then come into the office to meet some of your future colleagues and walk us through your case presentation.",
+   "text_formatted": "<p>At Proposales, we’re transforming how hotels sell and manage Groups, Meetings &amp; Events. We’re building a modern product platform for an industry that still relies heavily on legacy systems and manual processes, helping hotels move from inquiry to booking and delivery through beautifully designed software, automation and AI.</p><p>We’re now taking the next step, expanding Proposales beyond proposals into booking, workflows and AI powered operations and we're looking for a Marketing Manager to lead how we tell our story and support the sales team in getting it out there. You'll run social content, plan events and help build the kind of presence that makes prospects already know who we are before a salesperson picks up the phone. This isn't a role where you hand off a brief and wait. You're hands on, from planning the campaign to shooting the video for it.  This role is Stockholm based - 100% on-site. </p><p><strong>Your mission:</strong></p><ul><li><p>Support sales through social content, events, and showing up in person where it matters</p></li><li><p>Run online marketing that builds both awareness and leads, not just one of the two</p></li><li><p>Use ABM to reach the accounts we actually want to win</p></li><li><p>Build our public presence and tell our story in a way people remember</p></li><li><p>Create visual content yourself, ads, videos, presentations, whatever the story needs</p></li></ul><p><strong>A bit about you:</strong></p><ul><li><p>3+ years in B2B SaaS marketing</p></li><li><p>Real experience with ABM, not just knowing the term</p></li><li><p>You've made content yourself, not just briefed someone else to do it</p></li><li><p>You move fast, you're confident, and you're not afraid to take a risk</p></li><li><p>You bring energy into a room</p></li></ul><p><strong>What we believe in:</strong></p><p>We value ownership over process, curiosity over comfort, and getting things done over getting them perfect.</p><p><strong>Our process:</strong></p><ul><li><p><strong>First stage:</strong> An intro interview. We want to get to know you, and for you to get a feel for our culture and what Proposales is about.</p></li><li><p><strong>Second stage:</strong> A meeting with our CEO. This is where you dig into the vision, and we talk through mutual expectations.</p></li><li><p><strong>Third stage (Case Presentation):</strong> You'll get an assignment, then come into the office to meet some of your future colleagues and walk us through your case presentation.</p></li></ul>",
+   "company_information": null,
+   "needs": null,
+   "requirements": null,
+   "conditions": null
+  },
+  "employment_type": {
+   "concept_id": "PFZr_Syz_cUq",
+   "label": "Vanlig anställning",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "salary_type": {
+   "concept_id": "oG8G_9cW_nRf",
+   "label": "Fast månads- vecko- eller timlön",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "salary_description": null,
+  "duration": {
+   "concept_id": "a7uU_j21_mkL",
+   "label": "Tills vidare",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "working_hours_type": {
+   "concept_id": "6YE1_gAC_R2G",
+   "label": "Heltid",
+   "legacy_ams_taxonomy_id": "1"
+  },
+  "scope_of_work": {
+   "min": 100,
+   "max": 100
+  },
+  "access": null,
+  "employer": {
+   "phone_number": null,
+   "email": null,
+   "url": "https://join.proposales.com",
+   "organization_number": "5591506075",
+   "name": "Proposales AB",
+   "workplace": "Proposales"
+  },
+  "application_details": {
+   "information": null,
+   "reference": "teamtailor-8322361-2184167",
+   "email": null,
+   "via_af": false,
+   "url": "https://join.proposales.com/jobs/8322361-marketing-manager?promotion=2184167-arbetsformedlingen",
+   "other": null
+  },
+  "experience_required": true,
+  "access_to_own_car": false,
+  "driving_license_required": false,
+  "driving_license": null,
+  "occupation": {
+   "concept_id": "reEg_XH4_15c",
+   "label": "Marknadschef",
+   "legacy_ams_taxonomy_id": "5090"
+  },
+  "occupation_group": {
+   "concept_id": "Pz9M_srJ_Lc9",
+   "label": "Försäljnings- och marknadschefer",
+   "legacy_ams_taxonomy_id": "1250"
+  },
+  "occupation_field": {
+   "concept_id": "bh3H_Y3h_5eD",
+   "label": "Chefer och verksamhetsledare",
+   "legacy_ams_taxonomy_id": "20"
+  },
+  "workplace_model": {
+   "concept_id": null,
+   "label": null
+  },
+  "workplace_address": {
+   "municipality": "Stockholm",
+   "municipality_code": "0180",
+   "municipality_concept_id": "AvNB_uwa_6n6",
+   "region": "Stockholms län",
+   "region_code": "01",
+   "region_concept_id": "CifL_Rzy_Mku",
+   "country": "Sverige",
+   "country_code": "199",
+   "country_concept_id": "i46j_HmG_v64",
+   "street_address": "Torsgatan 26",
+   "postcode": "11321",
+   "city": "Stockholm",
+   "coordinates": [
+    18.0466509474257,
+    59.3365863531023
+   ]
+  },
+  "workplace_addresses": [
+   {
+    "municipality": "Stockholm",
+    "municipality_code": "0180",
+    "municipality_concept_id": "AvNB_uwa_6n6",
+    "region": "Stockholms län",
+    "region_code": "01",
+    "region_concept_id": "CifL_Rzy_Mku",
+    "country": "Sverige",
+    "country_code": "199",
+    "country_concept_id": "i46j_HmG_v64",
+    "street_address": "Torsgatan 26",
+    "postcode": "11321",
+    "city": "Stockholm",
+    "coordinates": [
+     18.0466509474257,
+     59.3365863531023
+    ]
+   }
+  ],
+  "must_have": {
+   "skills": [],
+   "languages": [],
+   "work_experiences": [],
+   "education": [],
+   "education_level": []
+  },
+  "nice_to_have": {
+   "skills": [],
+   "languages": [],
+   "work_experiences": [],
+   "education": [],
+   "education_level": []
+  },
+  "application_contacts": [],
+  "publication_date": "2026-09-08T09:38:45",
+  "last_publication_date": "2027-03-07T23:59:59",
+  "removed": false,
+  "removed_date": null,
+  "source_type": "VIA_JOBPOSTING",
+  "timestamp": 1788853125058
+ }
+]
