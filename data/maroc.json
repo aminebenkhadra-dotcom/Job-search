@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T12:09:18Z",
+ "updated": "2026-11-01T17:11:24Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -363,6 +363,21 @@
    "posted": "2026-10-31",
    "first_seen": "2026-11-01",
    "auto": true
+  },
+  {
+   "id": "auto-nejma-maroc-s-a-responsable-national-des-ventes-byd-casablanca-2026-10",
+   "title": "Responsable National des Ventes BYD",
+   "company": "Auto Nejma Maroc S.A.",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 41,
+   "why": "Direction, 5 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-national-des-ventes-byd-recrutement-auto-nejma-maroc-s.a.-casablanca-187178.html",
+   "source": "ReKrute",
+   "posted": "2026-10-05",
+   "first_seen": "2026-11-01",
+   "auto": true,
+   "deadline": "2026-12-05"
   },
   {
    "id": "michael-page-sales-manager-fmcg-marrakech-2026-09",
@@ -1648,21 +1663,6 @@
    "source": "Indeed",
    "posted": "2026-09-25",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "super-auto-group-chef-des-ventes-automobile-volkswagen-rabat-rabat-2026-09",
-   "title": "Chef des Ventes Automobile - Volkswagen Rabat",
-   "company": "Super Auto Group",
-   "place": "Rabat",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-automobile---volkswagen-rabat-recrutement-super-auto-group-rabat-187001.html",
-   "source": "ReKrute",
-   "posted": "2026-09-29",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-29"
   }
  ]
 }
