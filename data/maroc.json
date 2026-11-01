@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T17:11:21Z",
+ "updated": "2026-11-01T06:19:37Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -351,6 +351,20 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "ds-smith-responsable-commercial-region-sud-agadir-2026-10",
+   "title": "Responsable commercial - Région Sud",
+   "company": "DS Smith",
+   "place": "Agadir",
+   "family": "Vente & comptes clés",
+   "chances": 42,
+   "why": "Vente et comptes clés, 10 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=643883941395245863",
+   "source": "Talent.com",
+   "posted": "2026-10-31",
+   "first_seen": "2026-11-01",
+   "auto": true
+  },
+  {
    "id": "michael-page-sales-manager-fmcg-marrakech-2026-09",
    "title": "Sales Manager FMCG",
    "company": "Michael Page · multinationale grande consommation",
@@ -501,6 +515,20 @@
    "source": "Jobzyn",
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "orange-maroc-senior-manager-marketing-ict-casablanca-2026-09",
+   "title": "Senior Manager Marketing ICT",
+   "company": "Orange Maroc",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 36,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/orange-maroc/jobs/senior-manager-marketing-ict-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-09-01",
+   "first_seen": "2026-11-01",
    "auto": true
   },
   {
@@ -708,6 +736,20 @@
    "source": "Jobzyn",
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "m-automotiv-directeur-commercial-h-f-casablanca-2026-10",
+   "title": "Directeur Commercial (H/F)",
+   "company": "M-AUTOMOTIV",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 31,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/m-automotiv/jobs/directeur-commercial-hf-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-10-27",
+   "first_seen": "2026-11-01",
    "auto": true
   },
   {
@@ -1370,6 +1412,20 @@
    "auto": true
   },
   {
+   "id": "arrow-electronics-inc-inside-sales-manager-casablanca-2026-11",
+   "title": "Inside Sales Manager",
+   "company": "Arrow Electronics, Inc.",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 18,
+   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=639659640919756929",
+   "source": "Talent.com",
+   "posted": "2026-11-01",
+   "first_seen": "2026-11-01",
+   "auto": true
+  },
+  {
    "id": "orange-maroc-key-account-manager-grands-comptes-gc-casablanca-2026-08",
    "title": "Key Account Manager Grands Comptes (GC)",
    "company": "Orange Maroc",
@@ -1509,21 +1565,6 @@
    "deadline": "2026-11-02"
   },
   {
-   "id": "sothema-key-account-manager-casablanca-2026-09",
-   "title": "KEY ACCOUNT MANAGER",
-   "company": "Sothema",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, 3 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-sothema-casablanca-185847.html",
-   "source": "ReKrute",
-   "posted": "2026-09-09",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-10-31"
-  },
-  {
    "id": "the-view-senior-sales-manager-rabat-2026-09",
    "title": "Senior Sales Manager",
    "company": "The View Rabat · hôtellerie",
@@ -1620,48 +1661,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-11-21"
-  },
-  {
-   "id": "sofrecom-maroc-responsable-detudes-client-marketing-parcour-rabat-2026-10",
-   "title": "Responsable d’Etudes Client Marketing/Parcours client (F/H)",
-   "company": "Sofrecom Maroc",
-   "place": "Rabat",
-   "family": "Marketing",
-   "chances": 15,
-   "why": "Études clients pour un groupe télécom : loin de votre métier de marque et de vente.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-detudes-client-marketingparcours-client-fh-recrutement-sofrecom-maroc-rabat-187802.html",
-   "source": "ReKrute",
-   "posted": "2026-10-22",
-   "first_seen": "2026-10-23",
-   "deadline": "2026-12-22"
-  },
-  {
-   "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
-   "title": "Chef de Produit / Product Manager (H/F)",
-   "company": "Jameel Motors",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 15,
-   "why": "Chef de produit automobile, 3 à 5 ans demandés : secteur éloigné et poste sous votre niveau.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-product-manager-hf-recrutement-jameel-motors-casablanca-186387.html",
-   "source": "ReKrute",
-   "posted": "2026-10-23",
-   "first_seen": "2026-10-24",
-   "deadline": "2026-11-14"
-  },
-  {
-   "id": "orange-maroc-key-account-manager-pme-casablanca-2026-08",
-   "title": "Key Account Manager PME",
-   "company": "Orange Maroc",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 14,
-   "why": "Vente et comptes clés, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/orange-maroc/jobs/key-account-manager-pme-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-08-30",
-   "first_seen": "2026-10-30",
-   "auto": true
   }
  ]
 }
