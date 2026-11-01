@@ -130,7 +130,9 @@ EXCLUDE_NORD = re.compile(
     r"selger|saelger|butik\w*|butikk\w*|kundservice|kundtjanst|kundeservice|studentjobb?|student|deltid|"
     r"timvikarie|vikariat|vikar|telemarketing|innesalj\w*|telefon\w*|lager\w*|chauffor|sjafor|"
     r"specialist|analyst|analytiker|automation|performance|growth|product marketing|"
-    r"marketing operations|marketing technolog\w*|martech|web|developer|utvecklare|utvikler|ux|ui)\b")
+    r"marketing operations|marketing technolog\w*|martech|web|developer|utvecklare|utvikler|ux|ui|"
+    r"compliance|legal|counsel|controller|control|phd|candidate|researcher|postdoc|internal communications?|"
+    r"parental|maternity|cover|studenter\w*|medhjaelper|advisor|adviser|art director|creative|designer)\b")
 NORDIC_GOOD = re.compile(
     r"\b(dagligvar\w*|livsmedel\w*|dagligvaruhandel|matvar\w*|konsumentvar\w*|forbrugsvar\w*|naeringsmiddel\w*|"
     r"arla|fazer|paulig|orkla|cloetta|oatly|essity|valio|tine|nortura|mills|lantmannen|scandi standard|atria|hkscan|"
@@ -141,6 +143,7 @@ NORDIC_FAR = re.compile(
     r"\b(it.?konsult\w*|programvar\w*|mjukvar\w*|bank\w*|forsakring\w*|forsikring\w*|fastighet\w*|eiendom\w*|"
     r"bygg\w*|entreprenad\w*|lakemedel\w*|legemiddel\w*|medtech|biotech|halsa|sjukvard\w*|helse|tech|"
     r"industri\w*|maskin\w*|elektronik\w*|energi\w*|kraft|olje|gas|shipping|rederi\w*|konsult\w*|byra|reklambyra|"
+    r"defen[cs]e|military|weapons?|drones?|surveillance|mobility|emobility|charging|consultancy|"
     r"kommun\w*|myndighet\w*|forening\w*|forbund\w*|universitet\w*|hogskola|skola|fagforbund)\b")
 NORDIC_ALCOHOL = re.compile(
     r"\b(carlsberg|heineken|royal unibrew|systembolaget|vinmonopolet|alko|altia|anora|pernod|diageo|arcus|"
@@ -165,7 +168,7 @@ def title_en(title):
 
 
 def years_asked(txt):
-    nums = [int(n) for n in YEARS_RX.findall(txt or "") if 1 <= int(n) <= 25]
+    nums = [int(n) for n in YEARS_RX.findall(txt or "") if 1 <= int(n) <= 15]  # au-delà : souvent l'âge de l'entreprise
     return max(nums) if nums else None
 
 
@@ -349,6 +352,8 @@ def scan_norway(dump, since_days, budget=60):
             save_dump(dump, f"no-entry-{i}.json", e)
         desc = mx.text(str(walk(e, "description") or ""))[:6000]
         due = str(walk(e, "applicationDue") or "")
+        if not re.match(r"\d{4}-", due):
+            due = str(walk(e, "expires") or "")
         out.append({"key": "no:" + c["uid"], "title": c["title"], "company": str(walk(e, "businessName") or c["company"]),
                     "place": c["place"] or "Norvège", "cc": "NO",
                     "url": "https://arbeidsplassen.nav.no/stillinger/stilling/" + c["uid"],
@@ -383,7 +388,9 @@ def scan_denmark(dump):
                 continue
             seen.add(tid)
             comp = (r.get("company") or {}).get("name") or r.get("companytext") or ""
-            snippet = mx.text(r.get("html") or "")[:3000]
+            # seul le texte de présentation de l'annonce (les boutons du site sont en danois)
+            paras = re.findall(r"<p[^>]*>(.*?)</p>", r.get("html") or "", re.S)
+            snippet = mx.text(" ".join(paras))[:3000]
             out.append({"key": "dk:" + tid, "title": mx.text(r.get("headline") or ""), "company": mx.text(comp),
                         "place": r.get("area") or "Danemark", "cc": "DK",
                         "url": r.get("share_url") or f"https://www.jobindex.dk/vis-job/{tid}",
@@ -463,12 +470,12 @@ def sync_selection(sel, nord, today, now_iso):
             n = cur.get(o["id"])
             if not n or int(n.get("chances") or 0) < SEUIL_SELECTION:
                 continue
-            o.update({k: v for k, v in n.items() if k != "family"})
+            o.update(n)
         keep.append(o)
     have = {o["id"] for o in keep}
     for n in nord["offers"]:
         if n["id"] not in have and int(n.get("chances") or 0) >= SEUIL_SELECTION:
-            keep.append({k: v for k, v in n.items() if k != "family"})
+            keep.append(dict(n))
     keep = [o for o in keep if mx.still_open(o, today, 75) and not mx.excluded_sector(o)]
     keep.sort(key=lambda o: (-int(o.get("chances") or 0), o.get("posted") or ""))
     top = [o for o in keep if o.get("cc") in COUNTRY][:30]
