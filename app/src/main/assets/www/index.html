@@ -264,6 +264,23 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
 .switch::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .15s}
 .switch[aria-checked="true"]{background:var(--accent)}
 .switch[aria-checked="true"]::after{left:25px}
+.pbars .bar{grid-template-columns:minmax(72px,92px) minmax(0,1fr) 78px;cursor:pointer}
+.pbars .seg{background:transparent;height:14px}
+.pbars .seg i{background:var(--chart-1);border-radius:99px}
+.pbars .n{font-weight:600;color:var(--ink);font-size:13.5px}
+.pbars .n.na{font-weight:500;color:var(--muted);font-size:12px;line-height:1.2}
+.permit{display:flex;flex-direction:column;gap:8px}
+.permit .pk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.permit .pk div{background:var(--sunk);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.permit .pk b{font-size:17px;font-variant-numeric:tabular-nums}
+.permit .pk span{font-size:12.5px;color:var(--muted)}
+.chip .cn{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500;margin-left:4px}
+.chip[aria-pressed="true"] .cn{color:var(--accent)}
+.tag.ok{background:var(--good-soft);color:var(--good);font-weight:600}
+.facts{display:flex;flex-direction:column;gap:10px;margin:0}
+.facts div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;font-size:14.5px}
+.facts dt{color:var(--muted);font-size:13px;margin:0}
+.facts dd{margin:0}
 </style>
 </head>
 <body>
@@ -278,29 +295,31 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
   <!-- ===== Onglet 1 : la sélection, tous pays ===== -->
   <div class="stack" id="tab-feed" role="tabpanel" aria-labelledby="tabbtn-feed">
     <div class="hero">
-      <h1>Vos meilleures pistes, <em>au Maroc</em>.</h1>
-      <p class="muted">Vos chances d'entretien pour chaque offre. «&nbsp;Postuler&nbsp;» prépare la lettre et le CV.</p>
+      <h1>Vos meilleures pistes, <em>dans les pays nordiques</em>.</h1>
+      <p class="muted">Vos chances d'entretien pour chaque offre. «&nbsp;Postuler&nbsp;» prépare la lettre et le CV, en anglais pour les pays nordiques.</p>
       <button class="alertline" id="alert-line" type="button"><span class="dot ok" id="alert-dot"></span><span id="alert-txt">Alerte dès qu'une offre dépasse 75&nbsp;%</span></button>
     </div>
     <div class="filters">
       <p class="small muted" id="feed-status">Chargement…</p>
       <button class="btn" id="feed-refresh" type="button">Actualiser</button>
     </div>
+    <div class="row" id="f-market"></div>
     <div class="stats">
       <div class="stat"><b id="f-total">–</b><span>offres pour vous</span></div>
       <div class="stat"><b id="f-strong">–</b><span>à 60 % et plus</span></div>
       <div class="stat"><b id="f-best">–</b><span>meilleures chances</span></div>
     </div>
     <div class="list" id="feed-list"></div>
-    <p class="foot">Liste mise à jour 3 fois par jour, avec une alerte dès qu'une offre dépasse 75 %. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.</p>
+    <p class="foot" id="f-foot">Pays nordiques scannés chaque matin, Maroc 3 fois par jour. Le pourcentage estime vos chances d'obtenir un entretien, langue et permis compris : ce n'est pas une garantie.</p>
   </div>
 
-  <!-- ===== Onglet 2 : le marché marocain ===== -->
+  <!-- ===== Onglet 2 : les marchés (pays nordiques et Maroc) ===== -->
   <div class="stack" id="tab-maroc" role="tabpanel" aria-labelledby="tabbtn-maroc" hidden>
     <div class="hero">
-      <h1>Le marché marocain, <em>passé au scanner</em>.</h1>
-      <p class="muted">Toutes les offres repérées dans votre domaine, avec vos chances pour chacune.</p>
+      <h1 id="m-h1">Les marchés, <em>passés au scanner</em>.</h1>
+      <p class="muted">Toutes les offres repérées dans votre domaine, pays par pays, avec vos chances pour chacune.</p>
     </div>
+    <div class="row" id="m-countries" role="group" aria-label="Pays"></div>
     <div class="filters">
       <p class="small muted" id="maroc-status">Chargement…</p>
       <button class="btn" id="maroc-refresh" type="button">Actualiser</button>
@@ -310,6 +329,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
       <div class="stat"><b id="m-strong">–</b><span>à 60 % et plus</span></div>
       <div class="stat"><b id="m-best">–</b><span>meilleures chances</span></div>
     </div>
+    <section class="panel permit" id="m-permit" hidden></section>
 
     <section class="panel" id="maroc-chart">
       <h2>Par métier</h2>
@@ -330,7 +350,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
       <h2>Vérifier en direct</h2>
       <div class="row" id="m-postes"></div>
       <div class="row" id="m-links"></div>
-      <p class="small muted">Ouvre la recherche de la semaine sur chaque site marocain.</p>
+      <p class="small muted" id="m-links-note">Ouvre la recherche de la semaine sur chaque site du pays.</p>
     </section>
 
     <p class="foot" id="m-foot">Scan refait chaque matin. Le pourcentage est une estimation de vos chances d'obtenir un entretien, pas une garantie.</p>
@@ -366,6 +386,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
     <div class="hero">
       <h1>Ce qui fait <em>rappeler</em>.</h1>
       <p class="muted">Un plan simple, chaque semaine.</p>
+      <div class="row" id="c-mode" role="group" aria-label="Marché"></div>
     </div>
     <section class="panel" id="c-week">
       <div class="step"><h2>Cette semaine</h2><span class="small muted" id="c-weekno" style="margin-left:auto"></span></div>
@@ -384,6 +405,12 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
     <div class="filters"><h2>Pourquoi on ne vous rappelle pas</h2></div>
     <p class="note" id="c-rappel-note"></p>
     <div class="list" id="c-causes"></div>
+    <section class="panel" id="c-anchor-permis" hidden>
+      <h2>Permis de travail</h2>
+      <p class="small muted" id="c-permis-note"></p>
+      <div class="bars pbars" id="c-permis-bars"></div>
+      <div class="rows" id="c-permis"></div>
+    </section>
     <section class="panel" id="c-anchor-cv">
       <h2>Votre CV en 5 points</h2>
       <ol class="tips" id="c-cv"></ol>
@@ -399,7 +426,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
     </section>
     <section class="panel" id="c-anchor-entreprises">
       <h2>Entreprises cibles</h2>
-      <p class="small muted">Grande consommation et distribution au Maroc. Touchez une entreprise.</p>
+      <p class="small muted" id="c-ent-note">Grande consommation et distribution au Maroc. Touchez une entreprise.</p>
       <div class="rows" id="c-entreprises"></div>
     </section>
     <section class="panel">
@@ -522,7 +549,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
   <button class="bn" role="tab" type="button" id="tabbtn-feed" data-tab="feed" aria-selected="true" aria-controls="tab-feed">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><span>Offres</span><b class="badge" id="badge-feed" hidden></b></button>
   <button class="bn" role="tab" type="button" id="tabbtn-maroc" data-tab="maroc" aria-selected="false" aria-controls="tab-maroc">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Maroc</span><b class="badge" id="badge-maroc" hidden></b></button>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Marchés</span><b class="badge" id="badge-maroc" hidden></b></button>
   <button class="bn" role="tab" type="button" id="tabbtn-suivi" data-tab="suivi" aria-selected="false" aria-controls="tab-suivi">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/></svg><span>Suivi</span><b class="badge warnb" id="badge-suivi" hidden></b></button>
   <button class="bn" role="tab" type="button" id="tabbtn-conseils" data-tab="conseils" aria-selected="false" aria-controls="tab-conseils">
@@ -546,6 +573,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
 (function(){
 "use strict";
 var REGIONS=[
+ ["Pays nordiques",[["SE","Suède","Sweden"],["NO","Norvège","Norway"],["DK","Danemark","Denmark"],["FI","Finlande","Finland"],["IS","Islande","Iceland"]]],
  ["Maroc",[["MA","Maroc","Morocco","fr"]]],
  ["Golfe",[["AE","Émirats","United Arab Emirates"],["SA","Arabie saoudite","Saudi Arabia"],["QA","Qatar","Qatar"],["KW","Koweït","Kuwait"],["BH","Bahreïn","Bahrain"],["OM","Oman","Oman"]]],
  ["Europe",[["FR","France","France","fr"],["BE","Belgique","Belgium","fr"],["CH","Suisse","Switzerland","fr"],["LU","Luxembourg","Luxembourg","fr"],["GB","Royaume-Uni","United Kingdom"],["DE","Allemagne","Germany"],["ES","Espagne","Spain"],["IT","Italie","Italy"],["NL","Pays-Bas","Netherlands"],["PT","Portugal","Portugal"],["IE","Irlande","Ireland"]]],
@@ -559,7 +587,8 @@ var PER_COUNTRY=2, FREE_QUOTA=200, MODEL="claude-haiku-4-5-20251001";
 
 var INDEED={GB:"uk",US:"www"};
 var BAYT={AE:"uae",SA:"saudi-arabia",QA:"qatar",KW:"kuwait",BH:"bahrain",OM:"oman",EG:"egypt",MA:"morocco"};
-var S={poste:0,sel:new Set(["MA","AE","SA","QA","FR"]),profile:null,jobs:[],example:true,running:false,stop:false,min:0,country:"",shown:30,onlyNew:false,failed:new Set(),simple:false};
+var NORD_CC=["SE","NO","DK","FI","IS"];
+var S={poste:0,sel:new Set(["SE","NO","DK","FI","MA"]),profile:null,jobs:[],example:true,running:false,stop:false,min:0,country:"",shown:30,onlyNew:false,failed:new Set(),simple:false};
 var K={prov:"rapid",jkey:"",akey:""};
 var NATIVE=!!(window.Android&&typeof window.Android.http==="function");
 
@@ -652,16 +681,39 @@ $("all").addEventListener("click",function(){
   if(s!=null){var set=new Set(s.split(",").filter(function(c){return COUNTRIES[c];}));if(set.size)S.sel=set;}
 })();
 $("profil").addEventListener("input",function(){store("radar.profil",$("profil").value.slice(0,30000));});
-$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));renderLinks();renderMarocLinks();});
+$("postes").addEventListener("input",function(){store("radar.postes",$("postes").value.slice(0,400));renderLinks();renderMarketLinks();});
 function typedTitles(){return uniq($("postes").value.split(/[,;\n]/).map(function(x){return x.trim().slice(0,60);})).slice(0,4);}
 
 /* ---------- direct links to the job sites: no key needed ---------- */
 function slug(q){return q.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
 function sites(c,q){
   var e=encodeURIComponent(q),out=[
-    ["LinkedIn","https://www.linkedin.com/jobs/search/?keywords="+e+"&location="+encodeURIComponent(c.loc)+"&f_TPR=r604800&sortBy=DD"],
-    ["Indeed","https://"+(INDEED[c.code]||c.code.toLowerCase())+".indeed.com/jobs?q="+e+"&fromage=7&sort=date"],
-    ["Google","https://www.google.com/search?udm=8&q="+encodeURIComponent(q+" jobs "+c.loc)]];
+    ["LinkedIn","https://www.linkedin.com/jobs/search/?keywords="+e+"&location="+encodeURIComponent(c.loc)+"&f_TPR=r604800&sortBy=DD"]];
+  if(c.code!=="IS")out.push(["Indeed","https://"+(INDEED[c.code]||c.code.toLowerCase())+".indeed.com/jobs?q="+e+"&fromage=7&sort=date"]);
+  out.push(["Google","https://www.google.com/search?udm=8&q="+encodeURIComponent(q+" jobs "+c.loc)]);
+  if(c.code==="SE"){
+    out.push(["Platsbanken","https://arbetsformedlingen.se/platsbanken/annonser?q="+e]);
+    out.push(["The Hub","https://thehub.io/jobs?search="+e+"&countryCode=SE"]);
+  }
+  if(c.code==="NO"){
+    out.push(["arbeidsplassen (NAV)","https://arbeidsplassen.nav.no/stillinger?q="+e]);
+    out.push(["FINN.no","https://www.finn.no/job/search?q="+e]);
+  }
+  if(c.code==="DK"){
+    out.push(["Jobindex","https://www.jobindex.dk/jobsoegning?q="+encodeURIComponent(q).replace(/%20/g,"+")]);
+    out.push(["Jobnet","https://job.jobnet.dk/CV/FindWork?SearchString="+e]);
+    out.push(["Work in Denmark","https://www.workindenmark.dk/"]);
+    out.push(["The Hub","https://thehub.io/jobs?search="+e+"&countryCode=DK"]);
+  }
+  if(c.code==="FI"){
+    out.push(["Duunitori","https://duunitori.fi/tyopaikat?haku="+e]);
+    out.push(["Työmarkkinatori","https://tyomarkkinatori.fi/en/personal-customers/vacancies?q="+e]);
+    out.push(["Work in Finland","https://www.workinfinland.com/en/"]);
+  }
+  if(c.code==="IS"){
+    out.push(["Alfred.is","https://alfred.is/"]);
+    out.push(["Work in Iceland","https://work.iceland.is/"]);
+  }
   if(BAYT[c.code])out.push(["Bayt","https://www.bayt.com/en/"+BAYT[c.code]+"/jobs/"+slug(q)+"-jobs/"]);
   if(c.code==="MA"){
     out.push(["ReKrute","https://www.rekrute.com/emploi-"+e]);
@@ -1000,6 +1052,8 @@ function card(j,example){
   var tags=el("div",{class:"row"});
   if(example===true)tags.append(el("span",{class:"tag key",text:"Exemple"}));
   if(j.isNew)tags.append(el("span",{class:"tag new",text:"Nouveau"}));
+  if(j.lang==="en")tags.append(el("span",{class:"tag ok",text:"Annonce en anglais"}));
+  else if(j.langReq)tags.append(el("span",{class:"tag warn",text:"Langue locale exigée"}));
   if(j.deadline){
     /* the closing day itself still counts as open */
     var left=Math.ceil((j.deadline+864e5-Date.now())/864e5);
@@ -1090,7 +1144,7 @@ function showTab(name){
     $("tabbtn-"+t).setAttribute("aria-selected",t===name?"true":"false");
   });
   store("radar.onglet",name);
-  if(LISTS[name])LISTS[name].opened();
+  Object.keys(LISTS).forEach(function(k){if(LISTS[k].tab===name)LISTS[k].opened();});
   if(name==="suivi")$("badge-suivi").hidden=true;
   if(name==="conseils")renderConseils();
   window.scrollTo(0,0);
@@ -1101,8 +1155,12 @@ TABS.forEach(function(t){$("tabbtn-"+t).addEventListener("click",function(){show
 
 /* ---------- evaluated lists read from the repository: the selection and the Moroccan market ---------- */
 var BASE="https://raw.githubusercontent.com/aminebenkhadra-dotcom/Job-search/main/data/";
-function makeList(name,file,render){
-  var L={name:name,offers:[],ids:[],updated:NaN,meta:{},cached:true,loaded:false,error:false};
+function tabBadge(tab){
+  var n=0;Object.keys(LISTS).forEach(function(k){if(LISTS[k].tab===tab)n+=LISTS[k].newCount||0;});
+  var b=$("badge-"+tab);if(!b)return;b.textContent=n;b.hidden=!n||TAB===tab;
+}
+function makeList(name,file,render,tab){
+  var L={name:name,tab:tab||name,offers:[],ids:[],updated:NaN,meta:{},cached:true,loaded:false,error:false,newCount:0};
   var cacheKey="radar.liste."+name,seenKey="radar.vues."+name;
   function seen(){
     try{var a=JSON.parse(store(seenKey)||(name==="feed"?store("radar.fluxvus"):null)||"null");return Array.isArray(a)?new Set(a):null;}catch(e){return null;}
@@ -1114,19 +1172,19 @@ function makeList(name,file,render){
       var url=str(o.url,600),ts=Date.parse(o.posted||""),id=str(o.id,120);
       return {id:id,title:str(o.title,160),company:str(o.company,80),place:str(o.place,80),country:str(o.country,40),family:str(o.family,40),
         score:clamp(o.chances),why:str(o.why,220),url:/^https:\/\//.test(url)?url:"",posted:isFinite(ts)?ts:null,via:str(o.source,30),
+        cc:str(o.cc,4),lang:str(o.lang,8),langReq:!!o.lang_req,
         deadline:isFinite(Date.parse(o.deadline||""))?Date.parse(o.deadline):null,isNew:!!s&&!!id&&!s.has(id)};
     }).filter(function(o){return o.title;}).sort(function(x,y){return (y.score||0)-(x.score||0)||(y.posted||0)-(x.posted||0);});
     L.ids=L.offers.map(function(o){return o.id;}).filter(Boolean);
     L.updated=Date.parse(d&&d.updated||"");L.meta=d&&typeof d==="object"?d:{};L.cached=cached;
     if(!cached)L.loaded=true;
     render(L);
-    var n=L.offers.filter(function(o){return o.isNew;}).length,b=$("badge-"+name);
-    b.textContent=n;b.hidden=!n||TAB===name;
-    if(!cached&&TAB===name)L.opened();
+    L.newCount=L.offers.filter(function(o){return o.isNew;}).length;tabBadge(L.tab);
+    if(!cached&&TAB===L.tab)L.opened();
   }
   /* the offers count as seen once their tab has been shown with fresh data */
   L.opened=function(){
-    $("badge-"+name).hidden=true;
+    L.newCount=0;$("badge-"+L.tab).hidden=true;
     if(!L.loaded||!L.ids.length)return;
     var s=seen(),all=(s?Array.from(s):[]).concat(L.ids).filter(function(x,i,arr2){return arr2.indexOf(x)===i;});
     store(seenKey,JSON.stringify(all.slice(-3000)));
@@ -1158,20 +1216,49 @@ function stats(prefix,offers){
   $(prefix+"-best").textContent=offers.length&&offers[0].score!=null?offers[0].score+"%":"–";
 }
 
+function isNord(o){return !!o&&NORD_CC.indexOf(o.cc)>=0;}
+var F={market:store("radar.fmarche")==="maroc"?"maroc":"nord"};
 makeList("feed","offres.json",function(L){
   var list=$("feed-list");list.textContent="";
-  stats("f",L.offers);
-  if(!L.offers.length&&!L.error)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. La liste se remplit chaque matin."}));
-  L.offers.forEach(function(o){list.append(card(o,"feed"));});
+  var nord=L.offers.filter(isNord),ma=L.offers.filter(function(o){return !isNord(o);});
+  var offers=F.market==="nord"?nord:ma;
+  var f=$("f-market");f.textContent="";
+  [["nord","Pays nordiques",nord.length],["maroc","Maroc",ma.length]].forEach(function(m){
+    f.append(el("button",{class:"chip",type:"button","aria-pressed":F.market===m[0]?"true":"false",onclick:function(){F.market=m[0];store("radar.fmarche",m[0]);L.render();}},
+      m[1],el("span",{class:"cn",text:String(m[2])})));
+  });
+  $("tab-feed").querySelector("h1").innerHTML=F.market==="nord"?"Vos meilleures pistes, <em>dans les pays nordiques</em>.":"Vos meilleures pistes, <em>au Maroc</em>.";
+  stats("f",offers);
+  if(!offers.length&&!L.error){
+    list.append(el("div",{class:"empty"},el("p",{text:nb(F.market==="nord"
+      ?"Aucune offre nordique à 40 % et plus pour l'instant. Toutes les offres repérées sont dans l'onglet Marchés."
+      :"Aucune offre marocaine retenue pour l'instant.")}),
+      el("button",{class:"btn primary small-btn",type:"button",text:"Voir l'onglet Marchés",onclick:function(){showTab("maroc");}})));
+  }
+  offers.forEach(function(o){list.append(card(o,"feed"));});
   $("feed-status").textContent=statusText(L);
 });
 $("feed-refresh").addEventListener("click",function(){LISTS.feed.load();});
 
-/* ---------- Morocco tab ---------- */
-var M={min:0,fam:"",onlyNew:false,shown:20,poste:0};
-var MPOSTES=["trade marketing","directeur marketing","brand manager","category manager","directeur commercial"];
-makeList("maroc","maroc.json",function(L){
-  var offers=L.offers;
+/* ---------- onglet Marchés : pays nordiques et Maroc ---------- */
+var M={min:0,fam:"",onlyNew:false,shown:20,poste:0,cc:store("radar.marche")||"SE"};
+if(NORD_CC.concat(["MA"]).indexOf(M.cc)<0)M.cc="SE";
+var MPOSTES={nord:["trade marketing manager","marketing manager","brand manager","category manager","export manager"],
+  MA:["trade marketing","directeur marketing","brand manager","category manager","directeur commercial"]};
+function marketOffers(cc){
+  if(cc==="MA")return LISTS.maroc?LISTS.maroc.offers:[];
+  return LISTS.nord?LISTS.nord.offers.filter(function(o){return o.cc===cc;}):[];
+}
+function renderMarket(){
+  if(!LISTS.nord||!LISTS.maroc)return;
+  var cc=M.cc,L=cc==="MA"?LISTS.maroc:LISTS.nord,offers=marketOffers(cc),name=COUNTRIES[cc].name;
+  var cs=$("m-countries");cs.textContent="";
+  NORD_CC.concat(["MA"]).forEach(function(c){
+    var n=marketOffers(c).length;
+    cs.append(el("button",{class:"chip",type:"button","aria-pressed":cc===c?"true":"false",onclick:function(){
+      M.cc=c;store("radar.marche",c);M.fam="";M.shown=20;M.poste=0;renderMarket();renderMarketLinks();}},
+      COUNTRIES[c].name,n?el("span",{class:"cn",text:String(n)}):null));
+  });
   stats("m",offers);
 
   /* one stacked bar per job family, widths on a single count scale */
@@ -1183,43 +1270,79 @@ makeList("maroc","maroc.json",function(L){
   var bars=$("m-bars");bars.textContent="";
   fams.forEach(function(f){
     var b=by[f];
-    bars.append(el("button",{class:"bar",type:"button","aria-pressed":M.fam===f?"true":"false",onclick:function(){M.fam=M.fam===f?"":f;M.shown=20;L.render();}},
+    bars.append(el("button",{class:"bar",type:"button","aria-pressed":M.fam===f?"true":"false",onclick:function(){M.fam=M.fam===f?"":f;M.shown=20;renderMarket();}},
       el("span",{class:"lab",text:f}),
       el("span",{class:"seg",style:"width:"+Math.max(4,b.n/max*100)+"%"},
         el("i",{class:"g",style:"width:"+b.g/b.n*100+"%"}),el("i",{class:"m",style:"width:"+b.m/b.n*100+"%"}),el("i",{class:"l",style:"width:"+b.l/b.n*100+"%"})),
       el("span",{class:"n",text:b.n})));
   });
   $("maroc-chart").hidden=!fams.length;
+  renderPermitPanel(cc);
 
   var f=$("m-filter");f.textContent="";
   if(offers.length)[[0,"Toutes"],[35,"35 % +"],[60,"60 % +"]].forEach(function(o){
-    f.append(el("button",{class:"chip",type:"button","aria-pressed":M.min===o[0]?"true":"false",text:o[1],onclick:function(){M.min=o[0];M.shown=20;L.render();}}));
+    f.append(el("button",{class:"chip",type:"button","aria-pressed":M.min===o[0]?"true":"false",text:o[1],onclick:function(){M.min=o[0];M.shown=20;renderMarket();}}));
   });
+  var nEn=offers.filter(function(o){return o.lang==="en";}).length;
+  if(cc!=="MA"&&nEn)f.append(el("button",{class:"chip",type:"button","aria-pressed":M.onlyEn?"true":"false",text:"En anglais · "+nEn,onclick:function(){M.onlyEn=!M.onlyEn;M.shown=20;renderMarket();}}));
+  else M.onlyEn=false;
   var nNew=offers.filter(function(o){return o.isNew;}).length;
-  if(nNew)f.append(el("button",{class:"chip",type:"button","aria-pressed":M.onlyNew?"true":"false",text:"Nouvelles · "+nNew,onclick:function(){M.onlyNew=!M.onlyNew;M.shown=20;L.render();}}));
+  if(nNew)f.append(el("button",{class:"chip",type:"button","aria-pressed":M.onlyNew?"true":"false",text:"Nouvelles · "+nNew,onclick:function(){M.onlyNew=!M.onlyNew;M.shown=20;renderMarket();}}));
   else M.onlyNew=false;
 
-  var view=offers.filter(function(o){return (!M.onlyNew||o.isNew)&&(!M.fam||(o.family||"Autres")===M.fam)&&(o.score||0)>=M.min;});
-  $("m-title").textContent=view.length+" offre"+(view.length>1?"s":"")+(M.fam?" · "+M.fam:"");
+  var view=offers.filter(function(o){return (!M.onlyNew||o.isNew)&&(!M.onlyEn||o.lang==="en")&&(!M.fam||(o.family||"Autres")===M.fam)&&(o.score||0)>=M.min;});
+  $("m-title").textContent=view.length+" offre"+(view.length>1?"s":"")+" · "+name+(M.fam?" · "+M.fam:"");
   var list=$("m-list");list.textContent="";
-  if(!offers.length&&!L.error)list.append(el("p",{class:"muted",text:"Aucune offre pour l'instant. Le scan tourne chaque matin."}));
+  if(!offers.length&&!L.error){
+    list.append(el("p",{class:"muted",text:nb(cc==="FI"?"Pas de scan automatique en Finlande : aucun site finlandais n'accepte les robots. Les liens « Vérifier en direct » ouvrent les recherches."
+      :cc==="IS"?"Pas de scan automatique en Islande : utilisez les liens « Vérifier en direct ». Le permis y est le plus difficile à obtenir."
+      :"Aucune offre pour l'instant. Le scan tourne chaque matin.")}));
+  }
   else if(!view.length&&offers.length)list.append(el("p",{class:"muted",text:"Aucune offre avec ces filtres."}));
   view.slice(0,M.shown).forEach(function(o){list.append(card(o,"feed"));});
   $("m-more").hidden=view.length<=M.shown;
-  $("maroc-status").textContent=statusText(L);
-  var src=arr(L.meta.sources,10,30);
-  $("m-foot").textContent=(src.length?"Sites scannés : "+src.join(", ")+". ":"")+"Scan refait 3 fois par jour. Le pourcentage estime vos chances d'obtenir un entretien, ce n'est pas une garantie.";
-});
-$("m-more").addEventListener("click",function(){M.shown+=20;LISTS.maroc.render();});
-$("maroc-refresh").addEventListener("click",function(){LISTS.maroc.load();});
-function renderMarocLinks(){
-  var t=typedTitles();if(!t.length)t=MPOSTES;
+  $("maroc-status").textContent=offers.length||L.error?statusText(L):(cc==="FI"||cc==="IS"?"Recherche sur les sites du pays":statusText(L));
+  var src=arr(L.meta.sources,10,40);
+  $("m-foot").textContent=(src.length?"Sites scannés : "+src.join(", ")+". ":"")+(cc==="MA"?"Scan refait 3 fois par jour. ":"Scan refait chaque matin. ")+"Le pourcentage estime vos chances d'obtenir un entretien"+(cc==="MA"?"":", langue et permis compris")+" : ce n'est pas une garantie.";
+}
+makeList("nord","nordiques.json",renderMarket,"maroc");
+makeList("maroc","maroc.json",renderMarket,"maroc");
+$("m-more").addEventListener("click",function(){M.shown+=20;renderMarket();});
+$("maroc-refresh").addEventListener("click",function(){LISTS.nord.load();LISTS.maroc.load();});
+function renderMarketLinks(){
+  var t=typedTitles();if(!t.length)t=M.cc==="MA"?MPOSTES.MA:MPOSTES.nord;
   if(M.poste>=t.length)M.poste=0;
   var chips=$("m-postes"),box=$("m-links");chips.textContent="";box.textContent="";
   t.forEach(function(x,i){
-    chips.append(el("button",{class:"chip",type:"button","aria-pressed":M.poste===i?"true":"false",text:x,onclick:function(){M.poste=i;renderMarocLinks();}}));
+    chips.append(el("button",{class:"chip",type:"button","aria-pressed":M.poste===i?"true":"false",text:x,onclick:function(){M.poste=i;renderMarketLinks();}}));
   });
-  sites(COUNTRIES.MA,t[M.poste]).forEach(function(s){box.append(el("a",{class:"chip site",href:s[1],text:s[0]}));});
+  sites(COUNTRIES[M.cc],t[M.poste]).forEach(function(s){box.append(el("a",{class:"chip site",href:s[1],text:s[0]}));});
+  $("m-links-note").textContent="Ouvre la recherche de la semaine sur chaque site : "+COUNTRIES[M.cc].name+".";
+}
+/* permis de travail : chiffres tenus à jour en ligne (conseils.json) */
+function permitOf(cc){var p=CONSEILS&&CONSEILS.nord&&CONSEILS.nord.permis||[];for(var i=0;i<p.length;i++)if(p[i].cc===cc)return p[i];return null;}
+function eur(n){if(n%100)return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"\u202f")+"\u00a0€";return "≈ "+String(Math.round(n/100)*100).replace(/\B(?=(\d{3})+(?!\d))/g," ")+" €";}
+function renderPermitPanel(cc){
+  var box=$("m-permit"),p=cc==="MA"?null:permitOf(cc);box.textContent="";box.hidden=!p;if(!p)return;
+  box.append(el("div",{class:"step"},el("h2",{text:"Permis · "+p.pays}),
+      el("button",{class:"btn ghost",type:"button",style:"margin-left:auto;white-space:nowrap",onclick:function(){openPermit(p);}},"Détails ›")),
+    el("div",{class:"pk"},
+      el("div",{},el("b",{text:p.eur?eur(p.eur):"—"}),el("span",{text:nb(p.eur?"salaire minimum par mois":p.seuil)})),
+      el("div",{},el("b",{text:p.conjoint&&/travailler/.test(p.conjoint)?"Oui":"À vérifier"}),el("span",{text:"votre femme peut travailler"}))),
+    el("p",{class:"small muted",text:nb(p.plus||"")}));
+}
+function openPermit(p){
+  SHEET.offer=null;
+  var dl=el("dl",{class:"facts"});
+  [["Salaire minimum",p.seuil+(p.eur?" ("+eur(p.eur)+" par mois)":"")],["Précision",p.detail],["Délai",p.delai],["Votre femme",p.conjoint],["À savoir",p.plus]].forEach(function(x){
+    if(x[1])dl.append(el("div",{},el("dt",{text:x[0]}),el("dd",{text:nb(x[1])})));
+  });
+  var s1=step("1","Les règles 2026");s1.append(dl);
+  var s2=step("2","Source officielle");
+  s2.append(el("button",{class:"btn wide",type:"button",text:"Ouvrir le site officiel ↗",onclick:function(){openUrl(p.url);}}),
+    el("p",{class:"small muted",text:nb(CONSEILS&&CONSEILS.nord&&CONSEILS.nord.permis_note||"")}));
+  var box=el("div",{class:"steps"});box.append(s1,s2);
+  openSheet("Permis de travail · "+p.pays,"Règles pour un salarié venu du Maroc",null,box);
 }
 
 /* ---------- postuler : dossier privé (CV, lettres), fiche de candidature, suivi ---------- */
@@ -1230,6 +1353,7 @@ function dayOf(iso){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||"");return m?new 
 function daysSince(iso){var d=dayOf(iso);if(!d)return 0;var t=new Date();t.setHours(0,0,0,0);return Math.round((t-d)/864e5);}
 function fmtDate(iso){var d=dayOf(iso);return d?d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"}):"";}
 function fmtLong(iso){var d=dayOf(iso);return d?d.toLocaleDateString("fr-FR",{day:"numeric",month:"long"}):"";}
+function fmtEn(iso){var d=dayOf(iso);return d?d.toLocaleDateString("en-GB",{day:"numeric",month:"long"}):"";}
 
 var toastT=null;
 function toast(msg){
@@ -1238,13 +1362,14 @@ function toast(msg){
 }
 
 /* le dossier : fichier envoyé par Claude, importé une fois ; rien de personnel dans l'appli publiée */
-var KIT=null,CVNAME="";
+var KIT=null,CVNAME="",CVNAME_EN="";
 function loadKit(){
   var raw="";
   try{raw=has("kit")?String(window.Android.kit()||""):(store("radar.kit")||"");}catch(e){raw="";}
   KIT=null;
   if(raw){try{var k=JSON.parse(raw);if(k&&k.radar_kit)KIT=k;}catch(e){}}
   try{CVNAME=has("cvName")?String(window.Android.cvName()||""):(store("radar.cvname")||"");}catch(e){CVNAME="";}
+  try{CVNAME_EN=has("cvNameEn")?String(window.Android.cvNameEn()||""):(store("radar.cvname_en")||"");}catch(e){CVNAME_EN="";}
 }
 window.__kit=function(ok,msg){
   loadKit();renderKit();toast(msg||(ok?"Dossier importé":"Fichier non reconnu"));
@@ -1257,8 +1382,8 @@ function importKit(){
     var f=inp.files&&inp.files[0],r=new FileReader();if(!f)return;
     if(/\.pdf$/i.test(f.name)){store("radar.cvname",f.name);return window.__kit(true,"CV enregistré");}
     r.onload=function(){
-      try{var k=JSON.parse(r.result);if(!k||!k.radar_kit)throw 0;var cv=k.cv;delete k.cv;
-        store("radar.kit",JSON.stringify(k));if(cv&&cv.name)store("radar.cvname",cv.name);window.__kit(true,"Dossier importé : lettres et CV prêts");}
+      try{var k=JSON.parse(r.result);if(!k||!k.radar_kit)throw 0;var cv=k.cv,cvEn=k.cv_en;delete k.cv;delete k.cv_en;
+        store("radar.kit",JSON.stringify(k));if(cv&&cv.name)store("radar.cvname",cv.name);if(cvEn&&cvEn.name)store("radar.cvname_en",cvEn.name);window.__kit(true,"Dossier importé : lettres et CV prêts");}
       catch(e){window.__kit(false,"Fichier non reconnu");}
     };
     r.readAsText(f);
@@ -1267,7 +1392,7 @@ function importKit(){
 }
 
 /* lettre : sur mesure si Claude l'a écrite pour l'offre, sinon modèle du métier */
-var RECRUTEURS=/\b(confidentiel\w*|confidential|cabinet|michael page|interface|manpower\w*|ifcar\w*|talents? partners|best profil|orh|carl rogers|adecco|africa staffing|talentmind|talensya)\b/i;
+var RECRUTEURS=/\b(confidentiel\w*|confidential|cabinet|recruitment|rekrytering|rekruttering|bemanning|recruiting|human resources|interface|manpower\w*|ifcar\w*|talents? partners|best profil|orh|carl rogers|adecco|africa staffing|talentmind|talensya)\b/i;
 var VILLES=/\s+[-–]\s+(casablanca|rabat|marrakech|tanger|agadir|f[eè]s|mekn[eè]s|k[ée]nitra|t[ée]touan|oujda|bouskoura|mohammedia|el jadida|laayoune|tit mellil|maroc)\s*$/i;
 function cleanTitle(t){
   t=String(t||"").split(" · ")[0]
@@ -1278,7 +1403,8 @@ function cleanTitle(t){
   return t;
 }
 function companyOf(c){
-  c=String(c||"");var name=c.split(" · ")[0].trim();
+  c=String(c||"");var name=c.split(" · ")[0].trim()
+    .replace(/\s+(aktiebolag|amba|a\/s|aps|ab|asa|as|oy|oyj|ehf|hf)(\s+[-–].*)?$/i,"").trim();
   if(!name||RECRUTEURS.test(name))return {name:"",recruiter:!!name&&!/confidenti/i.test(name)};
   /* « Groupe agroalimentaire », « Société de distribution » : une description, pas un nom */
   if(/^(groupe|soci[ée]t[ée]|entreprise|client)\s+[a-zà-ÿ]/.test(name.charAt(0).toLowerCase()+name.slice(1))&&!/\s[A-Z]/.test(name))return {name:"",recruiter:false};
@@ -1286,6 +1412,7 @@ function companyOf(c){
 }
 function familyOf(t){
   t=String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  if(/\bexport\b/.test(t))return "Export";
   if(/\btrade\b/.test(t))return "Trade marketing";
   if(/\b(directeur|directrice|director|head)\b.*\b(commercia\w*|ventes?|sales)\b/.test(t))return "Direction";
   if(/\bcateg/.test(t))return "Category";
@@ -1299,17 +1426,23 @@ function varsFor(o,extra){
   var p=cleanTitle(o.title),c=companyOf(o.company),city=String(o.place||"").trim(),k;
   var v={poste:p,de_poste:(/^[aeiouyàâéèêëîïôöûü]/i.test(p)?"d'":"de ")+p,chez:c.name?" chez "+c.name:"",entreprise:c.name,
     a_entreprise:c.name?" à "+c.name:(c.recruiter?" à votre client":""),
-    ville:city&&!/^(maroc|morocco)$/i.test(city)?" à "+city:"",signature:KIT&&KIT.signature||""};
+    ville:city&&!/^(maroc|morocco)$/i.test(city)?" à "+city:"",signature:KIT&&KIT.signature||"",
+    at:c.name?" at "+c.name:"",to_company:c.name?" to "+c.name:(c.recruiter?" to your client":""),in_city:city&&!/,| or /.test(city)?" in "+(city===city.toUpperCase()?city.charAt(0)+city.slice(1).toLowerCase():city):""};
   for(k in extra||{})v[k]=extra[k];
   return v;
 }
+/* pays nordiques : lettres, messages et CV en anglais */
+function enFor(o){return isNord(o)&&KIT&&KIT.en?KIT.en:null;}
+function kitOf(o){return enFor(o)||KIT||{};}
+function langOf(o){return isNord(o)?"en":"fr";}
 function letterFor(o){
   if(!KIT)return "";
-  var v=varsFor(o),custom=KIT.letters&&o.id&&KIT.letters[o.id],fams=KIT.families||{};
+  var k=kitOf(o),v=varsFor(o),custom=k.letters&&o.id&&k.letters[o.id],fams=k.families||{};
+  if(k.signature)v.signature=k.signature;
   if(custom)return fill(custom,v);
-  return fill([KIT.opening,fams[o.family||familyOf(o.title)]||fams.Marketing,KIT.closing].filter(Boolean).join("\n\n"),v);
+  return fill([k.opening,fams[o.family||familyOf(o.title)]||fams.Marketing,k.closing].filter(Boolean).join("\n\n"),v);
 }
-function subjectFor(o){return fill(KIT&&KIT.subject||"Candidature – {poste}",varsFor(o));}
+function subjectFor(o){return fill(kitOf(o).subject||"Candidature – {poste}",varsFor(o));}
 function siteOf(o){
   var u=o.url||"";
   if(/michaelpage/.test(u))return {name:"Michael Page",url:u.replace("/job-detail/","/job-apply/"),hint:"Formulaire Michael Page : ajoutez votre CV, puis collez la lettre."};
@@ -1317,6 +1450,9 @@ function siteOf(o){
   if(/rekrute\.com/.test(u))return {name:"ReKrute",url:u,hint:"Connectez-vous à ReKrute, touchez « Postuler » et collez la lettre si elle est demandée."};
   if(/indeed\./.test(u)||o.via==="Indeed")return {name:"Indeed",url:u,hint:"Postulez avec votre CV sur Indeed et collez la lettre si elle est demandée."};
   if(/linkedin\./.test(u))return {name:"LinkedIn",url:u,hint:"Postulez sur LinkedIn et collez la lettre en message."};
+  if(/arbetsformedlingen\.se/.test(u))return {name:"Platsbanken",url:u,hint:"Touchez « Ansök » : vous arrivez sur le site de l'employeur. Envoyez le CV anglais et collez la lettre."};
+  if(/nav\.no/.test(u))return {name:"arbeidsplassen",url:u,hint:"Touchez « Søk på stillingen » : vous arrivez sur le site de l'employeur. Envoyez le CV anglais et collez la lettre."};
+  if(/jobindex\.dk/.test(u))return {name:"Jobindex",url:u,hint:"Touchez « Se jobbet » : vous arrivez sur le site de l'employeur. Envoyez le CV anglais et collez la lettre."};
   return {name:o.via||"le site",url:u,hint:"Postulez sur le site avec votre CV et collez la lettre."};
 }
 function copy(text,msg){
@@ -1330,8 +1466,8 @@ function openUrl(u){
   try{if(has("open"))return window.Android.open(u);}catch(e){}
   window.open(u,"_blank","noopener");
 }
-function sendMail(to,subject,body){
-  if(has("send"))return window.Android.send(JSON.stringify({to:to,subject:subject,body:body}));
+function sendMail(to,subject,body,lang){
+  if(has("send"))return window.Android.send(JSON.stringify({to:to,subject:subject,body:body,lang:lang||"fr"}));
   location.href="mailto:"+encodeURIComponent(to)+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
 }
 
@@ -1344,7 +1480,7 @@ function appOf(id){for(var i=0;i<APPS.length;i++)if(APPS[i].id===id)return APPS[
 function due(a){return (a.status==="envoyee"&&daysSince(a.sent)>=7)||(a.status==="relancee"&&daysSince(a.relance||a.sent)>=10);}
 function markSent(o){
   var a=appOf(o.id);
-  if(!a){a={id:o.id,title:o.title,company:o.company,place:o.place,url:o.url,via:o.via,score:o.score,family:o.family||familyOf(o.title)};APPS.unshift(a);}
+  if(!a){a={id:o.id,title:o.title,company:o.company,place:o.place,url:o.url,via:o.via,score:o.score,family:o.family||familyOf(o.title),cc:o.cc||""};APPS.unshift(a);}
   a.sent=today();a.status="envoyee";delete a.relance;saveApps();
 }
 function refreshCards(){
@@ -1370,10 +1506,11 @@ function metaOf(o){return uniq([companyOf(o.company).name||String(o.company||"")
 function step(n,title,extra){
   return el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num",text:n}),el("h3",{text:title}),extra||null));
 }
-function mailRow(getSubject,getBody){
+function mailRow(getSubject,getBody,lang){
   var mail=el("input",{type:"email",inputmode:"email",autocomplete:"off",placeholder:"adresse e-mail","aria-label":"Adresse e-mail du recruteur"});
-  return el("div",{class:"mailbox"},el("p",{class:"small muted",text:CVNAME?"Ou par e-mail, CV joint :":"Ou par e-mail :"}),
-    el("div",{class:"mailrow"},mail,el("button",{class:"btn",type:"button",text:"Envoyer",onclick:function(){sendMail(mail.value.trim(),getSubject(),getBody());}})));
+  var cv=lang==="en"?(CVNAME_EN?"Ou par e-mail, CV anglais joint :":(CVNAME?"Ou par e-mail, CV joint (le CV anglais manque) :":"Ou par e-mail :")):(CVNAME?"Ou par e-mail, CV joint :":"Ou par e-mail :");
+  return el("div",{class:"mailbox"},el("p",{class:"small muted",text:cv}),
+    el("div",{class:"mailrow"},mail,el("button",{class:"btn",type:"button",text:"Envoyer",onclick:function(){sendMail(mail.value.trim(),getSubject(),getBody(),lang);}})));
 }
 function autosize(ta){
   function fit(){ta.style.height="auto";ta.style.height=(ta.scrollHeight+2)+"px";}
@@ -1387,7 +1524,7 @@ function openApply(o){
   s1.append(el("button",{class:"btn primary wide",type:"button",onclick:function(){
       if(ta)copy(ta.value,"Lettre copiée : collez-la sur "+site.name);openUrl(site.url);}},"Postuler sur "+site.name+" ↗"),
     el("p",{class:"small muted",text:nb((ta?"La lettre est copiée en même temps. ":"")+site.hint)}),
-    mailRow(function(){return subjectFor(o);},function(){return ta?ta.value:"";}));
+    mailRow(function(){return subjectFor(o);},function(){return ta?ta.value:"";},langOf(o)));
   var s2=step("2","C'est envoyé ?");
   if(a)s2.append(el("p",{class:"small",text:"Déjà dans votre suivi : envoyée le "+fmtLong(a.sent)+"."}),
     el("button",{class:"btn wide",type:"button",text:"Voir le suivi",onclick:function(){closeSheet();showTab("suivi");}}));
@@ -1397,7 +1534,9 @@ function openApply(o){
   if(ta){
     s3=el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num ico",text:"✎"}),el("h3",{text:"Votre lettre"}),
       el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){copy(ta.value,"Lettre copiée");}})));
-    s3.append(el("p",{class:"small muted",text:KIT.letters&&KIT.letters[o.id]?"Écrite pour cette offre. Modifiable avant l'envoi.":"Adaptée à ce métier. Modifiable avant l'envoi."}),ta);
+    var k3=kitOf(o),en=!!enFor(o);
+    s3.append(el("p",{class:"small muted",text:(en?"En anglais. ":"")+(k3.letters&&k3.letters[o.id]?"Écrite pour cette offre. Modifiable avant l'envoi.":"Adaptée à ce métier. Modifiable avant l'envoi.")}),ta);
+    if(isNord(o)&&!KIT.en)s3.append(el("p",{class:"small",text:"Importez le nouveau dossier envoyé par Claude : il contient les lettres et le CV en anglais."}));
   }else{
     s3=el("section",{class:"st"},el("div",{class:"st-h"},el("span",{class:"num ico",text:"✎"}),el("h3",{text:"Lettre et CV prêts ?"})));
     s3.append(el("p",{class:"small",text:"Importez le dossier envoyé par Claude : une lettre prête pour chaque offre, et le CV joint aux e-mails."}),
@@ -1409,13 +1548,14 @@ function openApply(o){
 }
 function openRelance(a){
   SHEET.offer=null;
-  var o={id:a.id,title:a.title,company:a.company,place:a.place,url:a.url,via:a.via,family:a.family};
-  var v=varsFor(o,{date:fmtLong(a.sent)}),f=KIT&&KIT.followup||{};
+  var o={id:a.id,title:a.title,company:a.company,place:a.place,url:a.url,via:a.via,family:a.family,cc:a.cc};
+  var k=kitOf(o),v=varsFor(o,{date:fmtLong(a.sent),date_en:fmtEn(a.sent)}),f=k.followup||{};
+  if(k.signature)v.signature=k.signature;
   var ta=el("textarea",{class:"letter","aria-label":"Message de relance",spellcheck:"false"});
   ta.value=fill(f.body||"Madame, Monsieur,\n\nJe me permets de revenir vers vous au sujet de ma candidature au poste {de_poste}{chez}, envoyée le {date}. Ce poste m'intéresse vivement et je reste disponible pour un échange à votre convenance.\n\nBien cordialement,\n{signature}",v).trim();
   var s1=step("1","Votre message",el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){copy(ta.value,"Message copié");}}));
   s1.append(ta,el("p",{class:"small muted",text:"Pas d'adresse ? Copiez le message et envoyez-le au recruteur sur LinkedIn."}),
-    mailRow(function(){return fill(f.subject||"Relance – Candidature {poste}",v);},function(){return ta.value;}));
+    mailRow(function(){return fill(f.subject||"Relance – Candidature {poste}",v);},function(){return ta.value;},langOf(o)));
   if(a.url)s1.append(el("button",{class:"btn ghost",type:"button",text:"Revoir l'offre ↗",onclick:function(){openUrl(a.url);}}));
   var s2=step("2","C'est fait ?");
   s2.append(el("button",{class:"btn done wide",type:"button",text:"Oui, relance envoyée",onclick:function(){
@@ -1460,33 +1600,44 @@ function renderApps(){
 function renderKit(){
   var rows=$("kit-rows");rows.textContent="";
   function row(ok,label,val){rows.append(el("div",{class:"kitrow"},el("span",{class:"dot"+(ok?" ok":"")}),el("b",{text:label}),el("span",{class:ok?"":"muted",text:val})));}
-  var n=KIT&&KIT.letters?Object.keys(KIT.letters).length:0;
+  var n=KIT&&KIT.letters?Object.keys(KIT.letters).length:0,ne=KIT&&KIT.en&&KIT.en.letters?Object.keys(KIT.en.letters).length:0;
   row(!!CVNAME,"CV",CVNAME||"à importer");
-  row(!!KIT,"Lettres",KIT?n+" sur mesure, et un modèle par métier":"à importer");
+  row(!!CVNAME_EN,"CV anglais",CVNAME_EN||"à importer (pays nordiques)");
+  row(!!KIT,"Lettres",KIT?n+ne+" sur mesure"+(KIT.en?", en français et en anglais":"")+", et un modèle par métier":"à importer");
   row(!!(KIT&&KIT.profile),"Contact",KIT&&KIT.profile?(KIT.profile.email||KIT.profile.phone||"✓"):"à importer");
   $("kit-import").textContent=KIT||CVNAME?"Remplacer":"Importer";
   $("kit-note").textContent=nb(KIT?"Dossier du "+fmtLong(KIT.updated)+". Pour le changer, importez le nouveau fichier envoyé par Claude."
     :"Importez le fichier « Dossier-candidature » envoyé par Claude, ou simplement votre CV en PDF.");
-  $("kit-cv").hidden=!(CVNAME&&(has("shareCv")||has("saveCv")));
+  var kc=$("kit-cv");kc.textContent="";
+  [["fr",CVNAME,"Partager le CV"],["en",CVNAME_EN,"Partager le CV anglais"]].forEach(function(x){
+    if(!x[1]||!(has("shareCvLang")||(x[0]==="fr"&&has("shareCv"))))return;
+    kc.append(el("button",{class:"btn ghost",type:"button",text:x[2],onclick:function(){if(has("shareCvLang"))window.Android.shareCvLang(x[0]);else window.Android.shareCv();}}));
+  });
+  if(CVNAME&&(has("saveCvLang")||has("saveCv")))kc.append(el("button",{class:"btn ghost",type:"button",text:"Enregistrer dans Téléchargements",onclick:function(){
+    var ok=has("saveCvLang")?(window.Android.saveCvLang("fr")&&(!CVNAME_EN||window.Android.saveCvLang("en"))):window.Android.saveCv();
+    toast(ok?"CV enregistré"+(CVNAME_EN?"s":"")+" dans Téléchargements":"Impossible ici : utilisez « Partager le CV »");}}));
+  kc.hidden=!kc.childNodes.length;
   /* tant que le dossier manque, il passe en tête de l'onglet */
   var tab=$("tab-suivi"),panel=$("kit-panel");
   tab.insertBefore(panel,KIT||CVNAME?tab.querySelector(".foot"):tab.children[1]);
 }
 $("kit-import").addEventListener("click",importKit);
-$("cv-share").addEventListener("click",function(){if(has("shareCv"))window.Android.shareCv();});
-$("cv-save").addEventListener("click",function(){
-  if(!has("saveCv"))return;
-  toast(window.Android.saveCv()?"CV enregistré dans Téléchargements":"Impossible ici : utilisez « Partager le CV »");
-});
+
 
 /* ---------- Conseils : plan de la semaine, diagnostic, messages, cabinets, entreprises ---------- */
-var CONSEILS=null;
+var CONSEILS=null,MODE=store("radar.mode")==="maroc"?"maroc":"nord";
+/* contenu du marché choisi : le bloc « nord » remplace les rubriques marocaines qu'il redéfinit */
+function conseils(){
+  if(!CONSEILS)return null;
+  if(MODE!=="nord"||!CONSEILS.nord)return CONSEILS;
+  var c={},k;for(k in CONSEILS)c[k]=CONSEILS[k];for(k in CONSEILS.nord)c[k]=CONSEILS.nord[k];return c;
+}
 function loadConseils(){
   var cached=null;try{cached=JSON.parse(store("radar.liste.conseils")||"null");}catch(e){}
   if(cached&&cached.semaine)CONSEILS=cached;
   http("GET",BASE+"conseils.json?t="+Date.now(),{},"").then(function(r){
     if(r.status!==200)throw 0;var d=JSON.parse(r.body);if(!d||!Array.isArray(d.semaine))throw 0;
-    store("radar.liste.conseils",JSON.stringify(d));CONSEILS=d;if(TAB==="conseils")renderConseils();
+    store("radar.liste.conseils",JSON.stringify(d));CONSEILS=d;if(TAB==="conseils")renderConseils();if(TAB==="maroc")renderMarket();
   }).catch(function(){});
 }
 /* semaine ISO (lundi) : "2026-10-26" pour la semaine du lundi 26 octobre */
@@ -1509,13 +1660,14 @@ function goalState(g,week){
   return {v:v,t:t};
 }
 function template(id){
-  var k=KIT&&KIT.templates&&KIT.templates[id],m=CONSEILS&&CONSEILS.modeles&&CONSEILS.modeles[id];
+  var src=MODE==="nord"&&KIT&&KIT.en?KIT.en:KIT,C=conseils();
+  var k=src&&src.templates&&src.templates[id],m=C&&C.modeles&&C.modeles[id];
   if(k)return {titre:(m&&m.titre)||id,objet:k.objet||(m&&m.objet)||"",texte:k.texte||k,perso:true};
   return m?{titre:m.titre,objet:m.objet||"",texte:m.texte,perso:false}:null;
 }
 function openTemplate(id,vars,count){
   var t=template(id);if(!t)return;
-  vars=vars||{};vars.signature=KIT&&KIT.signature||"";
+  vars=vars||{};vars.signature=(MODE==="nord"&&KIT&&KIT.en&&KIT.en.signature)||(KIT&&KIT.signature)||"";
   var ta=el("textarea",{class:"letter","aria-label":t.titre,spellcheck:"false"});ta.value=fill(t.texte,vars).trim();
   var mail=id!=="linkedin"&&id!=="pitch"&&id!=="reseau";
   var s1=step("1",t.titre,el("button",{class:"btn ghost",type:"button",text:"Copier",onclick:function(){
@@ -1524,7 +1676,7 @@ function openTemplate(id,vars,count){
   var box=el("div",{class:"steps"});box.append(s1);
   if(mail){
     var s2=step("2","Envoyer");
-    s2.append(mailRow(function(){return fill(t.objet||"Candidature",vars);},function(){return ta.value;}));
+    s2.append(mailRow(function(){return fill(t.objet||"Candidature",vars);},function(){return ta.value;},MODE==="nord"?"en":"fr"));
     if(count)s2.append(el("p",{class:"small muted",text:"Compté dans votre plan de la semaine dès l'envoi."}));
     box.append(s2);
   }
@@ -1565,7 +1717,13 @@ function renderChart(){
 }
 function scrollToAnchor(name){var t=$("c-anchor-"+name);if(t)t.scrollIntoView({behavior:"smooth",block:"start"});}
 function renderConseils(){
-  var C=CONSEILS;if(!C){$("c-goals").textContent="Chargement…";return;}
+  var C=conseils();if(!C){$("c-goals").textContent="Chargement…";return;}
+  var md=$("c-mode");md.textContent="";
+  [["nord","Pays nordiques"],["maroc","Maroc"]].forEach(function(m){
+    md.append(el("button",{class:"chip",type:"button","aria-pressed":MODE===m[0]?"true":"false",text:m[1],onclick:function(){MODE=m[0];store("radar.mode",m[0]);renderConseils();}}));
+  });
+  renderPermits(C);
+  $("c-ent-note").textContent=nb(C.entreprises_note||"Grande consommation et distribution au Maroc. Touchez une entreprise.");
   $("c-rappel-note").textContent=nb(C.rappel||"");
   var week=weekKey(),goals=C.semaine||[],done=0,total=0,box=$("c-goals");box.textContent="";
   $("c-weekno").textContent="semaine du "+weekLabel(week);
@@ -1626,18 +1784,31 @@ function renderConseils(){
     oc.append(el("div",{class:"chk"+(on?" on":"")},
       el("button",{class:"box",type:"button",role:"checkbox","aria-checked":on?"true":"false","aria-label":o.label,onclick:function(){var x=loadOnce();x[o.id]=!x[o.id];store("radar.unefois",JSON.stringify(x));renderConseils();}},on?"✓":""),
       el("div",{class:"rt"},el("b",{text:nb(o.label)}),el("span",{class:"small muted",text:nb(o.aide||"")})),
-      o.url?el("button",{class:"btn ghost",type:"button",onclick:function(){openUrl(o.url);}},"Ouvrir ↗"):null));
+      o.url?el("button",{class:"btn ghost",type:"button",onclick:function(){openUrl(o.url);}},"Ouvrir ↗")
+        :o.onglet?el("button",{class:"btn ghost",type:"button",onclick:function(){showTab(o.onglet);}},"Voir ›"):null));
   });
   $("c-once-count").textContent=n+"/"+(C.une_fois||[]).length;
   var b=$("badge-conseils"),todo=(C.une_fois||[]).length-n;b.textContent=todo;b.hidden=!todo||TAB==="conseils";
 }
+function renderPermits(C){
+  var sec=$("c-anchor-permis"),P=C.permis||[];sec.hidden=!P.length;if(!P.length)return;
+  $("c-permis-note").textContent=nb(C.permis_note||"");
+  var bars=$("c-permis-bars"),rows=$("c-permis");bars.textContent="";rows.textContent="";
+  var max=Math.max.apply(null,P.map(function(p){return p.eur||0;}).concat([1]));
+  P.forEach(function(p){
+    bars.append(el("button",{class:"bar",type:"button","aria-label":p.pays+" : "+(p.eur?eur(p.eur)+" par mois":p.seuil),onclick:function(){openPermit(p);}},
+      el("span",{class:"lab",text:p.pays}),
+      el("span",{class:"seg",style:"width:"+(p.eur?Math.max(4,p.eur/max*100):0)+"%"},el("i",{style:"width:100%"})),
+      el("span",{class:"n"+(p.eur?"":" na"),text:p.eur?eur(p.eur):"test du marché"})));
+  });
+}
 function loadOnce(){try{var o=JSON.parse(store("radar.unefois")||"{}");return o&&typeof o==="object"?o:{};}catch(e){return {};}}
 function openCompany(c){
-  var q=encodeURIComponent(c.nom),box=el("div",{class:"steps"});
+  var q=encodeURIComponent(c.nom),box=el("div",{class:"steps"}),loc=c.pays||"Maroc";
   var s1=step("1","Voir leurs offres");
   s1.append(el("div",{class:"row"},
-    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.linkedin.com/jobs/search/?keywords="+q+"&location=Maroc");}},"Offres LinkedIn ↗"),
-    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.google.com/search?q="+encodeURIComponent(c.nom+" recrutement carrières Maroc"));}},"Page carrières ↗"),
+    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.linkedin.com/jobs/search/?keywords="+q+"&location="+encodeURIComponent(loc));}},"Offres LinkedIn ↗"),
+    el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.google.com/search?q="+encodeURIComponent(c.nom+(c.pays?" careers jobs "+c.pays:" recrutement carrières Maroc")));}},"Page carrières ↗"),
     el("button",{class:"btn",type:"button",onclick:function(){openUrl("https://www.linkedin.com/search/results/people/?keywords="+encodeURIComponent(c.nom+" marketing"));}},"Leurs équipes ↗")),
     el("p",{class:"small muted",text:"Un contact dans l'entreprise vaut mieux qu'un formulaire : cherchez un ancien collègue ou un manager marketing."}));
   var s2=step("2","Candidature spontanée");
@@ -1647,7 +1818,7 @@ function openCompany(c){
 }
 /* compté au moment de l'envoi d'un e-mail préparé depuis le plan */
 var sendMailBase=sendMail;
-sendMail=function(to,subject,body){if(SHEET.count){bump(SHEET.count,1);toast("Compté dans votre plan de la semaine");SHEET.count="";}return sendMailBase(to,subject,body);};
+sendMail=function(to,subject,body,lang){if(SHEET.count){bump(SHEET.count,1);toast("Compté dans votre plan de la semaine");SHEET.count="";}return sendMailBase(to,subject,body,lang);};
 
 /* ---------- réglages des alertes ---------- */
 function notifPrefs(){
@@ -1662,7 +1833,7 @@ function setNotifPrefs(p){
 }
 function renderAlertLine(){
   var p=notifPrefs();$("alert-dot").className="dot"+(p.fortes?" ok":"");
-  $("alert-txt").textContent=nb(p.fortes?"Alerte immédiate dès 75 % · 3 scans par jour":"Alertes 75 % coupées · touchez pour activer");
+  $("alert-txt").textContent=nb(p.fortes?"Alerte immédiate dès 75 % · scan chaque jour":"Alertes 75 % coupées · touchez pour activer");
 }
 function openSettings(){
   SHEET.offer=null;
@@ -1678,13 +1849,13 @@ function openSettings(){
     seg.append(el("button",{class:"seg-b",type:"button","aria-pressed":p.autres===o[0]?"true":"false",text:o[1],onclick:function(){
       p.autres=o[0];setNotifPrefs(p);Array.prototype.forEach.call(seg.children,function(c){c.setAttribute("aria-pressed",c===this?"true":"false");},this);}}));
   });
-  s1.append(el("div",{class:"setrow col"},el("div",{class:"rt"},el("b",{text:"Autres nouvelles offres"}),el("span",{class:"small muted",text:"De 40 à 74 %."})),seg));
+  s1.append(el("div",{class:"setrow col"},el("div",{class:"rt"},el("b",{text:"Autres nouvelles offres"}),el("span",{class:"small muted",text:"Pays nordiques dès 35 %, Maroc dès 40 %."})),seg));
   s1.append(sw("Rappels de relance","7 jours après l'envoi d'une candidature.",p.relances,function(v){p.relances=v;setNotifPrefs(p);}));
   s1.append(el("button",{class:"btn wide",type:"button",text:"Tester une alerte",onclick:function(){
     if(has("testNotif")){window.Android.testNotif();toast("Alerte de test envoyée");}else toast("Disponible dans l'appli Android");}}));
   var s2=step("2","Le scan");
-  s2.append(el("p",{class:"small",text:nb("Le marché marocain est scanné 3 fois par jour (matin, midi, fin d'après-midi) : ReKrute, Exekutive, Michael Page, Talent.com, Jobzyn, MaroCadres et Fed Africa. Le téléphone vérifie chaque heure.")}),
-    el("p",{class:"small muted",text:nb("LinkedIn, Indeed, Emploi.ma et les autres sites refusent les robots : ouvrez-les depuis l'onglet Maroc ou Chercher.")}));
+  s2.append(el("p",{class:"small",text:nb("Pays nordiques, chaque matin : Platsbanken (Suède), NAV (Norvège) et Jobindex (Danemark). Maroc, 3 fois par jour : ReKrute, Exekutive, Michael Page, Talent.com, Jobzyn, MaroCadres et Fed Africa. Le téléphone vérifie chaque heure.")}),
+    el("p",{class:"small muted",text:nb("LinkedIn, Indeed, les sites finlandais et islandais refusent les robots : ouvrez-les depuis l'onglet Marchés ou Chercher.")}));
   var s3=step("3","Mon dossier");
   s3.append(el("button",{class:"btn wide",type:"button",text:"Voir mon dossier (CV et lettres)",onclick:function(){closeSheet();showTab("suivi");setTimeout(function(){$("kit-panel").scrollIntoView({behavior:"smooth"});},150);}}));
   box.append(s1,s2,s3);
@@ -1695,9 +1866,9 @@ $("alert-line").addEventListener("click",openSettings);
 
 loadKit();loadApps();syncApps();renderKit();renderApps();renderAlertLine();loadConseils();
 loadKeys();$("keys").hidden=true;
-renderRegions();renderKeys();renderAlerts();render();renderMarocLinks();
+renderRegions();renderKeys();renderAlerts();render();renderMarketLinks();
 showTab((location.hash||"").replace("#","")||store("radar.onglet")||"feed");
-LISTS.feed.load();LISTS.maroc.load();
+LISTS.feed.load();LISTS.nord.load();LISTS.maroc.load();
 try{if(has("notice"))toast(String(window.Android.notice()||""));}catch(e){}
 })();
 </script>

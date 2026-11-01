@@ -17,11 +17,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-/** Lit les listes d'offres évaluées (sélection tous pays, marché marocain) et prévient des nouvelles. */
+/** Lit les listes d'offres évaluées (sélection, pays nordiques, Maroc) et prévient des nouvelles. */
 public class FeedWorker extends Worker {
   static final String BASE = "https://raw.githubusercontent.com/aminebenkhadra-dotcom/Job-search/main/data/";
   /** Au Maroc, on ne notifie que les offres où les chances atteignent ce seuil. */
   private static final int MAROC_MIN = 40;
+  /** Dans les pays nordiques, les estimations sont plus basses (langue, permis) : le seuil l'est aussi. */
+  private static final int NORD_MIN = 35;
   /** À partir de ce niveau, l'offre a sa propre alerte, immédiate et sonore. */
   static final int STRONG = 75;
 
@@ -39,7 +41,9 @@ public class FeedWorker extends Worker {
     List<String> strong = new ArrayList<>();
     List<String> feed = new ArrayList<>();
     List<String> maroc = new ArrayList<>();
+    List<String> nord = new ArrayList<>();
     check(ctx, "offres.json", "feed_seen", 0, announced, strong, feed);
+    check(ctx, "nordiques.json", "nord_seen", NORD_MIN, announced, strong, nord);
     check(ctx, "maroc.json", "maroc_seen", MAROC_MIN, announced, strong, maroc);
     if (strongOn && !strong.isEmpty()) {
       String first = strong.get(0);
@@ -52,6 +56,8 @@ public class FeedWorker extends Worker {
       String channel = "son".equals(others) ? AlertWorker.CHANNEL : AlertWorker.CH_QUIET;
       int n = feed.size();
       if (n > 0) AlertWorker.notify(ctx, feed, 2, "feed", n == 1 ? "1 nouvelle offre pour vous" : n + " nouvelles offres pour vous", channel);
+      n = nord.size();
+      if (n > 0) AlertWorker.notify(ctx, nord, 6, "maroc", n == 1 ? "1 nouvelle offre dans les pays nordiques" : n + " nouvelles offres dans les pays nordiques", channel);
       n = maroc.size();
       if (n > 0) AlertWorker.notify(ctx, maroc, 3, "maroc", n == 1 ? "1 nouvelle offre au Maroc" : n + " nouvelles offres au Maroc", channel);
     }

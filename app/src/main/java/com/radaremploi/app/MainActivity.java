@@ -131,8 +131,8 @@ public class MainActivity extends Activity {
   }
 
   /** Envoie le CV (et éventuellement un message) vers une autre appli. */
-  private void share(String to, String subject, String body, boolean emailOnly) {
-    File cv = Kit.cv(getApplicationContext());
+  private void share(String to, String subject, String body, boolean emailOnly, String lang) {
+    File cv = Kit.cvFor(getApplicationContext(), lang);
     Intent send = new Intent(Intent.ACTION_SEND);
     send.setType(cv != null ? "application/pdf" : "text/plain");
     if (to != null && !to.isEmpty()) send.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
@@ -267,6 +267,13 @@ public class MainActivity extends Activity {
       return f == null ? "" : f.getName();
     }
 
+    /** Nom du CV anglais (pays nordiques), ou chaîne vide. */
+    @JavascriptInterface
+    public String cvNameEn() {
+      File f = Kit.cv(getApplicationContext(), "en");
+      return f == null ? "" : f.getName();
+    }
+
     /** Choix du fichier à importer : dossier envoyé par Claude ou CV en PDF. */
     @JavascriptInterface
     public void pickKit() {
@@ -306,7 +313,8 @@ public class MainActivity extends Activity {
       try {
         JSONObject o = new JSONObject(json == null ? "{}" : json);
         final String to = o.optString("to"), subject = o.optString("subject"), body = o.optString("body");
-        runOnUiThread(() -> share(to, subject, body, true));
+        final String lang = o.optString("lang", "fr");
+        runOnUiThread(() -> share(to, subject, body, true, lang));
       } catch (Exception e) {
         /* message illisible */
       }
@@ -314,12 +322,24 @@ public class MainActivity extends Activity {
 
     @JavascriptInterface
     public void shareCv() {
-      runOnUiThread(() -> share(null, null, null, false));
+      runOnUiThread(() -> share(null, null, null, false, "fr"));
     }
 
     @JavascriptInterface
     public boolean saveCv() {
-      return Kit.saveToDownloads(getApplicationContext());
+      return Kit.saveToDownloads(getApplicationContext(), "fr");
+    }
+
+    /** Partage ou enregistrement d'un CV précis : "fr" ou "en". */
+    @JavascriptInterface
+    public void shareCvLang(String lang) {
+      final String l = "en".equals(lang) ? "en" : "fr";
+      runOnUiThread(() -> share(null, null, null, false, l));
+    }
+
+    @JavascriptInterface
+    public boolean saveCvLang(String lang) {
+      return Kit.saveToDownloads(getApplicationContext(), "en".equals(lang) ? "en" : "fr");
     }
 
     /** Candidatures envoyées, gardées pour le rappel de relance. */

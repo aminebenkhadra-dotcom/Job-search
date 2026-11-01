@@ -6,8 +6,8 @@ android {
     applicationId 'com.radaremploi.app'
     minSdk 24
     targetSdk 34
-    versionCode 6
-    versionName '1.5'
+    versionCode 7
+    versionName '1.6'
   }
   signingConfigs {
     fixe { storeFile file('radar.keystore'); storePassword 'radaremploi2026'; keyAlias 'radar'; keyPassword 'radaremploi2026' }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T06:19:37Z",
+ "updated": "2026-11-01T10:32:41Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -29,6 +29,24 @@
    "country": "Maroc"
   },
   {
+   "id": "dk-arla-foods-amba-trade-marketing-manager-2026-10",
+   "title": "Trade Marketing Manager",
+   "company": "Arla Foods amba",
+   "place": "Viby J, Leeds, Dusseldorf, Solna or Söderkulla",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Trade marketing",
+   "chances": 72,
+   "why": "Votre cœur de métier chez le premier groupe laitier nordique, annonce en anglais, poste ouvert aussi à Solna (Suède). Risque : rôle global, une expérience multi-pays est attendue.",
+   "url": "https://www.jobindex.dk/vis-job/h1708503",
+   "source": "Jobindex",
+   "posted": "2026-10-16",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-13"
+  },
+  {
    "id": "b5-flormar-senior-trade-marketing-bouskoura-2026-10",
    "title": "Senior Trade Marketing Manager",
    "company": "Flormar · B5 Cosmetics",
@@ -54,6 +72,24 @@
    "source": "Jobzyn",
    "first_seen": "2026-10-30",
    "country": "Maroc"
+  },
+  {
+   "id": "dk-lego-system-a-s-senior-trade-shopper-marketing-manager-2026-10",
+   "title": "Senior Trade & Shopper Marketing Manager",
+   "company": "LEGO System A/S",
+   "place": "København, Storbritannien",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Trade marketing",
+   "chances": 66,
+   "why": "Trade et shopper marketing omnicanal, votre expertise, dans un groupe qui travaille en anglais. Risque : poste très demandé, expérience retail internationale attendue.",
+   "url": "https://www.jobindex.dk/vis-job/r14070712",
+   "source": "Jobindex",
+   "posted": "2026-10-27",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-25"
   },
   {
    "id": "innoflex-responsable-commercial-hospitality-gms-et-gr-had-soualem-2026-10",
@@ -94,6 +130,24 @@
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05",
    "country": "Maroc"
+  },
+  {
+   "id": "dk-le-creuset-scandinavia-shopping-marketing-manager-scandi-2026-10",
+   "title": "Shopping Marketing Manager, Scandi",
+   "company": "Le Creuset Scandinavia",
+   "place": "Taastrup",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 62,
+   "why": "Marketing en point de vente, activations et PLV : votre terrain, pour une marque premium. Risque : petite équipe scandinave, le danois peut compter.",
+   "url": "https://www.jobindex.dk/vis-job/h1708473",
+   "source": "Jobindex",
+   "posted": "2026-10-20",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-17"
   },
   {
    "id": "yo-ai-labs-product-manager-remote-casablanca-2026-10",
@@ -149,6 +203,78 @@
    "first_seen": "2026-10-12",
    "deadline": "2027-01-08",
    "country": "Maroc"
+  },
+  {
+   "id": "dk-boconcept-a-s-join-boconcept-as-our-new-ecommerce-manager-2026-10",
+   "title": "Join BoConcept as our new Ecommerce Manager",
+   "company": "BoConcept A/S",
+   "place": "Aarhus C",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 46,
+   "why": "Ameublement, comme chez Richbond, et votre croissance online chez SISAL. Risque : poste d'e-commerce pur, outils et marketplaces attendus.",
+   "url": "https://www.jobindex.dk/vis-job/h1689503",
+   "source": "Jobindex",
+   "posted": "2026-10-26",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-06"
+  },
+  {
+   "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
+   "title": "Brand Manager",
+   "company": "Beiersdorf Aktiebolag",
+   "place": "Göteborg",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marque & produit",
+   "chances": 43,
+   "why": "Marque et produit, langue du pays exigée, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31631527",
+   "source": "Platsbanken",
+   "posted": "2026-10-22",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "lang_req": true,
+   "deadline": "2026-11-27"
+  },
+  {
+   "id": "dk-rotate-birger-christense-head-of-e-commerce-2026-10",
+   "title": "Head of E-Commerce",
+   "company": "Rotate Birger Christensen",
+   "place": "København K",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 42,
+   "why": "Votre expérience online compte, mais le poste demande une expertise e-commerce mode et marketplaces.",
+   "url": "https://www.jobindex.dk/vis-job/h1711762",
+   "source": "Jobindex",
+   "posted": "2026-10-30",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "deadline": "2026-11-27"
+  },
+  {
+   "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",
+   "title": "Senior Marketing Manager to Kustom!",
+   "company": "Needo Recruitment Sthlm AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31604633",
+   "source": "Platsbanken",
+   "posted": "2026-10-16",
+   "first_seen": "2026-11-01",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-15"
   }
  ]
 }

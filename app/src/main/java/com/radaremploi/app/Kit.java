@@ -27,8 +27,8 @@ final class Kit {
 
   private Kit() {}
 
-  private static File cvDir(Context c) {
-    File d = new File(c.getFilesDir(), "cv");
+  private static File cvDir(Context c, String lang) {
+    File d = new File(c.getFilesDir(), "en".equals(lang) ? "cv_en" : "cv");
     if (!d.isDirectory()) d.mkdirs();
     return d;
   }
@@ -39,8 +39,19 @@ final class Kit {
 
   /** Le CV enregistré, ou null. */
   static File cv(Context c) {
-    File[] f = cvDir(c).listFiles();
+    return cv(c, "fr");
+  }
+
+  /** Le CV dans la langue demandée ("en" : CV anglais, pour les pays nordiques), ou null. */
+  static File cv(Context c, String lang) {
+    File[] f = cvDir(c, lang).listFiles();
     return f != null && f.length > 0 ? f[0] : null;
+  }
+
+  /** CV anglais s'il est demandé et présent, sinon le CV principal. */
+  static File cvFor(Context c, String lang) {
+    File en = "en".equals(lang) ? cv(c, "en") : null;
+    return en != null ? en : cv(c);
   }
 
   /** Le dossier sans le CV (JSON), ou une chaîne vide. */
@@ -57,8 +68,9 @@ final class Kit {
   /** Importe un PDF (le CV seul) ou un dossier JSON ; renvoie le message à afficher. */
   static String importBytes(Context c, byte[] data, String name) throws Exception {
     if (isPdf(data)) {
-      saveCv(c, data, name);
-      return "CV enregistré";
+      boolean en = name != null && name.matches("(?i).*(\\b|_)(en|eng|english)(\\b|_|\\.).*");
+      saveCv(c, data, name, en ? "en" : "fr");
+      return en ? "CV anglais enregistré" : "CV enregistré";
     }
     String s = new String(data, StandardCharsets.UTF_8).trim();
     if (s.startsWith("﻿")) s = s.substring(1);
@@ -69,10 +81,19 @@ final class Kit {
     if (cv != null) {
       byte[] pdf = Base64.decode(cv.optString("data", ""), Base64.DEFAULT);
       if (isPdf(pdf)) {
-        saveCv(c, pdf, cv.optString("name", "CV.pdf"));
+        saveCv(c, pdf, cv.optString("name", "CV.pdf"), "fr");
         withCv = true;
       }
       k.remove("cv");
+    }
+    JSONObject cvEn = k.optJSONObject("cv_en");
+    if (cvEn != null) {
+      byte[] pdf = Base64.decode(cvEn.optString("data", ""), Base64.DEFAULT);
+      if (isPdf(pdf)) {
+        saveCv(c, pdf, cvEn.optString("name", "CV_EN.pdf"), "en");
+        withCv = true;
+      }
+      k.remove("cv_en");
     }
     write(kitFile(c), k.toString().getBytes(StandardCharsets.UTF_8));
     return withCv ? "Dossier importé : lettres et CV prêts" : "Dossier importé";
@@ -82,10 +103,10 @@ final class Kit {
     return b != null && b.length > 4 && b[0] == '%' && b[1] == 'P' && b[2] == 'D' && b[3] == 'F';
   }
 
-  private static void saveCv(Context c, byte[] pdf, String name) throws IOException {
-    File[] old = cvDir(c).listFiles();
+  private static void saveCv(Context c, byte[] pdf, String name, String lang) throws IOException {
+    File[] old = cvDir(c, lang).listFiles();
     if (old != null) for (File f : old) f.delete();
-    write(new File(cvDir(c), safeName(name)), pdf);
+    write(new File(cvDir(c, lang), safeName(name)), pdf);
   }
 
   private static String safeName(String n) {
@@ -96,8 +117,8 @@ final class Kit {
   }
 
   /** Copie le CV dans le dossier Téléchargements (Android 10 et plus). */
-  static boolean saveToDownloads(Context c) {
-    File cv = cv(c);
+  static boolean saveToDownloads(Context c, String lang) {
+    File cv = cvFor(c, lang);
     if (cv == null || Build.VERSION.SDK_INT < 29) return false;
     try {
       ContentValues v = new ContentValues();

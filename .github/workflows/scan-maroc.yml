@@ -1,4 +1,4 @@
-name: Scan du marché marocain
+name: Scan des marchés (pays nordiques et Maroc)
 on:
   schedule:
     - cron: '37 5,11,16 * * *'
@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/scan_maroc.py'
+      - 'scripts/scan_nordiques.py'
       - '.github/workflows/scan-maroc.yml'
 permissions:
   contents: write
@@ -19,15 +20,23 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Scanner les sites d'emploi
+      - name: Scanner les sites d'emploi marocains
         run: python3 scripts/scan_maroc.py
+      - name: Scanner les pays nordiques (une fois par jour, et à chaque modification)
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%H)" -ge 10 ]; then
+            echo "Scan nordique : une fois par jour, le matin"; exit 0
+          fi
+          python3 scripts/scan_nordiques.py || echo "Scan nordique incomplet"
+        env:
+          NAV_TOKEN: ${{ secrets.NAV_TOKEN }}
       - name: Enregistrer les listes
         run: |
-          if git diff --quiet -- data; then echo "Aucun changement"; exit 0; fi
+          if [ -z "$(git status --porcelain -- data)" ]; then echo "Aucun changement"; exit 0; fi
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add data/maroc.json data/offres.json
-          git commit -qm "Scan Maroc du $(date -u +%d/%m/%Y) à $(date -u +%Hh%M)"
+          git add data/maroc.json data/offres.json data/nordiques.json
+          git commit -qm "Scan du $(date -u +%d/%m/%Y) à $(date -u +%Hh%M)"
           for i in 1 2 3; do
             git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
             sleep 10

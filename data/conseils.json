@@ -1,20 +1,89 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-11-01",
  "rappel": "Le pourcentage mesure l'adéquation avec l'annonce. Le rappel dépend surtout du canal : une candidature recommandée par un contact, ou présentée par un cabinet, est beaucoup plus souvent lue.",
  "semaine": [
-  {"id": "candidatures", "label": "Candidatures ciblées", "cible": 5, "auto": "candidatures", "aide": "Offres à 55 % et plus, lettre adaptée."},
-  {"id": "reseau", "label": "Messages à votre réseau", "cible": 5, "modele": "reseau", "aide": "Anciens collègues et managers, clients, anciens de votre école."},
-  {"id": "cabinets", "label": "Cabinets contactés", "cible": 2, "modele": "cabinet", "aide": "Un message court et le CV."},
-  {"id": "spontanees", "label": "Candidatures spontanées", "cible": 2, "modele": "spontanee", "aide": "Entreprises cibles, même sans offre publiée."},
-  {"id": "relances", "label": "Relances", "auto": "relances", "aide": "Chaque candidature restée sans réponse 7 jours."},
-  {"id": "linkedin", "label": "Posts ou commentaires LinkedIn", "cible": 2, "aide": "Sur votre métier : résultats, lancements, marché."}
+  {
+   "id": "candidatures",
+   "label": "Candidatures ciblées",
+   "cible": 5,
+   "auto": "candidatures",
+   "aide": "Offres à 55 % et plus, lettre adaptée."
+  },
+  {
+   "id": "reseau",
+   "label": "Messages à votre réseau",
+   "cible": 5,
+   "modele": "reseau",
+   "aide": "Anciens collègues et managers, clients, anciens de votre école."
+  },
+  {
+   "id": "cabinets",
+   "label": "Cabinets contactés",
+   "cible": 2,
+   "modele": "cabinet",
+   "aide": "Un message court et le CV."
+  },
+  {
+   "id": "spontanees",
+   "label": "Candidatures spontanées",
+   "cible": 2,
+   "modele": "spontanee",
+   "aide": "Entreprises cibles, même sans offre publiée."
+  },
+  {
+   "id": "relances",
+   "label": "Relances",
+   "auto": "relances",
+   "aide": "Chaque candidature restée sans réponse 7 jours."
+  },
+  {
+   "id": "linkedin",
+   "label": "Posts ou commentaires LinkedIn",
+   "cible": 2,
+   "aide": "Sur votre métier : résultats, lancements, marché."
+  }
  ],
  "causes": [
-  {"titre": "Le CV doit parler du poste visé", "texte": "Un recruteur décide en quelques secondes : titre, dernier poste, chiffres. En haut du CV, le métier visé et vos meilleurs résultats.", "action": {"label": "Conseils CV", "ancre": "cv"}},
-  {"titre": "Les sites d'emploi seuls répondent peu", "texte": "Une annonce reçoit souvent des centaines de CV. Les postes de cadres passent surtout par le réseau et les cabinets.", "action": {"label": "Voir les cabinets", "ancre": "cabinets"}},
-  {"titre": "« Trop senior » pour l'annonce", "texte": "Avec beaucoup d'expérience, un poste « Responsable » peut inquiéter (salaire, motivation). Dites pourquoi ce poste vous attire, et visez aussi Head of et Directeur.", "action": {"label": "Mes meilleures offres", "onglet": "feed"}},
-  {"titre": "Invisible pour les chasseurs", "texte": "Les chasseurs cherchent sur LinkedIn par titre, compétences et ville. Un titre clair et « Open to work » visible des seuls recruteurs changent beaucoup.", "action": {"label": "Ouvrir mon LinkedIn", "url": "https://www.linkedin.com/in/me/"}},
-  {"titre": "Pas de relance", "texte": "Une relance polie 7 jours après l'envoi remet votre candidature en haut de la pile.", "action": {"label": "Voir le suivi", "onglet": "suivi"}}
+  {
+   "titre": "Le CV doit parler du poste visé",
+   "texte": "Un recruteur décide en quelques secondes : titre, dernier poste, chiffres. En haut du CV, le métier visé et vos meilleurs résultats.",
+   "action": {
+    "label": "Conseils CV",
+    "ancre": "cv"
+   }
+  },
+  {
+   "titre": "Les sites d'emploi seuls répondent peu",
+   "texte": "Une annonce reçoit souvent des centaines de CV. Les postes de cadres passent surtout par le réseau et les cabinets.",
+   "action": {
+    "label": "Voir les cabinets",
+    "ancre": "cabinets"
+   }
+  },
+  {
+   "titre": "« Trop senior » pour l'annonce",
+   "texte": "Avec beaucoup d'expérience, un poste « Responsable » peut inquiéter (salaire, motivation). Dites pourquoi ce poste vous attire, et visez aussi Head of et Directeur.",
+   "action": {
+    "label": "Mes meilleures offres",
+    "onglet": "feed"
+   }
+  },
+  {
+   "titre": "Invisible pour les chasseurs",
+   "texte": "Les chasseurs cherchent sur LinkedIn par titre, compétences et ville. Un titre clair et « Open to work » visible des seuls recruteurs changent beaucoup.",
+   "action": {
+    "label": "Ouvrir mon LinkedIn",
+    "url": "https://www.linkedin.com/in/me/"
+   }
+  },
+  {
+   "titre": "Pas de relance",
+   "texte": "Une relance polie 7 jours après l'envoi remet votre candidature en haut de la pile.",
+   "action": {
+    "label": "Voir le suivi",
+    "onglet": "suivi"
+   }
+  }
  ],
  "cv": [
   "En haut : le poste visé (par exemple « Trade Marketing Manager · Grande consommation »), pas seulement l'intitulé actuel.",
@@ -24,50 +93,531 @@
   "Deux pages au plus, en PDF, nommé Prénom_Nom_CV.pdf."
  ],
  "modeles": {
-  "reseau": {"titre": "Message au réseau", "texte": "Bonjour [Prénom], j'espère que tu vas bien. Je regarde de nouvelles opportunités en [votre métier] dans [votre secteur]. Aurais-tu 15 minutes cette semaine pour un café ou un appel ? Ton regard sur le marché m'aiderait beaucoup. Merci !"},
-  "cabinet": {"titre": "Message à un cabinet", "objet": "Candidature – [poste visé]", "texte": "Bonjour,\n\n[Votre poste actuel], avec [X] ans en [votre métier], je suis à l'écoute de postes de [postes visés] au Maroc. Mon CV est joint.\n\nSeriez-vous disponible pour un échange de 15 minutes ?\n\nBien cordialement,\n[Prénom Nom]"},
-  "spontanee": {"titre": "Candidature spontanée", "objet": "Candidature spontanée – [poste visé]", "texte": "Madame, Monsieur,\n\nJe vous adresse ma candidature spontanée pour un poste de [poste visé] chez {entreprise}. [Deux résultats chiffrés de votre parcours.]\n\nJe serais heureux d'échanger avec vous. Mon CV est joint.\n\nBien cordialement,\n[Prénom Nom]"},
-  "linkedin": {"titre": "Titre LinkedIn", "texte": "[Métier visé] | [Secteur] | [Deux compétences clés] | [Un résultat chiffré]"},
-  "pitch": {"titre": "Pitch de 60 secondes", "texte": "Je suis [Prénom], [X] ans en [métier]. J'ai [résultat 1] et [résultat 2]. Je cherche un poste de [poste visé] où je peux [ce que vous apportez]."}
+  "reseau": {
+   "titre": "Message au réseau",
+   "texte": "Bonjour [Prénom], j'espère que tu vas bien. Je regarde de nouvelles opportunités en [votre métier] dans [votre secteur]. Aurais-tu 15 minutes cette semaine pour un café ou un appel ? Ton regard sur le marché m'aiderait beaucoup. Merci !"
+  },
+  "cabinet": {
+   "titre": "Message à un cabinet",
+   "objet": "Candidature – [poste visé]",
+   "texte": "Bonjour,\n\n[Votre poste actuel], avec [X] ans en [votre métier], je suis à l'écoute de postes de [postes visés] au Maroc. Mon CV est joint.\n\nSeriez-vous disponible pour un échange de 15 minutes ?\n\nBien cordialement,\n[Prénom Nom]"
+  },
+  "spontanee": {
+   "titre": "Candidature spontanée",
+   "objet": "Candidature spontanée – [poste visé]",
+   "texte": "Madame, Monsieur,\n\nJe vous adresse ma candidature spontanée pour un poste de [poste visé] chez {entreprise}. [Deux résultats chiffrés de votre parcours.]\n\nJe serais heureux d'échanger avec vous. Mon CV est joint.\n\nBien cordialement,\n[Prénom Nom]"
+  },
+  "linkedin": {
+   "titre": "Titre LinkedIn",
+   "texte": "[Métier visé] | [Secteur] | [Deux compétences clés] | [Un résultat chiffré]"
+  },
+  "pitch": {
+   "titre": "Pitch de 60 secondes",
+   "texte": "Je suis [Prénom], [X] ans en [métier]. J'ai [résultat 1] et [résultat 2]. Je cherche un poste de [poste visé] où je peux [ce que vous apportez]."
+  }
  },
  "cabinets": [
-  {"nom": "Michael Page", "note": "Cadres : marketing, ventes, direction", "site": "https://www.michaelpageafrica.com/fr"},
-  {"nom": "Fed Africa", "note": "Cadres et dirigeants · alerte e-mail", "site": "https://www.fedafrica.com/offres"},
-  {"nom": "Diorh Executive Search", "note": "Chasse de cadres dirigeants", "site": "https://www.diorh.com/fr"},
-  {"nom": "ExeKutive", "note": "Postes de direction (ReKrute)", "site": "https://exekutive.biz/offres-emploi-afrique.html"},
-  {"nom": "MaroCadres", "note": "Cadres au Maroc", "site": "https://www.marocadres.com/"},
-  {"nom": "Interface", "note": "Grande consommation, ventes, marketing", "linkedin": "Interface recrutement Maroc"},
-  {"nom": "Talents Partners", "note": "Cadres commerciaux et marketing", "linkedin": "Talents Partners Maroc"}
+  {
+   "nom": "Michael Page",
+   "note": "Cadres : marketing, ventes, direction",
+   "site": "https://www.michaelpageafrica.com/fr"
+  },
+  {
+   "nom": "Fed Africa",
+   "note": "Cadres et dirigeants · alerte e-mail",
+   "site": "https://www.fedafrica.com/offres"
+  },
+  {
+   "nom": "Diorh Executive Search",
+   "note": "Chasse de cadres dirigeants",
+   "site": "https://www.diorh.com/fr"
+  },
+  {
+   "nom": "ExeKutive",
+   "note": "Postes de direction (ReKrute)",
+   "site": "https://exekutive.biz/offres-emploi-afrique.html"
+  },
+  {
+   "nom": "MaroCadres",
+   "note": "Cadres au Maroc",
+   "site": "https://www.marocadres.com/"
+  },
+  {
+   "nom": "Interface",
+   "note": "Grande consommation, ventes, marketing",
+   "linkedin": "Interface recrutement Maroc"
+  },
+  {
+   "nom": "Talents Partners",
+   "note": "Cadres commerciaux et marketing",
+   "linkedin": "Talents Partners Maroc"
+  }
  ],
  "entreprises": [
-  {"nom": "Centrale Danone", "secteur": "Produits laitiers"},
-  {"nom": "Lesieur Cristal", "secteur": "Huiles, savons"},
-  {"nom": "Cosumar", "secteur": "Sucre"},
-  {"nom": "Unilever Maroc", "secteur": "Hygiène, alimentaire"},
-  {"nom": "Procter & Gamble Maroc", "secteur": "Hygiène, beauté"},
-  {"nom": "Nestlé Maroc", "secteur": "Alimentaire"},
-  {"nom": "Coca-Cola Maroc", "secteur": "Boissons sans alcool"},
-  {"nom": "Les Eaux Minérales d'Oulmès", "secteur": "Eaux, boissons"},
-  {"nom": "Sotherma", "secteur": "Eaux"},
-  {"nom": "Mondelez Maroc", "secteur": "Biscuits, confiserie"},
-  {"nom": "Dari Couspate", "secteur": "Pâtes, couscous"},
-  {"nom": "Copag Jaouda", "secteur": "Produits laitiers, jus"},
-  {"nom": "Safilait", "secteur": "Produits laitiers"},
-  {"nom": "Koutoubia", "secteur": "Charcuterie, volaille"},
-  {"nom": "Henkel Maroc", "secteur": "Détergents, cosmétique"},
-  {"nom": "L'Oréal Maroc", "secteur": "Beauté"},
-  {"nom": "Colgate-Palmolive Maroc", "secteur": "Hygiène"},
-  {"nom": "Label'Vie Carrefour", "secteur": "Grande distribution"},
-  {"nom": "Marjane", "secteur": "Grande distribution"},
-  {"nom": "KITEA", "secteur": "Ameublement, retail"}
+  {
+   "nom": "Centrale Danone",
+   "secteur": "Produits laitiers"
+  },
+  {
+   "nom": "Lesieur Cristal",
+   "secteur": "Huiles, savons"
+  },
+  {
+   "nom": "Cosumar",
+   "secteur": "Sucre"
+  },
+  {
+   "nom": "Unilever Maroc",
+   "secteur": "Hygiène, alimentaire"
+  },
+  {
+   "nom": "Procter & Gamble Maroc",
+   "secteur": "Hygiène, beauté"
+  },
+  {
+   "nom": "Nestlé Maroc",
+   "secteur": "Alimentaire"
+  },
+  {
+   "nom": "Coca-Cola Maroc",
+   "secteur": "Boissons sans alcool"
+  },
+  {
+   "nom": "Les Eaux Minérales d'Oulmès",
+   "secteur": "Eaux, boissons"
+  },
+  {
+   "nom": "Sotherma",
+   "secteur": "Eaux"
+  },
+  {
+   "nom": "Mondelez Maroc",
+   "secteur": "Biscuits, confiserie"
+  },
+  {
+   "nom": "Dari Couspate",
+   "secteur": "Pâtes, couscous"
+  },
+  {
+   "nom": "Copag Jaouda",
+   "secteur": "Produits laitiers, jus"
+  },
+  {
+   "nom": "Safilait",
+   "secteur": "Produits laitiers"
+  },
+  {
+   "nom": "Koutoubia",
+   "secteur": "Charcuterie, volaille"
+  },
+  {
+   "nom": "Henkel Maroc",
+   "secteur": "Détergents, cosmétique"
+  },
+  {
+   "nom": "L'Oréal Maroc",
+   "secteur": "Beauté"
+  },
+  {
+   "nom": "Colgate-Palmolive Maroc",
+   "secteur": "Hygiène"
+  },
+  {
+   "nom": "Label'Vie Carrefour",
+   "secteur": "Grande distribution"
+  },
+  {
+   "nom": "Marjane",
+   "secteur": "Grande distribution"
+  },
+  {
+   "nom": "KITEA",
+   "secteur": "Ameublement, retail"
+  }
  ],
  "une_fois": [
-  {"id": "alerte-linkedin", "label": "Alerte LinkedIn « trade marketing »", "aide": "Ouvrez, puis activez « Alerte » en haut des résultats.", "url": "https://www.linkedin.com/jobs/search/?keywords=trade%20marketing&location=Maroc&f_TPR=r604800"},
-  {"id": "alerte-linkedin-2", "label": "Alerte LinkedIn « marketing manager »", "aide": "Même chose pour un second intitulé.", "url": "https://www.linkedin.com/jobs/search/?keywords=marketing%20manager&location=Casablanca"},
-  {"id": "opentowork", "label": "LinkedIn : titre clair et « Open to work » (recruteurs seulement)", "aide": "Profil, puis « Disponible pour » et « Recruteurs uniquement ».", "url": "https://www.linkedin.com/in/me/"},
-  {"id": "alerte-indeed", "label": "Alerte Indeed « marketing » à Casablanca", "aide": "Touchez « Recevoir de nouvelles offres par e-mail ».", "url": "https://ma.indeed.com/jobs?q=marketing+manager&l=Casablanca"},
-  {"id": "compte-rekrute", "label": "Compte ReKrute avec CV et alertes", "aide": "Indispensable pour postuler sur ReKrute et Exekutive.", "url": "https://www.rekrute.com/"},
-  {"id": "michael-page", "label": "Profil Michael Page", "aide": "Déposez votre CV : les consultants cherchent dans leur base.", "url": "https://www.michaelpageafrica.com/fr"},
-  {"id": "fed-africa", "label": "Alerte e-mail Fed Africa (Maroc, commercial et marketing)", "aide": "Bouton « Créer une alerte e-mail ».", "url": "https://www.fedafrica.com/offres"}
- ]
+  {
+   "id": "alerte-linkedin",
+   "label": "Alerte LinkedIn « trade marketing »",
+   "aide": "Ouvrez, puis activez « Alerte » en haut des résultats.",
+   "url": "https://www.linkedin.com/jobs/search/?keywords=trade%20marketing&location=Maroc&f_TPR=r604800"
+  },
+  {
+   "id": "alerte-linkedin-2",
+   "label": "Alerte LinkedIn « marketing manager »",
+   "aide": "Même chose pour un second intitulé.",
+   "url": "https://www.linkedin.com/jobs/search/?keywords=marketing%20manager&location=Casablanca"
+  },
+  {
+   "id": "opentowork",
+   "label": "LinkedIn : titre clair et « Open to work » (recruteurs seulement)",
+   "aide": "Profil, puis « Disponible pour » et « Recruteurs uniquement ».",
+   "url": "https://www.linkedin.com/in/me/"
+  },
+  {
+   "id": "alerte-indeed",
+   "label": "Alerte Indeed « marketing » à Casablanca",
+   "aide": "Touchez « Recevoir de nouvelles offres par e-mail ».",
+   "url": "https://ma.indeed.com/jobs?q=marketing+manager&l=Casablanca"
+  },
+  {
+   "id": "compte-rekrute",
+   "label": "Compte ReKrute avec CV et alertes",
+   "aide": "Indispensable pour postuler sur ReKrute et Exekutive.",
+   "url": "https://www.rekrute.com/"
+  },
+  {
+   "id": "michael-page",
+   "label": "Profil Michael Page",
+   "aide": "Déposez votre CV : les consultants cherchent dans leur base.",
+   "url": "https://www.michaelpageafrica.com/fr"
+  },
+  {
+   "id": "fed-africa",
+   "label": "Alerte e-mail Fed Africa (Maroc, commercial et marketing)",
+   "aide": "Bouton « Créer une alerte e-mail ».",
+   "url": "https://www.fedafrica.com/offres"
+  }
+ ],
+ "nord": {
+  "rappel": "Dans les pays nordiques, le pourcentage tient compte de la langue et du permis de travail. Les cadres venus de l'étranger sont surtout recrutés sur des offres en anglais, dans les groupes internationaux, et par recommandation.",
+  "semaine": [
+   {
+    "id": "candidatures",
+    "label": "Candidatures ciblées",
+    "cible": 5,
+    "auto": "candidatures",
+    "aide": "Offres en anglais d'abord, avec la lettre et le CV anglais."
+   },
+   {
+    "id": "reseau",
+    "label": "Messages à votre réseau",
+    "cible": 5,
+    "modele": "reseau",
+    "aide": "Anciens collègues des multinationales, Marocains et francophones installés en Scandinavie, anciens de votre école."
+   },
+   {
+    "id": "cabinets",
+    "label": "Cabinets contactés",
+    "cible": 2,
+    "modele": "cabinet",
+    "aide": "Un message court en anglais et le CV anglais."
+   },
+   {
+    "id": "spontanees",
+    "label": "Candidatures spontanées",
+    "cible": 2,
+    "modele": "spontanee",
+    "aide": "Groupes nordiques qui travaillent en anglais ou à l'export."
+   },
+   {
+    "id": "relances",
+    "label": "Relances",
+    "auto": "relances",
+    "aide": "Chaque candidature restée sans réponse 7 jours."
+   },
+   {
+    "id": "langue",
+    "label": "Séances de suédois ou de norvégien",
+    "cible": 3,
+    "aide": "Même débutant, l'écrire sur le CV rassure les recruteurs."
+   }
+  ],
+  "causes": [
+   {
+    "titre": "La langue du pays filtre d'abord",
+    "texte": "La plupart des annonces exigent le suédois, le norvégien ou le danois. Visez celles en anglais (badge vert) et les groupes internationaux, et commencez la langue dès maintenant.",
+    "action": {
+     "label": "Offres en anglais",
+     "onglet": "maroc"
+    }
+   },
+   {
+    "titre": "Le permis inquiète les petites entreprises",
+    "texte": "Les grands groupes connaissent la démarche et recrutent déjà à l'étranger. Visez-les en priorité, et vérifiez que le salaire proposé dépasse le seuil du pays.",
+    "action": {
+     "label": "Les règles par pays",
+     "ancre": "permis"
+    }
+   },
+   {
+    "titre": "Un CV au format nordique",
+    "texte": "En anglais, deux pages, résultats chiffrés, budgets en euros, sans photo obligatoire. Le CV anglais du dossier est prêt.",
+    "action": {
+     "label": "Conseils CV",
+     "ancre": "cv"
+    }
+   },
+   {
+    "titre": "Votre atout : français, arabe, Afrique",
+    "texte": "Les groupes nordiques qui vendent en Afrique, au Moyen-Orient ou en France cherchent ces profils. Ces offres sont remontées, avec la mention « votre atout ».",
+    "action": {
+     "label": "Entreprises cibles",
+     "ancre": "entreprises"
+    }
+   },
+   {
+    "titre": "Le réseau compte encore plus",
+    "texte": "Beaucoup de postes sont pourvus par recommandation. Sur LinkedIn : titre en anglais, ville visée (Stockholm, Oslo, Copenhague) et « Open to work » pour les recruteurs.",
+    "action": {
+     "label": "Ouvrir mon LinkedIn",
+     "url": "https://www.linkedin.com/in/me/"
+    }
+   }
+  ],
+  "cv": [
+   "En anglais, deux pages au plus, en PDF.",
+   "En haut : le poste visé et trois résultats chiffrés (+530 % de ventes en ligne, 27 lancements, +54 % sur les comptes clés).",
+   "Les budgets en euros, pas seulement en dirhams.",
+   "Les langues avec leur niveau, et la langue locale en cours d'apprentissage.",
+   "Une ligne « Relocating to Sweden / Norway / Denmark » : le recruteur sait que vous venez."
+  ],
+  "permis": [
+   {
+    "cc": "SE",
+    "pays": "Suède",
+    "eur": 3100,
+    "seuil": "34 470 SEK par mois",
+    "detail": "90 % du salaire médian, depuis juin 2026. Assurance santé exigée.",
+    "delai": "Environ 30 jours pour les postes qualifiés.",
+    "conjoint": "Peut obtenir un permis de travail si le vôtre dépasse 6 mois.",
+    "plus": "Permis de 9 mois pour chercher un emploi sur place, ouvert aux titulaires d'un master (fonds à prouver).",
+    "url": "https://www.migrationsverket.se/"
+   },
+   {
+    "cc": "NO",
+    "pays": "Norvège",
+    "eur": 4400,
+    "seuil": "545 400 NOK par an",
+    "detail": "Sans convention collective. 624 700 NOK avec un master.",
+    "delai": "Variable selon le dossier.",
+    "conjoint": "Peut venir et travailler (regroupement familial).",
+    "plus": "Le permis pour chercher un emploi est réservé aux diplômés en Norvège.",
+    "url": "https://www.udi.no/en/"
+   },
+   {
+    "cc": "DK",
+    "pays": "Danemark",
+    "eur": 6200,
+    "seuil": "552 000 DKK par an",
+    "detail": "Pay Limit Scheme, 2026. Seuil élevé, mais pas de test du marché.",
+    "delai": "Plus rapide avec une entreprise certifiée (Fast-track).",
+    "conjoint": "Peut venir et travailler.",
+    "plus": "Le Danemark n'était pas sur votre liste : il est scandinave et recrute beaucoup en anglais.",
+    "url": "https://www.nyidanmark.dk/en-GB"
+   },
+   {
+    "cc": "FI",
+    "pays": "Finlande",
+    "eur": 3937,
+    "seuil": "3 937 € par mois",
+    "detail": "Titre de spécialiste, 2026.",
+    "delai": "Voie rapide : environ 2 semaines.",
+    "conjoint": "Peut venir et travailler.",
+    "plus": "Aucun site finlandais n'accepte le scan automatique : utilisez les liens de l'onglet Marchés.",
+    "url": "https://migri.fi/en/home"
+   },
+   {
+    "cc": "IS",
+    "pays": "Islande",
+    "eur": null,
+    "seuil": "Pas de seuil fixe",
+    "detail": "Permis d'expert avec test du marché : l'employeur doit prouver qu'aucun candidat local ou européen ne convient.",
+    "delai": "Long.",
+    "conjoint": "À vérifier selon le permis.",
+    "plus": "Le pays le plus difficile pour un premier permis.",
+    "url": "https://work.iceland.is/"
+   }
+  ],
+  "permis_note": "Salaire minimum pour obtenir le permis, converti en euros par mois (taux de fin octobre 2026, arrondis). Règles 2026, à vérifier sur le site officiel avant de postuler.",
+  "cabinets": [
+   {
+    "nom": "Michael Page",
+    "note": "Cadres marketing et ventes · Suède, Norvège, Danemark",
+    "linkedin": "Michael Page Nordics"
+   },
+   {
+    "nom": "Academic Work",
+    "note": "Recrutement nordique, offres en anglais",
+    "site": "https://www.academicwork.se/"
+   },
+   {
+    "nom": "Hays",
+    "note": "Cadres commerciaux et marketing",
+    "linkedin": "Hays Nordics"
+   },
+   {
+    "nom": "Adecco",
+    "note": "Postes cadres, Scandinavie",
+    "linkedin": "Adecco Sweden"
+   },
+   {
+    "nom": "Randstad",
+    "note": "Cadres et managers",
+    "linkedin": "Randstad Sweden"
+   }
+  ],
+  "entreprises": [
+   {
+    "nom": "Arla Foods",
+    "secteur": "Laitier · Danemark, Suède · forte présence MENA",
+    "pays": "Denmark"
+   },
+   {
+    "nom": "Orkla",
+    "secteur": "Alimentaire et marques · Norvège",
+    "pays": "Norway"
+   },
+   {
+    "nom": "Fazer",
+    "secteur": "Confiserie, boulangerie · Finlande",
+    "pays": "Finland"
+   },
+   {
+    "nom": "Paulig",
+    "secteur": "Café, épicerie · Finlande",
+    "pays": "Finland"
+   },
+   {
+    "nom": "Valio",
+    "secteur": "Laitier · Finlande, export",
+    "pays": "Finland"
+   },
+   {
+    "nom": "Cloetta",
+    "secteur": "Confiserie · Suède",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Oatly",
+    "secteur": "Boissons végétales · Suède",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Essity",
+    "secteur": "Hygiène · Suède",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Electrolux",
+    "secteur": "Électroménager · Suède, Moyen-Orient et Afrique",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Tetra Pak",
+    "secteur": "Emballage pour l'agroalimentaire · Suède, Afrique et Moyen-Orient",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "IKEA (Inter IKEA)",
+    "secteur": "Ameublement, retail · Suède",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "LEGO",
+    "secteur": "Jouets, retail · Danemark",
+    "pays": "Denmark"
+   },
+   {
+    "nom": "Unilever Nordics",
+    "secteur": "Hygiène, alimentaire",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Procter & Gamble Nordics",
+    "secteur": "Hygiène, beauté",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "L'Oréal Nordics",
+    "secteur": "Beauté",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Mondelez Nordics",
+    "secteur": "Biscuits, chocolat (Marabou, Freia)",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Coca-Cola Europacific Partners",
+    "secteur": "Boissons sans alcool · Suède, Norvège",
+    "pays": "Norway"
+   },
+   {
+    "nom": "Svenska Spel",
+    "secteur": "Loterie nationale · Suède",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Norsk Tipping",
+    "secteur": "Loterie nationale · Norvège",
+    "pays": "Norway"
+   },
+   {
+    "nom": "Veikkaus",
+    "secteur": "Loterie nationale · Finlande",
+    "pays": "Finland"
+   },
+   {
+    "nom": "Danske Spil",
+    "secteur": "Loterie nationale · Danemark",
+    "pays": "Denmark"
+   },
+   {
+    "nom": "Kindred (FDJ United)",
+    "secteur": "Jeux en ligne · groupe français, Stockholm",
+    "pays": "Sweden"
+   },
+   {
+    "nom": "Betsson",
+    "secteur": "Jeux en ligne · Suède",
+    "pays": "Sweden"
+   }
+  ],
+  "entreprises_note": "Grande consommation, loteries et groupes nordiques présents en Afrique ou au Moyen-Orient. Touchez une entreprise.",
+  "une_fois": [
+   {
+    "id": "n-linkedin-anglais",
+    "label": "LinkedIn en anglais, ville visée et « Open to work »",
+    "aide": "Titre prêt dans « Messages prêts ». Lieu : Stockholm, Oslo ou Copenhague.",
+    "url": "https://www.linkedin.com/in/me/"
+   },
+   {
+    "id": "n-alerte-se",
+    "label": "Alerte LinkedIn « trade marketing » en Suède",
+    "aide": "Ouvrez, puis activez « Alerte ».",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=trade%20marketing&location=Sweden&f_TPR=r604800"
+   },
+   {
+    "id": "n-alerte-dk",
+    "label": "Alerte LinkedIn « marketing manager » au Danemark",
+    "aide": "Même chose pour un second pays.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=marketing%20manager&location=Denmark&f_TPR=r604800"
+   },
+   {
+    "id": "n-alerte-no",
+    "label": "Alerte LinkedIn « marketing manager » en Norvège",
+    "aide": "Même chose pour la Norvège.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=marketing%20manager&location=Norway&f_TPR=r604800"
+   },
+   {
+    "id": "n-langue",
+    "label": "Commencer le suédois (cours gratuit en ligne)",
+    "aide": "Learning Swedish, de l'Institut suédois. Pour le norvégien : NTNU Learn Now.",
+    "url": "https://learningswedish.se/"
+   },
+   {
+    "id": "n-diplome",
+    "label": "Faire évaluer votre master et votre MBA (Suède)",
+    "aide": "Gratuit, auprès de l'UHR. Utile pour le permis de recherche d'emploi.",
+    "url": "https://www.uhr.se/en/start/"
+   },
+   {
+    "id": "n-cv-anglais",
+    "label": "Relire et compléter le CV anglais",
+    "aide": "Ajoutez votre niveau d'anglais et la langue locale en cours.",
+    "onglet": "suivi"
+   }
+  ]
+ }
 }
