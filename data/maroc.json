@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T12:29:40Z",
+ "updated": "2026-11-02T17:29:09Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -269,6 +269,21 @@
    "posted": "2026-10-28",
    "first_seen": "2026-10-30",
    "auto": true
+  },
+  {
+   "id": "cdg-directeur-trice-communication-groupe-rabat-2026-11",
+   "title": "Directeur(trice) Communication Groupe",
+   "company": "CDG",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 49,
+   "why": "Marketing, 5 à 20 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeurtrice-communication-groupe-recrutement-cdg-rabat-188146.html",
+   "source": "ReKrute",
+   "posted": "2026-11-02",
+   "first_seen": "2026-11-02",
+   "auto": true,
+   "deadline": "2027-01-02"
   },
   {
    "id": "innoflex-area-manager-retail-casablanca-2026-09",
@@ -1650,20 +1665,6 @@
    "source": "Indeed",
    "posted": "2026-09-25",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "orange-maroc-key-account-manager-pme-casablanca-2026-09",
-   "title": "Key Account Manager PME",
-   "company": "Orange Maroc",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 14,
-   "why": "Vente et comptes clés, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/orange-maroc/jobs/key-account-manager-pme-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-09-02",
-   "first_seen": "2026-11-02",
-   "auto": true
   }
  ]
 }
