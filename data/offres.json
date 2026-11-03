@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T17:29:09Z",
+ "updated": "2026-11-03T06:35:07Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -230,6 +230,24 @@
    "first_seen": "2026-10-12",
    "deadline": "2027-01-08",
    "country": "Maroc"
+  },
+  {
+   "id": "dk-saab-danmark-a-s-marketing-communication-manager-2026-11",
+   "title": "Marketing & Communication Manager",
+   "company": "Saab Danmark A/S",
+   "place": "Sønderborg",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 47,
+   "why": "Marketing, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1712644",
+   "source": "Jobindex",
+   "posted": "2026-11-02",
+   "first_seen": "2026-11-03",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-29"
   },
   {
    "id": "dk-boconcept-a-s-join-boconcept-as-our-new-ecommerce-manager-2026-10",

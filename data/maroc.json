@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T17:29:09Z",
+ "updated": "2026-11-03T06:31:35Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1544,6 +1544,20 @@
    "auto": true
   },
   {
+   "id": "ma-navette-responsable-grands-comptes-casablanca-2026-11",
+   "title": "Responsable Grands Comptes",
+   "company": "MA-NAVETTE",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 16,
+   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/ma-navette/jobs/responsable-grands-comptes-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-03",
+   "auto": true
+  },
+  {
    "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
    "title": "Country Manager H/F (coatings)",
    "company": "Michael Page · cabinet de recrutement",
@@ -1624,21 +1638,6 @@
    "source": "Indeed",
    "posted": "2026-08-15",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "manpower-agences-directeur-de-communication-h-f-casablanca-2026-09",
-   "title": "Directeur de communication (H/F)",
-   "company": "Manpower Agences",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 15,
-   "why": "Marketing, 5 à 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-de-communication-hf-recrutement-manpower-agences-casablanca-185937.html",
-   "source": "ReKrute",
-   "posted": "2026-09-02",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-02"
   },
   {
    "id": "the-view-senior-sales-manager-rabat-2026-09",
