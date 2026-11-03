@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:27:37Z",
+ "updated": "2026-11-03T17:28:20Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -212,6 +212,20 @@
    "source": "MaroCadres",
    "posted": "2026-10-09",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "marocannonces-com-chef-de-projet-marketing-ain-chock-casablanca-2026-11",
+   "title": "CHEF DE PROJET MARKETING (Aïn Chock)",
+   "company": "MarocAnnonces.com",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 51,
+   "why": "Marketing, 2 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644338140443381739",
+   "source": "Talent.com",
+   "posted": "2026-11-02",
+   "first_seen": "2026-11-03",
    "auto": true
   },
   {
@@ -1650,19 +1664,6 @@
    "url": "https://to.indeed.com/aav8gngbq7xv",
    "source": "Indeed",
    "posted": "2026-09-11",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "cubic-33-directeur-developpement-commercial-casablanca-2026-09",
-   "title": "Directeur du Développement Commercial",
-   "company": "Cubic 33 Maroc",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Secteur éloigné de votre parcours. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aajc8w26xknj",
-   "source": "Indeed",
-   "posted": "2026-09-25",
    "first_seen": "2026-10-12"
   }
  ]
