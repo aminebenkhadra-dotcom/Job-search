@@ -15,7 +15,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Publier la page sur la branche gh-pages
         run: |
-          mkdir -p /tmp/site && cp -r app/src/main/assets/www/. /tmp/site/ && touch /tmp/site/.nojekyll
+          mkdir -p /tmp/site/maroc && cp -r app/src/main/assets/www/. /tmp/site/ && touch /tmp/site/.nojekyll
+          # version Maroc : même page, marché marocain seul
+          python3 -c "import sys;h=open('/tmp/site/index.html',encoding='utf8').read();i=h.rindex('<script>');open('/tmp/site/maroc/index.html','w',encoding='utf8').write(h[:i]+'<script>window.RADAR_MARCHE=\"maroc\";</script>'+h[i:])"
           cd /tmp/site
           git init -q && git checkout -q -b gh-pages
           git config user.name "github-actions" && git config user.email "github-actions@users.noreply.github.com"

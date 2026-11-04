@@ -588,6 +588,8 @@ var PER_COUNTRY=2, FREE_QUOTA=200, MODEL="claude-haiku-4-5-20251001";
 var INDEED={GB:"uk",US:"www"};
 var BAYT={AE:"uae",SA:"saudi-arabia",QA:"qatar",KW:"kuwait",BH:"bahrain",OM:"oman",EG:"egypt",MA:"morocco"};
 var NORD_CC=["SE","NO","DK","FI","IS"];
+/* version Maroc du site web (/maroc/) : marché marocain seul, lettres en français */
+var ONLY_MA=window.RADAR_MARCHE==="maroc";
 var S={poste:0,sel:new Set(["SE","NO","DK","FI","MA"]),profile:null,jobs:[],example:true,running:false,stop:false,min:0,country:"",shown:30,onlyNew:false,failed:new Set(),simple:false};
 var K={prov:"rapid",jkey:"",akey:""};
 var NATIVE=!!(window.Android&&typeof window.Android.http==="function");
@@ -1217,12 +1219,12 @@ function stats(prefix,offers){
 }
 
 function isNord(o){return !!o&&NORD_CC.indexOf(o.cc)>=0;}
-var F={market:store("radar.fmarche")==="maroc"?"maroc":"nord"};
+var F={market:ONLY_MA||store("radar.fmarche")==="maroc"?"maroc":"nord"};
 makeList("feed","offres.json",function(L){
   var list=$("feed-list");list.textContent="";
   var nord=L.offers.filter(isNord),ma=L.offers.filter(function(o){return !isNord(o);});
   var offers=F.market==="nord"?nord:ma;
-  var f=$("f-market");f.textContent="";
+  var f=$("f-market");f.textContent="";f.hidden=ONLY_MA;
   [["nord","Pays nordiques",nord.length],["maroc","Maroc",ma.length]].forEach(function(m){
     f.append(el("button",{class:"chip",type:"button","aria-pressed":F.market===m[0]?"true":"false",onclick:function(){F.market=m[0];store("radar.fmarche",m[0]);L.render();}},
       m[1],el("span",{class:"cn",text:String(m[2])})));
@@ -1241,7 +1243,7 @@ makeList("feed","offres.json",function(L){
 $("feed-refresh").addEventListener("click",function(){LISTS.feed.load();});
 
 /* ---------- onglet Marchés : pays nordiques et Maroc ---------- */
-var M={min:0,fam:"",onlyNew:false,shown:20,poste:0,cc:store("radar.marche")||"SE"};
+var M={min:0,fam:"",onlyNew:false,shown:20,poste:0,cc:ONLY_MA?"MA":store("radar.marche")||"SE"};
 if(NORD_CC.concat(["MA"]).indexOf(M.cc)<0)M.cc="SE";
 var MPOSTES={nord:["trade marketing manager","marketing manager","brand manager","category manager","export manager"],
   MA:["trade marketing","directeur marketing","brand manager","category manager","directeur commercial"]};
@@ -1252,7 +1254,7 @@ function marketOffers(cc){
 function renderMarket(){
   if(!LISTS.nord||!LISTS.maroc)return;
   var cc=M.cc,L=cc==="MA"?LISTS.maroc:LISTS.nord,offers=marketOffers(cc),name=COUNTRIES[cc].name;
-  var cs=$("m-countries");cs.textContent="";
+  var cs=$("m-countries");cs.textContent="";cs.hidden=ONLY_MA;
   NORD_CC.concat(["MA"]).forEach(function(c){
     var n=marketOffers(c).length;
     cs.append(el("button",{class:"chip",type:"button","aria-pressed":cc===c?"true":"false",onclick:function(){
@@ -1625,7 +1627,7 @@ $("kit-import").addEventListener("click",importKit);
 
 
 /* ---------- Conseils : plan de la semaine, diagnostic, messages, cabinets, entreprises ---------- */
-var CONSEILS=null,MODE=store("radar.mode")==="maroc"?"maroc":"nord";
+var CONSEILS=null,MODE=ONLY_MA||store("radar.mode")==="maroc"?"maroc":"nord";
 /* contenu du marché choisi : le bloc « nord » remplace les rubriques marocaines qu'il redéfinit */
 function conseils(){
   if(!CONSEILS)return null;
@@ -1718,7 +1720,7 @@ function renderChart(){
 function scrollToAnchor(name){var t=$("c-anchor-"+name);if(t)t.scrollIntoView({behavior:"smooth",block:"start"});}
 function renderConseils(){
   var C=conseils();if(!C){$("c-goals").textContent="Chargement…";return;}
-  var md=$("c-mode");md.textContent="";
+  var md=$("c-mode");md.textContent="";md.hidden=ONLY_MA;
   [["nord","Pays nordiques"],["maroc","Maroc"]].forEach(function(m){
     md.append(el("button",{class:"chip",type:"button","aria-pressed":MODE===m[0]?"true":"false",text:m[1],onclick:function(){MODE=m[0];store("radar.mode",m[0]);renderConseils();}}));
   });
@@ -1864,6 +1866,13 @@ function openSettings(){
 $("open-settings").addEventListener("click",openSettings);
 $("alert-line").addEventListener("click",openSettings);
 
+if(ONLY_MA){
+  document.title="Radar Emploi · Maroc";
+  $("tab-feed").querySelector(".hero p").textContent="Vos chances d'entretien pour chaque offre. « Postuler » prépare la lettre et le CV.";
+  $("m-h1").innerHTML="Le marché marocain, <em>passé au scanner</em>.";
+  $("tab-maroc").querySelector(".hero p").textContent="Toutes les offres repérées dans votre domaine, avec vos chances pour chacune.";
+  $("tabbtn-maroc").querySelector("span").textContent="Maroc";
+}
 loadKit();loadApps();syncApps();renderKit();renderApps();renderAlertLine();loadConseils();
 loadKeys();$("keys").hidden=true;
 renderRegions();renderKeys();renderAlerts();render();renderMarketLinks();
