@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T12:21:22Z",
+ "updated": "2026-11-04T17:28:50Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -827,6 +827,34 @@
    "auto": true
   },
   {
+   "id": "cypher-marketing-communications-specialist-casablanca-2026-11",
+   "title": "Marketing & Communications Specialist",
+   "company": "Cypher",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 31,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/cypher/jobs/marketing-communications-specialist-casablanca",
+   "source": "Jobzyn",
+   "posted": "",
+   "first_seen": "2026-11-04",
+   "auto": true
+  },
+  {
+   "id": "super-auto-group-chef-de-produit-casablanca-2026-10",
+   "title": "Chef de Produit",
+   "company": "Super Auto Group",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 31,
+   "why": "Marque et produit, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/super-auto-group/jobs/chef-de-produit-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-10-06",
+   "first_seen": "2026-11-04",
+   "auto": true
+  },
+  {
    "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
    "title": "Chef de Produit / Product Manager (H/F)",
    "company": "Jameel Motors",
@@ -1638,32 +1666,6 @@
    "url": "https://www.michaelpageafrica.com/fr/job-detail/marketing-manager-hf-b2b-casablanca/ref/jn-082026-7075950",
    "source": "Michael Page",
    "posted": "",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "best-profil-category-manager-pieces-rechange-casablanca-2026-08",
-   "title": "Category Manager",
-   "company": "Best Profil · pièces de rechange",
-   "place": "Casablanca",
-   "family": "Category",
-   "chances": 15,
-   "why": "Orienté achats et logistique de pièces de rechange : hors de votre terrain.",
-   "url": "https://to.indeed.com/aajs8gtst4bp",
-   "source": "Indeed",
-   "posted": "2026-08-15",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "the-view-senior-sales-manager-rabat-2026-09",
-   "title": "Senior Sales Manager",
-   "company": "The View Rabat · hôtellerie",
-   "place": "Rabat",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente hôtelière : une expérience du secteur est attendue. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aav8gngbq7xv",
-   "source": "Indeed",
-   "posted": "2026-09-11",
    "first_seen": "2026-10-12"
   }
  ]
