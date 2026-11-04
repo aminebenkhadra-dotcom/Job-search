@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T17:28:20Z",
+ "updated": "2026-11-04T06:38:47Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -250,6 +250,24 @@
    "deadline": "2026-11-29"
   },
   {
+   "id": "dk-abena-product-manager-connect-market-needs-with-sm-2026-11",
+   "title": "Product Manager – Connect market needs with smarter portfolio decisions",
+   "company": "ABENA",
+   "place": "Aabenraa",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marque & produit",
+   "chances": 47,
+   "why": "Marque et produit, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1713113",
+   "source": "Jobindex",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-04",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-01"
+  },
+  {
    "id": "dk-boconcept-a-s-join-boconcept-as-our-new-ecommerce-manager-2026-10",
    "title": "Join BoConcept as our new Ecommerce Manager",
    "company": "BoConcept A/S",
@@ -266,6 +284,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-06"
+  },
+  {
+   "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
+   "title": "Brand Partnership Manager",
+   "company": "Live Nation Denmark ApS",
+   "place": "København V",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marque & produit",
+   "chances": 44,
+   "why": "Marque et produit. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1712968",
+   "source": "Jobindex",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-04",
+   "lang": "",
+   "auto": true,
+   "deadline": "2026-12-01"
   },
   {
    "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
@@ -285,6 +321,24 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-11-27"
+  },
+  {
+   "id": "se-infinity-human-resources-mips-global-brand-lead-2026-11",
+   "title": "Mips - Global Brand Lead",
+   "company": "Infinity Human Resources Sweden AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marque & produit",
+   "chances": 43,
+   "why": "Marque et produit, annonce en anglais, 7 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681204",
+   "source": "Platsbanken",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-04",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-07"
   },
   {
    "id": "dk-rotate-birger-christense-head-of-e-commerce-2026-10",
@@ -322,6 +376,24 @@
    "deadline": "2027-04-30"
   },
   {
+   "id": "se-infinity-human-resources-mips-digital-lead-2026-11",
+   "title": "Mips - Digital Lead",
+   "company": "Infinity Human Resources Sweden AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 41,
+   "why": "Marketing, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681222",
+   "source": "Platsbanken",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-04",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-07"
+  },
+  {
    "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",
    "title": "Senior Marketing Manager to Kustom!",
    "company": "Needo Recruitment Sthlm AB",
@@ -338,6 +410,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-15"
+  },
+  {
+   "id": "dk-topas-explorer-group-aps-studiepraktikant-i-marketing-efterar-2027-2026-11",
+   "title": "Studiepraktikant i marketing - Efterår 2027",
+   "company": "Topas Explorer Group ApS",
+   "place": "8680 Ry, Grønland, Vietnam",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14083598",
+   "source": "Jobindex",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-04",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-01"
   }
  ]
 }
