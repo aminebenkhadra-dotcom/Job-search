@@ -1,0 +1,23 @@
+name: Site web (version PC)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/src/main/assets/www/**'
+      - '.github/workflows/site-web.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publier la page sur la branche gh-pages
+        run: |
+          mkdir -p /tmp/site && cp -r app/src/main/assets/www/. /tmp/site/ && touch /tmp/site/.nojekyll
+          cd /tmp/site
+          git init -q && git checkout -q -b gh-pages
+          git config user.name "github-actions" && git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -qm "Site web depuis ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
