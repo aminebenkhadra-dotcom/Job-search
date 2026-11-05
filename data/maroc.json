@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T12:31:23Z",
+ "updated": "2026-11-05T17:35:57Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -517,6 +517,20 @@
    "first_seen": "2026-10-30",
    "auto": true,
    "deadline": "2026-12-16"
+  },
+  {
+   "id": "digital-virgo-product-manager-gaming-vas-products-africa-casablanca-2026-11",
+   "title": "Product Manager – Gaming VAS Products Africa",
+   "company": "Digital Virgo",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 39,
+   "why": "Marque et produit, secteur éloigné de votre parcours, univers des jeux, déjà pratiqué. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644398462252034855",
+   "source": "Talent.com",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-05",
+   "auto": true
   },
   {
    "id": "auto-nejma-maroc-s-a-chef-de-produits-senior-value-casablanca-2026-10",
@@ -1352,6 +1366,20 @@
    "auto": true
   },
   {
+   "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
+   "title": "Country Manager H/F (coatings)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 21,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/country-manager-hf-coatings-casablanca/ref/jn-062026-7045645",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-05",
+   "auto": true
+  },
+  {
    "id": "michael-page-marketing-head-technologie-casablanca-2026-07",
    "title": "Marketing Head (secteur technologie)",
    "company": "Michael Page · groupe tech",
@@ -1639,34 +1667,6 @@
    "source": "MaroCadres",
    "posted": "2026-10-22",
    "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "ikea-account-manager-casablanca-2026-10",
-   "title": "Account Manager",
-   "company": "Ikea",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 16,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=637597467095411606",
-   "source": "Talent.com",
-   "posted": "2026-10-26",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "ma-navette-responsable-grands-comptes-casablanca-2026-11",
-   "title": "Responsable Grands Comptes",
-   "company": "MA-NAVETTE",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 16,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/ma-navette/jobs/responsable-grands-comptes-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-11-03",
-   "first_seen": "2026-11-03",
    "auto": true
   }
  ]
