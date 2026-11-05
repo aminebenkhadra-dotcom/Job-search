@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:28:50Z",
+ "updated": "2026-11-05T06:35:36Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -185,6 +185,20 @@
    "posted": "2026-10-08",
    "first_seen": "2026-10-12",
    "deadline": "2027-01-08"
+  },
+  {
+   "id": "tech-first-gulf-marketing-executive-morocco-casablanca-2026-11",
+   "title": "Marketing Executive (Morocco)",
+   "company": "Tech First Gulf",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 55,
+   "why": "Marketing, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644634309101944989",
+   "source": "Talent.com",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-05",
+   "auto": true
   },
   {
    "id": "innoflex-e-commerce-brand-manager-enia-had-soualem-2026-08",
@@ -739,6 +753,20 @@
    "source": "Indeed",
    "posted": "2026-10-23",
    "first_seen": "2026-10-29"
+  },
+  {
+   "id": "accor-general-manager-nador-nador-2026-11",
+   "title": "General Manager Nador",
+   "company": "Accor",
+   "place": "Nador",
+   "family": "Direction",
+   "chances": 34,
+   "why": "Direction. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644338280121772839",
+   "source": "Talent.com",
+   "posted": "2026-11-03",
+   "first_seen": "2026-11-05",
+   "auto": true
   },
   {
    "id": "bank-of-africa-marketing-manager-mre-casablanca-2026-08",
@@ -1640,33 +1668,6 @@
    "posted": "",
    "first_seen": "2026-10-26",
    "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
-   "title": "Operators Key Account Manager H/F - Telecom",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 15,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-20",
-   "auto": true
-  },
-  {
-   "id": "michael-page-marketing-manager-b2b-telecom-casablanca-2026-08",
-   "title": "Marketing Manager B2B · télécoms",
-   "company": "Michael Page · groupe tech",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 15,
-   "why": "10 ans demandés avec une expérience télécom ou tech exigée, que vous n'avez pas.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/marketing-manager-hf-b2b-casablanca/ref/jn-082026-7075950",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-12"
   }
  ]
 }

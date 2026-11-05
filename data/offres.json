@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:28:50Z",
+ "updated": "2026-11-05T06:39:22Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -132,6 +132,24 @@
    "country": "Maroc"
   },
   {
+   "id": "se-maquire-sverige-ab-business-team-director-sales-marketing-to-li-2026-11",
+   "title": "Business Team Director Sales & Marketing to Lindex, Gothenburg",
+   "company": "Maquire Sverige AB",
+   "place": "Göteborg",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Direction",
+   "chances": 64,
+   "why": "Direction, annonce en anglais, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31684615",
+   "source": "Platsbanken",
+   "posted": "2026-11-04",
+   "first_seen": "2026-11-05",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-23"
+  },
+  {
    "id": "dk-le-creuset-scandinavia-shopping-marketing-manager-scandi-2026-10",
    "title": "Shopping Marketing Manager, Scandi",
    "company": "Le Creuset Scandinavia",
@@ -232,6 +250,38 @@
    "country": "Maroc"
   },
   {
+   "id": "tech-first-gulf-marketing-executive-morocco-casablanca-2026-11",
+   "title": "Marketing Executive (Morocco)",
+   "company": "Tech First Gulf",
+   "place": "Casablanca",
+   "chances": 55,
+   "why": "Marketing, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644634309101944989",
+   "source": "Talent.com",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-05",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "se-maquire-sverige-ab-head-of-digital-sales-marketing-b2b-to-linde-2026-11",
+   "title": "Head of Digital – Sales & Marketing / B2B to Lindex, Gothenburg",
+   "company": "Maquire Sverige AB",
+   "place": "Göteborg",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Direction",
+   "chances": 52,
+   "why": "Direction, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31684604",
+   "source": "Platsbanken",
+   "posted": "2026-11-04",
+   "first_seen": "2026-11-05",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-23"
+  },
+  {
    "id": "dk-saab-danmark-a-s-marketing-communication-manager-2026-11",
    "title": "Marketing & Communication Manager",
    "company": "Saab Danmark A/S",
@@ -284,6 +334,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-06"
+  },
+  {
+   "id": "dk-jbt-marel-key-account-manager-pf-emea-2026-11",
+   "title": "Key Account Manager PF EMEA",
+   "company": "JBT Marel",
+   "place": "Aarhus N, Kastrup, Roskilde, Støvring",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 45,
+   "why": "Vente et comptes clés, annonce en anglais, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1713323",
+   "source": "Jobindex",
+   "posted": "2026-11-04",
+   "first_seen": "2026-11-05",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-02"
   },
   {
    "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
@@ -428,6 +496,24 @@
    "lang": "",
    "auto": true,
    "deadline": "2027-01-01"
+  },
+  {
+   "id": "se-alfa-laval-technologies-head-of-strategic-insights-industry-marketin-2026-11",
+   "title": "Head of Strategic Insights & Industry Marketing",
+   "company": "Alfa Laval Technologies AB",
+   "place": "Huddinge",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31687124",
+   "source": "Platsbanken",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-05",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-15"
   }
  ]
 }
