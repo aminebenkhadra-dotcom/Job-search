@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T06:35:36Z",
+ "updated": "2026-11-05T12:31:23Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -325,6 +325,20 @@
    "source": "Jobzyn",
    "posted": "2026-09-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-marketing-manager-h-f-b2b-casablanca-2026-08",
+   "title": "Marketing Manager H/F - B2B",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing, 10 ans minimum demandés, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/marketing-manager-hf-b2b-casablanca/ref/jn-082026-7075950",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-05",
    "auto": true
   },
   {
@@ -769,6 +783,20 @@
    "auto": true
   },
   {
+   "id": "fed-africa-cabinet-de-re-responsable-developpement-commercial-export-casablanca-2026-11",
+   "title": "Responsable Développement Commercial Export – Afrique (H/F)",
+   "company": "Fed Africa · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 34,
+   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.fedafrica.com/offres/responsable-developpement-commercial-export-afrique-h-f",
+   "source": "Fed Africa",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-05",
+   "auto": true
+  },
+  {
    "id": "bank-of-africa-marketing-manager-mre-casablanca-2026-08",
    "title": "Marketing Manager MRE",
    "company": "BANK OF AFRICA",
@@ -1070,6 +1098,20 @@
    "source": "Jobzyn",
    "posted": "",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
+   "title": "Operators Key Account Manager H/F - Telecom",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 26,
+   "why": "Vente et comptes clés, 15 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-05",
    "auto": true
   },
   {
@@ -1625,48 +1667,6 @@
    "source": "Jobzyn",
    "posted": "2026-11-03",
    "first_seen": "2026-11-03",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-country-manager-h-f-coatings-casablanca-2026-06",
-   "title": "Country Manager H/F (coatings)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/country-manager-hf-coatings-casablanca/ref/jn-062026-7045645",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-20",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
-   "title": "Directeur Général H/F",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Kénitra",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-27",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
-   "title": "Directeur Général H/F (Secteur BTP)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-secteur-btp-casablanca/ref/jn-102026-7125657",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-26",
    "auto": true
   }
  ]
