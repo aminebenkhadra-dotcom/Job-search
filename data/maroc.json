@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T06:36:38Z",
+ "updated": "2026-11-06T12:28:46Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -795,6 +795,20 @@
    "source": "Indeed",
    "posted": "2026-10-23",
    "first_seen": "2026-10-29"
+  },
+  {
+   "id": "lenovo-client-account-manager-morocco-casablanca-2026-10",
+   "title": "Client Account Manager - Morocco",
+   "company": "Lenovo",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 34,
+   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=628549820800377793",
+   "source": "Talent.com",
+   "posted": "2026-10-19",
+   "first_seen": "2026-11-06",
+   "auto": true
   },
   {
    "id": "accor-general-manager-nador-nador-2026-11",
@@ -1653,20 +1667,6 @@
    "source": "Jobzyn",
    "posted": "2026-09-30",
    "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "arrow-electronics-inc-inside-sales-manager-casablanca-2026-11",
-   "title": "Inside Sales Manager",
-   "company": "Arrow Electronics, Inc.",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 18,
-   "why": "Vente et comptes clés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=639659640919756929",
-   "source": "Talent.com",
-   "posted": "2026-11-01",
-   "first_seen": "2026-11-01",
    "auto": true
   }
  ]
