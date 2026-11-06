@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T17:35:57Z",
+ "updated": "2026-11-06T06:40:26Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -282,6 +282,24 @@
    "deadline": "2026-11-23"
   },
   {
+   "id": "dk-venaris-executive-search-managing-director-2026-11",
+   "title": "Managing Director",
+   "company": "Venaris Executive Search",
+   "place": "Hobro",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Direction",
+   "chances": 48,
+   "why": "Direction, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1713838",
+   "source": "Jobindex",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-06",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-03"
+  },
+  {
    "id": "dk-saab-danmark-a-s-marketing-communication-manager-2026-11",
    "title": "Marketing & Communication Manager",
    "company": "Saab Danmark A/S",
@@ -514,6 +532,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-15"
+  },
+  {
+   "id": "dk-factbird-aps-customer-marketing-manager-2026-11",
+   "title": "Customer Marketing Manager",
+   "company": "Factbird ApS",
+   "place": "København",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14087834",
+   "source": "Jobindex",
+   "posted": "2026-11-05",
+   "first_seen": "2026-11-06",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-03"
   }
  ]
 }

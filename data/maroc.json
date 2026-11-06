@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T17:35:57Z",
+ "updated": "2026-11-06T06:36:38Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -530,6 +530,20 @@
    "source": "Talent.com",
    "posted": "2026-11-03",
    "first_seen": "2026-11-05",
+   "auto": true
+  },
+  {
+   "id": "boston-consulting-group-expert-project-leader-trade-investments-casablanca-2026-11",
+   "title": "Expert Project Leader - Trade & Investments",
+   "company": "Boston Consulting Group",
+   "place": "Casablanca",
+   "family": "Trade marketing",
+   "chances": 39,
+   "why": "Trade marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644900708803813384",
+   "source": "Talent.com",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-06",
    "auto": true
   },
   {
@@ -1101,6 +1115,20 @@
    "auto": true
   },
   {
+   "id": "accor-directeur-commercial-f-h-agadir-2026-11",
+   "title": "Directeur Commercial (F/H)",
+   "company": "Accor",
+   "place": "Agadir",
+   "family": "Direction",
+   "chances": 29,
+   "why": "Direction, 3 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644734620699328669",
+   "source": "Talent.com",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-06",
+   "auto": true
+  },
+  {
    "id": "ceva-logistics-sales-management-manager-casablanca-2026-10",
    "title": "Sales Management Manager",
    "company": "CEVA Logistics",
@@ -1639,34 +1667,6 @@
    "source": "Talent.com",
    "posted": "2026-11-01",
    "first_seen": "2026-11-01",
-   "auto": true
-  },
-  {
-   "id": "orange-maroc-key-account-manager-grands-comptes-gc-casablanca-2026-08",
-   "title": "Key Account Manager Grands Comptes (GC)",
-   "company": "Orange Maroc",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 16,
-   "why": "Vente et comptes clés, 7 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/orange-maroc/jobs/key-account-manager-grands-comptes-gc-casablanca-1",
-   "source": "Jobzyn",
-   "posted": "2026-08-30",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "confidentiel-key-account-manager-casablanca-2026-10",
-   "title": "Key Account Manager",
-   "company": "Confidentiel",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 16,
-   "why": "Vente et comptes clés, 5 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.marocadres.com/Offre?id=2568",
-   "source": "MaroCadres",
-   "posted": "2026-10-22",
-   "first_seen": "2026-10-30",
    "auto": true
   }
  ]
