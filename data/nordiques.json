@@ -1095,24 +1095,6 @@
    "deadline": "2026-12-03"
   },
   {
-   "id": "se-maersk-sverige-aktiebola-department-manager-key-account-stromstad-2026-10",
-   "title": "Department Manager Key Account, Strömstad",
-   "company": "Maersk Sverige Aktiebolag",
-   "place": "STRÖMSTAD",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Vente & comptes clés",
-   "chances": 22,
-   "why": "Vente et comptes clés, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31626937",
-   "source": "Platsbanken",
-   "posted": "2026-10-21",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-07"
-  },
-  {
    "id": "dk-danhostel-danmarks-vandr-marketing-commercial-manager-til-danhostel-2026-10",
    "title": "Marketing & Commercial Manager til Danhostel",
    "company": "Danhostel Danmarks Vandrerhjem",
@@ -1573,6 +1555,25 @@
    "lang": "",
    "auto": true,
    "deadline": "2027-01-01"
+  },
+  {
+   "id": "dk-serwiz-sales-manager-for-food-2026-11",
+   "title": "Sales Manager for Food",
+   "company": "SERWIZ",
+   "place": "Danemark",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 18,
+   "why": "Vente et comptes clés, annonce en langue locale, la langue sera exigée, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1714411",
+   "source": "Jobindex",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-08",
+   "lang": "local",
+   "auto": true,
+   "lang_req": true,
+   "deadline": "2026-12-04"
   },
   {
    "id": "se-proposales-ab-marketing-manager-2026-09",
@@ -2448,6 +2449,25 @@
    "deadline": "2026-11-20"
   },
   {
+   "id": "dk-headcon-management-av-project-sales-manager-2026-11",
+   "title": "AV - Project Sales Manager",
+   "company": "Headcon Management",
+   "place": "Gentofte",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 8,
+   "why": "Vente et comptes clés, annonce en langue locale, la langue sera exigée. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1714457",
+   "source": "Jobindex",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-08",
+   "lang": "local",
+   "auto": true,
+   "lang_req": true,
+   "deadline": "2026-12-04"
+  },
+  {
    "id": "dk-rossini-caviar-a-s-sales-account-manager-2026-11",
    "title": "Sales & Account Manager",
    "company": "Rossini Caviar A/S",
@@ -2769,36 +2789,17 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-11-16"
-  },
-  {
-   "id": "no-ansettr-as-lyst-til-a-lede-utviklingen-av-fremtidens-an-2026-11",
-   "title": "Lyst til å lede utviklingen av fremtidens annonseteknologi i Nordens største mediekonsern? Amedia søker Product Manager Annonseplattform (Søk uten CV og søknadsbrev)",
-   "company": "Ansettr AS",
-   "place": "Oslo",
-   "country": "Norvège",
-   "cc": "NO",
-   "family": "Marque & produit",
-   "chances": 7,
-   "why": "Marque et produit, annonce en langue locale, la langue sera exigée, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbeidsplassen.nav.no/stillinger/stilling/10f18390-e340-478d-8919-e1e1c3643c9d",
-   "source": "NAV",
-   "posted": "2026-11-03",
-   "first_seen": "2026-11-04",
-   "lang": "local",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-24"
   }
  ],
- "updated": "2026-11-07T06:35:33Z",
+ "updated": "2026-11-08T06:29:26Z",
  "sources": [
   "Platsbanken (Suède)",
   "NAV (Norvège)",
   "Jobindex (Danemark)"
  ],
  "counts": {
-  "DK": 75,
-  "SE": 49,
-  "NO": 26
+  "DK": 77,
+  "SE": 48,
+  "NO": 25
  }
 }
