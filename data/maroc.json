@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T12:33:36Z",
+ "updated": "2026-11-09T17:33:27Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -103,6 +103,36 @@
    "posted": "2026-10-05",
    "first_seen": "2026-10-12",
    "deadline": "2026-12-05"
+  },
+  {
+   "id": "flormar-brand-manager-casablanca-2026-11",
+   "title": "Brand Manager",
+   "company": "Flormar",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 65,
+   "why": "Marque et produit, 5 à 10 ans demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-brand-manager-recrutement-flormar-casablanca-188362.html",
+   "source": "ReKrute",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-09",
+   "auto": true,
+   "deadline": "2027-01-09"
+  },
+  {
+   "id": "groupe-label-vie-carrefo-responsable-marketing-operationnel-casablanca-2026-11",
+   "title": "Responsable Marketing Opérationnel",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 63,
+   "why": "Marketing, 5 à 10 ans demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-operationnel-recrutement-groupe-labelvie---carrefour-casablanca-188351.html",
+   "source": "ReKrute",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-09",
+   "auto": true,
+   "deadline": "2027-01-09"
   },
   {
    "id": "kitea-head-of-marketing-customer-intelligence-casablanca-2026-10",
@@ -1639,35 +1669,6 @@
    "posted": "",
    "first_seen": "2026-10-30",
    "auto": true
-  },
-  {
-   "id": "jobzyn-confidential-responsable-commercial-senior-h-f-casablanca-2026-08",
-   "title": "Responsable Commercial Senior H/F",
-   "company": "Jobzyn Confidential",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 19,
-   "why": "Vente et comptes clés, 7 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/jobzyn-confidential/jobs/responsable-commercial-senior-hf-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-08-30",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "moulim-group-chef-de-produits-bruns-safi-2026-10",
-   "title": "CHEF DE PRODUITS BRUNS",
-   "company": "Moulim Group",
-   "place": "Safi",
-   "family": "Marque & produit",
-   "chances": 19,
-   "why": "Marque et produit, 1 à 5 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produits-bruns-recrutement-moulim-group-safi-187361.html",
-   "source": "ReKrute",
-   "posted": "2026-10-10",
-   "first_seen": "2026-10-30",
-   "auto": true,
-   "deadline": "2026-12-10"
   }
  ]
 }

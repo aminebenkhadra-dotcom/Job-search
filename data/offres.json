@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T12:33:36Z",
+ "updated": "2026-11-09T17:33:27Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -132,6 +132,21 @@
    "country": "Maroc"
   },
   {
+   "id": "flormar-brand-manager-casablanca-2026-11",
+   "title": "Brand Manager",
+   "company": "Flormar",
+   "place": "Casablanca",
+   "chances": 65,
+   "why": "Marque et produit, 5 à 10 ans demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-brand-manager-recrutement-flormar-casablanca-188362.html",
+   "source": "ReKrute",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-09",
+   "auto": true,
+   "deadline": "2027-01-09",
+   "country": "Maroc"
+  },
+  {
    "id": "se-maquire-sverige-ab-business-team-director-sales-marketing-to-li-2026-11",
    "title": "Business Team Director Sales & Marketing to Lindex, Gothenburg",
    "company": "Maquire Sverige AB",
@@ -148,6 +163,21 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-23"
+  },
+  {
+   "id": "groupe-label-vie-carrefo-responsable-marketing-operationnel-casablanca-2026-11",
+   "title": "Responsable Marketing Opérationnel",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "chances": 63,
+   "why": "Marketing, 5 à 10 ans demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-operationnel-recrutement-groupe-labelvie---carrefour-casablanca-188351.html",
+   "source": "ReKrute",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-09",
+   "auto": true,
+   "deadline": "2027-01-09",
+   "country": "Maroc"
   },
   {
    "id": "dk-le-creuset-scandinavia-shopping-marketing-manager-scandi-2026-10",
