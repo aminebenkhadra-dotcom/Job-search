@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T06:38:30Z",
+ "updated": "2026-11-09T12:33:36Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -116,6 +116,20 @@
    "posted": "2026-08-30",
    "source": "Jobzyn",
    "first_seen": "2026-10-30"
+  },
+  {
+   "id": "jobzyn-confidential-directeur-trice-marque-et-communication-casablanca-2026-11",
+   "title": "Directeur(trice) Marque et Communication",
+   "company": "Jobzyn Confidential",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 60,
+   "why": "Marque et produit, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/jobzyn-confidential/jobs/directeurtrice-marque-et-communication-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-09",
+   "auto": true
   },
   {
    "id": "kitea-category-manager-casablanca-2026-08",
@@ -1654,20 +1668,6 @@
    "first_seen": "2026-10-30",
    "auto": true,
    "deadline": "2026-12-10"
-  },
-  {
-   "id": "innoflex-responsable-commercial-reseau-traditionnel-had-soualem-2026-09",
-   "title": "Responsable Commercial Réseau traditionnel",
-   "company": "Innoflex",
-   "place": "Had Soualem",
-   "family": "Vente & comptes clés",
-   "chances": 18,
-   "why": "Vente et comptes clés, 5 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/innoflex/jobs/responsable-commercial-reseau-traditionnel-had-soualem",
-   "source": "Jobzyn",
-   "posted": "2026-09-30",
-   "first_seen": "2026-10-30",
-   "auto": true
   }
  ]
 }
