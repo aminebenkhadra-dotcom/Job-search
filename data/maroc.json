@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T06:30:51Z",
+ "updated": "2026-11-10T18:47:45Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1243,6 +1243,20 @@
    "auto": true
   },
   {
+   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
+   "title": "Directeur Général H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Kénitra",
+   "family": "Direction",
+   "chances": 25,
+   "why": "Direction, 15 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-10",
+   "auto": true
+  },
+  {
    "id": "michael-page-cabinet-de-head-of-sales-africa-h-f-solutions-de-securi-casablanca-2026-10",
    "title": "Head of Sales Africa H/F (Solutions de Sécurité)",
    "company": "Michael Page · cabinet de recrutement",
@@ -1655,20 +1669,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-13"
-  },
-  {
-   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
-   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 19,
-   "why": "Marketing, 5 à 8 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-30",
-   "auto": true
   }
  ]
 }
