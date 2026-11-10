@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:33:27Z",
+ "updated": "2026-11-10T06:34:59Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -506,6 +506,24 @@
    "deadline": "2026-11-27"
   },
   {
+   "id": "dk-lego-system-a-s-marketing-manager-lego-ideas-12-month-contra-2026-11",
+   "title": "Marketing Manager, LEGO® Ideas (12-month contract)",
+   "company": "LEGO System A/S",
+   "place": "Billund",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 42,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14094163",
+   "source": "Jobindex",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-10",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-07"
+  },
+  {
    "id": "se-instabee-group-ab-senior-product-manager-capacity-conversion-2026-11",
    "title": "Senior Product Manager | Capacity & Conversion",
    "company": "Instabee Group AB",
@@ -540,6 +558,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-07"
+  },
+  {
+   "id": "se-h-m-hennes-mauritz-gbc-a-creator-marketing-lead-affiliate-creator-com-2026-11",
+   "title": "Creator Marketing Lead - Affiliate & Creator Commerce",
+   "company": "H & M Hennes & Mauritz GBC AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 41,
+   "why": "Marketing, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703824",
+   "source": "Platsbanken",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-10",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-09"
   },
   {
    "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",

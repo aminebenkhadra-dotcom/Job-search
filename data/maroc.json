@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:33:27Z",
+ "updated": "2026-11-10T06:30:51Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1145,6 +1145,20 @@
    "first_seen": "2026-10-30"
   },
   {
+   "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
+   "title": "Directeur Général H/F (Secteur BTP)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 29,
+   "why": "Direction, 15 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-secteur-btp-casablanca/ref/jn-102026-7125657",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-10",
+   "auto": true
+  },
+  {
    "id": "intelcia-digital-marketing-specialist-1-1-casablanca-2026-10",
    "title": "DIGITAL MARKETING SPECIALIST 1 1",
    "company": "Intelcia",
@@ -1490,20 +1504,6 @@
    "source": "Indeed",
    "posted": "2026-09-11",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "exekutive-directeur-commercial-confidentiel-casablanca-2026-09",
-   "title": "Directeur Commercial (H/F)",
-   "company": "Confidentiel · via ExeKutive",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 20,
-   "why": "10 à 20 ans demandés. Freins : secteur non précisé, et l'annonce situe le poste en France.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-hf-recrutement-confidentiel-casablanca-186159.html",
-   "source": "ReKrute",
-   "posted": "2026-09-15",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-11-09"
   },
   {
    "id": "foods-and-goods-brand-manager-bouskoura-2026-09",
