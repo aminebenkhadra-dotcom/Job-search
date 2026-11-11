@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T12:56:26Z",
+ "updated": "2026-11-11T22:59:50Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -245,6 +245,21 @@
    "auto": true
   },
   {
+   "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-11",
+   "title": "Directeur en charge E-Commerce",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 54,
+   "why": "Marketing, 5 à 10 ans demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-en-charge-e-commerce-recrutement-groupe-labelvie---carrefour-casablanca-188142.html",
+   "source": "ReKrute",
+   "posted": "2026-11-02",
+   "first_seen": "2026-11-11",
+   "auto": true,
+   "deadline": "2027-01-02"
+  },
+  {
    "id": "innoflex-e-commerce-brand-manager-enia-had-soualem-2026-08",
    "title": "E-commerce & Brand Manager – Enia",
    "company": "Innoflex",
@@ -356,6 +371,20 @@
    "first_seen": "2026-11-02",
    "auto": true,
    "deadline": "2027-01-02"
+  },
+  {
+   "id": "rcruitable-b2b-marketing-executive-maroc-2026-11",
+   "title": "B2B Marketing Executive",
+   "company": "Rcruitable",
+   "place": "Maroc",
+   "family": "Marketing",
+   "chances": 49,
+   "why": "Marketing. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=645596399672296701",
+   "source": "Talent.com",
+   "posted": "2026-11-11",
+   "first_seen": "2026-11-11",
+   "auto": true
   },
   {
    "id": "innoflex-area-manager-retail-casablanca-2026-09",
@@ -1187,6 +1216,20 @@
    "auto": true
   },
   {
+   "id": "societe-generale-marketing-coordinator-casablanca-2026-11",
+   "title": "Marketing Coordinator",
+   "company": "Société Générale",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 29,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=645596401754965245",
+   "source": "Talent.com",
+   "posted": "2026-11-11",
+   "first_seen": "2026-11-11",
+   "auto": true
+  },
+  {
    "id": "ceva-logistics-sales-management-manager-casablanca-2026-10",
    "title": "Sales Management Manager",
    "company": "CEVA Logistics",
@@ -1212,6 +1255,20 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-11-05",
+   "auto": true
+  },
+  {
+   "id": "pfizer-category-lead-oncology-internal-medicine-and-casablanca-2026-11",
+   "title": "Category Lead Oncology, Internal Medicine and Specialty care North Africa",
+   "company": "Pfizer",
+   "place": "Casablanca",
+   "family": "Category",
+   "chances": 26,
+   "why": "Category management, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=645596352880379133",
+   "source": "Talent.com",
+   "posted": "2026-11-11",
+   "first_seen": "2026-11-11",
    "auto": true
   },
   {
@@ -1612,63 +1669,6 @@
    "source": "Indeed",
    "posted": "2026-10-07",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "claes-medical-service-chef-de-produit-appels-doffres-secteur-medic-casablanca-2026-10",
-   "title": "Chef de Produit – Appels d’Offres (Secteur Médical)",
-   "company": "Claes Medical Service",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 20,
-   "why": "Marque et produit, 3 à 5 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-appels-doffres-secteur-medical-recrutement-claes-medical-service-casablanca-187332.html",
-   "source": "ReKrute",
-   "posted": "2026-10-09",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-09"
-  },
-  {
-   "id": "kwiks-sales-marketing-manager-healthtech-temara-2026-10",
-   "title": "Sales & Marketing Manager · start-up santé",
-   "company": "Kwiks FRC",
-   "place": "Témara",
-   "family": "Marketing",
-   "chances": 20,
-   "why": "Start-up de la santé numérique : secteur éloigné. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa72y7bpt9qx",
-   "source": "Indeed",
-   "posted": "2026-10-09",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "auto-hall-responsable-communication-h-f-casablanca-2026-10",
-   "title": "Responsable communication (H/F)",
-   "company": "Auto Hall",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 20,
-   "why": "Marketing, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-communication-hf-recrutement-auto-hall-casablanca-187486.html",
-   "source": "ReKrute",
-   "posted": "2026-10-13",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-13"
-  },
-  {
-   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
-   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 19,
-   "why": "Marketing, 5 à 8 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-11-11",
-   "auto": true
   }
  ]
 }
