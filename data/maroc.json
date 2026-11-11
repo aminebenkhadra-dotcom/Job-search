@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T18:47:45Z",
+ "updated": "2026-11-11T12:56:26Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -730,20 +730,6 @@
    "source": "Indeed",
    "posted": "2026-09-02",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-09",
-   "title": "Directeur en charge E-Commerce",
-   "company": "Label'Vie · Carrefour",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 35,
-   "why": "Pilotage du e-commerce de Carrefour Maroc ; votre expérience du marketing en ligne compte. Frein : direction d'une activité e-commerce attendue.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-en-charge-e-commerce-recrutement-groupe-labelvie---carrefour-casablanca-186265.html",
-   "source": "ReKrute",
-   "posted": "2026-09-10",
-   "first_seen": "2026-10-20",
-   "deadline": "2026-11-10"
   },
   {
    "id": "cosmomaroc-responsable-marketing-foxyfox-fes-2026-09",
@@ -1669,6 +1655,20 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-13"
+  },
+  {
+   "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
+   "title": "Chef de Projet Senior Communication Institutionnelle H/F - Rabat",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 19,
+   "why": "Marketing, 5 à 8 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/chef-de-projet-senior-communication-institutionnelle-hf-rabat/ref/jn-102026-7134886",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-11",
+   "auto": true
   }
  ]
 }
