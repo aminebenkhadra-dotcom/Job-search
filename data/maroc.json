@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T22:59:50Z",
+ "updated": "2026-11-12T13:58:05Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -618,6 +618,21 @@
    "posted": "2026-11-06",
    "first_seen": "2026-11-06",
    "auto": true
+  },
+  {
+   "id": "confidentiel-responsable-marketing-relations-publiques-meknes-2026-11",
+   "title": "Responsable Marketing & Relations Publiques",
+   "company": "Confidentiel",
+   "place": "Meknès",
+   "family": "Marketing",
+   "chances": 39,
+   "why": "Marketing, 5 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-relations-publiques-recrutement-confidentiel-meknes-188439.html",
+   "source": "ReKrute",
+   "posted": "2026-11-12",
+   "first_seen": "2026-11-12",
+   "auto": true,
+   "deadline": "2027-01-12"
   },
   {
    "id": "auto-nejma-maroc-s-a-chef-de-produits-senior-value-casablanca-2026-10",
@@ -1653,19 +1668,6 @@
    "chances": 20,
    "why": "Secteur éloigné de la grande consommation. Estimation d'après l'intitulé seul.",
    "url": "https://to.indeed.com/aalfq4gt6hkn",
-   "source": "Indeed",
-   "posted": "2026-10-07",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "citmetal-responsable-marketing-digital-casablanca-2026-10",
-   "title": "Responsable Marketing & Digital",
-   "company": "Citmetal · industrie",
-   "place": "Casablanca",
-   "family": "Marketing",
-   "chances": 20,
-   "why": "Industrie du métal et marketing surtout digital : loin de votre parcours. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa2l46wcbxyp",
    "source": "Indeed",
    "posted": "2026-10-07",
    "first_seen": "2026-10-12"
