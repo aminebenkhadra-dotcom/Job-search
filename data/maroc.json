@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T13:24:49Z",
+ "updated": "2026-11-13T22:08:38Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -159,6 +159,48 @@
    "source": "Jobzyn",
    "posted": "2026-11-09",
    "first_seen": "2026-11-09",
+   "auto": true
+  },
+  {
+   "id": "sterifil-directeur-marketing-casablanca-2026-11",
+   "title": "Directeur Marketing",
+   "company": "Sterifil",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 60,
+   "why": "Marketing, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/sterifil/jobs/directeur-marketing-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-13",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-head-of-commercial-h-f-rabat-2026-11",
+   "title": "Head Of Commercial H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Rabat",
+   "family": "Direction",
+   "chances": 59,
+   "why": "Direction, 10 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/head-commercial-hf-rabat/ref/jn-112026-7144261",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-13",
+   "auto": true
+  },
+  {
+   "id": "sterifil-directeur-commercial-casablanca-2026-11",
+   "title": "Directeur Commercial",
+   "company": "Sterifil",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 59,
+   "why": "Direction, 12 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/sterifil/jobs/directeur-commercial-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-13",
    "auto": true
   },
   {
@@ -398,6 +440,20 @@
    "source": "Jobzyn",
    "posted": "2026-09-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "procter-gamble-sales-section-manager-casablanca-2026-11",
+   "title": "Sales Section Manager",
+   "company": "Procter & Gamble",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 46,
+   "why": "Vente et comptes clés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644899609274748968",
+   "source": "Talent.com",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-13",
    "auto": true
   },
   {
@@ -1245,6 +1301,20 @@
    "auto": true
   },
   {
+   "id": "ribatis-marketing-and-communication-officer-casablanca-2026-11",
+   "title": "MARKETING AND COMMUNICATION OFFICER",
+   "company": "RIBATIS",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 29,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=547574113896835344",
+   "source": "Talent.com",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-13",
+   "auto": true
+  },
+  {
    "id": "ceva-logistics-sales-management-manager-casablanca-2026-10",
    "title": "Sales Management Manager",
    "company": "CEVA Logistics",
@@ -1602,74 +1672,6 @@
    "url": "https://to.indeed.com/aagj676qlmnb",
    "source": "Indeed",
    "posted": "2026-09-19",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "best-profil-key-account-manager-casablanca-2026-09",
-   "title": "Key Account Manager",
-   "company": "Best Profil",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 20,
-   "why": "Secteur non précisé. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa72zzxqsnnw",
-   "source": "Indeed",
-   "posted": "2026-09-22",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "locamed-category-manager-rabat-2026-09",
-   "title": "Category Manager",
-   "company": "Locamed · matériel médical",
-   "place": "Rabat",
-   "family": "Category",
-   "chances": 20,
-   "why": "Matériel médical : secteur éloigné, et poste à Rabat.",
-   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-locamed-rabat-186763.html",
-   "source": "ReKrute",
-   "posted": "2026-09-23",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-11-23"
-  },
-  {
-   "id": "talents-partners-key-account-manager-senior-tanger-2026-09",
-   "title": "Key Account Manager Senior",
-   "company": "Talents Partners",
-   "place": "Tanger",
-   "family": "Vente & comptes clés",
-   "chances": 20,
-   "why": "Secteur non précisé, poste à Tanger. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aajy82kbl7pv",
-   "source": "Indeed",
-   "posted": "2026-09-29",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "inyad-key-account-manager-casablanca-2026-09",
-   "title": "Key Account Manager",
-   "company": "Inyad",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 20,
-   "why": "Vente et comptes clés, 3 à 5 ans d'expérience demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
-   "source": "ReKrute",
-   "posted": "2026-09-30",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-30"
-  },
-  {
-   "id": "cellulift-directeur-commercial-casablanca-2026-10",
-   "title": "Directeur Commercial / Sales Director",
-   "company": "Cellulift",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 20,
-   "why": "Secteur éloigné de la grande consommation. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aalfq4gt6hkn",
-   "source": "Indeed",
-   "posted": "2026-10-07",
    "first_seen": "2026-10-12"
   }
  ]

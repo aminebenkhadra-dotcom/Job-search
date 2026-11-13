@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T13:24:49Z",
+ "updated": "2026-11-13T22:08:38Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -225,6 +225,34 @@
    "country": "Maroc"
   },
   {
+   "id": "sterifil-directeur-marketing-casablanca-2026-11",
+   "title": "Directeur Marketing",
+   "company": "Sterifil",
+   "place": "Casablanca",
+   "chances": 60,
+   "why": "Marketing, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/sterifil/jobs/directeur-marketing-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-13",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "michael-page-cabinet-de-head-of-commercial-h-f-rabat-2026-11",
+   "title": "Head Of Commercial H/F",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Rabat",
+   "chances": 59,
+   "why": "Direction, 10 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/head-commercial-hf-rabat/ref/jn-112026-7144261",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-13",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
    "id": "dk-toms-gruppen-international-product-manager-2026-11",
    "title": "International Product Manager",
    "company": "Toms Gruppen",
@@ -241,6 +269,20 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-04"
+  },
+  {
+   "id": "sterifil-directeur-commercial-casablanca-2026-11",
+   "title": "Directeur Commercial",
+   "company": "Sterifil",
+   "place": "Casablanca",
+   "chances": 59,
+   "why": "Direction, 12 ans minimum demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/sterifil/jobs/directeur-commercial-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-13",
+   "auto": true,
+   "country": "Maroc"
   },
   {
    "id": "kitea-category-manager-casablanca-2026-08",
