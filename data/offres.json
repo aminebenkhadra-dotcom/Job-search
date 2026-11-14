@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T22:08:38Z",
+ "updated": "2026-11-14T12:29:07Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -27,24 +27,6 @@
    "first_seen": "2026-10-30",
    "auto": true,
    "country": "Maroc"
-  },
-  {
-   "id": "dk-arla-foods-amba-trade-marketing-manager-2026-10",
-   "title": "Trade Marketing Manager",
-   "company": "Arla Foods amba",
-   "place": "Viby J, Leeds, Dusseldorf, Solna or Söderkulla",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Trade marketing",
-   "chances": 72,
-   "why": "Votre cœur de métier chez le premier groupe laitier nordique, annonce en anglais, poste ouvert aussi à Solna (Suède). Risque : rôle global, une expérience multi-pays est attendue.",
-   "url": "https://www.jobindex.dk/vis-job/h1708503",
-   "source": "Jobindex",
-   "posted": "2026-10-16",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-13"
   },
   {
    "id": "b5-flormar-senior-trade-marketing-bouskoura-2026-10",
@@ -198,19 +180,6 @@
    "deadline": "2026-11-17"
   },
   {
-   "id": "kitea-head-of-marketing-customer-intelligence-casablanca-2026-10",
-   "title": "Head Of Marketing & Customer Intelligence",
-   "company": "KITEA · ameublement",
-   "place": "Casablanca",
-   "chances": 60,
-   "why": "Direction marketing d'un leader de l'ameublement, 10 ans demandés. Freins : forte expertise data et CRM attendue, annonce ancienne.",
-   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/head-of-marketing-customer-intelligence-casablanca",
-   "posted": "2026-08-30",
-   "source": "Jobzyn",
-   "first_seen": "2026-10-30",
-   "country": "Maroc"
-  },
-  {
    "id": "jobzyn-confidential-directeur-trice-marque-et-communication-casablanca-2026-11",
    "title": "Directeur(trice) Marque et Communication",
    "company": "Jobzyn Confidential",
@@ -281,20 +250,6 @@
    "source": "Jobzyn",
    "posted": "2026-11-13",
    "first_seen": "2026-11-13",
-   "auto": true,
-   "country": "Maroc"
-  },
-  {
-   "id": "kitea-category-manager-casablanca-2026-08",
-   "title": "Category Manager",
-   "company": "KITEA",
-   "place": "Casablanca",
-   "chances": 58,
-   "why": "Category management, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/kitea/jobs/category-manager-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-08-30",
-   "first_seen": "2026-10-30",
    "auto": true,
    "country": "Maroc"
   },
