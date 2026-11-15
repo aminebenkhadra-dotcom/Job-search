@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T20:54:31Z",
+ "updated": "2026-11-15T12:56:38Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -734,21 +734,6 @@
    "deadline": "2027-01-12"
   },
   {
-   "id": "auto-nejma-maroc-s-a-chef-de-produits-senior-value-casablanca-2026-10",
-   "title": "Chef de Produits Senior Value+",
-   "company": "Auto Nejma Maroc S.A.",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 38,
-   "why": "Marque et produit, 5 à 10 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produits-senior-value-recrutement-auto-nejma-maroc-s.a.-casablanca-186336.html",
-   "source": "ReKrute",
-   "posted": "2026-10-01",
-   "first_seen": "2026-10-30",
-   "auto": true,
-   "deadline": "2026-11-14"
-  },
-  {
    "id": "confidentiel-key-account-manager-casablanca-2026-10-2",
    "title": "Key Account Manager",
    "company": "Confidentiel",
@@ -1054,21 +1039,6 @@
    "auto": true
   },
   {
-   "id": "auto-nejma-maroc-s-a-chef-de-produits-vp-vul-casablanca-2026-10",
-   "title": "Chef de Produits VP & VUL",
-   "company": "Auto Nejma Maroc S.A.",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 33,
-   "why": "Marque et produit, 5 à 10 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produits-vp-vul-recrutement-auto-nejma-maroc-s.a.-casablanca-186335.html",
-   "source": "ReKrute",
-   "posted": "2026-10-01",
-   "first_seen": "2026-10-30",
-   "auto": true,
-   "deadline": "2026-11-14"
-  },
-  {
    "id": "arrow-ecs-support-center-digital-marketing-specialist-casablanca-2026-10",
    "title": "Digital Marketing Specialist",
    "company": "Arrow ECS Support Center Morocco, S.A.R.L.A.U",
@@ -1166,21 +1136,6 @@
    "posted": "2026-10-06",
    "first_seen": "2026-11-04",
    "auto": true
-  },
-  {
-   "id": "jameel-motors-chef-de-produit-product-manager-h-f-casablanca-2026-10",
-   "title": "Chef de Produit / Product Manager (H/F)",
-   "company": "Jameel Motors",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 31,
-   "why": "Marque et produit, 3 à 10 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-product-manager-hf-recrutement-jameel-motors-casablanca-186387.html",
-   "source": "ReKrute",
-   "posted": "2026-10-23",
-   "first_seen": "2026-11-01",
-   "auto": true,
-   "deadline": "2026-11-14"
   },
   {
    "id": "m-automotiv-directeur-commercial-h-f-casablanca-2026-10",
@@ -1677,6 +1632,50 @@
    "posted": "2026-10-20",
    "first_seen": "2026-10-30",
    "auto": true
+  },
+  {
+   "id": "centrale-automobile-cher-responsable-des-ventes-reseau-casablanca-2026-09",
+   "title": "Responsable des Ventes Réseau",
+   "company": "Centrale Automobile Chérifienne (CAC)",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 24,
+   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-09-15",
+   "first_seen": "2026-11-15",
+   "auto": true
+  },
+  {
+   "id": "inyad-key-account-manager-casablanca-2026-11",
+   "title": "Key Account Manager",
+   "company": "Inyad",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 24,
+   "why": "Vente et comptes clés, 3 à 5 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
+   "source": "ReKrute",
+   "posted": "2026-11-02",
+   "first_seen": "2026-11-15",
+   "auto": true,
+   "deadline": "2026-11-30"
+  },
+  {
+   "id": "locamed-category-manager-rabat-2026-09",
+   "title": "Category manager",
+   "company": "Locamed",
+   "place": "Rabat",
+   "family": "Category",
+   "chances": 22,
+   "why": "Category management, 3 à 10 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-locamed-rabat-186763.html",
+   "source": "ReKrute",
+   "posted": "2026-09-23",
+   "first_seen": "2026-11-15",
+   "auto": true,
+   "deadline": "2026-11-23"
   }
  ]
 }
