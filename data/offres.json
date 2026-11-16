@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T21:13:57Z",
+ "updated": "2026-11-16T13:57:51Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -575,24 +575,6 @@
    "deadline": "2026-12-09"
   },
   {
-   "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",
-   "title": "Senior Marketing Manager to Kustom!",
-   "company": "Needo Recruitment Sthlm AB",
-   "place": "Stockholm",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marketing",
-   "chances": 40,
-   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31604633",
-   "source": "Platsbanken",
-   "posted": "2026-10-16",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-15"
-  },
-  {
    "id": "dk-topas-explorer-group-aps-studiepraktikant-i-marketing-efterar-2027-2026-11",
    "title": "Studiepraktikant i marketing - Efterår 2027",
    "company": "Topas Explorer Group ApS",
@@ -609,24 +591,6 @@
    "lang": "",
    "auto": true,
    "deadline": "2027-01-01"
-  },
-  {
-   "id": "se-alfa-laval-technologies-head-of-strategic-insights-industry-marketin-2026-11",
-   "title": "Head of Strategic Insights & Industry Marketing",
-   "company": "Alfa Laval Technologies AB",
-   "place": "Huddinge",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marketing",
-   "chances": 40,
-   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31687124",
-   "source": "Platsbanken",
-   "posted": "2026-11-05",
-   "first_seen": "2026-11-05",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-15"
   },
   {
    "id": "dk-factbird-aps-customer-marketing-manager-2026-11",

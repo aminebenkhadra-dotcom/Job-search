@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T21:13:57Z",
+ "updated": "2026-11-16T13:57:51Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -441,6 +441,21 @@
    "posted": "2026-11-11",
    "first_seen": "2026-11-11",
    "auto": true
+  },
+  {
+   "id": "haut-commissariat-au-pla-expert-senior-en-communication-institutionne-rabat-2026-11",
+   "title": "Expert Senior en Communication Institutionnelle (H/F)",
+   "company": "Haut Commissariat au Plan (HCP)",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 47,
+   "why": "Marketing, 10 à 20 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://exekutive.biz/offre-emploi-expert-senior-en-communication-institutionnelle-hf-recrutement-haut-commissariat-au-plan-hcp-rabat-188509.html",
+   "source": "Exekutive",
+   "posted": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "auto": true,
+   "deadline": "2027-02-16"
   },
   {
    "id": "innoflex-area-manager-retail-casablanca-2026-09",
@@ -899,20 +914,6 @@
    "source": "Indeed",
    "posted": "2026-09-14",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "confidentiel-directeur-commercial-marketing-tit-mellil-2026-09",
-   "title": "Directeur Commercial & Marketing",
-   "company": "Confidentiel · industrie",
-   "place": "Tit Mellil",
-   "family": "Marketing",
-   "chances": 35,
-   "why": "Direction commerciale et marketing, 10 ans demandés : votre niveau. Frein : une expérience de l'industrie est fortement souhaitée.",
-   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-marketing-recrutement-confidentiel-tit-mellil-186432.html",
-   "source": "ReKrute",
-   "posted": "2026-09-15",
-   "first_seen": "2026-10-20",
-   "deadline": "2026-11-15"
   },
   {
    "id": "ora-technologies-marketing-manager-casablanca-2026-09",
