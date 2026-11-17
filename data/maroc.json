@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T14:52:22Z",
+ "updated": "2026-11-17T23:38:17Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -118,6 +118,34 @@
    "first_seen": "2026-11-09",
    "auto": true,
    "deadline": "2027-01-09"
+  },
+  {
+   "id": "haier-europe-brand-activation-manager-casablanca-2026-11",
+   "title": "Brand Activation Manager",
+   "company": "Haier Europe",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 65,
+   "why": "Marque et produit, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=646466769476519165",
+   "source": "Talent.com",
+   "posted": "2026-11-17",
+   "first_seen": "2026-11-17",
+   "auto": true
+  },
+  {
+   "id": "nestle-media-digital-brand-specialist-casablanca-ma-casablanca-2026-11",
+   "title": "Media & Digital Brand Specialist (Casablanca, MA)",
+   "company": "Nestlé",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 65,
+   "why": "Marque et produit, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=646466779929969917",
+   "source": "Talent.com",
+   "posted": "2026-11-17",
+   "first_seen": "2026-11-17",
+   "auto": true
   },
   {
    "id": "groupe-label-vie-carrefo-responsable-marketing-operationnel-casablanca-2026-11",
@@ -384,6 +412,21 @@
    "posted": "2026-10-06",
    "first_seen": "2026-10-20",
    "deadline": "2026-12-06"
+  },
+  {
+   "id": "smollan-morocco-key-account-manager-casablanca-2026-11",
+   "title": "Key Account Manager",
+   "company": "Smollan Morocco",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 50,
+   "why": "Vente et comptes clés, 6 ans minimum demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-smollan-morocco-casablanca-188592.html",
+   "source": "ReKrute",
+   "posted": "2026-11-17",
+   "first_seen": "2026-11-17",
+   "auto": true,
+   "deadline": "2027-01-17"
   },
   {
    "id": "accor-responsable-marketing-agadir-2026-10",
@@ -1633,49 +1676,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-24"
-  },
-  {
-   "id": "axone-sys-expert-en-strategie-digitale-et-marketing-te-rabat-2026-10",
-   "title": "Expert en stratégie digitale et marketing territorial",
-   "company": "AXONE SYS",
-   "place": "Rabat",
-   "family": "Marketing",
-   "chances": 25,
-   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=642418099398050881",
-   "source": "Talent.com",
-   "posted": "2026-10-20",
-   "first_seen": "2026-10-30",
-   "auto": true
-  },
-  {
-   "id": "centrale-automobile-cher-responsable-des-ventes-reseau-casablanca-2026-09",
-   "title": "Responsable des Ventes Réseau",
-   "company": "Centrale Automobile Chérifienne (CAC)",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-09-15",
-   "first_seen": "2026-11-15",
-   "auto": true
-  },
-  {
-   "id": "inyad-key-account-manager-casablanca-2026-11",
-   "title": "Key Account Manager",
-   "company": "Inyad",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 3 à 5 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
-   "source": "ReKrute",
-   "posted": "2026-11-02",
-   "first_seen": "2026-11-15",
-   "auto": true,
-   "deadline": "2026-11-30"
   }
  ]
 }

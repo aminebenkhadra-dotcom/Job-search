@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T14:52:22Z",
+ "updated": "2026-11-17T23:38:17Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -126,6 +126,34 @@
    "first_seen": "2026-11-09",
    "auto": true,
    "deadline": "2027-01-09",
+   "country": "Maroc"
+  },
+  {
+   "id": "haier-europe-brand-activation-manager-casablanca-2026-11",
+   "title": "Brand Activation Manager",
+   "company": "Haier Europe",
+   "place": "Casablanca",
+   "chances": 65,
+   "why": "Marque et produit, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=646466769476519165",
+   "source": "Talent.com",
+   "posted": "2026-11-17",
+   "first_seen": "2026-11-17",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "nestle-media-digital-brand-specialist-casablanca-ma-casablanca-2026-11",
+   "title": "Media & Digital Brand Specialist (Casablanca, MA)",
+   "company": "Nestlé",
+   "place": "Casablanca",
+   "chances": 65,
+   "why": "Marque et produit, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=646466779929969917",
+   "source": "Talent.com",
+   "posted": "2026-11-17",
+   "first_seen": "2026-11-17",
+   "auto": true,
    "country": "Maroc"
   },
   {
