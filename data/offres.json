@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T13:57:51Z",
+ "updated": "2026-11-17T00:32:14Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -323,6 +323,24 @@
    "country": "Maroc"
   },
   {
+   "id": "dk-whiteaway-group-senior-category-buyer-2026-11",
+   "title": "Senior Category Buyer",
+   "company": "Whiteaway Group",
+   "place": "Aarhus N",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Category",
+   "chances": 54,
+   "why": "Category management, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1716699",
+   "source": "Jobindex",
+   "posted": "2026-11-16",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-14"
+  },
+  {
    "id": "se-maquire-sverige-ab-head-of-digital-sales-marketing-b2b-to-linde-2026-11",
    "title": "Head of Digital – Sales & Marketing / B2B to Lindex, Gothenburg",
    "company": "Maquire Sverige AB",
@@ -339,6 +357,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-11-23"
+  },
+  {
+   "id": "dk-abena-global-category-manager-lead-people-enable-s-2026-11",
+   "title": "Global Category Manager - Lead People. Enable Sales. Grow the Category",
+   "company": "ABENA",
+   "place": "6200 Aabenraa",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Category",
+   "chances": 49,
+   "why": "Category management. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14097664",
+   "source": "Jobindex",
+   "posted": "2026-11-11",
+   "first_seen": "2026-11-17",
+   "lang": "",
+   "auto": true,
+   "deadline": "2026-12-20"
   },
   {
    "id": "dk-venaris-executive-search-managing-director-2026-11",
@@ -377,6 +413,24 @@
    "deadline": "2026-11-26"
   },
   {
+   "id": "dk-simcorp-a-s-head-of-global-commercial-2026-11",
+   "title": "Head of Global Commercial",
+   "company": "SimCorp A/S",
+   "place": "København, Storbritannien, Tyskland",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Direction",
+   "chances": 48,
+   "why": "Direction, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14096775",
+   "source": "Jobindex",
+   "posted": "2026-11-10",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2027-01-08"
+  },
+  {
    "id": "dk-saab-danmark-a-s-marketing-communication-manager-2026-11",
    "title": "Marketing & Communication Manager",
    "company": "Saab Danmark A/S",
@@ -413,6 +467,24 @@
    "deadline": "2026-12-01"
   },
   {
+   "id": "se-vattenfall-ab-director-group-brand-insight-2026-11",
+   "title": "Director Group Brand Insight",
+   "company": "Vattenfall AB",
+   "place": "Solna",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marque & produit",
+   "chances": 46,
+   "why": "Marque et produit, annonce en anglais, 15 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31724903",
+   "source": "Platsbanken",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-26"
+  },
+  {
    "id": "dk-jbt-marel-key-account-manager-pf-emea-2026-11",
    "title": "Key Account Manager PF EMEA",
    "company": "JBT Marel",
@@ -431,6 +503,24 @@
    "deadline": "2026-12-02"
   },
   {
+   "id": "se-incluso-ab-hands-on-marketing-project-manager-2026-11",
+   "title": "Hands-on Marketing Project Manager",
+   "company": "Incluso AB",
+   "place": "Göteborg",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31730970",
+   "source": "Platsbanken",
+   "posted": "2026-11-14",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2027-05-13"
+  },
+  {
    "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
    "title": "Brand Partnership Manager",
    "company": "Live Nation Denmark ApS",
@@ -447,6 +537,24 @@
    "lang": "",
    "auto": true,
    "deadline": "2026-12-01"
+  },
+  {
+   "id": "se-koenigsegg-automotive-ab-commercial-director-2026-11",
+   "title": "Commercial Director",
+   "company": "Koenigsegg Automotive AB",
+   "place": "Ängelholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Direction",
+   "chances": 44,
+   "why": "Direction, annonce en anglais, 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31716800",
+   "source": "Platsbanken",
+   "posted": "2026-11-11",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-25"
   },
   {
    "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
@@ -484,6 +592,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-07"
+  },
+  {
+   "id": "dk-lego-system-a-s-head-of-commercial-analytics-insights-wester-2026-11",
+   "title": "Head of Commercial Analytics & Insights Western Europe (Director)",
+   "company": "LEGO System A/S",
+   "place": "Billund, Storbritannien, Tyskland",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Direction",
+   "chances": 43,
+   "why": "Direction. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14106062",
+   "source": "Jobindex",
+   "posted": "2026-11-16",
+   "first_seen": "2026-11-17",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-14"
   },
   {
    "id": "dk-rotate-birger-christense-head-of-e-commerce-2026-10",
@@ -609,6 +735,24 @@
    "lang": "",
    "auto": true,
    "deadline": "2027-01-03"
+  },
+  {
+   "id": "dk-whiteaway-group-senior-sales-excellence-manager-2026-11",
+   "title": "Senior Sales Excellence Manager",
+   "company": "Whiteaway Group",
+   "place": "Aarhus N",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 40,
+   "why": "Vente et comptes clés, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1717015",
+   "source": "Jobindex",
+   "posted": "2026-11-16",
+   "first_seen": "2026-11-17",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-14"
   }
  ]
 }
