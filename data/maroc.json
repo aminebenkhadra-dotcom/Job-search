@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T23:38:17Z",
+ "updated": "2026-11-18T14:30:40Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -717,21 +717,6 @@
    "source": "Indeed",
    "posted": "2026-10-21",
    "first_seen": "2026-10-29"
-  },
-  {
-   "id": "foods-and-goods-brand-manager-h-f-sales-marketing-bouskoura-2026-11",
-   "title": "Brand Manager (H/F) - Sales & Marketing",
-   "company": "Foods and Goods",
-   "place": "Bouskoura",
-   "family": "Marque & produit",
-   "chances": 40,
-   "why": "Marque et produit, 1 à 3 ans demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-brand-manager-hf---sales-marketing-recrutement-foods-and-goods-bouskoura-186599.html",
-   "source": "ReKrute",
-   "posted": "2026-11-10",
-   "first_seen": "2026-11-14",
-   "auto": true,
-   "deadline": "2026-11-17"
   },
   {
    "id": "xcdm-maroc-directeur-commercial-et-marketing-immobilier-casablanca-2026-10",
@@ -1676,6 +1661,20 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-24"
+  },
+  {
+   "id": "axone-sys-expert-en-strategie-digitale-et-marketing-te-rabat-2026-10",
+   "title": "Expert en stratégie digitale et marketing territorial",
+   "company": "AXONE SYS",
+   "place": "Rabat",
+   "family": "Marketing",
+   "chances": 25,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=642418099398050881",
+   "source": "Talent.com",
+   "posted": "2026-10-20",
+   "first_seen": "2026-11-18",
+   "auto": true
   }
  ]
 }
