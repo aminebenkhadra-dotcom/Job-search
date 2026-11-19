@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T14:39:57Z",
+ "updated": "2026-11-19T23:12:56Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -299,6 +299,21 @@
    "posted": "2026-11-05",
    "first_seen": "2026-11-05",
    "auto": true
+  },
+  {
+   "id": "foods-and-goods-brand-manager-h-f-sales-marketing-bouskoura-2026-11",
+   "title": "Brand Manager (H/F) - Sales & Marketing",
+   "company": "Foods and Goods",
+   "place": "Bouskoura",
+   "family": "Marque & produit",
+   "chances": 55,
+   "why": "Marque et produit, 1 à 5 ans demandés, secteur proche de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-brand-manager-hf---sales-marketing-recrutement-foods-and-goods-bouskoura-188655.html",
+   "source": "ReKrute",
+   "posted": "2026-11-19",
+   "first_seen": "2026-11-19",
+   "auto": true,
+   "deadline": "2027-01-19"
   },
   {
    "id": "groupe-label-vie-carrefo-directeur-en-charge-e-commerce-casablanca-2026-11",
@@ -1661,21 +1676,6 @@
    "posted": "2026-09-19",
    "first_seen": "2026-11-19",
    "auto": true
-  },
-  {
-   "id": "inyad-key-account-manager-casablanca-2026-11",
-   "title": "Key Account Manager",
-   "company": "Inyad",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 3 à 5 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
-   "source": "ReKrute",
-   "posted": "2026-11-02",
-   "first_seen": "2026-11-19",
-   "auto": true,
-   "deadline": "2026-11-30"
   }
  ]
 }
