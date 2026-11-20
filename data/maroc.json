@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T23:12:56Z",
+ "updated": "2026-11-20T14:19:43Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -637,6 +637,21 @@
    "first_seen": "2026-11-01",
    "auto": true,
    "deadline": "2026-12-05"
+  },
+  {
+   "id": "confidentiel-directeur-commercial-casablanca-2026-11",
+   "title": "Directeur Commercial",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 41,
+   "why": "Direction, 10 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-recrutement-confidentiel-casablanca-188687.html",
+   "source": "ReKrute",
+   "posted": "2026-11-20",
+   "first_seen": "2026-11-20",
+   "auto": true,
+   "deadline": "2027-02-20"
   },
   {
    "id": "michael-page-cabinet-de-marketing-head-h-f-secteur-technologie-casablanca-2026-07",
@@ -1315,6 +1330,21 @@
    "first_seen": "2026-10-30"
   },
   {
+   "id": "confidentiel-chef-de-produit-casablanca-2026-11",
+   "title": "Chef de Produit",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Marque & produit",
+   "chances": 30,
+   "why": "Marque et produit, 1 à 3 ans demandés, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-produit-recrutement-confidentiel-casablanca-188686.html",
+   "source": "ReKrute",
+   "posted": "2026-11-20",
+   "first_seen": "2026-11-20",
+   "auto": true,
+   "deadline": "2027-01-20"
+  },
+  {
    "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
    "title": "Directeur Général H/F (Secteur BTP)",
    "company": "Michael Page · cabinet de recrutement",
@@ -1648,34 +1678,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-24"
-  },
-  {
-   "id": "axone-sys-expert-en-strategie-digitale-et-marketing-te-rabat-2026-10",
-   "title": "Expert en stratégie digitale et marketing territorial",
-   "company": "AXONE SYS",
-   "place": "Rabat",
-   "family": "Marketing",
-   "chances": 25,
-   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=642418099398050881",
-   "source": "Talent.com",
-   "posted": "2026-10-20",
-   "first_seen": "2026-11-18",
-   "auto": true
-  },
-  {
-   "id": "centrale-automobile-cher-responsable-des-ventes-reseau-casablanca-2026-09",
-   "title": "Responsable des Ventes Réseau",
-   "company": "Centrale Automobile Chérifienne (CAC)",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-09-19",
-   "first_seen": "2026-11-19",
-   "auto": true
   }
  ]
 }
