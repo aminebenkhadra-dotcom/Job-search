@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:51:27Z",
+ "updated": "2026-11-22T13:34:52Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1126,21 +1126,6 @@
    "auto": true
   },
   {
-   "id": "maroc-diplomatique-responsable-commercial-h-f-casablanca-2026-10",
-   "title": "Responsable Commercial H/F",
-   "company": "Maroc Diplomatique",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 32,
-   "why": "Vente et comptes clés, 2 à 10 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-hf-recrutement-maroc-diplomatique-casablanca-186692.html",
-   "source": "ReKrute",
-   "posted": "2026-10-19",
-   "first_seen": "2026-11-01",
-   "auto": true,
-   "deadline": "2026-11-21"
-  },
-  {
    "id": "accorhotel-general-manager-nador-nador-2026-10",
    "title": "General Manager Nador",
    "company": "AccorHotel",
@@ -1678,6 +1663,20 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-24"
+  },
+  {
+   "id": "centrale-automobile-cher-responsable-des-ventes-reseau-casablanca-2026-09",
+   "title": "Responsable des Ventes Réseau",
+   "company": "Centrale Automobile Chérifienne (CAC)",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 24,
+   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca",
+   "source": "Jobzyn",
+   "posted": "2026-09-22",
+   "first_seen": "2026-11-22",
+   "auto": true
   }
  ]
 }
