@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T21:59:17Z",
+ "updated": "2026-11-23T16:26:34Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1112,6 +1112,20 @@
    "auto": true
   },
   {
+   "id": "accor-responsable-marketing-h-f-essaouira-2026-11",
+   "title": "Responsable Marketing ( H/F)",
+   "company": "Accor",
+   "place": "Essaouira",
+   "family": "Marketing",
+   "chances": 33,
+   "why": "Marketing, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=647261770808034676",
+   "source": "Talent.com",
+   "posted": "2026-11-23",
+   "first_seen": "2026-11-23",
+   "auto": true
+  },
+  {
    "id": "inwi-manager-marketing-casablanca-2026-08",
    "title": "Manager Marketing",
    "company": "inwi",
@@ -1220,20 +1234,6 @@
    "source": "Indeed",
    "posted": "2026-09-22",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "labelvie-category-manager-casablanca-2026-09",
-   "title": "Category Manager",
-   "company": "Label'Vie · Carrefour",
-   "place": "Casablanca",
-   "family": "Category",
-   "chances": 30,
-   "why": "Category management côté distributeur, une première expérience suffit : poste nettement sous votre niveau.",
-   "url": "https://www.rekrute.com/offre-emploi-category-manager-recrutement-groupe-labelvie---carrefour-casablanca-186731.html",
-   "source": "ReKrute",
-   "posted": "2026-09-22",
-   "first_seen": "2026-10-12",
-   "deadline": "2026-11-22"
   },
   {
    "id": "beyondcom-directeur-marketing-casablanca-2026-09",
