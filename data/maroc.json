@@ -1,9 +1,8 @@
 {
- "updated": "2026-11-23T16:26:34Z",
+ "updated": "2026-11-24T03:01:53Z",
  "sources": [
   "ReKrute",
   "Exekutive",
-  "Michael Page",
   "Talent.com",
   "Jobzyn",
   "MaroCadres",
@@ -1538,21 +1537,6 @@
    "first_seen": "2026-10-12"
   },
   {
-   "id": "m-automotiv-chef-des-ventes-laayoune-2026-09",
-   "title": "Chef des ventes",
-   "company": "M-automotiv",
-   "place": "Laayoune",
-   "family": "Vente & comptes clés",
-   "chances": 25,
-   "why": "Vente et comptes clés, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-chef-des-ventes-recrutement-m-automotiv-laayoune-186822.html",
-   "source": "ReKrute",
-   "posted": "2026-09-23",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-11-23"
-  },
-  {
    "id": "sis-pay-brand-partnerships-manager-casablanca-2026-09",
    "title": "Brand & Partnerships Manager",
    "company": "Sis Pay · paiement",
@@ -1677,6 +1661,21 @@
    "posted": "2026-09-22",
    "first_seen": "2026-11-22",
    "auto": true
+  },
+  {
+   "id": "inyad-key-account-manager-casablanca-2026-11",
+   "title": "Key Account Manager",
+   "company": "Inyad",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 24,
+   "why": "Vente et comptes clés, 3 à 5 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
+   "source": "ReKrute",
+   "posted": "2026-11-23",
+   "first_seen": "2026-11-24",
+   "auto": true,
+   "deadline": "2026-11-30"
   }
  ]
 }
