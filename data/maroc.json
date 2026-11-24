@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T03:01:53Z",
+ "updated": "2026-11-24T16:20:47Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -342,6 +342,21 @@
    "posted": "2026-11-14",
    "first_seen": "2026-11-14",
    "auto": true
+  },
+  {
+   "id": "groupe-label-vie-carrefo-chef-de-departement-marketing-operationnel-casablanca-2026-11",
+   "title": "Chef de Département Marketing Opérationnel",
+   "company": "Groupe Label'Vie - Carrefour",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 53,
+   "why": "Marketing, 5 ans minimum demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-chef-de-departement-marketing-operationnel-recrutement-groupe-labelvie---carrefour-casablanca-188829.html",
+   "source": "ReKrute",
+   "posted": "2026-11-24",
+   "first_seen": "2026-11-24",
+   "auto": true,
+   "deadline": "2027-01-24"
   },
   {
    "id": "innoflex-e-commerce-brand-manager-enia-had-soualem-2026-08",
@@ -902,6 +917,20 @@
    "source": "Jobzyn",
    "posted": "2026-10-19",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "theodo-key-account-manager-paris-cdi-theodo-casablanca-2026-11",
+   "title": "Key Account Manager - Paris CDI - Theodo",
+   "company": "Theodo",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 36,
+   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=644900769188552712",
+   "source": "Talent.com",
+   "posted": "2026-11-06",
+   "first_seen": "2026-11-24",
    "auto": true
   },
   {
@@ -1647,35 +1676,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-24"
-  },
-  {
-   "id": "centrale-automobile-cher-responsable-des-ventes-reseau-casablanca-2026-09",
-   "title": "Responsable des Ventes Réseau",
-   "company": "Centrale Automobile Chérifienne (CAC)",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 10 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.jobzyn.com/fr/companies/centrale-automobile-chérifienne-cac/jobs/responsable-des-ventes-reseau-casablanca",
-   "source": "Jobzyn",
-   "posted": "2026-09-22",
-   "first_seen": "2026-11-22",
-   "auto": true
-  },
-  {
-   "id": "inyad-key-account-manager-casablanca-2026-11",
-   "title": "Key Account Manager",
-   "company": "Inyad",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 24,
-   "why": "Vente et comptes clés, 3 à 5 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-key-account-manager-recrutement-inyad-casablanca-187041.html",
-   "source": "ReKrute",
-   "posted": "2026-11-23",
-   "first_seen": "2026-11-24",
-   "auto": true,
-   "deadline": "2026-11-30"
   }
  ]
 }
