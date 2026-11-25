@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T01:02:42Z",
+ "updated": "2026-11-25T16:00:21Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -258,6 +258,21 @@
    "posted": "2026-10-15",
    "first_seen": "2026-10-31",
    "auto": true
+  },
+  {
+   "id": "maymana-responsable-commercial-rabat-2026-11",
+   "title": "Responsable commercial",
+   "company": "Maymana",
+   "place": "Rabat",
+   "family": "Vente & comptes clés",
+   "chances": 56,
+   "why": "Vente et comptes clés, 10 à 20 ans demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-recrutement-maymana-rabat-188869.html",
+   "source": "ReKrute",
+   "posted": "2026-11-25",
+   "first_seen": "2026-11-25",
+   "auto": true,
+   "deadline": "2027-01-25"
   },
   {
    "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
@@ -1317,6 +1332,20 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "trend-micro-strategic-account-manager-maroc-2026-10",
+   "title": "Strategic Account Manager",
+   "company": "Trend Micro",
+   "place": "Maroc",
+   "family": "Vente & comptes clés",
+   "chances": 30,
+   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=621077833947553527",
+   "source": "Talent.com",
+   "posted": "2026-10-27",
+   "first_seen": "2026-11-25",
+   "auto": true
+  },
+  {
    "id": "confidentiel-area-manager-responsable-regional-e-tanger-2026-10",
    "title": "Area Manager / Responsable Régional(e)",
    "company": "Confidentiel",
@@ -1648,35 +1677,6 @@
    "posted": "2026-10-14",
    "first_seen": "2026-10-30",
    "auto": true
-  },
-  {
-   "id": "yo-ai-labs-product-manager-remote-rabat-2026-10",
-   "title": "Product Manager - Remote",
-   "company": "YO AI Labs",
-   "place": "Rabat",
-   "family": "Marque & produit",
-   "chances": 25,
-   "why": "Marque et produit, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=640242374214421314",
-   "source": "Talent.com",
-   "posted": "2026-10-15",
-   "first_seen": "2026-11-01",
-   "auto": true
-  },
-  {
-   "id": "confidentiel-country-manager-h-f-casablanca-2026-10",
-   "title": "Country Manager (H/F)",
-   "company": "Confidentiel",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Direction, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-country-manager-hf-recrutement-confidentiel-casablanca-186751.html",
-   "source": "ReKrute",
-   "posted": "2026-10-19",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-24"
   }
  ]
 }

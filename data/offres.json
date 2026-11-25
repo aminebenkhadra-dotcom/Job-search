@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T01:06:55Z",
+ "updated": "2026-11-25T16:00:21Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -294,6 +294,21 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-20"
+  },
+  {
+   "id": "maymana-responsable-commercial-rabat-2026-11",
+   "title": "Responsable commercial",
+   "company": "Maymana",
+   "place": "Rabat",
+   "chances": 56,
+   "why": "Vente et comptes clés, 10 à 20 ans demandés, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-recrutement-maymana-rabat-188869.html",
+   "source": "ReKrute",
+   "posted": "2026-11-25",
+   "first_seen": "2026-11-25",
+   "auto": true,
+   "deadline": "2027-01-25",
+   "country": "Maroc"
   },
   {
    "id": "michael-page-cabinet-de-responsable-grands-comptes-marketing-h-f-agadir-2026-10",
