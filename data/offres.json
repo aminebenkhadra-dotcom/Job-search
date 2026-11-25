@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T16:20:47Z",
+ "updated": "2026-11-25T01:06:55Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -406,6 +406,24 @@
    "deadline": "2026-12-10"
   },
   {
+   "id": "dk-depanneur-sales-manager-off-trade-2026-11",
+   "title": "Sales Manager – Off-trade",
+   "company": "Depanneur",
+   "place": "2200 København N",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Trade marketing",
+   "chances": 50,
+   "why": "Trade marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14108983",
+   "source": "Jobindex",
+   "posted": "2026-11-18",
+   "first_seen": "2026-11-25",
+   "lang": "",
+   "auto": true,
+   "deadline": "2026-12-06"
+  },
+  {
    "id": "dk-abena-global-category-manager-lead-people-enable-s-2026-11",
    "title": "Global Category Manager - Lead People. Enable Sales. Grow the Category",
    "company": "ABENA",
@@ -548,6 +566,24 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-15"
+  },
+  {
+   "id": "dk-mk-vejle-camille-brinch-jewellery-is-looking-for-a-he-2026-11",
+   "title": "Camille Brinch Jewellery is looking for a Head of Marketing",
+   "company": "Mk Vejle",
+   "place": "København, Aarhus",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 47,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14119566",
+   "source": "Jobindex",
+   "posted": "2026-11-24",
+   "first_seen": "2026-11-25",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-22"
   },
   {
    "id": "se-vattenfall-ab-director-group-brand-insight-2026-11",
@@ -782,42 +818,6 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-07"
-  },
-  {
-   "id": "se-h-m-hennes-mauritz-gbc-a-creator-marketing-lead-affiliate-creator-com-2026-11",
-   "title": "Creator Marketing Lead - Affiliate & Creator Commerce",
-   "company": "H & M Hennes & Mauritz GBC AB",
-   "place": "Stockholm",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marketing",
-   "chances": 41,
-   "why": "Marketing, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703824",
-   "source": "Platsbanken",
-   "posted": "2026-11-09",
-   "first_seen": "2026-11-10",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-12-09"
-  },
-  {
-   "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",
-   "title": "Senior Marketing Manager to Kustom!",
-   "company": "Needo Recruitment Sthlm AB",
-   "place": "Stockholm",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marketing",
-   "chances": 40,
-   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31604633",
-   "source": "Platsbanken",
-   "posted": "2026-10-16",
-   "first_seen": "2026-11-24",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-30"
   }
  ]
 }
