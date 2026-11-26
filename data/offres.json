@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T00:43:07Z",
+ "updated": "2026-11-26T15:43:39Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -260,6 +260,20 @@
    "source": "Jobzyn",
    "posted": "2026-11-13",
    "first_seen": "2026-11-13",
+   "auto": true,
+   "country": "Maroc"
+  },
+  {
+   "id": "michael-page-cabinet-de-category-manager-buyer-h-f-casablanca-2025-12",
+   "title": "Category Manager / Buyer (H/F)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "chances": 56,
+   "why": "Category management, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/category-manager-buyer-hf-casablanca/ref/jn-122025-6909867",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-26",
    "auto": true,
    "country": "Maroc"
   },

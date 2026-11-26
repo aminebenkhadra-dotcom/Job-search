@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T00:38:58Z",
+ "updated": "2026-11-26T15:43:39Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -243,6 +243,20 @@
    "source": "Jobzyn",
    "posted": "2026-08-30",
    "first_seen": "2026-10-30",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-category-manager-buyer-h-f-casablanca-2025-12",
+   "title": "Category Manager / Buyer (H/F)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Category",
+   "chances": 56,
+   "why": "Category management, secteur proche de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/category-manager-buyer-hf-casablanca/ref/jn-122025-6909867",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-26",
    "auto": true
   },
   {
@@ -849,6 +863,21 @@
    "posted": "2026-10-14",
    "first_seen": "2026-10-30",
    "auto": true
+  },
+  {
+   "id": "groupe-bel-senior-brand-manager-innovation-beyond-the-c-maroc-2026-11",
+   "title": "Senior Brand Manager Innovation Beyond the Core Maroc",
+   "company": "Groupe Bel",
+   "place": "Maroc",
+   "family": "Marque & produit",
+   "chances": 38,
+   "why": "Marque et produit, 6 à 10 ans demandés, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-senior-brand-manager-innovation-beyond-the-core-maroc-recrutement-groupe-bel-maroc-188930.html",
+   "source": "ReKrute",
+   "posted": "2026-11-26",
+   "first_seen": "2026-11-26",
+   "auto": true,
+   "deadline": "2027-01-26"
   },
   {
    "id": "michael-page-cabinet-de-chef-de-projet-senior-communication-institut-casablanca-2026-10",
@@ -1572,6 +1601,21 @@
    "auto": true
   },
   {
+   "id": "xcdm-maroc-trucks-sales-manager-casablanca-2026-10",
+   "title": "Trucks Sales Manager",
+   "company": "XCDM Maroc",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 26,
+   "why": "Vente et comptes clés, 10 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-trucks-sales-manager-recrutement-xcdm-maroc-casablanca-187483.html",
+   "source": "ReKrute",
+   "posted": "2026-10-13",
+   "first_seen": "2026-11-26",
+   "auto": true,
+   "deadline": "2026-12-13"
+  },
+  {
    "id": "pfizer-category-lead-oncology-internal-medicine-and-casablanca-2026-11",
    "title": "Category Lead Oncology, Internal Medicine and Specialty care North Africa",
    "company": "Pfizer",
@@ -1639,47 +1683,6 @@
    "source": "Indeed",
    "posted": "2026-09-14",
    "first_seen": "2026-10-12"
-  },
-  {
-   "id": "hadri-parfums-manager-commercial-casablanca-2026-09",
-   "title": "Manager Commercial",
-   "company": "Hadri Parfums",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 25,
-   "why": "Parfumerie : univers premium, mais vente en boutique. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aarbv8c6f8rc",
-   "source": "Indeed",
-   "posted": "2026-09-22",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "sis-pay-brand-partnerships-manager-casablanca-2026-09",
-   "title": "Brand & Partnerships Manager",
-   "company": "Sis Pay · paiement",
-   "place": "Casablanca",
-   "family": "Marque & produit",
-   "chances": 25,
-   "why": "Marque et partenariats dans le paiement : secteur éloigné. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aahln724dfdq",
-   "source": "Indeed",
-   "posted": "2026-09-28",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "carl-rogers-consulting-responsable-commercial-immobilier-h-f-marrakech-2026-10",
-   "title": "Responsable Commercial Immobilier (H/F)",
-   "company": "Carl Rogers Consulting",
-   "place": "Marrakech",
-   "family": "Vente & comptes clés",
-   "chances": 25,
-   "why": "Vente et comptes clés, 5 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-responsable-commercial-immobilier-hf-recrutement-carl-rogers-consulting-marrakech-184052.html",
-   "source": "ReKrute",
-   "posted": "2026-10-01",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-01"
   }
  ]
 }
