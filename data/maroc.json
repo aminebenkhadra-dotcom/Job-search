@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T16:00:21Z",
+ "updated": "2026-11-26T00:38:58Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1058,6 +1058,21 @@
    "first_seen": "2026-10-29"
   },
   {
+   "id": "confidentiel-directeur-commercial-secteur-automobile-meknes-2026-11",
+   "title": "Directeur Commercial – Secteur Automobile",
+   "company": "Confidentiel",
+   "place": "Meknès",
+   "family": "Direction",
+   "chances": 35,
+   "why": "Direction, 5 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-directeur-commercial-secteur-automobile-recrutement-confidentiel-meknes-188905.html",
+   "source": "ReKrute",
+   "posted": "2026-11-25",
+   "first_seen": "2026-11-26",
+   "auto": true,
+   "deadline": "2027-01-25"
+  },
+  {
    "id": "lenovo-client-account-manager-morocco-casablanca-2026-10",
    "title": "Client Account Manager - Morocco",
    "company": "Lenovo",
@@ -1167,6 +1182,20 @@
    "source": "Talent.com",
    "posted": "2026-11-23",
    "first_seen": "2026-11-23",
+   "auto": true
+  },
+  {
+   "id": "cercle-rh-directeur-commercial-et-marketing-rabat-2026-11",
+   "title": "Directeur Commercial et Marketing",
+   "company": "Cercle RH",
+   "place": "Rabat",
+   "family": "Direction",
+   "chances": 33,
+   "why": "Direction, 5 ans minimum demandés, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=647686211262748261",
+   "source": "Talent.com",
+   "posted": "2026-11-26",
+   "first_seen": "2026-11-26",
    "auto": true
   },
   {
@@ -1486,6 +1515,35 @@
    "auto": true
   },
   {
+   "id": "confidentiel-country-manager-h-f-casablanca-2026-10",
+   "title": "Country Manager (H/F)",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 27,
+   "why": "Direction, 10 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-country-manager-hf-recrutement-confidentiel-casablanca-186751.html",
+   "source": "ReKrute",
+   "posted": "2026-10-19",
+   "first_seen": "2026-11-26",
+   "auto": true,
+   "deadline": "2026-12-24"
+  },
+  {
+   "id": "marrakech-responsable-marketing-digital-marrakech-2026-11",
+   "title": "Responsable marketing digital.",
+   "company": "Marrakech",
+   "place": "Marrakech",
+   "family": "Marketing",
+   "chances": 27,
+   "why": "Marketing, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=647686248933950836",
+   "source": "Talent.com",
+   "posted": "2026-11-26",
+   "first_seen": "2026-11-26",
+   "auto": true
+  },
+  {
    "id": "ceva-logistics-sales-management-manager-casablanca-2026-10",
    "title": "Sales Management Manager",
    "company": "CEVA Logistics",
@@ -1622,61 +1680,6 @@
    "first_seen": "2026-10-20",
    "auto": true,
    "deadline": "2026-12-01"
-  },
-  {
-   "id": "interface-directeur-commercial-btob-casablanca-2026-10",
-   "title": "Directeur Commercial BtoB",
-   "company": "Interface (cabinet)",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Vente aux entreprises, secteur non précisé. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aag8p9cbm8x2",
-   "source": "Indeed",
-   "posted": "2026-10-01",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "ibn-batouta-mall-responsable-marketing-communication-tanger-2026-10",
-   "title": "Responsable marketing et communication",
-   "company": "Ibn Batouta Mall",
-   "place": "Tanger",
-   "family": "Marketing",
-   "chances": 25,
-   "why": "Marketing d'un centre commercial à Tanger : surtout communication et animation. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa9nq4qntlc4",
-   "source": "Indeed",
-   "posted": "2026-10-08",
-   "first_seen": "2026-10-12"
-  },
-  {
-   "id": "xcdm-maroc-trucks-sales-manager-casablanca-2026-10",
-   "title": "Trucks Sales Manager",
-   "company": "XCDM Maroc",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 25,
-   "why": "Vente et comptes clés, 10 à 20 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-trucks-sales-manager-recrutement-xcdm-maroc-casablanca-187483.html",
-   "source": "ReKrute",
-   "posted": "2026-10-13",
-   "first_seen": "2026-10-20",
-   "auto": true,
-   "deadline": "2026-12-13"
-  },
-  {
-   "id": "david-kennedy-recruitmen-trust-safety-product-manager-marrakech-2026-10",
-   "title": "Trust & Safety Product Manager",
-   "company": "David Kennedy Recruitment",
-   "place": "Marrakech",
-   "family": "Marque & produit",
-   "chances": 25,
-   "why": "Marque et produit, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=641375544484626964",
-   "source": "Talent.com",
-   "posted": "2026-10-14",
-   "first_seen": "2026-10-30",
-   "auto": true
   }
  ]
 }

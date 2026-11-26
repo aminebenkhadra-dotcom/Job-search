@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T16:00:21Z",
+ "updated": "2026-11-26T00:43:07Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -655,6 +655,24 @@
    "deadline": "2027-05-13"
   },
   {
+   "id": "dk-microsoft-danmark-aps-marketing-services-centre-msc-execution-lead-2026-11",
+   "title": "Marketing Services Centre (MSC) Execution Lead, EMEA",
+   "company": "Microsoft Danmark ApS",
+   "place": "Storbritannien",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14122361",
+   "source": "Jobindex",
+   "posted": "2026-11-25",
+   "first_seen": "2026-11-26",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-23"
+  },
+  {
    "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
    "title": "Brand Partnership Manager",
    "company": "Live Nation Denmark ApS",
@@ -671,24 +689,6 @@
    "lang": "",
    "auto": true,
    "deadline": "2026-12-01"
-  },
-  {
-   "id": "se-koenigsegg-automotive-ab-commercial-director-2026-11",
-   "title": "Commercial Director",
-   "company": "Koenigsegg Automotive AB",
-   "place": "Ängelholm",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Direction",
-   "chances": 44,
-   "why": "Direction, annonce en anglais, 10 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31716800",
-   "source": "Platsbanken",
-   "posted": "2026-11-11",
-   "first_seen": "2026-11-17",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-25"
   },
   {
    "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
