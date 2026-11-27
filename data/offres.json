@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T15:43:39Z",
+ "updated": "2026-11-27T00:50:51Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -489,24 +489,6 @@
    "deadline": "2026-12-03"
   },
   {
-   "id": "dk-cloud-factory-a-s-country-sales-manager-2026-11",
-   "title": "Country Sales Manager",
-   "company": "Cloud Factory A/S",
-   "place": "Esbjerg eller København",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Direction",
-   "chances": 48,
-   "why": "Direction, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://www.jobindex.dk/vis-job/h1714568",
-   "source": "Jobindex",
-   "posted": "2026-11-06",
-   "first_seen": "2026-11-07",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-26"
-  },
-  {
    "id": "dk-simcorp-a-s-head-of-global-commercial-2026-11",
    "title": "Head of Global Commercial",
    "company": "SimCorp A/S",
@@ -613,24 +595,6 @@
    "lang": "",
    "auto": true,
    "deadline": "2027-01-22"
-  },
-  {
-   "id": "se-vattenfall-ab-director-group-brand-insight-2026-11",
-   "title": "Director Group Brand Insight",
-   "company": "Vattenfall AB",
-   "place": "Solna",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marque & produit",
-   "chances": 46,
-   "why": "Marque et produit, annonce en anglais, 15 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31724903",
-   "source": "Platsbanken",
-   "posted": "2026-11-13",
-   "first_seen": "2026-11-17",
-   "lang": "en",
-   "auto": true,
-   "deadline": "2026-11-26"
   },
   {
    "id": "dk-jbt-marel-key-account-manager-pf-emea-2026-11",
@@ -847,6 +811,42 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-07"
+  },
+  {
+   "id": "se-h-m-hennes-mauritz-gbc-a-creator-marketing-lead-affiliate-creator-com-2026-11",
+   "title": "Creator Marketing Lead - Affiliate & Creator Commerce",
+   "company": "H & M Hennes & Mauritz GBC AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 41,
+   "why": "Marketing, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703824",
+   "source": "Platsbanken",
+   "posted": "2026-11-09",
+   "first_seen": "2026-11-10",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-09"
+  },
+  {
+   "id": "se-needo-recruitment-sthlm-senior-marketing-manager-to-kustom-2026-10",
+   "title": "Senior Marketing Manager to Kustom!",
+   "company": "Needo Recruitment Sthlm AB",
+   "place": "Stockholm",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 40,
+   "why": "Marketing, annonce en anglais, 8 ans d'expérience demandés, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31604633",
+   "source": "Platsbanken",
+   "posted": "2026-10-16",
+   "first_seen": "2026-11-24",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-11-30"
   }
  ]
 }

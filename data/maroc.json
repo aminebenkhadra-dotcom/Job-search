@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T15:43:39Z",
+ "updated": "2026-11-27T00:46:52Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1144,6 +1144,20 @@
    "auto": true
   },
   {
+   "id": "glovo-account-manager-morocco-casablanca-2026-11",
+   "title": "Account Manager Morocco",
+   "company": "Glovo",
+   "place": "Casablanca",
+   "family": "Vente & comptes clés",
+   "chances": 34,
+   "why": "Vente et comptes clés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=647782996939844385",
+   "source": "Talent.com",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-27",
+   "auto": true
+  },
+  {
    "id": "bank-of-africa-marketing-manager-mre-casablanca-2026-08",
    "title": "Marketing Manager MRE",
    "company": "BANK OF AFRICA",
@@ -1670,19 +1684,6 @@
    "posted": "",
    "first_seen": "2026-10-20",
    "auto": true
-  },
-  {
-   "id": "emeraude-manager-reseau-boutiques-aeroports-rabat-2026-09",
-   "title": "Manager Réseau Boutiques Aéroports",
-   "company": "Emeraude Service",
-   "place": "Rabat",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Pilotage d'un réseau de boutiques : plutôt de l'exploitation retail. Estimation d'après l'intitulé seul.",
-   "url": "https://to.indeed.com/aa2n6ffxfqbj",
-   "source": "Indeed",
-   "posted": "2026-09-14",
-   "first_seen": "2026-10-12"
   }
  ]
 }
