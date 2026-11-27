@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T00:46:52Z",
+ "updated": "2026-11-27T15:32:52Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -923,6 +923,21 @@
    "deadline": "2026-12-22"
   },
   {
+   "id": "confidentiel-crm-manager-casablanca-2026-11",
+   "title": "CRM Manager",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 37,
+   "why": "Marketing, 5 à 10 ans demandés. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-crm-manager-recrutement-confidentiel-casablanca-189022.html",
+   "source": "ReKrute",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-27",
+   "auto": true,
+   "deadline": "2027-01-27"
+  },
+  {
    "id": "kitea-responsable-commercial-specialiste-des-cuisi-casablanca-2026-08",
    "title": "Responsable Commercial – Spécialiste des Cuisines H/F - Casablanca",
    "company": "KITEA",
@@ -1669,20 +1684,6 @@
    "source": "Michael Page",
    "posted": "",
    "first_seen": "2026-11-10",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-head-of-sales-africa-h-f-solutions-de-securi-casablanca-2026-10",
-   "title": "Head of Sales Africa H/F (Solutions de Sécurité)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/head-sales-africa-hf-solutions-de-s%C3%A9curit%C3%A9-casablanca/ref/jn-102026-7116982",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-20",
    "auto": true
   }
  ]
