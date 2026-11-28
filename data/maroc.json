@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T00:13:08Z",
+ "updated": "2026-11-28T14:29:00Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1131,6 +1131,21 @@
    "auto": true
   },
   {
+   "id": "confidentiel-responsable-marketing-et-communication-casablanca-2026-11",
+   "title": "Responsable Marketing et Communication",
+   "company": "Confidentiel",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Marketing, 5 à 10 ans demandés, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.rekrute.com/offre-emploi-responsable-marketing-et-communication-recrutement-confidentiel-casablanca-189065.html",
+   "source": "ReKrute",
+   "posted": "2026-11-28",
+   "first_seen": "2026-11-28",
+   "auto": true,
+   "deadline": "2027-01-28"
+  },
+  {
    "id": "lenovo-client-account-manager-morocco-casablanca-2026-10",
    "title": "Client Account Manager - Morocco",
    "company": "Lenovo",
@@ -1503,6 +1518,20 @@
    "deadline": "2027-01-20"
   },
   {
+   "id": "michael-page-cabinet-de-directeur-commercial-h-f-secteur-pharmaceuti-maroc-2026-10",
+   "title": "Directeur Commercial H/F (secteur pharmaceutique)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Maroc",
+   "family": "Direction",
+   "chances": 29,
+   "why": "Direction, 5 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-commercial-hf-secteur-pharmaceutique-maroc/ref/jn-102026-7117420",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-28",
+   "auto": true
+  },
+  {
    "id": "michael-page-cabinet-de-directeur-general-h-f-secteur-btp-casablanca-2026-10",
    "title": "Directeur Général H/F (Secteur BTP)",
    "company": "Michael Page · cabinet de recrutement",
@@ -1656,35 +1685,6 @@
    "posted": "",
    "first_seen": "2026-10-30",
    "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-operators-key-account-manager-h-f-telecom-casablanca-2026-08",
-   "title": "Operators Key Account Manager H/F - Telecom",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 26,
-   "why": "Vente et comptes clés, 15 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/operators-key-account-manager-hf-telecom-casablanca/ref/jn-082026-7075946",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-11-05",
-   "auto": true
-  },
-  {
-   "id": "xcdm-maroc-trucks-sales-manager-casablanca-2026-10",
-   "title": "Trucks Sales Manager",
-   "company": "XCDM Maroc",
-   "place": "Casablanca",
-   "family": "Vente & comptes clés",
-   "chances": 26,
-   "why": "Vente et comptes clés, 10 à 20 ans demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.rekrute.com/offre-emploi-trucks-sales-manager-recrutement-xcdm-maroc-casablanca-187483.html",
-   "source": "ReKrute",
-   "posted": "2026-10-13",
-   "first_seen": "2026-11-26",
-   "auto": true,
-   "deadline": "2026-12-13"
   }
  ]
 }
