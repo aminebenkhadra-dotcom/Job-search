@@ -162,6 +162,24 @@
    "deadline": "2026-12-20"
   },
   {
+   "id": "dk-dynaudio-a-s-brand-marketing-project-manager-2026-11",
+   "title": "Brand & Marketing Project Manager",
+   "company": "Dynaudio A/S",
+   "place": "København K",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marque & produit",
+   "chances": 49,
+   "why": "Marque et produit, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1720183",
+   "source": "Jobindex",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-25"
+  },
+  {
    "id": "dk-venaris-executive-search-managing-director-2026-11",
    "title": "Managing Director",
    "company": "Venaris Executive Search",
@@ -342,6 +360,24 @@
    "deadline": "2027-01-23"
   },
   {
+   "id": "dk-medtronic-danmark-a-s-senior-marketing-program-manager-2026-11",
+   "title": "Senior Marketing Program Manager",
+   "company": "Medtronic Danmark A/S",
+   "place": "Belgien",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14126564",
+   "source": "Jobindex",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-25"
+  },
+  {
    "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
    "title": "Brand Partnership Manager",
    "company": "Live Nation Denmark ApS",
@@ -358,25 +394,6 @@
    "lang": "",
    "auto": true,
    "deadline": "2026-12-01"
-  },
-  {
-   "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
-   "title": "Brand Manager",
-   "company": "Beiersdorf Aktiebolag",
-   "place": "Göteborg",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marque & produit",
-   "chances": 43,
-   "why": "Marque et produit, langue du pays exigée, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31631527",
-   "source": "Platsbanken",
-   "posted": "2026-10-22",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
   },
   {
    "id": "se-infinity-human-resources-mips-global-brand-lead-2026-11",
@@ -431,23 +448,6 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-21"
-  },
-  {
-   "id": "dk-rotate-birger-christense-head-of-e-commerce-2026-10",
-   "title": "Head of E-Commerce",
-   "company": "Rotate Birger Christensen",
-   "place": "København K",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Marketing",
-   "chances": 42,
-   "why": "Votre expérience online compte, mais le poste demande une expertise e-commerce mode et marketplaces.",
-   "url": "https://www.jobindex.dk/vis-job/h1711762",
-   "source": "Jobindex",
-   "posted": "2026-10-30",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "deadline": "2026-11-27"
   },
   {
    "id": "dk-lego-system-a-s-marketing-manager-lego-ideas-12-month-contra-2026-11",
@@ -957,25 +957,6 @@
    "deadline": "2026-12-25"
   },
   {
-   "id": "dk-good-food-group-a-s-product-manager-2026-10",
-   "title": "Product Manager",
-   "company": "Good Food Group A/S",
-   "place": "Vejle eller Hadsten",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Marque & produit",
-   "chances": 34,
-   "why": "Marque et produit, annonce en langue locale, la langue sera exigée, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://www.jobindex.dk/vis-job/h1711882",
-   "source": "Jobindex",
-   "posted": "2026-10-30",
-   "first_seen": "2026-11-01",
-   "lang": "local",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
-  },
-  {
    "id": "dk-jjdk-company-aps-category-manager-beauty-personal-care-jjdk-2026-11",
    "title": "Category Manager – Beauty & Personal Care – JJDK",
    "company": "JJDK Company ApS",
@@ -1192,6 +1173,24 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-12-10"
+  },
+  {
+   "id": "dk-jbt-marel-sales-project-manager-2026-11",
+   "title": "Sales Project Manager",
+   "company": "JBT Marel",
+   "place": "Aarhus N",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Vente & comptes clés",
+   "chances": 33,
+   "why": "Vente et comptes clés, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1720240",
+   "source": "Jobindex",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-25"
   },
   {
    "id": "se-hitachi-energy-sweden-ab-local-product-manager-2026-10",
@@ -1798,25 +1797,6 @@
    "deadline": "2027-04-14"
   },
   {
-   "id": "dk-mette-ditmer-design-aps-digital-key-account-manager-2026-10",
-   "title": "Digital Key Account Manager",
-   "company": "Mette Ditmer Design ApS",
-   "place": "Silkeborg",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Marketing",
-   "chances": 24,
-   "why": "Marketing, annonce en langue locale, la langue sera exigée. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://www.jobindex.dk/vis-job/h1711974",
-   "source": "Jobindex",
-   "posted": "2026-10-30",
-   "first_seen": "2026-11-01",
-   "lang": "local",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
-  },
-  {
    "id": "dk-normal-a-s-category-manager-candy-gum-2026-11",
    "title": "Category Manager – Candy & Gum",
    "company": "Normal A/S",
@@ -2064,25 +2044,6 @@
    "deadline": "2027-04-25"
   },
   {
-   "id": "dk-kvk-hydra-klov-digital-marketing-e-commerce-manager-2026-10",
-   "title": "Digital Marketing & E-Commerce Manager",
-   "company": "KVK Hydra Klov",
-   "place": "Esbjerg",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Marketing",
-   "chances": 22,
-   "why": "Marketing, annonce en langue locale, la langue sera exigée. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://www.jobindex.dk/vis-job/h1712152",
-   "source": "Jobindex",
-   "posted": "2026-10-30",
-   "first_seen": "2026-11-01",
-   "lang": "local",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
-  },
-  {
    "id": "dk-sonnimax-a-s-digital-marketing-og-e-commerce-medarbejder-2026-11",
    "title": "Digital marketing- og e-commerce medarbejder med alsidige kontoropgaver",
    "company": "Sonnimax A/S",
@@ -2252,6 +2213,24 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-12-21"
+  },
+  {
+   "id": "no-job-squad-norwegian-business-account-manager-in-sarpsb-2026-11",
+   "title": "Norwegian Business Account Manager in Sarpsborg, Norway",
+   "company": "Job Squad",
+   "place": "Sarpsborg",
+   "country": "Norvège",
+   "cc": "NO",
+   "family": "Vente & comptes clés",
+   "chances": 22,
+   "why": "Vente et comptes clés, annonce en anglais, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbeidsplassen.nav.no/stillinger/stilling/43bfe99c-9dbf-4370-a024-b224f0ceb675",
+   "source": "NAV",
+   "posted": "2026-11-26",
+   "first_seen": "2026-11-28",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2027-01-10"
   },
   {
    "id": "se-xbp-europe-ab-sales-executive-2026-10",
@@ -2666,25 +2645,6 @@
    "deadline": "2026-12-31"
   },
   {
-   "id": "se-primekey-solutions-ab-regional-sales-director-nordics-baltics-2026-11",
-   "title": "Regional Sales Director, Nordics & Baltics",
-   "company": "PrimeKey Solutions AB",
-   "place": "Solna",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Direction",
-   "chances": 15,
-   "why": "Direction, langue du pays exigée, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31708707",
-   "source": "Platsbanken",
-   "posted": "2026-11-10",
-   "first_seen": "2026-11-17",
-   "lang": "en",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
-  },
-  {
    "id": "dk-3byggetilbud-dk-a-s-b2b-salgskonsulent-din-vej-til-senior-key-ac-2026-11",
    "title": "B2B-salgskonsulent – din vej til Senior Key Account Manager",
    "company": "3byggetilbud.dk A/S",
@@ -2759,17 +2719,55 @@
    "auto": true,
    "lang_req": true,
    "deadline": "2026-11-30"
+  },
+  {
+   "id": "se-ctc-clinical-trial-consu-associate-director-marketing-2026-11",
+   "title": "Associate Director Marketing",
+   "company": "CTC Clinical Trial Consultants AB",
+   "place": "UPPSALA",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 14,
+   "why": "Marketing, annonce en langue locale, la langue sera exigée, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31728867",
+   "source": "Platsbanken",
+   "posted": "2026-11-13",
+   "first_seen": "2026-11-28",
+   "lang": "local",
+   "auto": true,
+   "lang_req": true,
+   "deadline": "2026-12-02"
+  },
+  {
+   "id": "se-aeronis-ab-marketing-communications-business-developmen-2026-11",
+   "title": "Marketing, Communications & Business Development Manager",
+   "company": "Aeronis AB",
+   "place": "GÖTEBORG",
+   "country": "Suède",
+   "cc": "SE",
+   "family": "Marketing",
+   "chances": 14,
+   "why": "Marketing, langue du pays exigée, secteur éloigné de votre parcours. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31761702",
+   "source": "Platsbanken",
+   "posted": "2026-11-20",
+   "first_seen": "2026-11-28",
+   "lang": "en",
+   "auto": true,
+   "lang_req": true,
+   "deadline": "2026-12-20"
   }
  ],
- "updated": "2026-11-27T00:50:51Z",
+ "updated": "2026-11-28T00:18:26Z",
  "sources": [
   "Platsbanken (Suède)",
   "NAV (Norvège)",
   "Jobindex (Danemark)"
  ],
  "counts": {
-  "DK": 99,
+  "DK": 98,
   "SE": 45,
-  "NO": 6
+  "NO": 7
  }
 }

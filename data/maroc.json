@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T15:32:52Z",
+ "updated": "2026-11-28T00:13:08Z",
  "sources": [
   "ReKrute",
   "Exekutive",
@@ -1117,6 +1117,20 @@
    "deadline": "2027-01-25"
   },
   {
+   "id": "cih-bank-un-e-chef-fe-de-projet-marketing-casablanca-2026-11",
+   "title": "Un(e) Chef(fe) de Projet Marketing",
+   "company": "CIH BANK",
+   "place": "Casablanca",
+   "family": "Marketing",
+   "chances": 35,
+   "why": "Marketing, secteur éloigné de votre parcours, missions proches des vôtres. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://ma.talent.com/view?id=647897526907962740",
+   "source": "Talent.com",
+   "posted": "2026-11-28",
+   "first_seen": "2026-11-28",
+   "auto": true
+  },
+  {
    "id": "lenovo-client-account-manager-morocco-casablanca-2026-10",
    "title": "Client Account Manager - Morocco",
    "company": "Lenovo",
@@ -1296,6 +1310,20 @@
    "source": "Jobzyn",
    "posted": "",
    "first_seen": "2026-11-04",
+   "auto": true
+  },
+  {
+   "id": "michael-page-cabinet-de-head-of-sales-africa-h-f-solutions-de-securi-casablanca-2026-10",
+   "title": "Head of Sales Africa H/F (Solutions de Sécurité)",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 31,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/head-sales-africa-hf-solutions-de-securite-casablanca/ref/jn-102026-7116982",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-28",
    "auto": true
   },
   {
@@ -1573,6 +1601,20 @@
    "auto": true
   },
   {
+   "id": "michael-page-cabinet-de-directeur-apres-vente-secteur-automobile-h-f-casablanca-2026-11",
+   "title": "Directeur Aprés-vente (secteur automobile) H/F Casablanca",
+   "company": "Michael Page · cabinet de recrutement",
+   "place": "Casablanca",
+   "family": "Direction",
+   "chances": 27,
+   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
+   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-apres-vente-secteur-automobile-hf-casablanca/ref/jn-112026-7154714",
+   "source": "Michael Page",
+   "posted": "",
+   "first_seen": "2026-11-28",
+   "auto": true
+  },
+  {
    "id": "confidentiel-country-manager-h-f-casablanca-2026-10",
    "title": "Country Manager (H/F)",
    "company": "Confidentiel",
@@ -1643,48 +1685,6 @@
    "first_seen": "2026-11-26",
    "auto": true,
    "deadline": "2026-12-13"
-  },
-  {
-   "id": "pfizer-category-lead-oncology-internal-medicine-and-casablanca-2026-11",
-   "title": "Category Lead Oncology, Internal Medicine and Specialty care North Africa",
-   "company": "Pfizer",
-   "place": "Casablanca",
-   "family": "Category",
-   "chances": 26,
-   "why": "Category management, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://ma.talent.com/view?id=645596352880379133",
-   "source": "Talent.com",
-   "posted": "2026-11-11",
-   "first_seen": "2026-11-11",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-commercial-h-f-secteur-pharmaceuti-maroc-2026-10",
-   "title": "Directeur Commercial H/F (secteur pharmaceutique)",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Maroc",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Direction, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-commercial-hf-secteur-pharmaceutique-maroc/ref/jn-102026-7117420",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-10-20",
-   "auto": true
-  },
-  {
-   "id": "michael-page-cabinet-de-directeur-general-h-f-kenitra-2026-10",
-   "title": "Directeur Général H/F",
-   "company": "Michael Page · cabinet de recrutement",
-   "place": "Kénitra",
-   "family": "Direction",
-   "chances": 25,
-   "why": "Direction, 15 ans minimum demandés, secteur éloigné de votre parcours. Estimation automatique d'après l'annonce, à affiner.",
-   "url": "https://www.michaelpageafrica.com/fr/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-k%C3%A9nitra/ref/jn-102026-7131179",
-   "source": "Michael Page",
-   "posted": "",
-   "first_seen": "2026-11-10",
-   "auto": true
   }
  ]
 }

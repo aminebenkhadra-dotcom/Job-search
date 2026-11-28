@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T15:32:52Z",
+ "updated": "2026-11-28T00:18:26Z",
  "offers": [
   {
    "id": "ifcar-rtm-kenitra-2026-10",
@@ -471,6 +471,24 @@
    "deadline": "2026-12-20"
   },
   {
+   "id": "dk-dynaudio-a-s-brand-marketing-project-manager-2026-11",
+   "title": "Brand & Marketing Project Manager",
+   "company": "Dynaudio A/S",
+   "place": "København K",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marque & produit",
+   "chances": 49,
+   "why": "Marque et produit, annonce en anglais. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/h1720183",
+   "source": "Jobindex",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "lang": "en",
+   "auto": true,
+   "deadline": "2026-12-25"
+  },
+  {
    "id": "dk-venaris-executive-search-managing-director-2026-11",
    "title": "Managing Director",
    "company": "Venaris Executive Search",
@@ -651,6 +669,24 @@
    "deadline": "2027-01-23"
   },
   {
+   "id": "dk-medtronic-danmark-a-s-senior-marketing-program-manager-2026-11",
+   "title": "Senior Marketing Program Manager",
+   "company": "Medtronic Danmark A/S",
+   "place": "Belgien",
+   "country": "Danemark",
+   "cc": "DK",
+   "family": "Marketing",
+   "chances": 45,
+   "why": "Marketing. Estimation automatique, permis de travail à prévoir.",
+   "url": "https://www.jobindex.dk/vis-job/r14126564",
+   "source": "Jobindex",
+   "posted": "2026-11-27",
+   "first_seen": "2026-11-28",
+   "lang": "",
+   "auto": true,
+   "deadline": "2027-01-25"
+  },
+  {
    "id": "dk-live-nation-denmark-aps-brand-partnership-manager-2026-11",
    "title": "Brand Partnership Manager",
    "company": "Live Nation Denmark ApS",
@@ -667,25 +703,6 @@
    "lang": "",
    "auto": true,
    "deadline": "2026-12-01"
-  },
-  {
-   "id": "se-beiersdorf-aktiebolag-brand-manager-2026-10",
-   "title": "Brand Manager",
-   "company": "Beiersdorf Aktiebolag",
-   "place": "Göteborg",
-   "country": "Suède",
-   "cc": "SE",
-   "family": "Marque & produit",
-   "chances": 43,
-   "why": "Marque et produit, langue du pays exigée, grande consommation, votre secteur. Estimation automatique, permis de travail à prévoir.",
-   "url": "https://arbetsformedlingen.se/platsbanken/annonser/31631527",
-   "source": "Platsbanken",
-   "posted": "2026-10-22",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "auto": true,
-   "lang_req": true,
-   "deadline": "2026-11-27"
   },
   {
    "id": "se-infinity-human-resources-mips-global-brand-lead-2026-11",
@@ -740,23 +757,6 @@
    "lang": "en",
    "auto": true,
    "deadline": "2026-12-21"
-  },
-  {
-   "id": "dk-rotate-birger-christense-head-of-e-commerce-2026-10",
-   "title": "Head of E-Commerce",
-   "company": "Rotate Birger Christensen",
-   "place": "København K",
-   "country": "Danemark",
-   "cc": "DK",
-   "family": "Marketing",
-   "chances": 42,
-   "why": "Votre expérience online compte, mais le poste demande une expertise e-commerce mode et marketplaces.",
-   "url": "https://www.jobindex.dk/vis-job/h1711762",
-   "source": "Jobindex",
-   "posted": "2026-10-30",
-   "first_seen": "2026-11-01",
-   "lang": "en",
-   "deadline": "2026-11-27"
   },
   {
    "id": "dk-lego-system-a-s-marketing-manager-lego-ideas-12-month-contra-2026-11",
